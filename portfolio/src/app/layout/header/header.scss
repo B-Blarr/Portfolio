@@ -1,0 +1,16 @@
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 16px 32px;
+
+
+.button-area{
+  display: flex;
+  gap: 16px;
+}
+}
+
+.language-button{
+font-size: 20px;
+}
