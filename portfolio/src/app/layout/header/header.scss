@@ -1,28 +1,30 @@
-header{
+header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 16px 32px;
+  padding: 16px 32px;
+  max-width: 1440px;
 
-
-.button-area{
-  display: flex;
-  gap: 16px;
+  .button-area {
+    display: flex;
+    gap: 16px;
+  }
 }
-}
 
-.language-switch{
+.language-switch {
   border: 1px solid var(--primary-color);
   border-radius: 16px;
 }
 
-.language-button{
-font-size: 20px;
-border: none;
-background-color: transparent;
-}
-
-.nav-button{
+.language-button {
+  font-size: 20px;
   border: none;
   background-color: transparent;
+  color: white;
+}
+
+.nav-button {
+  border: none;
+  background-color: transparent;
+  color: white;
 }
