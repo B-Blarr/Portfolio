@@ -11,6 +11,18 @@ header{
 }
 }
 
+.language-switch{
+  border: 1px solid var(--primary-color);
+  border-radius: 16px;
+}
+
 .language-button{
 font-size: 20px;
+border: none;
+background-color: transparent;
+}
+
+.nav-button{
+  border: none;
+  background-color: transparent;
 }
