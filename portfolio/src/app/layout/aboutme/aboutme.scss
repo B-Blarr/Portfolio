@@ -15,7 +15,7 @@
     position: relative;
     border-radius: 30px;
     isolation: isolate;
-    padding-left: 30px;
+    padding-left: 48px;
   padding-bottom: 30px;
   // border: none;
   // background: transparent;
@@ -47,12 +47,12 @@
       repeating-linear-gradient(
         45deg,
         color-mix(in srgb, var(--primary-color) 95%, transparent) 0 1px,
-        transparent 2px 20px
-      ) left 6px bottom / 24px calc(100% - 40px) no-repeat,
+        transparent 2px 24px
+      ) left 6px bottom / 48px calc(100% - 40px) no-repeat,
       repeating-linear-gradient(
         45deg,
         color-mix(in srgb, var(--primary-color) 95%, transparent) 0 1px,
-        transparent 2px 20px
+        transparent 2px 24px
       ) left bottom 6px / calc(100% - 40px) 24px no-repeat;
   }
 
