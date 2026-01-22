@@ -4,27 +4,59 @@ header {
   justify-content: space-between;
   padding: 16px 32px;
   max-width: 1440px;
+  font-family: Fira Code;
 
   .button-area {
     display: flex;
+    align-items: center;
     gap: 16px;
   }
 }
 
 .language-switch {
   border: 1px solid var(--primary-color);
-  border-radius: 16px;
+  border-radius: 100px;
 }
 
 .language-button {
   font-size: 20px;
+  padding-right: 12px;
+  padding-left: 12px;
   border: none;
   background-color: transparent;
   color: white;
+  border-radius: 100px;
+
+  &.active{
+    color: white;
+    background-color: var(--primary-color);
+  }
 }
 
 .nav-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   background-color: transparent;
   color: white;
+  font-size: 20px;
+
+  &::after{
+    content: "";
+    opacity: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: -1px;
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover::after{
+    opacity: 1;
+    transform: scale(1);
+  }
 }
