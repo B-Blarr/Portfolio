@@ -9,7 +9,6 @@
 .hero-area {
   display: flex;
   justify-content: space-between;
-  // align-items: center;
   flex: 1;
   height: 100%;
   padding: 0 32px;
@@ -25,22 +24,9 @@
 
 .introduction-buttons {
   display: flex;
-  height: 48px;
   gap: 48px;
 
-  button {
-    padding: 0 24px;
-    font-size: 18px;
-    background-color: transparent;
-    border-radius: 32px;
-    color: white;
-    border: 1px solid white;
 
-    &:hover {
-      border: 1px solid var(--primary-color);
-      color: var(--primary-color);
-    }
-  }
 }
 
 h1 {

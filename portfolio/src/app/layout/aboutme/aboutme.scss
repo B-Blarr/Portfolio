@@ -11,51 +11,37 @@
   font-family: Karla;
 }
 
- .main-image-wrap {
-    position: relative;
-    border-radius: 30px;
-    isolation: isolate;
-    padding-left: 48px;
+.main-image-wrap {
+  position: relative;
+  border-radius: 30px;
+  isolation: isolate;
+  padding-left: 48px;
   padding-bottom: 30px;
-  // border: none;
-  // background: transparent;
 
-  //   &::before {
-  //   content: "";
-  //   position: absolute;
-  //   inset: 0;
-  //   border-radius: inherit;
-  //   background: #1c1c1c;
-  //   border: 2px solid color-mix(in srgb, var(--primary-color) 55%, transparent);
-  //   transform: translate(-14px, 14px);
-  //   opacity: 0;
-  //   transition: opacity 180ms ease, transform 180ms ease;
-  //   z-index: 1;
-  // }
-
-   &::after {
-    content: "";
+  &::after {
+    content: '';
     position: absolute;
     inset: 0;
     border-radius: inherit;
     z-index: 1;
 
     opacity: 0;
-    transition: opacity 180ms ease;
+    transition: opacity 600ms ease;
 
     background:
       repeating-linear-gradient(
-        45deg,
-        color-mix(in srgb, var(--primary-color) 95%, transparent) 0 1px,
-        transparent 2px 24px
-      ) left 6px bottom / 48px calc(100% - 40px) no-repeat,
+          45deg,
+          color-mix(in srgb, var(--primary-color) 95%, transparent) 0 1px,
+          transparent 2px 24px
+        )
+        left 6px bottom / 48px calc(100% - 40px) no-repeat,
       repeating-linear-gradient(
-        45deg,
-        color-mix(in srgb, var(--primary-color) 95%, transparent) 0 1px,
-        transparent 2px 24px
-      ) left bottom 6px / calc(100% - 40px) 24px no-repeat;
+          45deg,
+          color-mix(in srgb, var(--primary-color) 95%, transparent) 0 1px,
+          transparent 2px 24px
+        )
+        left bottom 6px / calc(100% - 40px) 24px no-repeat;
   }
-
 
   &:hover::after {
     opacity: 1;
@@ -69,8 +55,9 @@
     border-radius: inherit;
     position: relative;
     z-index: 2;
+    filter: grayscale(100%);
   }
- }
+}
 
 article {
   margin-top: 120px;
@@ -125,10 +112,14 @@ h3 {
       flex-direction: row;
       justify-content: flex-start;
       gap: 24px;
-      color: #FFFFFFCC;
+      color: #ffffffcc;
       font-size: 18px;
 
-      & img{
+      &:hover {
+        color: white;
+      }
+
+      & img {
         width: 32px;
         height: 32px;
         object-fit: contain;
