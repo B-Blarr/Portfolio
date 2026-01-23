@@ -1,22 +1,13 @@
-.content {
+.skills-wrapper-full {
   width: 100%;
-  height: 100%;
-  max-width: 1440px;
   display: flex;
-  align-items: flex-start;
-  flex-direction: row;
-  background-color: #1c1c1c;
-  margin-top: 80px;
-  gap: 80px;
-  font-family: Karla;
-  color: white;
-  margin-top: 120px;
-  margin-bottom: 120px;
+  justify-content: center;
 
-
-   background-color: #1c1c1c;
+  /* HIER ist jetzt dein Hintergrund, damit er am linken Rand klebt */
+  /* Der Background-Color Teil kann weg, wenn der main-wrapper schon grau ist,
+     oder du lässt ihn zur Sicherheit drin. */
   background-image: radial-gradient(
-    ellipse 700px 520px at -12% 55%,
+    ellipse 700px 520px at -100px 55%, /* Ggf. musst du die -12% anpassen, siehe Tipp unten */
     rgba(8, 70, 59, 0.55) 0%,
     rgba(8, 70, 59, 0.28) 35%,
     rgba(8, 70, 59, 0) 75%
@@ -25,8 +16,29 @@
 }
 
 
+.content {
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  // background-color: #1c1c1c;
+  margin-top: 80px;
+  gap: 80px;
+  font-family: Karla;
+  color: white;
+  margin-top: 120px;
 
-
+  // background-color: #1c1c1c;
+  // background-image: radial-gradient(
+  //   ellipse 700px 520px at -12% 55%,
+  //   rgba(8, 70, 59, 0.55) 0%,
+  //   rgba(8, 70, 59, 0.28) 35%,
+  //   rgba(8, 70, 59, 0) 75%
+  // );
+  // background-repeat: no-repeat;
+}
 
 h3 {
   font-size: 24px;
@@ -36,18 +48,17 @@ h3 {
 }
 
 .tech-stack {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 72px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 72px 48px;
+  justify-items: center;
+  flex: 1;
+  // min-width: 0;
 
   & .tech-stack-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    justify-items: center;
+    text-align: center;
     gap: 8px;
 
     & img {
@@ -63,10 +74,25 @@ h3 {
       font-size: 18px;
     }
   }
+
+  & .highlight {
+    position: relative;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+
+    &:hover .speechbubble {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(-10px);
+    }
+  }
 }
 
-.technologies{
-margin-left: 120px;
+.technologies {
+  margin-left: 120px;
+  margin-bottom: 120px;
 }
 
 .skillset-text {
@@ -80,13 +106,12 @@ margin-left: 120px;
   padding: 32px 28px;
   gap: 40px;
 
-
   & h2 {
     text-align: left;
     width: 100%;
     font-size: 64px;
     color: var(--primary-color);
-    padding-bottom: 32px;
+    // padding-bottom: 32px;
     font-weight: 700;
     font-family: Fira Code;
   }
@@ -118,4 +143,68 @@ margin-left: 120px;
 
 app-animated-button {
   align-self: flex-start;
+}
+
+.speechbubble {
+  position: absolute;
+  bottom: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 250px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+  background-color: white;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  // background: rgba(61, 207, 182, 0.1);
+  border-radius: 16px;
+  gap: 8px;
+  font-size: 16px;
+  text-align: center;
+  padding: 8px 24px;
+  font-weight: 600;
+
+
+
+  & .bubble-triangle {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 20px;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  & .special-interests {
+    display: flex;
+    gap: 16px;
+
+    & .single-interest {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      & img {
+        width: 34px;
+        height: 32px;
+      }
+
+      & span {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
 }
