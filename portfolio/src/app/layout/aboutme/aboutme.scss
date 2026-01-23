@@ -9,6 +9,7 @@
   margin-top: 80px;
   gap: 80px;
   font-family: Karla;
+  margin-bottom: 80px;
 }
 
 .main-image-wrap {
@@ -56,6 +57,10 @@
     position: relative;
     z-index: 2;
     filter: grayscale(100%);
+
+    &:hover{
+      filter: grayscale(0%);
+    }
   }
 }
 
@@ -73,13 +78,11 @@ h3 {
 .aboutme-text {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: center;
   border: 1px solid var(--primary-color);
   border-radius: 30px;
   background: rgba(61, 207, 182, 0.1);
   width: 568px;
-  // height: 568px;
   padding: 32px 28px;
   gap: 40px;
 
