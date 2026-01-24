@@ -1,15 +1,15 @@
+@use '../../../styles/mixins' as m;
+
 .content {
-  width: 100%;
+  @include m.content-limitation(row);
   height: 100%;
-  max-width: 1440px;
-  display: flex;
   align-items: flex-start;
-  flex-direction: row;
   background-color: #1c1c1c;
   margin-top: 80px;
   gap: 80px;
   font-family: Karla;
   margin-bottom: 80px;
+  margin-left: 80px;
 }
 
 .main-image-wrap {
@@ -57,8 +57,9 @@
     position: relative;
     z-index: 2;
     filter: grayscale(100%);
+    transition: filter 0.4s ease-in-out;
 
-    &:hover{
+    &:hover {
       filter: grayscale(0%);
     }
   }
@@ -69,10 +70,7 @@ article {
 }
 
 h3 {
-  font-size: 24px;
-  color: var(--primary-color);
-  margin-bottom: 16px;
-  font-weight: 500;
+  @include m.small-headline;
 }
 
 .aboutme-text {
@@ -87,11 +85,7 @@ h3 {
   gap: 40px;
 
   & h2 {
-    text-align: left;
-    width: 100%;
-    font-size: 64px;
-    color: var(--primary-color);
-    font-family: Fira Code;
+    @include m.big-headline;
   }
 
   & .main-text {
