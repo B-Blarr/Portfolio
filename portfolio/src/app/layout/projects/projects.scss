@@ -4,6 +4,7 @@
   @include m.content-limitation();
 padding-right: 30vw;
 margin-left: 80px;
+margin-bottom: 120px;
 }
 
 .description{
@@ -25,10 +26,13 @@ margin-left: 80px;
  & p {
   font-size: 18px;
   color: white;
+  font-family: Karla;
+  margin-top: 16px;
  }
 }
 
 .projects{
+  margin-top: 32px;
   border-top: 1px solid var(--primary-color);
   }
 
@@ -37,5 +41,23 @@ margin-left: 80px;
   justify-content: space-between;
   border-bottom: 1px solid var(--primary-color);
   padding: 40px 32px;
+
+  & .project-name{
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Fira Code;
+  }
+
+  & .used-technologies{
+    font-size: 18px;
+    font-family: Karla;
+    color: white;
+  }
+
+  & .used-technologies span + span::before {
+  content: " | ";
+  color: var(--primary-color);
+}
 }
 
