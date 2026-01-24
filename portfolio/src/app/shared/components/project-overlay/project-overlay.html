@@ -1,1 +1,59 @@
-<p>project-overlay works!</p>
+<!-- <section class="content">
+  <article class="text-area">
+    <h2></h2>
+    <h3></h3>
+    <p>What is this project about?</p>
+    <p></p>
+    <aside class="tech">
+      <div>
+        <img src="" alt="" />
+        <span></span>
+      </div>
+      <div>
+        <img src="" alt="" />
+        <span></span>
+      </div>
+      <div>
+        <img src="" alt="" />
+        <span></span>
+      </div>
+      <div>
+        <img src="" alt="" />
+        <span></span>
+      </div>
+      <div>
+        <img src="" alt="" />
+        <span></span>
+      </div>
+    </aside>
+    <app-animated-button></app-animated-button>
+    <app-animated-button></app-animated-button>
+  </article>
+  <article class="image-area"></article>
+</section> -->
+
+<section class="content">
+  <article class="text-area">
+    <h2>{{ project.title }}</h2>
+    <h3>{{ project.subtitle }}</h3>
+
+    <p>What is this project about?</p>
+    <p>{{ project.description }}</p>
+
+    <aside class="tech">
+      <div *ngFor="let tech of project.techs">
+        <img [src]="tech.iconUrl" [alt]="tech.name" />
+        <span>{{ tech.name }}</span>
+      </div>
+    </aside>
+
+    <app-animated-button>Live Demo</app-animated-button>
+    <app-animated-button>GitHub</app-animated-button>
+  </article>
+
+  <article class="image-area">
+    <button class="close-btn" type="button">✕</button>
+
+    <img [src]="project.imageUrl" [alt]="project.title" />
+  </article>
+</section>

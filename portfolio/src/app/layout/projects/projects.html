@@ -9,7 +9,7 @@
   </div>
   <article class="projects">
     <!-- <div class="dividing line"></div> -->
-    <aside class="project-teaser">
+    <aside class="project-teaser" (click)="openJoinOverlay()">
       <span class="project-name">Join</span>
       <span class="used-technologies"
         ><span>Angular</span><span>TypeScript</span><span>HTML</span><span>SCSS</span
@@ -34,3 +34,9 @@
     <!-- <div class="dividing line"></div> -->
   </article>
 </section>
+<!-- <app-project-overlay ></app-project-overlay> -->
+
+<app-project-overlay
+  *ngIf="isOverlayOpen && selectedProject"
+  [project]="selectedProject!"
+></app-project-overlay>
