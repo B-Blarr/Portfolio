@@ -1,0 +1,103 @@
+.content {
+  width: min(90vw, 1440px);
+  // max-height: 90vh;
+  // overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--primary-color);
+  border-radius: 30px;
+  background: linear-gradient(45deg, #1c1c1c 0%, #1c1c1c 40%, #08463b 100%);
+  box-sizing: border-box;
+  padding: 64px;
+}
+
+.stage {
+  width: 100%;
+  max-width: 1440px;
+  // margin: 0 auto;
+  position: relative;
+}
+
+.text-area {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+h2 {
+  font-size: 128px;
+  font-family: Karla;
+  color: var(--primary-color);
+  line-height: 0.8;
+}
+
+h3 {
+  font-size: 64px;
+  font-family: Fira Code;
+  color: white;
+
+}
+
+.question {
+  font-size: 24px;
+  font-family: Fira Code;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.project-description {
+  color: white;
+  font-size: 18px;
+  font-family: Karla;
+}
+
+.tech {
+  display: flex;
+  gap: 16px;
+}
+
+.tech-image {
+  width: 24px;
+  height: 24px;
+  fill: var(--primary-color);
+}
+
+.tech {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  .tech-item {
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .icon-mask {
+    width: 24px;
+    height: 24px;
+    background-color: var(--primary-color);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+  }
+
+  .tech-name {
+    color: white;
+    font-size: 16px;
+    font-family: Karla;
+  }
+}
+
+.button-area{
+  display: flex;
+  gap: 32px;
+
+  & img{
+    margin-left: 8px;
+  }
+}
+
+

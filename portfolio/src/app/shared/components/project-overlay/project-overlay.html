@@ -37,23 +37,29 @@
     <h2>{{ project.title }}</h2>
     <h3>{{ project.subtitle }}</h3>
 
-    <p>What is this project about?</p>
-    <p>{{ project.description }}</p>
+    <p class="question">What is this project about?</p>
+    <p class="project-description">{{ project.description }}</p>
 
     <aside class="tech">
-      <div *ngFor="let tech of project.techs">
-        <img [src]="tech.iconUrl" [alt]="tech.name" />
-        <span>{{ tech.name }}</span>
+      <div *ngFor="let tech of project.techs" class="tech-item">
+        <div
+          class="icon-mask"
+          [style.mask-image]="'url(' + tech.iconUrl + ')'"
+          [style.-webkit-mask-image]="'url(' + tech.iconUrl + ')'"
+        ></div>
+        <span class="tech-name">{{ tech.name }}</span>
       </div>
     </aside>
-
-    <app-animated-button>Live Demo</app-animated-button>
-    <app-animated-button>GitHub</app-animated-button>
+    <div class="button-area">
+      <app-animated-button><span>GitHub</span><img src="/icons/arrow-out.svg" alt="Arrow out"></app-animated-button>
+      <app-animated-button><span>Live Test <img src="/icons/arrow-out.svg" alt="Arrow out"></span></app-animated-button>
+    </div>
   </article>
 
   <article class="image-area">
     <button class="close-btn" type="button">✕</button>
 
     <img [src]="project.imageUrl" [alt]="project.title" />
+    <button><span>Next project</span><img src="" alt="Arrow Left"></button>
   </article>
 </section>

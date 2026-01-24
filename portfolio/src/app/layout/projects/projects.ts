@@ -1,7 +1,6 @@
 // import { Component } from '@angular/core';
 // import { ProjectOverlay} from '../../shared/components/project-overlay/project-overlay';
 
-
 // @Component({
 //   selector: 'app-projects',
 //   imports: [ProjectOverlay],
@@ -12,8 +11,11 @@
 
 // }
 
-import { Component, } from '@angular/core';
-import { ProjectOverlay, ProjectData,} from '../../shared/components/project-overlay/project-overlay';
+import { Component } from '@angular/core';
+import {
+  ProjectOverlay,
+  ProjectData,
+} from '../../shared/components/project-overlay/project-overlay';
 import { NgIf } from '@angular/common';
 
 @Component({
@@ -48,19 +50,19 @@ import { NgIf } from '@angular/common';
 
 //   selectedProject: ProjectData = this.projects[0];
 // }
-
 export class Projects {
   joinProject: ProjectData = {
-    title: 'Join',
-    subtitle: 'Kanban Board',
-    description: 'A task manager with drag & drop and user management.',
-    imageUrl: 'assets/img/projects/join.png',
+    title: '01',
+    subtitle: 'Join',
+    description:
+      'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+    imageUrl: '/images/join.jpg',
     techs: [
-      { name: 'Angular', iconUrl: 'assets/img/tech/angular.svg' },
-      { name: 'TypeScript', iconUrl: 'assets/img/tech/typescript.svg' },
-      { name: 'HTML', iconUrl: 'assets/img/tech/html.svg' },
-      { name: 'SCSS', iconUrl: 'assets/img/tech/scss.svg' },
-      { name: 'Supabase', iconUrl: 'assets/img/tech/supabase.svg' },
+      { name: 'Angular', iconUrl: '/icons/angular.svg' },
+      { name: 'TypeScript', iconUrl: '/icons/typescript.svg' },
+      { name: 'HTML', iconUrl: '/icons/html.svg' },
+      { name: 'SCSS', iconUrl: '/icons/sass.svg' },
+      { name: 'Supabase', iconUrl: '/icons/supabase.svg' },
     ],
   };
 
