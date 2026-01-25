@@ -57,9 +57,15 @@
   </article>
 
   <article class="image-area">
-    <button class="close-btn" type="button">✕</button>
+    <button class="close-btn" type="button"><img src="/icons/close-small.svg" alt="Close Overlay"></button>
 
-    <img [src]="project.imageUrl" [alt]="project.title" />
-    <button><span>Next project</span><img src="" alt="Arrow Left"></button>
+    <img class="project-image" [src]="project.imageUrl" [alt]="project.title" />
+
+    <button class="next-project-button"><span>Next project</span>
+      <div class="arrow-icon">
+      <img src="/icons/arrow-right-nohover.svg" alt="Arrow Left">
+    </div>
+    </button>
+
   </article>
 </section>

@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 80px;
   border: 1px solid var(--primary-color);
   border-radius: 30px;
   background: linear-gradient(45deg, #1c1c1c 0%, #1c1c1c 40%, #08463b 100%);
@@ -36,7 +37,6 @@ h3 {
   font-size: 64px;
   font-family: Fira Code;
   color: white;
-
 }
 
 .question {
@@ -91,13 +91,91 @@ h3 {
   }
 }
 
-.button-area{
+.button-area {
   display: flex;
   gap: 32px;
+  padding-top: 16px;
 
-  & img{
+  & img {
     margin-left: 8px;
   }
 }
+
+.image-area {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-end;
+
+  & .close-btn {
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+
+    & img {
+      width: 18px;
+      height: 18px;
+      transition: opacity 225ms ease-in-out;
+      opacity: 1;
+    }
+
+    &:hover {
+      cursor: pointer;
+      img {
+        content: url('/icons/close.svg');
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
+  .project-image {
+    border-radius: 30px;
+  }
+
+  .next-project-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+    width: 150px;
+    height: 40px;
+    gap: 8px;
+    transition: color 100ms ease-in-out;
+
+    & span{
+      font-size: 18px;
+      font-family: Karla;
+      white-space: nowrap;
+    }
+
+    & img{
+      width: 18px;
+      height: 18px;
+      transition: transform 125ms ease-in-out;
+    }
+
+    &:hover{
+      cursor: pointer;
+      color: white;
+
+      img {
+        content: url('/icons/arrow-right.svg');
+        transform: translateX(3px);
+      }
+    }
+
+    & .arrow-icon{
+      width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+    }
+  }
+
 
 
