@@ -64,16 +64,6 @@ export class Projects {
     this.isOverlayOpen = true;
   }
 
-  // openElPolloLocoOverlay(): void {
-  //   this.selectedProject = this.polloLocoProject;
-  //   this.isOverlayOpen = true;
-  // }
-
-  // openPokedexOverlay(): void {
-  //   this.selectedProject = this.pokedexProject;
-  //   this.isOverlayOpen = true;
-  // }
-
   closeOverlay(): void {
     this.isOverlayOpen = false;
   }

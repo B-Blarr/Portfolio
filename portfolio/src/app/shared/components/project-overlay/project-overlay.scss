@@ -1,40 +1,31 @@
-.backdrop {
-  position: fixed;   /* Fixiert am Bildschirm */
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-
-  /* Dunkler Hintergrund */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Weichzeichner für den Hintergrund (optional, sieht schick aus) */
-  backdrop-filter: blur(5px);
-
-  z-index: 999; /* Damit es sicher ganz oben liegt */
-
-  /* Hier zentrieren wir die .content Karte */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// .backdrop {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: rgba(0, 0, 0, 0.4);
+//   backdrop-filter: blur(5px);
+//   z-index: 999;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 
 .content {
   width: min(90vw, 1440px);
-  // max-width: 80vw;
+  // max-width: 1300px;
+  // max-height: 90vh;
+  width: 90vw;
+  height: 85vh;
   max-width: 1300px;
-  max-height: 90vh;
-  // min-height: 60px;
-  // overflow: auto;
+  max-height: 600px;
   display: flex;
   justify-content: center;
-  // align-items: stretch;
-  // gap: 80px;
   gap: clamp(32px, 5vw, 80px);
   border: 1px solid var(--primary-color);
   border-radius: 30px;
   background: linear-gradient(45deg, #1c1c1c 0%, #1c1c1c 40%, #08463b 100%);
-  // box-sizing: border-box;
-  // padding: 64px;
   padding: clamp(32px, 5vw, 64px);
   overscroll-behavior: contain;
 }
@@ -49,8 +40,10 @@
 .text-area {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 24px;
+  // justify-content: center;
+  justify-content: space-between;
+  // gap: 24px;
+  height: 100%;
 
   flex: 1 1 40%;
   min-width: 300px;
@@ -67,6 +60,7 @@ h3 {
   font-size: clamp(56px, 5vw, 64px);
   font-family: Fira Code;
   color: white;
+  white-space: nowrap;
 }
 
 .question {
@@ -97,13 +91,14 @@ h3 {
 .tech {
   display: flex;
   gap: 16px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 
   .tech-item {
     display: flex;
     // flex-direction: column;
     align-items: center;
     gap: 8px;
+
   }
 
   .icon-mask {
@@ -135,11 +130,13 @@ h3 {
 .image-area {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
+  justify-content: space-between;
   gap: 40px;
   // gap: clamp(20px, 3vw, 60px);
   align-items: flex-end;
   flex: 1 1 60%;
+  height: 100%;
 
   & img{
     max-width: 520px;
@@ -174,10 +171,11 @@ h3 {
   // height: auto;
   object-fit: cover;
   // max-height: 60vh;
-  margin-top: auto;
-
+  // margin-top: auto;
+  max-height: 65%;
+margin: auto 0;
   /* UND es drückt sich vom Next-Button (unten) weg */
-  margin-bottom: auto;
+  // margin-bottom: auto;
 }
 
 .next-project-button {
