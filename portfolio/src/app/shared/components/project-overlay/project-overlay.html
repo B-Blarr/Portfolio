@@ -1,38 +1,5 @@
-<!-- <section class="content">
-  <article class="text-area">
-    <h2></h2>
-    <h3></h3>
-    <p>What is this project about?</p>
-    <p></p>
-    <aside class="tech">
-      <div>
-        <img src="" alt="" />
-        <span></span>
-      </div>
-      <div>
-        <img src="" alt="" />
-        <span></span>
-      </div>
-      <div>
-        <img src="" alt="" />
-        <span></span>
-      </div>
-      <div>
-        <img src="" alt="" />
-        <span></span>
-      </div>
-      <div>
-        <img src="" alt="" />
-        <span></span>
-      </div>
-    </aside>
-    <app-animated-button></app-animated-button>
-    <app-animated-button></app-animated-button>
-  </article>
-  <article class="image-area"></article>
-</section> -->
-
-<section class="content">
+<div class="backdrop" (click)="onClose()">
+<section class="content" (click)="$event.stopPropagation()">
   <article class="text-area">
     <h2>{{ project.title }}</h2>
     <h3>{{ project.subtitle }}</h3>
@@ -57,7 +24,7 @@
   </article>
 
   <article class="image-area">
-    <button class="close-btn" type="button"><img src="/icons/close-small.svg" alt="Close Overlay"></button>
+    <button class="close-btn" type="button" (click)="onClose()"><img src="/icons/close-small.svg" alt="Close Overlay"></button>
 
     <img class="project-image" [src]="project.imageUrl" [alt]="project.title" />
 
@@ -69,3 +36,4 @@
 
   </article>
 </section>
+</div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {Component, HostListener, Output, EventEmitter, Input} from '@angular/core';
 import { NgFor } from '@angular/common';
 import { AnimatedButton } from '../animated-button/animated-button';
 
@@ -23,4 +23,15 @@ export type ProjectData = {
 })
 export class ProjectOverlay {
 @Input({ required: true }) project!: ProjectData;
+@Output() close = new EventEmitter<void>();
+
+  // Das macht es "professionell": Hören auf die ESC-Taste
+ @HostListener('document:keydown.escape')
+  onEscapePressed() {
+    this.close.emit();
+  }
+
+  onClose() {
+    this.close.emit();
+  }
 }

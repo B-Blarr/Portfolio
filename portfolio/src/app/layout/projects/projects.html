@@ -38,7 +38,13 @@
 
 <!-- <app-project-overlay ></app-project-overlay> -->
 
-<div class="overlay-layer" *ngIf="isOverlayOpen && selectedProject">
+<!-- <div class="overlay-layer" *ngIf="isOverlayOpen && selectedProject">
     <app-project-overlay [project]="selectedProject!"></app-project-overlay>
   </div>
+</div> -->
+
+<div class="overlay-layer" *ngIf="isOverlayOpen && selectedProject">
+  <app-project-overlay
+      [project]="selectedProject!"
+      (close)="isOverlayOpen = false"> </app-project-overlay>
 </div>

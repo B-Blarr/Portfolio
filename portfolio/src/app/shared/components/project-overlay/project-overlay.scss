@@ -1,16 +1,42 @@
-.content {
-  width: min(90vw, 1440px);
-  // max-height: 90vh;
-  // overflow: auto;
+.backdrop {
+  position: fixed;   /* Fixiert am Bildschirm */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  /* Dunkler Hintergrund */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Weichzeichner für den Hintergrund (optional, sieht schick aus) */
+  backdrop-filter: blur(5px);
+
+  z-index: 999; /* Damit es sicher ganz oben liegt */
+
+  /* Hier zentrieren wir die .content Karte */
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px;
+}
+
+.content {
+  width: min(90vw, 1440px);
+  // max-width: 80vw;
+  max-width: 1300px;
+  max-height: 90vh;
+  // min-height: 60px;
+  // overflow: auto;
+  display: flex;
+  justify-content: center;
+  // align-items: stretch;
+  // gap: 80px;
+  gap: clamp(32px, 5vw, 80px);
   border: 1px solid var(--primary-color);
   border-radius: 30px;
   background: linear-gradient(45deg, #1c1c1c 0%, #1c1c1c 40%, #08463b 100%);
-  box-sizing: border-box;
-  padding: 64px;
+  // box-sizing: border-box;
+  // padding: 64px;
+  padding: clamp(32px, 5vw, 64px);
+  overscroll-behavior: contain;
 }
 
 .stage {
@@ -23,24 +49,29 @@
 .text-area {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 24px;
+
+  flex: 1 1 40%;
+  min-width: 300px;
 }
 
 h2 {
-  font-size: 128px;
+  font-size: clamp(72px, 8vw, 128px);
   font-family: Karla;
   color: var(--primary-color);
   line-height: 0.8;
 }
 
 h3 {
-  font-size: 64px;
+  font-size: clamp(56px, 5vw, 64px);
   font-family: Fira Code;
   color: white;
 }
 
 .question {
-  font-size: 24px;
+  // font-size: 24px;
+  font-size: clamp(20px, 2vw, 24px);
   font-family: Fira Code;
   font-weight: 700;
   color: var(--primary-color);
@@ -104,8 +135,15 @@ h3 {
 .image-area {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 40px;
+  // gap: clamp(20px, 3vw, 60px);
   align-items: flex-end;
+  flex: 1 1 60%;
+
+  & img{
+    max-width: 520px;
+  }
 
   & .close-btn {
     background-color: transparent;
@@ -130,52 +168,58 @@ h3 {
     }
   }
 }
-  .project-image {
-    border-radius: 30px;
+.project-image {
+  border-radius: 30px;
+  width: 100%;
+  // height: auto;
+  object-fit: cover;
+  // max-height: 60vh;
+  margin-top: auto;
+
+  /* UND es drückt sich vom Next-Button (unten) weg */
+  margin-bottom: auto;
+}
+
+.next-project-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: var(--primary-color);
+  width: 150px;
+  height: 40px;
+  gap: 8px;
+  transition: color 100ms ease-in-out;
+  margin-top: auto;
+
+  & span {
+    font-size: 18px;
+    font-family: Karla;
+    white-space: nowrap;
   }
 
-  .next-project-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    border: none;
-    color: var(--primary-color);
-    width: 150px;
-    height: 40px;
-    gap: 8px;
-    transition: color 100ms ease-in-out;
+  & img {
+    width: 18px;
+    height: 18px;
+    transition: transform 125ms ease-in-out;
+  }
 
-    & span{
-      font-size: 18px;
-      font-family: Karla;
-      white-space: nowrap;
+  &:hover {
+    cursor: pointer;
+    color: white;
+
+    img {
+      content: url('/icons/arrow-right.svg');
+      transform: translateX(3px);
     }
+  }
 
-    & img{
-      width: 18px;
-      height: 18px;
-      transition: transform 125ms ease-in-out;
-    }
-
-    &:hover{
-      cursor: pointer;
-      color: white;
-
-      img {
-        content: url('/icons/arrow-right.svg');
-        transform: translateX(3px);
-      }
-    }
-
-    & .arrow-icon{
-      width: 32px;
+  & .arrow-icon {
+    width: 32px;
     height: 32px;
     display: flex;
     align-items: center;
-    justify-content: center
-    }
+    justify-content: center;
   }
-
-
-
+}
