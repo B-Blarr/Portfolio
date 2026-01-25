@@ -1,67 +1,66 @@
-@use "../../../styles/mixins" as m;
+@use '../../../styles/mixins' as m;
 
 .content {
   @include m.content-limitation();
-// padding-right: 30vw;
-width: 70%;
-margin-left: 80px;
-margin-bottom: 120px;
-position: relative;
+  width: 70%;
+  margin-left: 80px;
+  margin-bottom: 120px;
+  position: relative;
 }
 
-.description{
+.description {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 
-  & h2{
-  @include m.big-headline;
-  padding-top: 12px
-}
-
-  & h3 {
- @include m.small-headline;
-}
-
- & p {
-  font-size: 18px;
-  color: white;
-  font-family: Karla;
-  margin-top: 16px;
- }
-}
-
-.projects{
-  margin-top: 32px;
-  border-top: 1px solid var(--primary-color);
+  & h2 {
+    @include m.big-headline;
+    padding-top: 12px;
   }
 
-.project-teaser{
+  & h3 {
+    @include m.small-headline;
+  }
+
+  & p {
+    font-size: 18px;
+    color: white;
+    font-family: Karla;
+    margin-top: 16px;
+  }
+}
+
+.projects {
+  margin-top: 32px;
+  border-top: 1px solid var(--primary-color);
+}
+
+.project-teaser {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--primary-color);
   padding: 40px 32px;
   cursor: pointer;
 
-  & .project-name{
+  & .project-name {
     color: white;
     font-size: 24px;
     font-weight: 700;
     font-family: Fira Code;
   }
 
-  & .used-technologies{
+  & .used-technologies {
     font-size: 18px;
     font-family: Karla;
     color: white;
   }
 
   & .used-technologies span + span::before {
-  content: " | ";
-  color: var(--primary-color);
-}
+    content: ' | ';
+    color: var(--primary-color);
+  }
 }
 
 .stage {
@@ -71,8 +70,6 @@ position: relative;
   position: relative;
 }
 
-/* :host umschließt die gesamte Komponente.
-   Alles darin hat eine etwas höhere Priorität als "lose" Styles. */
 :host {
   .overlay-layer {
     position: fixed;

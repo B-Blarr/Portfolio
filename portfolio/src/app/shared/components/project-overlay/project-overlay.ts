@@ -13,6 +13,7 @@ export type ProjectData = {
   description: string;
   imageUrl: string;
   techs: ProjectTech[];
+  github: string;
 };
 
 @Component({
@@ -24,8 +25,8 @@ export type ProjectData = {
 export class ProjectOverlay {
 @Input({ required: true }) project!: ProjectData;
 @Output() close = new EventEmitter<void>();
+@Output() next = new EventEmitter<void>();
 
-  // Das macht es "professionell": Hören auf die ESC-Taste
  @HostListener('document:keydown.escape')
   onEscapePressed() {
     this.close.emit();
@@ -33,5 +34,9 @@ export class ProjectOverlay {
 
   onClose() {
     this.close.emit();
+  }
+
+  onNext(){
+  this.next.emit();
   }
 }

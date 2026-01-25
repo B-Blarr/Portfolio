@@ -18,7 +18,13 @@
       </div>
     </aside>
     <div class="button-area">
-      <app-animated-button><span>GitHub</span><img src="/icons/arrow-out.svg" alt="Arrow out"></app-animated-button>
+      <app-animated-button><a [href]="project.github" target="_blank" class="github-link">
+
+      <span>GitHub</span>
+
+      <img src="/icons/arrow-out.svg" alt="Arrow out">
+  </a></app-animated-button>
+      <!-- <app-animated-button><a href="https://github.com/B-Blarr" target="_blank"><span>GitHub</span><img src="/icons/arrow-out.svg" alt="Arrow out"></a></app-animated-button> -->
       <app-animated-button><span>Live Test <img src="/icons/arrow-out.svg" alt="Arrow out"></span></app-animated-button>
     </div>
   </article>
@@ -28,7 +34,7 @@
 
     <img class="project-image" [src]="project.imageUrl" [alt]="project.title" />
 
-    <button class="next-project-button"><span>Next project</span>
+    <button class="next-project-button" (click)="onNext()"><span>Next project</span>
       <div class="arrow-icon">
       <img src="/icons/arrow-right-nohover.svg" alt="Arrow Left">
     </div>

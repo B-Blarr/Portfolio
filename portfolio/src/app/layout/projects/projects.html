@@ -1,50 +1,47 @@
 <div class="stage">
-<section class="content">
-  <div class="description">
-    <h3>Portfolio</h3>
-    <h2>Featured Projects</h2>
-    <p>
-      Explore a selection of my work here - Interact with <br />
-      projects to see my skills in action.
-    </p>
-  </div>
-  <article class="projects">
-    <!-- <div class="dividing line"></div> -->
-    <aside class="project-teaser" (click)="openJoinOverlay()">
-      <span class="project-name">Join</span>
-      <span class="used-technologies"
-        ><span>Angular</span><span>TypeScript</span><span>HTML</span><span>SCSS</span
-        ><span>Supabase</span></span
+  <section class="content">
+    <div class="description">
+      <h3>Portfolio</h3>
+      <h2>Featured Projects</h2>
+      <p>
+        Explore a selection of my work here - Interact with <br />
+        projects to see my skills in action.
+      </p>
+    </div>
+    <article class="projects">
+      <aside
+        class="project-teaser"
+        *ngFor="let project of projectsList"
+        (click)="openOverlay(project)"
       >
-    </aside>
-    <!-- <div class="dividing line"></div> -->
-    <aside class="project-teaser">
-      <span class="project-name">El Pollo Loco</span>
-      <span class="used-technologies"><span>HTML</span><span>CSS</span><span>JavaScript</span></span>
-    </aside>
-    <!-- <div class="dividing line"></div> -->
-    <aside class="project-teaser">
-      <span class="project-name">Pokedex</span>
-      <span class="used-technologies"
-        ><span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>REST-API</span></span
-      >
-    </aside>
-    <!-- <div class="dividing line"></div> -->
-  </article>
-</section>
+        <span class="project-name">{{ project.subtitle }}</span>
+        <span class="used-technologies"
+          ><span>Angular</span><span>TypeScript</span><span>HTML</span><span>SCSS </span
+          ><span>Supabase</span>
+        </span>
+      </aside>
+      <!-- <aside class="project-teaser" (click)="openElPolloLocoOverlay()">
+        <span class="project-name">El Pollo Loco</span>
+        <span class="used-technologies"
+          ><span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </span>
+      </aside>
+      <aside class="project-teaser" (click)="openPokedexOverlay()">
+        <span class="project-name">Pokédex</span>
+        <span class="used-technologies"
+          ><span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>REST-API</span>
+        </span>
+      </aside> -->
+    </article>
+  </section>
 
-<!-- <app-project-overlay ></app-project-overlay> -->
-
-<!-- <div class="overlay-layer" *ngIf="isOverlayOpen && selectedProject">
-    <app-project-overlay [project]="selectedProject!"></app-project-overlay>
+  <div class="overlay-layer" *ngIf="isOverlayOpen && selectedProject">
+    <app-project-overlay [project]="selectedProject!"
+    (close)="isOverlayOpen = false"
+    (next)="nextProject()">
+    </app-project-overlay>
   </div>
-</div> -->
-
-<div class="overlay-layer" *ngIf="isOverlayOpen && selectedProject">
-  <app-project-overlay
-      [project]="selectedProject!"
-      (close)="isOverlayOpen = false"> </app-project-overlay>
 </div>
