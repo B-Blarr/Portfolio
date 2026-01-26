@@ -3,6 +3,7 @@
   max-width: 1440px;
   display: flex;
   flex-direction: $direction;
+  margin: 0 auto;
 }
 
 @mixin small-headline {

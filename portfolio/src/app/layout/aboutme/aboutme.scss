@@ -20,31 +20,33 @@
   border-radius: 30px;
   isolation: isolate;
   padding-bottom: 30px;
+  padding-left: 30px;
 
   &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  opacity: 0;
 
-    opacity: 0;
-    transition: opacity 600ms ease;
+  /* Versatz: so “steht” die Stripe-Fläche unten/rechts raus */
+  top: 30px;
+  right: 30px;
 
-    background:
-      repeating-linear-gradient(
-          45deg,
-          color-mix(in srgb, var(--primary-color) 95%, transparent) 0 1px,
-          transparent 2px 24px
-        )
-        left 6px bottom / 48px calc(100% - 40px) no-repeat,
-      repeating-linear-gradient(
-          45deg,
-          color-mix(in srgb, var(--primary-color) 95%, transparent) 0 1px,
-          transparent 2px 24px
-        )
-        left bottom 6px / calc(100% - 40px) 24px no-repeat;
-  }
+  /* gleiche Größe wie die Box – dadurch wirkt’s wie im Project */
+  width: 568px;
+  height: 568px;
+
+  border-radius: inherit;
+  pointer-events: none;
+
+  background: repeating-linear-gradient(
+    45deg,
+    color-mix(in srgb, var(--primary-color) 95%, transparent) 0 1px,
+    transparent 1px 24px
+  );
+
+  /* hinter dem Bild */
+  z-index: 0;
+}
 
   &:hover::after {
     opacity: 1;
