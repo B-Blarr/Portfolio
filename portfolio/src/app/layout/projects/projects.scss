@@ -58,15 +58,33 @@
   cursor: pointer;
   transition: 0.2s ease-in;
 
-  &:hover{
+  &:hover {
     background: rgba(61, 207, 182, 0.3);
+
+    & .project-name-arrow .hover-arrow {
+      opacity: 1;
+      transition: opacity 150ms ease;
+    }
   }
 
-  & .project-name {
-    color: white;
-    font-size: 24px;
-    font-weight: 700;
-    font-family: Fira Code;
+  & .project-name-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    & .project-name {
+      color: white;
+      font-size: 24px;
+      font-weight: 700;
+      font-family: Fira Code;
+    }
+
+    & .hover-arrow {
+      width: 12px;
+      height: 12px;
+      opacity: 0;
+    }
   }
 
   & .used-technologies {

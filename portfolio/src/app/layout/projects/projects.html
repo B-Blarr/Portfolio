@@ -17,7 +17,10 @@
           (mouseenter)="setHover(project.subtitle)"
           (mouseleave)="clearHover()"
         >
-          <span class="project-name">{{ project.subtitle }}</span>
+          <div class="project-name-arrow">
+            <span class="project-name">{{ project.subtitle }}</span>
+            <img class="hover-arrow" src="/icons/arrow-out.white.svg" alt="Arrow Out" />
+          </div>
           <span class="used-technologies">
             <span *ngFor="let tech of project.techs">{{ tech.name }}</span>
           </span>
