@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class Header {
 
+  activeLanguage: 'de' | 'en' = 'en';
+
+  setActiveLanguage(language: 'de' | 'en' ) {
+    this.activeLanguage = language;
+  }
 }

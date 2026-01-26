@@ -2,7 +2,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 16px 32px;
+  padding: 24px 32px;
   max-width: 1440px;
   font-family: Fira Code;
 
@@ -24,8 +24,14 @@ header {
   padding-left: 12px;
   border: none;
   background-color: transparent;
-  color: white;
+  color: #3DCFB680;
   border-radius: 100px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover{
+    color: var(--primary-color);
+  }
 
   &.active{
     color: white;
@@ -50,7 +56,7 @@ header {
     border-radius: 50%;
     background-color: var(--primary-color);
     position: absolute;
-    bottom: -1px;
+    bottom: -5px;
     transform: scale(0);
     transition: all 0.2s ease-in-out;
   }
@@ -59,4 +65,9 @@ header {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+.logo{
+  width: 320px;
+  height: 90px;
 }

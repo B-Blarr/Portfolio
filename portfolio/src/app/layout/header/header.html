@@ -1,12 +1,16 @@
 <header>
   <div class="button-area">
     <div class="language-switch">
-      <button  class="language-button active">EN</button>
-      <button class="language-button">DE</button>
+      <button type="button" (click)="setActiveLanguage('en')"
+      [class.active]="activeLanguage === 'en'"
+      class="language-button">EN</button>
+      <button type="button" (click)="setActiveLanguage('de')"
+      [class.active]="activeLanguage === 'de'"
+      class="language-button">DE</button>
     </div>
     <button class="nav-button" ><a href="">About me</a></button>
     <button class="nav-button" ><a href="">Skills</a></button>
     <button class="nav-button" ><a href="">Projects</a></button>
   </div>
-  <img src="./favicon.ico" alt="Logo" />
+  <img class="logo" src="/icons/logo.png" alt="Logo" />
 </header>

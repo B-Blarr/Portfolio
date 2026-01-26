@@ -25,8 +25,6 @@
 .introduction-buttons {
   display: flex;
   gap: 48px;
-
-
 }
 
 h1 {
@@ -120,11 +118,11 @@ aside {
   justify-content: center;
   align-items: center;
   flex: 1;
-  width: 120vw;
-  transform: rotate(-5deg);
+  width: min(2000px, 140vw);
+  transform: translateX(-50%) rotate(-5deg);
   position: absolute;
   bottom: 80px;
-  left: -20vw;
+  left: 50%;
   background-color: rgb(255, 255, 255, 0.1);
   color: var(--primary-color);
   overflow: hidden;
@@ -132,8 +130,29 @@ aside {
   font-family: Karla;
   font-size: 32px;
   padding: 12px 32px;
+  white-space: nowrap;
   backdrop-filter: blur(5px);
-
+   background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.10) 12%,
+    rgba(255, 255, 255, 0.10) 88%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 10%,
+    #000 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 10%,
+    #000 90%,
+    transparent 100%
+  );
 }
 
 .dividing-dot {
