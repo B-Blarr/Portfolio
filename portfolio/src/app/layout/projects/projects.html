@@ -8,40 +8,42 @@
         projects to see my skills in action.
       </p>
     </div>
-    <article class="projects">
-      <aside
-        class="project-teaser"
-        *ngFor="let project of projectsList"
-        (click)="openOverlay(project)"
-      >
-        <span class="project-name">{{ project.subtitle }}</span>
-        <span class="used-technologies"
-          ><span>Angular</span><span>TypeScript</span><span>HTML</span><span>SCSS </span
-          ><span>Supabase</span>
-        </span>
-      </aside>
-      <!-- <aside class="project-teaser" (click)="openElPolloLocoOverlay()">
-        <span class="project-name">El Pollo Loco</span>
-        <span class="used-technologies"
-          ><span>HTML</span><span>CSS</span><span>JavaScript</span>
-        </span>
-      </aside>
-      <aside class="project-teaser" (click)="openPokedexOverlay()">
-        <span class="project-name">Pokédex</span>
-        <span class="used-technologies"
-          ><span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>REST-API</span>
-        </span>
-      </aside> -->
-    </article>
+    <div class="projects-wrapper">
+      <article class="projects">
+        <aside
+          class="project-teaser"
+          *ngFor="let project of projectsList"
+          (click)="openOverlay(project)"
+          (mouseenter)="setHover(project.subtitle)"
+          (mouseleave)="clearHover()"
+        >
+          <span class="project-name">{{ project.subtitle }}</span>
+          <span class="used-technologies"
+            ><span>Angular</span><span>TypeScript</span><span>HTML</span><span>SCSS </span
+            ><span>Supabase</span>
+          </span>
+        </aside>
+
+      </article>
+       <div class="project-image-stack">
+          <img
+            *ngFor="let project of projectsList; let i = index"
+            [src]="project.imageUrl"
+            [class.visible]="hoveredProjectSubtitle === project.subtitle"
+            [style.top.px]="i * 60"
+
+            alt="{{ project.subtitle }}"
+          />
+        </div>
+    </div>
   </section>
 
   <div class="overlay-layer" *ngIf="isOverlayOpen && selectedProject">
-    <app-project-overlay [project]="selectedProject!"
-    (close)="isOverlayOpen = false"
-    (next)="nextProject()">
+    <app-project-overlay
+      [project]="selectedProject!"
+      (close)="isOverlayOpen = false"
+      (next)="nextProject()"
+    >
     </app-project-overlay>
   </div>
 </div>

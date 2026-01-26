@@ -58,6 +58,7 @@ export class Projects {
 
   selectedProject: ProjectData | null = null;
   isOverlayOpen = false;
+  hoveredProjectSubtitle: string | null = null;
 
   openOverlay(project: ProjectData): void {
     this.selectedProject = project;
@@ -73,4 +74,12 @@ export class Projects {
     const nextIndex = (currentIndex + 1) % this.projectsList.length;
     this.selectedProject = this.projectsList[nextIndex];
   }
+
+  setHover(subtitle: string): void {
+  this.hoveredProjectSubtitle = subtitle;
+}
+
+clearHover(): void {
+  this.hoveredProjectSubtitle = null;
+}
 }
