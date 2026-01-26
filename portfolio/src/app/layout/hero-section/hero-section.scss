@@ -3,6 +3,8 @@
 .hero-content {
   @include m.content-limitation();
   height: 100%;
+  padding-right: 80px;
+  padding-left: 80px;
 }
 
 .hero-area {
@@ -10,7 +12,6 @@
   justify-content: space-between;
   flex: 1;
   height: 100%;
-  padding: 0 32px;
 }
 
 .developer-introduction {
@@ -106,7 +107,6 @@ aside {
 
 .rotate-text {
   transform: rotate(-90deg);
-  // padding-bottom: 60px;
   margin-bottom: 60px;
 
   &:hover {

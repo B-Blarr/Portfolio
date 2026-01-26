@@ -9,14 +9,14 @@
   gap: 80px;
   font-family: Karla;
   margin-bottom: 80px;
-  margin-left: 80px;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .main-image-wrap {
   position: relative;
   border-radius: 30px;
   isolation: isolate;
-  padding-left: 48px;
   padding-bottom: 30px;
 
   &::after {
@@ -46,7 +46,6 @@
 
   &:hover::after {
     opacity: 1;
-    // transform: translate(-10px, 10px);
   }
 
   & .main-image {

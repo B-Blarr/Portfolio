@@ -18,26 +18,23 @@
           (mouseleave)="clearHover()"
         >
           <span class="project-name">{{ project.subtitle }}</span>
-          <span class="used-technologies"
-            ><span>Angular</span><span>TypeScript</span><span>HTML</span><span>SCSS </span
-            ><span>Supabase</span>
+          <span class="used-technologies">
+            <span *ngFor="let tech of project.techs">{{ tech.name }}</span>
           </span>
         </aside>
-
       </article>
-       <div class="project-image-stack">
-          <img
-            *ngFor="let project of projectsList; let i = index"
-            [src]="project.imageUrl"
-            [class.visible]="hoveredProjectSubtitle === project.subtitle"
-            [style.top.px]="i * 60"
-
-            alt="{{ project.subtitle }}"
-          />
+      <div class="project-image-stack">
+        <div
+          *ngFor="let project of projectsList; let i = index"
+          class="individual-project-container"
+          [class.visible]="hoveredProjectSubtitle === project.subtitle"
+          [style.top.px]="i * 60"
+        >
+          <img [src]="project.imageUrl" alt="{{ project.subtitle }}" />
         </div>
+      </div>
     </div>
   </section>
-
   <div class="overlay-layer" *ngIf="isOverlayOpen && selectedProject">
     <app-project-overlay
       [project]="selectedProject!"
