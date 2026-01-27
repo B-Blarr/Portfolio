@@ -7,7 +7,7 @@
   height: 100%;
   align-items: flex-start;
   background-color: #1c1c1c;
-  margin-top: 80px;
+  margin-top: 120px;
   gap: 80px;
   font-family: Karla;
   margin-bottom: 80px;
@@ -23,33 +23,33 @@
   padding-left: 30px;
 
   &::after {
-  content: "";
-  position: absolute;
-  opacity: 0;
+    content: '';
+    position: absolute;
+    opacity: 0;
+    top: 30px;
+    right: 30px;
+    width: 568px;
+    height: 568px;
+    border-radius: inherit;
+    pointer-events: none;
 
-  /* Versatz: so “steht” die Stripe-Fläche unten/rechts raus */
-  top: 30px;
-  right: 30px;
+    transform: translate(8px, -8px) scale(0.98);
+    transition:
+      opacity 220ms ease,
+      transform 220ms ease;
+    // will-change: opacity, transform;
 
-  /* gleiche Größe wie die Box – dadurch wirkt’s wie im Project */
-  width: 568px;
-  height: 568px;
-
-  border-radius: inherit;
-  pointer-events: none;
-
-  background: repeating-linear-gradient(
-    45deg,
-    color-mix(in srgb, var(--primary-color) 95%, transparent) 0 1px,
-    transparent 1px 24px
-  );
-
-  /* hinter dem Bild */
-  z-index: 0;
-}
+    background: repeating-linear-gradient(
+      45deg,
+      color-mix(in srgb, var(--primary-color) 95%, transparent) 0 1px,
+      transparent 1px 24px
+    );
+    z-index: 0;
+  }
 
   &:hover::after {
     opacity: 1;
+    transform: translate(0, 0) scale(1);
   }
 
   & .main-image {
