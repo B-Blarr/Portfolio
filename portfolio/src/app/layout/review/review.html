@@ -1,23 +1,43 @@
 <section class="content">
+  <h3>What my colleagues say about me</h3>
 
-<h3>What my colleagues say about me</h3>
-<article class="reference-area">
-@for (reference of reviewList; track reference.evaluator) {
-  <article class="reference-card">
-  <app-reference [reference]="reference"></app-reference>
-  </article>
-}
-</article>
-<aside class="reference-area--navigation">
-  <button class="arrow-button">
-  <span class="arrow-icon arrow-left" aria-hidden="true"></span>
-</button>
+  <div class="carousel-wrapper">
+    <article class="reference-area">
+      @for (reference of reviewList; track reference.evaluator; let i = $index) {
+        <article
+          class="reference-card"
+          [class.active]="i === currentIndex"
+          [class.prev]="i === getPrevIndex()"
+          [class.next]="i === getNextIndex()"
+          [style.transform]="getCardTransform(i)"
+          [style.transition]="getCardTransition(i)"
+          [style.opacity]="getCardOpacity(i)"
+          [style.z-index]="getCardZIndex(i)"
+        >
+          <app-reference [reference]="reference"></app-reference>
+        </article>
+      }
+    </article>
+  </div>
 
+  <aside class="reference-area--navigation">
+    <button class="arrow-button" (click)="previousSlide()" aria-label="Previous review">
+      <span class="arrow-icon arrow-left" aria-hidden="true"></span>
+    </button>
 
-<button class="arrow-button">
-  <span class="arrow-icon arrow-right" aria-hidden="true"></span>
-  </button>
-</aside>
+    <div class="dots-container">
+      @for (reference of reviewList; track reference.evaluator; let i = $index) {
+        <button
+          class="dot"
+          [class.active]="i === currentIndex"
+          (click)="goToSlide(i)"
+          [attr.aria-label]="'Go to review ' + (i + 1)"
+        ></button>
+      }
+    </div>
+
+    <button class="arrow-button" (click)="nextSlide()" aria-label="Next review">
+      <span class="arrow-icon arrow-right" aria-hidden="true"></span>
+    </button>
+  </aside>
 </section>
-
-
