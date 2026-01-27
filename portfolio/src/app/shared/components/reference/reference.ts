@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+
+
+export type ReferenceData = {
+  text: string;
+  evaluator: string;
+}
 
 @Component({
   selector: 'app-reference',
@@ -7,5 +14,11 @@ import { Component } from '@angular/core';
   styleUrl: './reference.scss',
 })
 export class Reference {
+@Input({ required: true }) reference!: ReferenceData;
+
+
+
+
+
 
 }

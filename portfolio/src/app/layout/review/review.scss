@@ -1,15 +1,43 @@
 @use '../../../styles/mixins' as m;
 
-content{
-@include m.content-limitation(row);
-justify-content: center;
-align-items: center;
-// height: 450px;
+.content {
+  @include m.content-limitation();
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Karla;
+
+  gap: 32px;
 }
 
-h3{
+h3 {
   font-family: Fira Code;
   font-size: 32px;
   color: var(--primary-color);
   text-align: center;
+}
+
+.reference-area {
+  display: flex;
+  padding: 16px;
+  gap: 40px;
+}
+
+.reference-card {
+  background: rgba(61, 207, 182, 0.3);
+  border: 1px solid var(--primary-color);
+  border-radius: 32px;
+  padding: 40px;
+  width: 520px;
+  height: 280px;
+}
+
+.reviewer {
+  // padding-bottom: 16px;
+}
+
+.line {
+}
+
+.evaluator {
 }
