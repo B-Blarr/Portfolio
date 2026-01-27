@@ -1,160 +1,3 @@
-// @use '../../../styles/mixins' as m;
-
-// .content {
-//   @include m.content-limitation();
-//   justify-content: center;
-//   align-items: center;
-//   color: white;
-//   font-family: Karla;
-
-//   gap: 32px;
-// }
-
-// h3 {
-//   font-family: Fira Code;
-//   font-size: 32px;
-//   color: var(--primary-color);
-//   text-align: center;
-// }
-
-// .carousel-wrapper {
-//   width: 100%;
-//   overflow: hidden;
-//   padding: 16px 0;
-// }
-
-// .reference-area {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   gap: 40px;
-//   padding: 16px;
-//   position: relative;
-// }
-
-// .reference-card {
-//   background: rgba(61, 207, 182, 0.3);
-//   border: 1px solid var(--primary-color);
-//   border-radius: 32px;
-//   padding: 40px;
-//   width: 520px;
-//   height: 280px;
-//   flex-shrink: 0;
-//   display: none;
-//   opacity: 0.4;
-//   transform: scale(0.85);
-//   transition: all 400ms ease;
-
-//   &.active {
-//     display: block;
-//     opacity: 1;
-//     transform: scale(1);
-//     z-index: 3;
-//   }
-
-//   &.prev {
-//     display: block;
-//     opacity: 0.5;
-//     transform: scale(0.85) translateX(20px);
-//     z-index: 1;
-//   }
-
-//   &.next {
-//     display: block;
-//     opacity: 0.5;
-//     transform: scale(0.85) translateX(-20px);
-//     z-index: 1;
-//   }
-// }
-
-// .reviewer {
-//   // padding-bottom: 16px;
-// }
-
-// .line {
-// }
-
-// .evaluator {
-// }
-
-// .reference-area--navigation {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   gap: 16px;
-// }
-
-// .arrow-button {
-//   background-color: transparent;
-//   border: none;
-//   cursor: pointer;
-//   transition: transform 160ms ease;
-//   padding: 8px;
-
-//   &:hover .arrow-icon {
-//     transform: scale(1.12);
-//   }
-
-//   &:hover .arrow-left {
-//     background-image: url('/icons/arrow-left-hover.svg');
-//     transform: translateX(-3px);
-//   }
-
-//   &:hover .arrow-right {
-//     background-image: url('/icons/arrow-right-hover.svg');
-//     transform: translateX(3px);
-//   }
-
-//   .arrow-icon {
-//     display: inline-block;
-//     width: 18px;
-//     height: 18px;
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-size: contain;
-//     transition: transform 160ms ease;
-//   }
-
-//   .arrow-button:hover .arrow-icon {
-//     transform: scale(1.12);
-//   }
-
-//   .arrow-left {
-//     background-image: url('/icons/arrow-left-white.svg');
-//   }
-//   .arrow-right {
-//     background-image: url('/icons/arrow-right-white.svg');
-//   }
-// }
-
-// .dots-container {
-//   display: flex;
-//   gap: 12px;
-//   align-items: center;
-// }
-
-// .dot {
-//   width: 12px;
-//   height: 12px;
-//   border-radius: 50%;
-//   background-color: rgba(255, 255, 255, 0.4);
-//   border: none;
-//   cursor: pointer;
-//   transition: all 200ms ease;
-//   padding: 0;
-
-//   &:hover {
-//     background-color: rgba(255, 255, 255, 0.6);
-//     transform: scale(1.15);
-//   }
-
-//   &.active {
-//     background-color: var(--primary-color);
-//     transform: scale(1.2);
-//   }
-// }
-
-
 @use '../../../styles/mixins' as m;
 
 .content {
@@ -164,6 +7,7 @@
   color: white;
   font-family: Karla;
   gap: 32px;
+  margin-bottom: 120px;
 }
 
 h3 {
@@ -175,10 +19,26 @@ h3 {
 
 .carousel-wrapper {
   width: 100%;
-  overflow: hidden; // Versteckt Cards außerhalb
+  overflow: hidden;
   padding: 16px 0;
   position: relative;
   height: 350px;
+
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
 }
 
 .reference-area {
@@ -197,23 +57,18 @@ h3 {
   width: 520px;
   height: 280px;
 
-  // Absolute Positionierung für Carousel
   position: absolute;
   left: 50%;
-  margin-left: -260px; // Halbe Breite = Zentrierung
-
-  // Transform und Opacity werden per [style] im HTML gesteuert
+  margin-left: -260px;
   pointer-events: none;
   will-change: transform, opacity;
 
-  // Aktive Card (Mitte)
   &.active {
     transform: scale(1);
     z-index: 3;
     pointer-events: auto;
   }
 
-  // Nachbar-Cards (Links/Rechts)
   &.prev,
   &.next {
     transform: scale(0.85);
@@ -275,8 +130,8 @@ h3 {
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.4);
   border: none;
