@@ -10,40 +10,46 @@
     </div>
     <div class="projects-wrapper">
       <article class="projects">
-        <aside
-          class="project-teaser"
-          *ngFor="let project of projectsList"
-          (click)="openOverlay(project)"
-          (mouseenter)="setHover(project.subtitle)"
-          (mouseleave)="clearHover()"
-        >
-          <div class="project-name-arrow">
-            <span class="project-name">{{ project.subtitle }}</span>
-            <img class="hover-arrow" src="/icons/arrow-out.white.svg" alt="Arrow Out" />
-          </div>
-          <span class="used-technologies">
-            <span *ngFor="let tech of project.techs">{{ tech.name }}</span>
-          </span>
-        </aside>
+        @for (project of projectsList; track project.subtitle) {
+          <aside
+            class="project-teaser"
+            (click)="openOverlay(project)"
+            (mouseenter)="setHover(project.subtitle)"
+            (mouseleave)="clearHover()"
+          >
+            <div class="project-name-arrow">
+              <span class="project-name">{{ project.subtitle }}</span>
+              <img class="hover-arrow" src="/icons/arrow-out.white.svg" alt="Arrow Out" />
+            </div>
+            <span class="used-technologies">
+              @for (tech of project.techs; track tech.name) {
+                <span>{{ tech.name }}</span>
+              }
+            </span>
+          </aside>
+        }
       </article>
       <div class="project-image-stack">
-        <div
-          *ngFor="let project of projectsList; let i = index"
-          class="individual-project-container"
-          [class.visible]="hoveredProjectSubtitle === project.subtitle"
-          [style.top.px]="i * 60"
-        >
-          <img [src]="project.imageUrl" alt="{{ project.subtitle }}" />
-        </div>
+        @for (project of projectsList; track project.subtitle; let i = $index) {
+          <div
+            class="individual-project-container"
+            [class.visible]="hoveredProjectSubtitle === project.subtitle"
+            [style.top.px]="i * 60"
+          >
+            <img [src]="project.imageUrl" alt="{{ project.subtitle }}" />
+          </div>
+        }
       </div>
     </div>
   </section>
-  <div class="overlay-layer" *ngIf="isOverlayOpen && selectedProject">
-    <app-project-overlay
-      [project]="selectedProject!"
-      (close)="isOverlayOpen = false"
-      (next)="nextProject()"
-    >
-    </app-project-overlay>
-  </div>
+  @if (isOverlayOpen && selectedProject) {
+    <div class="overlay-layer">
+      <app-project-overlay
+        [project]="selectedProject!"
+        (close)="isOverlayOpen = false"
+        (next)="nextProject()"
+      >
+      </app-project-overlay>
+    </div>
+  }
 </div>

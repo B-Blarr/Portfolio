@@ -8,7 +8,8 @@
     <p class="project-description">{{ project.description }}</p>
 
     <aside class="tech">
-      <div *ngFor="let tech of project.techs" class="tech-item">
+      @for(tech of project.techs; track tech.name) {
+      <div class="tech-item">
         <div
           class="icon-mask"
           [style.mask-image]="'url(' + tech.iconUrl + ')'"
@@ -16,6 +17,7 @@
         ></div>
         <span class="tech-name">{{ tech.name }}</span>
       </div>
+    }
     </aside>
     <div class="button-area">
       <app-animated-button><a [href]="project.github" target="_blank" class="github-link">
@@ -24,8 +26,8 @@
 
       <img src="/icons/arrow-out.svg" alt="Arrow out">
   </a></app-animated-button>
-      <!-- <app-animated-button><a href="https://github.com/B-Blarr" target="_blank"><span>GitHub</span><img src="/icons/arrow-out.svg" alt="Arrow out"></a></app-animated-button> -->
-      <app-animated-button><span>Live Test <img src="/icons/arrow-out.svg" alt="Arrow out"></span></app-animated-button>
+
+      <app-animated-button><a [href]="project.livetest" target="_blank" ><span>Live Test</span><img src="/icons/arrow-out.svg" alt="Arrow out"></a></app-animated-button>
     </div>
   </article>
 

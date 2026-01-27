@@ -114,10 +114,8 @@ h3 {
 .image-area {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   justify-content: space-between;
   gap: 40px;
-  // gap: clamp(20px, 3vw, 60px);
   align-items: flex-end;
   flex: 1 1 60%;
   height: 100%;
@@ -152,14 +150,9 @@ h3 {
 .project-image {
   border-radius: 30px;
   width: 100%;
-  // height: auto;
   object-fit: cover;
-  // max-height: 60vh;
-  // margin-top: auto;
   max-height: 65%;
 margin: auto 0;
-  /* UND es drückt sich vom Next-Button (unten) weg */
-  // margin-bottom: auto;
 }
 
 .next-project-button {

@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import {ProjectOverlay,ProjectData,} from '../../shared/components/project-overlay/project-overlay';
-import { NgIf, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-projects',
-  imports: [ProjectOverlay, NgIf, NgFor],
+  imports: [ProjectOverlay],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
+
 export class Projects {
   projectsList: ProjectData[] = [
     {
@@ -24,6 +24,7 @@ export class Projects {
         { name: 'Supabase', iconUrl: '/icons/supabase.svg' },
       ],
       github: 'https://github.com/B-Blarr',
+      livetest: 'https://github.com/B-Blarr',
     },
 
     {
@@ -38,6 +39,7 @@ export class Projects {
         { name: 'CSS', iconUrl: '/icons/css.svg' },
       ],
       github: 'https://github.com/B-Blarr/El-Pollo-Loco',
+      livetest: 'https://github.com/B-Blarr',
     },
 
     {
@@ -53,6 +55,7 @@ export class Projects {
         { name: 'REST-API', iconUrl: '/icons/rest-api.svg' },
       ],
       github: 'https://github.com/B-Blarr/Pokedex',
+      livetest: 'https://github.com/B-Blarr',
     },
   ];
 

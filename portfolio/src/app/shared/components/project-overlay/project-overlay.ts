@@ -1,5 +1,4 @@
 import {Component, HostListener, Output, EventEmitter, Input} from '@angular/core';
-import { NgFor } from '@angular/common';
 import { AnimatedButton } from '../animated-button/animated-button';
 
 export type ProjectTech = {
@@ -14,11 +13,12 @@ export type ProjectData = {
   imageUrl: string;
   techs: ProjectTech[];
   github: string;
+  livetest: string;
 };
 
 @Component({
   selector: 'app-project-overlay',
-  imports: [AnimatedButton, NgFor],
+  imports: [AnimatedButton],
   templateUrl: './project-overlay.html',
   styleUrl: './project-overlay.scss',
 })

@@ -41,3 +41,56 @@ h3 {
 
 .evaluator {
 }
+
+.reference-area--navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.arrow-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 160ms ease;
+  padding: 8px;
+
+  &:hover .arrow-icon {
+    transform: scale(1.12);
+  }
+
+  &:hover .arrow-left {
+    background-image: url('/icons/arrow-left-hover.svg');
+    transform: translateX(-3px);
+  }
+
+  &:hover .arrow-right {
+    background-image: url('/icons/arrow-right-hover.svg');
+    transform: translateX(3px);
+  }
+
+  .arrow-icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: transform 160ms ease;
+  }
+
+  .arrow-button:hover .arrow-icon {
+    transform: scale(1.12);
+  }
+
+  .arrow-left {
+    background-image: url('/icons/arrow-left-white.svg');
+  }
+  .arrow-right {
+    background-image: url('/icons/arrow-right-white.svg');
+  }
+
+  white-dot {
+  }
+}
