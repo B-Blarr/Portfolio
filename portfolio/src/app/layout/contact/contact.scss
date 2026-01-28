@@ -44,3 +44,8 @@
     color: var(--primary-color);
   }
 }
+
+.form-area{
+  display: flex;
+  flex-direction: column;
+}

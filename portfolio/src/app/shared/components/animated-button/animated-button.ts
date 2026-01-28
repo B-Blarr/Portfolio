@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-animated-button',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './animated-button.scss',
 })
 export class AnimatedButton {
-
+@Input() disabled: boolean = false;
 }
