@@ -45,12 +45,15 @@
   color: white;
   font-size: 16px;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   div {
     position: relative;
     padding-left: 1rem;
 
     &:hover {
-      cursor: pointer;
       color: var(--primary-color);
     }
 
