@@ -12,4 +12,10 @@ button {
       color: var(--primary-color);
       cursor: pointer;
     }
+
+  &[disabled] {
+  border: 1px solid #FFFFFF80;
+  color: #FFFFFF80;
+
   }
+}

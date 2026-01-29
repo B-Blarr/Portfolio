@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AnimatedButton } from '../animated-button/animated-button';
 
@@ -9,7 +9,17 @@ import { AnimatedButton } from '../animated-button/animated-button';
   styleUrl: './form.scss',
 })
 export class Form {
+constructor(private cdr: ChangeDetectorRef) {}
+
+ngOnInit() {
+
+  this.userform.valueChanges.subscribe(() => {
+    this.cdr.detectChanges();
+  });
+}
+
   isFormInvalid = true;
+  formSubmitted = false;
 
   userform = new FormGroup({
     name: new FormControl("Your name goes here.", {
@@ -63,10 +73,12 @@ export class Form {
   }
 
 formSubmit(){
-if (this.userform.valid) {
-  console.warn(this.userform.value);
-  // this.formReset()
-}
+this.formSubmitted = true;
+
+  if (this.userform.valid) {
+    console.warn(this.userform.value);
+
+  }
 
 }
 

@@ -1,61 +1,65 @@
 <form class="contact-form" [formGroup]="userform" (ngSubmit)="formSubmit()">
-  <div class="dividing-line"></div>
+  <div>
+    <div class="input-container border-top">
+      <label class="label" for="name">What's your name?</label>
+      <input
+        class="input"
+        id="name"
+        type="text"
+        formControlName="name"
+        [placeholder]="getNamePlaceholder()"
+      />
+    </div>
 
-  <div class="input-container">
-    <label class="label" for="name">What's your name?</label>
-    <input
-      class="input"
-      id="name"
-      type="text"
-      formControlName="name"
-      [placeholder]="getNamePlaceholder()"
-    />
+    <div class="input-container">
+      <label class="label" for="mail">What's your email?</label>
+      <input
+        class="input"
+        id="mail"
+        type="text"
+        formControlName="email"
+        [placeholder]="getEmailPlaceholder()"
+      />
+    </div>
+
+
+    <div class="input-container">
+      <label class="label" for="message">How can I help you?</label>
+      <input
+        class="input"
+        id="message"
+        type="text"
+        formControlName="message"
+        [placeholder]="getMessagePlaceholder()"
+      />
+    </div>
+
+
+    <div class="privacy-policy">
+      <div class="checkbox">
+        <input
+          class="checkbox-box"
+          type="checkbox"
+          id="confirmation-checkbox"
+          formControlName="privacyAccepted"
+        />
+        <label class="checkbox-text" for="confirmation-checkbox">
+          I've read the <span class="highlighted">privacy policy</span> and agree to the
+          processing of my data as outlined.
+        </label>
+      </div>
+
+      <div class="error-container">
+        @if (formSubmitted && userform.get('privacyAccepted')?.invalid) {
+          <p class="error-message">
+            Please accept the privacy policy.
+          </p>
+        }
+      </div>
+    </div>
   </div>
 
-  <div class="dividing-line"></div>
-
-  <div class="input-container">
-    <label class="label" for="mail">What's your email?</label>
-    <input
-      class="input"
-      id="mail"
-      type="text"
-      formControlName="email"
-      [placeholder]="getEmailPlaceholder()"
-    />
-  </div>
-
-  <div class="dividing-line"></div>
-
-  <div class="input-container">
-    <label class="label" for="message">How can I help you?</label>
-    <input
-      class="input"
-      id="message"
-      type="text"
-      formControlName="message"
-      [placeholder]="getMessagePlaceholder()"
-    />
-  </div>
-
-  <div class="dividing-line"></div>
-
-  <div class="checkbox">
-    <input
-      class="checkbox-box"
-      type="checkbox"
-      name="confirmation-checkbox"
-      id="confirmation-checkbox"
-      formControlName="privacyAccepted"
-    />
-    <label class="checkbox-text" for="confirmation-checkbox">
-     <p class="checkbox-text"> I've read the <span class="highlighted">privacy policy</span> and agree to the processing of
-      my data as outlined.</p>
-    </label>
-  </div>
-
-  <app-animated-button [type]="'submit'"><span>Say Hello ;)</span></app-animated-button>
+  <app-animated-button [type]="'submit'" [class.btn-disabled]="userform.invalid">
+    <span>Say Hello ;)</span>
+  </app-animated-button>
 </form>
-
-<!-- <app-animated-button [type]="'submit'" [disabled] = "isFormInvalid"><span>Say Hello ;)</span></app-animated-button>
-</form> -->

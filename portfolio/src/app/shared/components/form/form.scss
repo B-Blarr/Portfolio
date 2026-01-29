@@ -1,9 +1,3 @@
-.dividing-line {
-  width: 100%;
-  height: 1px;
-  background-color: var(--primary-color);
-}
-
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -17,7 +11,29 @@
   gap: 32px;
   padding: 32px;
   gap: 16px;
-  color: white;
+  color: #ffffffcc;
+  cursor: pointer;
+  border-bottom: 1px solid #3dcfb680;
+  transition: transform 100ms ease-in;
+  border-top: 1px solid transparent;
+
+  & .label {
+    cursor: pointer;
+  }
+
+  & .input{
+    font-family: Karla;
+  }
+
+  &:hover {
+    border-bottom: 1px solid var(--primary-color);
+    border-top: 1px solid var(--primary-color);
+    color: white;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #3dcfb680;
 }
 
 .label {
@@ -34,13 +50,17 @@
   border: none;
 }
 
+.privacy-policy {
+  display: flex;
+}
+
 .checkbox {
   display: flex;
   gap: 8px;
   align-items: center;
 
   & .checkbox-box {
-     appearance: none;
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 
@@ -59,12 +79,11 @@
       box-shadow: 0 0 0 3px rgba(64, 181, 173, 0.25);
     }
 
-
     &:checked {
       border-color: var(--primary-color);
 
-    &::after {
-       content: '';
+      &::after {
+        content: '';
         position: absolute;
         left: 4px;
         top: 1px;
@@ -73,8 +92,8 @@
         border: solid var(--primary-color);
         border-width: 0 2px 2px 0;
         transform: rotate(45deg);
+      }
     }
-  }
   }
 
   & .checkbox-text {
@@ -84,6 +103,47 @@
 
     & .highlighted {
       color: var(--primary-color);
+
+      &:hover{
+        color: white;
+        text-decoration: underline var(--primary-color);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.privacy-policy {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  gap: 16px;
+}
+
+.error-container {
+  min-height: 30px;
+}
+
+.error-message {
+  font-family: Karla;
+  color: #ec7b7b;
+  font-size: 14px;
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+    color: #ec7b7b;
+  }
+}
+
+app-animated-button {
+
+
+  &.btn-disabled {
+    ::ng-deep button {
+      cursor: default !important;
+      border: 1px solid #FFFFFF80;
+      color: #FFFFFF80;
     }
   }
 }
