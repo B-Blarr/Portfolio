@@ -2,9 +2,10 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 24px 32px;
+  // padding: 0 32px;
   max-width: 1440px;
   font-family: Fira Code;
+
 
   .button-area {
     display: flex;
@@ -69,5 +70,5 @@ header {
 
 .logo{
   width: 320px;
-  height: 90px;
+  // height: 110px;
 }

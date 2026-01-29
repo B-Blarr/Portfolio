@@ -1,7 +1,7 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  align-items: center;
   width: 620px;
 }
 
@@ -137,7 +137,6 @@
 }
 
 app-animated-button {
-
 
   &.btn-disabled {
     ::ng-deep button {

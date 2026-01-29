@@ -1,0 +1,75 @@
+@use '../../../styles/mixins' as m;
+
+.content {
+  @include m.content-limitation(row);
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 80px;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Karla;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  // align-items: flex-start;
+  font-size: 16px;
+  color: white;
+
+  & .footer-logo-text {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    gap: 8px;
+  }
+
+  & img {
+    width: 320px;
+    max-height: 120px;
+  }
+}
+
+.copyright {
+  font-family: Fira Code;
+  font-size: 18px;
+  color: var(--primary-color);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+  font-size: 16px;
+
+  div {
+    position: relative;
+    padding-left: 1rem;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--primary-color);
+    }
+
+    &::before {
+      content: '';
+      opacity: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      position: absolute;
+      left: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+}
