@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class AnimatedButton {
 @Input() disabled: boolean = false;
+@Input() type: 'button' | 'submit' = "button";
 }
