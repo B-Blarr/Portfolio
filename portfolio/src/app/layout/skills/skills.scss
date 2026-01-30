@@ -125,6 +125,11 @@ h3 {
   }
 }
 
+::ng-deep .highlight {
+  color: var(--primary-color);
+}
+
+
 app-animated-button {
   align-self: flex-start;
 }

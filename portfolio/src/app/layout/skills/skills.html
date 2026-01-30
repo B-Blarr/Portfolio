@@ -1,22 +1,20 @@
 <div class="skills-wrapper-full" id="skills-section">
   <section class="content">
     <div class="technologies">
-      <h3>Technologies</h3>
+      <h3>{{"skills.technologies" | translate}}</h3>
       <article class="skillset-text">
-        <h2>Skill Set</h2>
+        <h2>{{"skills.skillset" | translate}}</h2>
         <div class="skill-text-area">
           <p class="main-text">
-            Frontend development changes fast, and I keep up by staying consistent: I invest a lot
-            of time, practice regularly and refine my skills step by step. I enjoy learning new
-            techniques and tools and applying them in real projects.
+            {{"skills.mainText" | translate}}
           </p>
 
-          <p class="request-skill">You need <span>another skill?</span></p>
+          <p class="request-skill" [innerHTML]="'skills.request' | translate"></p>
         </div>
         <p class="request-contact">
-          Feel free to contact me. I look forward t oexpanding on my previous knowledge.
+          {{"skills.requestText" | translate}}
         </p>
-        <app-animated-button>Let's Talk</app-animated-button>
+        <app-animated-button>{{"skills.button" | translate}}</app-animated-button>
       </article>
     </div>
     <aside class="tech-stack">
@@ -62,11 +60,9 @@
       </div>
       <div class="tech-stack-icon highlight">
         <img src="/icons/mindset.svg" alt="Mindset Logo" />
-        <span>Growth<br />mindset</span>
+        <span [innerHTML]="'skills.mindset' | translate"></span>
         <div class="speechbubble">
-          <p>
-            I have a special<br />
-            interest in learning
+          <p [innerHTML]="'skills.interest' | translate">
           </p>
           <div class="special-interests">
             <div class="single-interest">

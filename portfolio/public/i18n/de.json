@@ -4,8 +4,22 @@
     "skills": "Fähigkeiten",
     "projects": "Projekte"
   },
-  "status": {
-
+  "hero": {
+    "buttonProject": "Meine Projekte",
+    "buttonContact": "Kontakt",
+    "bannerOne": "Offen für Remote-Arbeit",
+    "bannerTwo": "Wohnhaft in Schöningen",
+    "bannerThree": "Offen für Jobangebote"
+  },
+  "aboutMe": {
+    "whoAmI": "Wer bin ich",
+    "aboutMe": "Über mich",
+    "introMain": "Hallo, ich bin Benjamin. Vor ein paar Jahren bin ich auf die Möglichkeiten und Herausforderungen der Softwareentwicklung gestoßen und habe mich immer mehr damit beschäftigt bis das Feuer richtig entbrannt ist und mittlerweile kann ich mir beruflich nichts mehr anderes vorstellen. Ich bin sehr lernbereit und fleißig und ich liebe es mich mit neuen Technologien auseinanderzusetzen.",
+    "introOne": "Ich wohne in Schöningen, das liegt im Bereich Braunschweig / Wolfsburg / Magdeburg, ich bin sehr offen für Remote-Arbeit und habe kein Problem mit Pendelstrecken, wenn nötig. Ein Umzug ist derzeit aber nicht geplant.",
+    "introTwo": "Ich liebe es neue Technologien zu lernen und finde mich schnell in neue Tools und Frameworks ein. Auch KI finde ich sehr spannend, sie auf praktische und sinnvolle Weise in Produkte zu integrieren.",
+    "introThree": "Um Probleme zu lösen arbeite ich strukturiert: erst das Problem verstehen, Lösungswege ausarbeiten und dann eine saubere Lösung umsetzen. Mir sind Lesbarkeit, Performance und eine großartige User Experience wichtig. Mir macht es große Freude mich in ein Team einzubringen und sich gegenseitig weiter zu bringen."
+  },
+  "skills":{
+    "technologies": ""
   }
-
 }
