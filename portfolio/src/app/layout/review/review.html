@@ -1,9 +1,9 @@
 <section class="content">
-  <h3>What my colleagues say about me</h3>
+  <h3>{{"references.headline" | translate}}</h3>
 
   <div class="carousel-wrapper">
     <article class="reference-area">
-      @for (reference of reviewList; track reference.evaluator; let i = $index) {
+      @for (reference of reviewList; track reference.evaluatorKey; let i = $index) {
         <article
           class="reference-card"
           [class.active]="i === currentIndex"
@@ -26,7 +26,7 @@
     </button>
 
     <div class="dots-container">
-      @for (reference of reviewList; track reference.evaluator; let i = $index) {
+      @for (reference of reviewList; track reference.evaluatorKey; let i = $index) {
         <button
           class="dot"
           [class.active]="i === currentIndex"

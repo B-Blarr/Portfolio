@@ -4,8 +4,8 @@
     <h2>{{ project.title }}</h2>
     <h3>{{ project.subtitle }}</h3>
 
-    <p class="question">What is this project about?</p>
-    <p class="project-description">{{ project.description }}</p>
+    <p class="question">{{ 'projects.question' | translate }}</p>
+    <p class="project-description">{{ project.descriptionKey | translate }}</p>
 
     <aside class="tech">
       @for(tech of project.techs; track tech.name) {
@@ -36,7 +36,7 @@
 
     <img class="project-image" [src]="project.imageUrl" [alt]="project.title" />
 
-    <button class="next-project-button" (click)="onNext()"><span>Next project</span>
+    <button class="next-project-button" (click)="onNext()"><span>{{"projects.nextButton" | translate}}</span>
       <div class="arrow-icon">
       <img src="/icons/arrow-right-nohover.svg" alt="Arrow Left">
     </div>

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import {ProjectOverlay,ProjectData,} from '../../shared/components/project-overlay/project-overlay';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
-  imports: [ProjectOverlay],
+  imports: [ProjectOverlay, TranslatePipe],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
@@ -13,8 +14,7 @@ export class Projects {
     {
       title: '01',
       subtitle: 'Join',
-      description:
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      descriptionKey: 'projects.join.description',
       imageUrl: '/images/join.jpg',
       techs: [
         { name: 'Angular', iconUrl: '/icons/angular.svg' },
@@ -30,8 +30,7 @@ export class Projects {
     {
       title: '02',
       subtitle: 'El Pollo Loco',
-      description:
-        'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy boss hen.',
+      descriptionKey: 'projects.polloLoco.description',
       imageUrl: '/images/pollo-loco.jpg',
       techs: [
         { name: 'JavaScript', iconUrl: '/icons/javascript.svg' },
@@ -45,8 +44,7 @@ export class Projects {
     {
       title: '03',
       subtitle: 'Pokédex',
-      description:
-        'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+      descriptionKey: 'projects.pokedex.description',
       imageUrl: '/images/pokedex.jpg',
       techs: [
         { name: 'JavaScript', iconUrl: '/icons/javascript.svg' },

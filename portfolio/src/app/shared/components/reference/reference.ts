@@ -1,15 +1,16 @@
 import { Component, Input } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 
 
 export type ReferenceData = {
-  text: string;
-  evaluator: string;
+  textKey: string;
+  evaluatorKey: string;
 }
 
 @Component({
   selector: 'app-reference',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './reference.html',
   styleUrl: './reference.scss',
 })

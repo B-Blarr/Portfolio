@@ -1,5 +1,6 @@
 import {Component, HostListener, Output, EventEmitter, Input} from '@angular/core';
 import { AnimatedButton } from '../animated-button/animated-button';
+import { TranslatePipe } from '@ngx-translate/core';
 
 export type ProjectTech = {
   iconUrl: string;
@@ -9,7 +10,7 @@ export type ProjectTech = {
 export type ProjectData = {
   title: string;
   subtitle: string;
-  description: string;
+  descriptionKey: string;
   imageUrl: string;
   techs: ProjectTech[];
   github: string;
@@ -18,7 +19,7 @@ export type ProjectData = {
 
 @Component({
   selector: 'app-project-overlay',
-  imports: [AnimatedButton],
+  imports: [AnimatedButton, TranslatePipe],
   templateUrl: './project-overlay.html',
   styleUrl: './project-overlay.scss',
 })

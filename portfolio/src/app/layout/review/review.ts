@@ -1,29 +1,30 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { Reference, ReferenceData } from '../../shared/components/reference/reference';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-review',
-  imports: [Reference],
+  imports: [Reference, TranslatePipe],
   templateUrl: './review.html',
   styleUrl: './review.scss',
 })
 export class Review {
   reviewList: ReferenceData[] = [
     {
-      text: 'Benjamin has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.',
-      evaluator: 'H. Janisch - Team Partner',
+      textKey: 'references.janisch.text',
+      evaluatorKey: 'references.janisch.evaluator',
     },
     {
-      text: 'I had the good fortune of working with Benjamin in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool and focused and made sure our team was set up for success. He is super knowledgeable, easy to work with and I would happily work with him again given the chance.',
-      evaluator: 'A. Fischer - Team Partner',
+      textKey: 'references.fischer.text',
+      evaluatorKey: 'references.fischer.evaluator',
     },
     {
-      text: 'Our project benefited enormously from Benjamins efficient way of working.',
-      evaluator: 'T. Schulz - Frontend Developer',
+      textKey: 'references.schulz.text',
+      evaluatorKey: 'references.schulz.evaluator',
     },
     {
-      text: 'Working with Benjamin was a great experience. His problem-solving skills are exceptional.',
-      evaluator: 'M. Weber - Project Manager',
+      textKey: 'references.weber.text',
+      evaluatorKey: 'references.weber.evaluator',
     },
   ];
 

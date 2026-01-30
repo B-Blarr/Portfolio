@@ -11,7 +11,7 @@
     "bannerTwo": "Based in Schoeningen",
     "bannerThree": "Open to Work"
   },
-  "aboutMe":{
+  "aboutMe": {
     "whoAmI": "Who I Am",
     "aboutMe": "About me",
     "introMain": "Hi, I'm Benjamin. A few years ago, I discovered the possibilities and challenges of software development and became increasingly engaged with it until the passion truly ignited and now I can't imagine doing anything else professionally. I'm eager to learn, hardworking, and I love diving into new technologies.",
@@ -19,7 +19,7 @@
     "introTwo": "I love learning new technologies and can quickly get up to speed with new tools and frameworks. I also find AI fascinating, integrating it into products in a practical and meaningful way.",
     "introThree": "To solve problems, I work in a structured way: first understand the problem, work out solution approaches, then implement a clean solution. I care about readability, performance, and a great user experience. I find great joy in contributing to a team and helping each other grow."
   },
- "skills":{
+  "skills": {
     "technologies": "Technologies",
     "skillset": "Skill Set",
     "mainText": "Frontend development changes fast, and I keep up by staying consistent: I invest a lot of time, practice regularly and refine my skills step by step. I enjoy learning new techniques and tools and applying them in real projects.",
@@ -28,6 +28,39 @@
     "button": "Let's talk",
     "mindset": "Growth<br />mindset",
     "interest": "I have a special <br/> interest in learning"
+  },
+  "projects": {
+    "headline": "Featured Projects",
+    "intro": "Explore a selection of my work here. Interact with <br/> projects to see my skills in action.",
+    "question": "What is this project about?",
+    "nextButton": "Next project",
+    "join": {
+      "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    },
+    "polloLoco": {
+      "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy boss hen."
+    },
+    "pokedex": {
+      "description": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
+    }
+  },
+  "references": {
+  "headline": "What my colleagues say about me",
+  "janisch": {
+    "text": "Benjamin has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
+    "evaluator": "H. Janisch - Team Partner"
+  },
+  "fischer": {
+    "text": "I had the good fortune of working with Benjamin in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool and focused and made sure our team was set up for success. He is super knowledgeable, easy to work with and I would happily work with him again given the chance.",
+    "evaluator": "A. Fischer - Team Partner"
+  },
+  "schulz": {
+    "text": "Our project benefited enormously from Benjamins efficient way of working.",
+    "evaluator": "T. Schulz - Frontend Developer"
+  },
+  "weber": {
+    "text": "Working with Benjamin was a great experience. His problem-solving skills are exceptional.",
+    "evaluator": "M. Weber - Project Manager"
   }
-
+}
 }
