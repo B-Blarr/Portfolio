@@ -1,15 +1,29 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, ChangeDetectorRef, inject } from '@angular/core';
+import { FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AnimatedButton } from '../animated-button/animated-button';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-form',
-  imports: [ ReactiveFormsModule, AnimatedButton],
+  imports: [ ReactiveFormsModule, AnimatedButton, FormsModule ],
   templateUrl: './form.html',
   styleUrl: './form.scss',
 })
 export class Form {
-constructor(private cdr: ChangeDetectorRef) {}
+
+http = inject(HttpClient);
+
+constructor(private cdr: ChangeDetectorRef,
+
+) {}
+
+contactData = {
+  name: "",
+  mail: "",
+  message: "",
+}
+
+
 
 ngOnInit() {
 
@@ -20,6 +34,21 @@ ngOnInit() {
 
   isFormInvalid = true;
   formSubmitted = false;
+  mailTest = false;
+
+ post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+
+
 
   userform = new FormGroup({
     name: new FormControl("Your name goes here.", {
@@ -72,18 +101,33 @@ ngOnInit() {
     return 'Hello Benjamin, I am interested in...';
   }
 
-formSubmit(){
+onSubmit(){
+
 this.formSubmitted = true;
 
-  if (this.userform.valid) {
-    console.warn(this.userform.value);
-
-  }
-
+if (this.userform.valid && !this.mailTest) {
+      // Echtes E-Mail-Versenden
+      this.http.post(this.post.endPoint, this.post.body(this.userform.value))
+        .subscribe({
+          next: (response) => {
+            console.log('E-Mail erfolgreich versendet:', response);
+            this.formReset();
+          },
+          error: (error) => {
+            console.error('Fehler beim E-Mail-Versand:', error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (this.userform.valid && this.mailTest) {
+      // Test-Modus: Nur Formular zurücksetzen
+      console.log('Test-Modus: Formular-Daten:', this.userform.value);
+      this.formReset();
+    }
 }
 
 formReset(){
   this.userform.reset();
+  this.formSubmitted = false;
 }
 
 fillForm(){
