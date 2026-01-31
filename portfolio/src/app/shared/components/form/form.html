@@ -1,7 +1,7 @@
 <form class="contact-form" [formGroup]="userform" (ngSubmit)="onSubmit()">
   <div>
     <div class="input-container border-top">
-      <label class="label" for="name">What's your name?</label>
+      <label class="label" for="name">{{"contact.nameQuestion" | translate}}</label>
       <input
         class="input"
         id="name"
@@ -12,7 +12,7 @@
     </div>
 
     <div class="input-container">
-      <label class="label" for="mail">What's your email?</label>
+      <label class="label" for="mail">{{"contact.emailQuestion" | translate}}</label>
       <input
         class="input"
         id="mail"
@@ -24,7 +24,7 @@
 
 
     <div class="input-container">
-      <label class="label" for="message">How can I help you?</label>
+      <label class="label" for="message">{{"contact.messageQuestion" | translate}}</label>
       <input
         class="input"
         id="message"
@@ -43,16 +43,16 @@
           id="confirmation-checkbox"
           formControlName="privacyAccepted"
         />
-        <label class="checkbox-text" for="confirmation-checkbox">
-          I've read the <span class="highlighted">privacy policy</span> and agree to the
-          processing of my data as outlined.
+        <a routerLink="legal-notice">
+        <label class="checkbox-text" for="confirmation-checkbox" [innerHTML]="'contact.privacy' | translate">
         </label>
+        </a>
       </div>
 
       <div class="error-container">
         @if (formSubmitted && userform.get('privacyAccepted')?.invalid) {
           <p class="error-message">
-            Please accept the privacy policy.
+           {{"contact.privacyError" | translate}}
           </p>
         }
       </div>
@@ -60,6 +60,6 @@
   </div>
 
   <app-animated-button [type]="'submit'" [class.btn-disabled]="userform.invalid">
-    <span>Say Hello ;)</span>
+    <span>{{ "contact.button" | translate }}</span>
   </app-animated-button>
 </form>

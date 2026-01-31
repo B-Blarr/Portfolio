@@ -1,0 +1,66 @@
+@use '../../../styles/mixins' as m;
+
+.content {
+  @include m.content-limitation();
+  min-height: 100vh;
+  // padding-right: 80px;
+  // padding-left: 80px;
+  font-family: Karla;
+}
+
+ul {
+  padding-top: 24px;
+
+  & li {
+    font-size: 16px;
+    color: var(--primary-color);
+  }
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  padding-bottom: 80px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+h2 {
+  @include m.big-headline;
+  text-align: center;
+  padding-bottom: 64px;
+}
+
+.paragraph {
+  display: flex;
+  flex-direction: column;
+
+
+
+  & .imprint-headline {
+    font-size: 19px;
+    color: white;
+  }
+
+  & .imprint-text {
+    font-size: 16px;
+    color: var(--primary-color);
+
+    ::ng-deep span{
+    color: white;
+  }
+  }
+}
+
+app-header {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+app-footer {
+  margin-top: auto;
+  padding-left: 0;
+  padding-right: 0;
+}

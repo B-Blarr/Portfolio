@@ -2,16 +2,19 @@ import { Component, ChangeDetectorRef, inject } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AnimatedButton } from '../animated-button/animated-button';
 import { HttpClient } from '@angular/common/http';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-form',
-  imports: [ ReactiveFormsModule, AnimatedButton, FormsModule ],
+  imports: [ ReactiveFormsModule, AnimatedButton, FormsModule, TranslatePipe, RouterLink],
   templateUrl: './form.html',
   styleUrl: './form.scss',
 })
 export class Form {
 
 http = inject(HttpClient);
+translate = inject(TranslateService);
 
 constructor(private cdr: ChangeDetectorRef,
 
@@ -51,13 +54,13 @@ ngOnInit() {
 
 
   userform = new FormGroup({
-    name: new FormControl("Your name goes here.", {
+    name: new FormControl("", {
      validators: [Validators.required, Validators.minLength(3)]
     }),
-     email: new FormControl("youremail@email.com", {
+     email: new FormControl("", {
      validators: [Validators.required, Validators.email]
      }),
-     message: new FormControl("Hello Benjamin, I am interested in...", {
+     message: new FormControl("", {
      validators: [Validators.required, Validators.maxLength(2500)]
      }),
      privacyAccepted: new FormControl(false, {
@@ -69,36 +72,36 @@ ngOnInit() {
     const nameControl = this.userform.get('name');
 
     if (nameControl?.touched && nameControl?.hasError('required')) {
-      return 'Oops it seems your name is missing.';
+      return this.translate.instant('contact.nameErrorRequired');
     }
     if (nameControl?.touched && nameControl?.hasError('minlength')) {
-      return 'Name must be at least 2 characters.';
+      return this.translate.instant('contact.nameErrorMinLength');
     }
-    return 'Your name goes here.';
+    return this.translate.instant('contact.namePlaceholder');
   }
 
-  getEmailPlaceholder(): string {
+ getEmailPlaceholder(): string {
     const emailControl = this.userform.get('email');
 
     if (emailControl?.touched && emailControl?.hasError('required')) {
-      return 'Hoppla! Your email is required.';
+      return this.translate.instant('contact.emailErrorRequired');
     }
     if (emailControl?.touched && emailControl?.hasError('email')) {
-      return 'Please enter a valid email address.';
+      return this.translate.instant('contact.emailErrorInvalid');
     }
-    return 'youremail@email.com';
+    return this.translate.instant('contact.emailPlaceholder');
   }
 
-  getMessagePlaceholder(): string {
+   getMessagePlaceholder(): string {
     const messageControl = this.userform.get('message');
 
     if (messageControl?.touched && messageControl?.hasError('required')) {
-      return 'What is your message to me?';
+      return this.translate.instant('contact.messageErrorRequired');
     }
     if (messageControl?.touched && messageControl?.hasError('maxlength')) {
-      return 'Message is too long (max 2500 characters).';
+      return this.translate.instant('contact.messageErrorMaxLength');
     }
-    return 'Hello Benjamin, I am interested in...';
+    return this.translate.instant('contact.messagePlaceholder');
   }
 
 onSubmit(){

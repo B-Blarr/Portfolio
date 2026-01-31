@@ -1,18 +1,20 @@
 <section class="content">
   <div class="footer-logo">
+    <a routerLink="">
     <img class="logo" src="/icons/logo.png" alt="Logo" />
+    </a>
     <div class="footer-logo-text">
       <span>Web Developer</span>
-      <span>Schoeningen Germany</span>
+      <span>{{"footer.home" | translate}}</span>
     </div>
   </div>
 
   <div class="copyright">&copy; Benjamin Blarr 2026</div>
 
   <div class="footer-links">
-    <div><a href="https://github.com/B-Blarr"></a>Github</div>
-    <div><a href=""></a>Linkedin</div>
-    <div><a href="mailto:b.blarr@gmx.de"></a>Email</div>
-    <div><a href=""></a>Legal Notice</div>
+    <div><a href="https://github.com/B-Blarr" target="_blank">Github</a></div>
+    <div><a href=""  target="_blank">Linkedin</a></div>
+    <div><a href="mailto:b.blarr@gmx.de">Email</a></div>
+    <div> <a routerLink="legal-notice">{{"footer.legalNotice" | translate}}</a></div>
   </div>
 </section>
