@@ -12,7 +12,7 @@ export class Header {
   protected title = 'ngx';
   private translate = inject(TranslateService);
 
-  activeLanguage = this.translate.getCurrentLang() as 'de' | 'en';
+   activeLanguage = (localStorage.getItem('language') || 'en') as 'de' | 'en';
 
 
   setActiveLanguage(language: 'de' | 'en' ) {
