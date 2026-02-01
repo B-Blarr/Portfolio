@@ -21,6 +21,7 @@
   align-items: center;
   flex-direction: column;
   font-family: Karla;
+  flex-shrink: 0;
 }
 
 .introduction-buttons {
@@ -50,6 +51,8 @@ aside {
   gap: 16px;
   font-family: Karla;
   color: white;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .arrow-down-button {
@@ -162,6 +165,21 @@ aside {
   .hero-content {
     padding-right: 60px;
     padding-left: 60px;
+  }
+}
+
+@media (max-width: 780px) {
+  aside {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .developer-introduction {
+    flex-shrink: 0;
+  }
+
+  .rotate-text{
+    padding-left: 20px;
   }
 }
 
