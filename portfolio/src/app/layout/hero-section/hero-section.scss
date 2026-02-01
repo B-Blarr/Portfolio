@@ -25,17 +25,18 @@
 
 .introduction-buttons {
   display: flex;
-  gap: 48px;
+  gap: clamp(24px, 4vw, 48px);
 }
 
 h1 {
-  font-size: 128px;
+  font-size: clamp(60px, 10vw, 128px);
   color: #d9d9d9;
   margin-bottom: 40px;
+  white-space: nowrap;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: clamp(24px, 4vw, 40px);
   color: #d9d9d9;
   font-family: Fira Code;
   font-weight: 400;
@@ -61,7 +62,7 @@ aside {
 
 .dividing-line {
   width: 1px;
-  height: 240px;
+  height: clamp(140px, 20vw, 240px);
   border: 1px;
 }
 
@@ -94,8 +95,8 @@ aside {
 }
 
 .hero-links img {
-  width: 26px;
-  height: 26px;
+   width: clamp(18px, 2.5vw, 26px);
+  height: clamp(18px, 2.5vw, 26px);
   transition: filter 0.2s ease-in-out;
   cursor: pointer;
 
@@ -106,7 +107,7 @@ aside {
 
 .rotate-text {
   transform: rotate(-90deg);
-  margin-bottom: 60px;
+  margin-bottom: clamp(30px, 5vw, 60px);
 
   &:hover {
     color: var(--primary-color);
@@ -122,14 +123,14 @@ aside {
   width: min(2000px, 140vw);
   transform: translateX(-50%) rotate(-5deg);
   position: absolute;
-  bottom: 80px;
+  bottom: clamp(40px, 6vw, 80px);
   left: 50%;
   background-color: rgb(255, 255, 255, 0.1);
   color: var(--primary-color);
   overflow: hidden;
-  gap: 56px;
+  gap: clamp(28px, 4vw, 56px);
   font-family: Karla;
-  font-size: 32px;
+  font-size: clamp(18px, 3vw, 32px);
   padding: 12px 32px;
   white-space: nowrap;
   backdrop-filter: blur(5px);
@@ -153,6 +154,7 @@ aside {
 .dividing-dot {
   border: 6px solid var(--primary-color);
   border-radius: 50%;
+  border-width: clamp(3px, 0.6vw, 6px);
 }
 
 
@@ -160,5 +162,12 @@ aside {
   .hero-content {
     padding-right: 60px;
     padding-left: 60px;
+  }
+}
+
+@media (max-width: 750px) {
+  .hero-content {
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
