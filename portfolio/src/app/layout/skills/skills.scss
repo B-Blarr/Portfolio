@@ -1,10 +1,10 @@
 @use '../../../styles/mixins' as m;
 
 .skills-wrapper-full {
-  // width: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
-
+  padding-bottom: clamp(40px, 5vw, 80px);
 
   background-image: radial-gradient(
     ellipse 700px 520px at -100px 55%,
@@ -17,14 +17,14 @@
 
 .content {
   @include m.content-limitation(row);
-  height: 100%;
-  align-items: flex-start;
-  margin-top: 80px;
-  gap: 80px;
+  // height: 100%;
+  // align-items: flex-start;
+  // gap: clamp(24px, 5vw, 80px);
+  gap: clamp(24px, 3vw, 48px);
+  margin-top: clamp(60px, 8vw, 120px);
   font-family: Karla;
   color: white;
-  margin-top: 120px;
-    padding-right: 80px;
+  padding-right: 80px;
   padding-left: 80px;
 }
 
@@ -34,9 +34,10 @@ h3 {
 
 .tech-stack {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-  gap: 72px 48px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(32px, 5vw, 72px) clamp(20px, 3vw, 48px);
   justify-items: center;
+  align-self: center;
   flex: 1;
 
   & .tech-stack-icon {
@@ -81,8 +82,10 @@ h3 {
 }
 
 .technologies {
-  // margin-left: 80px;
-  margin-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: clamp(60px, 8vw, 120px);
+  max-width: min(520px, 100%);
 }
 
 .skillset-text {
@@ -92,12 +95,14 @@ h3 {
   border: 1px solid var(--primary-color);
   border-radius: 30px;
   background: rgba(61, 207, 182, 0.1);
-  width: 520px;
+  width: min(520px, 100%);
   padding: 32px 28px;
   gap: 40px;
 
   & h2 {
     @include m.big-headline;
+    font-size: clamp(32px, 5vw, 64px);
+
   }
 
   & .skill-text-area {
@@ -128,7 +133,6 @@ h3 {
 ::ng-deep .highlight {
   color: var(--primary-color);
 }
-
 
 app-animated-button {
   align-self: flex-start;
@@ -193,5 +197,51 @@ app-animated-button {
         font-weight: 600;
       }
     }
+  }
+}
+@media (max-width: 1200px) {
+
+.tech-stack {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
+
+@media (max-width: 850px) {
+ .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .technologies {
+    max-width: 568px;
+    width: 100%;
+  }
+
+  .skillset-text {
+    width: 100%;
+  }
+
+  .tech-stack {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .content {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+ .tech-stack {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
