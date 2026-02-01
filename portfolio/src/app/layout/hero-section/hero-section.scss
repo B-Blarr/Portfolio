@@ -154,3 +154,11 @@ aside {
   border: 6px solid var(--primary-color);
   border-radius: 50%;
 }
+
+
+@media (max-width: 1024px) {
+  .hero-content {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}

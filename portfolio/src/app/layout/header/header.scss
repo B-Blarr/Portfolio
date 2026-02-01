@@ -68,6 +68,19 @@ header {
 }
 
 .logo{
-  width: 320px;
-  height: 100px;
+  display: flex;
+  width: clamp(120px, 14vw, 180px);
+  height: auto;
+}
+
+
+@media (max-width: 1024px) {
+  .button-area {
+    gap: 10px;
+  }
+
+  .nav-button,
+  .language-button {
+    font-size: 16px;
+  }
 }
