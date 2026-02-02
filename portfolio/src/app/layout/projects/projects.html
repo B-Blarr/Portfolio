@@ -3,11 +3,13 @@
     <div class="description">
       <h3>Portfolio</h3>
       <h2>Featured Projects</h2>
-      <p [innerHTML]="'projects.intro' | translate">
 
-      </p>
     </div>
     <div class="projects-wrapper">
+      <div class="projects-content">
+        <p [innerHTML]="'projects.intro' | translate">
+
+      </p>
       <article class="projects">
         @for (project of projectsList; track project.subtitle) {
           <aside
@@ -28,6 +30,7 @@
           </aside>
         }
       </article>
+      </div>
       <div class="project-image-stack">
         @for (project of projectsList; track project.subtitle; let i = $index) {
           <div
