@@ -3,10 +3,12 @@
   width: 90vw;
   height: 85vh;
   max-width: 1300px;
-  max-height: 600px;
+  max-height: 700px;
   display: flex;
-  justify-content: center;
-  gap: clamp(32px, 5vw, 80px);
+  flex-direction: column;
+  justify-content: flex-start;
+  // gap: clamp(32px, 5vw, 80px);
+  gap: 32px;
   border: 1px solid var(--primary-color);
   border-radius: 30px;
   background: linear-gradient(45deg, #1c1c1c 0%, #1c1c1c 40%, #08463b 100%);
@@ -21,34 +23,42 @@
   position: relative;
 }
 
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(32px, 5vw, 80px);
+  // flex: 1;
+}
+
 .text-area {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   justify-content: space-between;
-  // gap: 24px;
+  justify-content: flex-start;
+  gap: 32px;
   height: 100%;
-
   flex: 1 1 40%;
   min-width: 300px;
+  // min-height: 400px;
 }
 
 h2 {
-  font-size: clamp(72px, 8vw, 128px);
+  font-size: clamp(92px, 8vw, 128px);
   font-family: Karla;
   color: var(--primary-color);
   line-height: 0.8;
 }
 
 h3 {
-  font-size: clamp(56px, 5vw, 64px);
+  // font-size: clamp(40px, 5vw, 64px);
+  font-size: 64px;
   font-family: Fira Code;
   color: white;
   white-space: nowrap;
+
 }
 
 .question {
-  // font-size: 24px;
   font-size: clamp(20px, 2vw, 24px);
   font-family: Fira Code;
   font-weight: 700;
@@ -79,10 +89,8 @@ h3 {
 
   .tech-item {
     display: flex;
-    // flex-direction: column;
     align-items: center;
     gap: 8px;
-
   }
 
   .icon-mask {
@@ -103,25 +111,33 @@ h3 {
 
 .button-area {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 32px;
-  padding-top: 16px;
+  margin-top: auto;
+  // margin-top: clamp(24px, 3vw, 48px);
+  // padding-top: 16px;
 
   & img {
     margin-left: 8px;
   }
 }
 
+.button-links {
+  display: flex;
+  gap: 32px;
+}
+
 .image-area {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 40px;
+  justify-content: center;
+  gap: 20px;
   align-items: flex-end;
   flex: 1 1 60%;
-  height: 100%;
 
-  & img{
-    max-width: 520px;
+  & img {
+    max-width: 450px;
   }
 
   & .close-btn {
@@ -129,6 +145,8 @@ h3 {
     border: none;
     width: 40px;
     height: 40px;
+    align-self: flex-end;
+
 
     & img {
       width: 18px;
@@ -147,12 +165,14 @@ h3 {
     }
   }
 }
+
 .project-image {
   border-radius: 30px;
-  width: 100%;
+  max-width: 450px;
   object-fit: cover;
-  max-height: 65%;
-margin: auto 0;
+  object-position: center top;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .next-project-button {
@@ -198,3 +218,88 @@ margin: auto 0;
     justify-content: center;
   }
 }
+
+@media (max-width: 1300px) {
+h3{
+  font-size: 56px;
+}
+
+}
+
+@media (max-width: 1220px) {
+h3{
+  white-space: normal;
+}
+
+.content {
+    max-height: 740px;
+    // max-height: none;
+    // height: auto;
+  }
+}
+
+@media (max-width: 990px) {
+
+  .content {
+    max-height: none;
+    height: auto;
+    max-width: 680px;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .text-area {
+    flex: none;
+    gap: 24px;
+  }
+
+  .image-area {
+    flex: none;
+    width: 100%;
+    align-items: flex-end;
+    order: -1;
+  }
+
+  .project-image {
+    max-width: 100%;
+    width: 100%;
+    align-self: center;
+  }
+
+  h3 {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 900px) {
+.project-description{
+  font-size: 16px;
+}
+
+.tech {
+  flex-wrap: wrap;
+}
+}
+
+@media (max-width: 675px) {
+.button-area {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.button-links{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.next-project-button{
+  align-self: flex-end;
+}
+}
+
+
