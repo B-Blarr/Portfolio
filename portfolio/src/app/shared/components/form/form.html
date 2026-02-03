@@ -25,13 +25,14 @@
 
     <div class="input-container">
       <label class="label" for="message">{{"contact.messageQuestion" | translate}}</label>
-      <input
-        class="input"
+      <textarea
+      #messageBox
+        class="input message-box"
         id="message"
-        type="text"
         formControlName="message"
         [placeholder]="getMessagePlaceholder()"
-      />
+        (input)="autoResize(messageBox)"
+      ></textarea>
     </div>
 
 
