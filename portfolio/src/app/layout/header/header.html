@@ -16,4 +16,21 @@
   <img class="logo logo-full" src="/icons/logo.png" alt="Logo" />
   <img class="logo logo-small" src="/icons/logo-small.png" alt="Logo" />
   </a>
+  <button (click)="toggleBurgerMenu()" class="burger-menu" [class.open]="isMenuOpen"><img class="burger-icon" src="/icons/burger-menu.svg" alt="Burger Menu">
+  </button>
 </header>
+
+  <div class="burger-links-container" [class.flex]="isMenuOpen">
+
+    <button class="nav-button" ><a href="#aboutme-section">{{"nav.about me" | translate}}</a></button>
+    <button class="nav-button" ><a href="#skills-section">{{"nav.skills" | translate}}</a></button>
+    <button class="nav-button" ><a href="#projects">{{"nav.projects" | translate}}</a></button>
+    <div class="language-switch">
+      <button type="button" (click)="setActiveLanguage('en')"
+      [class.active]="activeLanguage === 'en'"
+      class="language-button">EN</button>
+      <button type="button" (click)="setActiveLanguage('de')"
+      [class.active]="activeLanguage === 'de'"
+      class="language-button">DE</button>
+    </div>
+  </div>

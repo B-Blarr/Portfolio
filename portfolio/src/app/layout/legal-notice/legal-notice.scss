@@ -28,6 +28,7 @@ ul {
 h2 {
   @include m.big-headline;
   text-align: center;
+  padding-top: 60px;
   padding-bottom: 64px;
 }
 
@@ -61,4 +62,32 @@ app-footer {
   margin-top: auto;
   padding-left: 0;
   padding-right: 0;
+}
+
+@media(max-width: 750px){
+  h2 {
+  font-size: 52px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.text-content {
+  padding-bottom: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+}
+
+@media(max-width: 450px){
+h2 {
+  font-size: 32px;
+  padding-bottom: 0px;
+  text-align: left;
+}
+
+.text-content {
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 }

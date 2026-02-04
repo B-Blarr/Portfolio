@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import {TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -12,12 +12,16 @@ export class Header {
   protected title = 'ngx';
   private translate = inject(TranslateService);
 
-   activeLanguage = (localStorage.getItem('language') || 'en') as 'de' | 'en';
+  activeLanguage = (localStorage.getItem('language') || 'en') as 'de' | 'en';
+  isMenuOpen = false;
 
-
-  setActiveLanguage(language: 'de' | 'en' ) {
+  setActiveLanguage(language: 'de' | 'en') {
     this.translate.use(language);
     this.activeLanguage = language;
     localStorage.setItem('language', language);
+  }
+
+  toggleBurgerMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }
