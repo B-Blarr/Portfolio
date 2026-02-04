@@ -9,7 +9,7 @@
 
 .hero-area {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex: 1;
   height: 100%;
 }
@@ -20,7 +20,6 @@
   align-items: center;
   flex-direction: column;
   font-family: Karla;
-  flex-shrink: 0;
 }
 
 .introduction-buttons {
@@ -42,6 +41,12 @@ h2 {
   font-weight: 400;
 }
 
+ ::ng-deep .animated-button button{
+ width: 174px;
+white-space: nowrap;
+
+  }
+
 aside {
   display: flex;
   flex-direction: column;
@@ -52,6 +57,7 @@ aside {
   color: white;
   flex-shrink: 1;
   min-width: 0;
+  flex: 1;
 }
 
 .arrow-down-button {
@@ -159,7 +165,6 @@ aside {
   border-width: clamp(3px, 0.6vw, 6px);
 }
 
-
 @media (max-width: 1024px) {
   .hero-content {
     padding-right: 60px;
@@ -168,11 +173,6 @@ aside {
 }
 
 @media (max-width: 780px) {
-  aside {
-    flex-shrink: 1;
-    min-width: 0;
-  }
-
   .developer-introduction {
     flex-shrink: 0;
   }
@@ -189,9 +189,37 @@ aside {
   }
 }
 
+@media (max-width: 530px) {
+  .developer-introduction {
+    flex-shrink: 1;
+  }
+
+h1{
+
+  font-size: 56px;
+  letter-spacing: -1px;
+
+text-align: center;
+line-height: 1.1;
+}
+}
+
+
 @media (max-width: 450px) {
+h1{
+  white-space: normal;
+}
+
 .hero-content {
     padding-right: 20px;
     padding-left: 20px;
+  }
+
+  .introduction-buttons {
+ flex-direction: column;
+}
+
+aside:first-of-type {
+    padding-left: 5px;
   }
 }
