@@ -17,6 +17,7 @@
   border-bottom: 1px solid #3dcfb680;
   transition: transform 100ms ease-in;
   border-top: 1px solid transparent;
+  margin-top: -1px;
 
   & .label {
     cursor: pointer;
@@ -25,6 +26,10 @@
   & .input {
     cursor: pointer;
     font-family: Karla;
+  }
+
+  & .input-field{
+    padding-bottom: 25px;
   }
 
   &:hover {
@@ -175,6 +180,8 @@ textarea.input {
 }
 
 .error-container {
+  padding-left: 25px;
+  padding-bottom: 10px;
   min-height: 30px;
 }
 
@@ -212,4 +219,8 @@ app-animated-button {
   .checkbox {
     gap: 8px;
   }
+
+  .error-container {
+  min-height: 45px;
+}
 }
