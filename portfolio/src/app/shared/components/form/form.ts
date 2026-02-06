@@ -1,5 +1,12 @@
 import { Component, ChangeDetectorRef, inject } from '@angular/core';
-import { FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  FormsModule,
+  NgForm,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { AnimatedButton } from '../animated-button/animated-button';
 import { HttpClient } from '@angular/common/http';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -7,35 +14,33 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-form',
-  imports: [ ReactiveFormsModule, AnimatedButton, FormsModule, TranslatePipe, RouterLink],
+  imports: [ReactiveFormsModule, AnimatedButton, FormsModule, TranslatePipe, RouterLink],
   templateUrl: './form.html',
   styleUrl: './form.scss',
 })
 export class Form {
+  http = inject(HttpClient);
+  translate = inject(TranslateService);
 
-http = inject(HttpClient);
-translate = inject(TranslateService);
+  constructor(private cdr: ChangeDetectorRef) {}
 
-constructor(private cdr: ChangeDetectorRef,) {}
+  contactData = {
+    name: '',
+    mail: '',
+    message: '',
+  };
 
-contactData = {
-  name: "",
-  mail: "",
-  message: "",
-}
-
-ngOnInit() {
-
-  this.userform.valueChanges.subscribe(() => {
-    this.cdr.detectChanges();
-  });
-}
+  ngOnInit() {
+    this.userform.valueChanges.subscribe(() => {
+      this.cdr.detectChanges();
+    });
+  }
 
   isFormInvalid = true;
   formSubmitted = false;
   mailTest = false;
 
- post = {
+  post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
@@ -47,99 +52,58 @@ ngOnInit() {
   };
 
   userform = new FormGroup({
-    name: new FormControl("", {
-     validators: [Validators.required, Validators.minLength(3)]
+    name: new FormControl('', {
+      validators: [Validators.required, Validators.minLength(3)],
     }),
-     email: new FormControl("", {
-     validators: [Validators.required, Validators.email]
-     }),
-     message: new FormControl("", {
-     validators: [Validators.required, Validators.maxLength(2500)]
-     }),
-     privacyAccepted: new FormControl(false, {
-      validators: [Validators.requiredTrue]
-    })
-  })
+    email: new FormControl('', {
+      validators: [Validators.required, Validators.email],
+    }),
+    message: new FormControl('', {
+      validators: [Validators.required, Validators.maxLength(2500)],
+    }),
+    privacyAccepted: new FormControl(false, {
+      validators: [Validators.requiredTrue],
+    }),
+  });
 
-//   getNamePlaceholder(): string {
-//     const nameControl = this.userform.get('name');
+  onSubmit() {
+    this.formSubmitted = true;
 
-//     if (nameControl?.touched && nameControl?.hasError('required')) {
-//       return this.translate.instant('contact.nameErrorRequired');
-//     }
-//     if (nameControl?.touched && nameControl?.hasError('minlength')) {
-//       return this.translate.instant('contact.nameErrorMinLength');
-//     }
-//     return this.translate.instant('contact.namePlaceholder');
-//   }
-
-//  getEmailPlaceholder(): string {
-//     const emailControl = this.userform.get('email');
-
-//     if (emailControl?.touched && emailControl?.hasError('required')) {
-//       return this.translate.instant('contact.emailErrorRequired');
-//     }
-//     if (emailControl?.touched && emailControl?.hasError('email')) {
-//       return this.translate.instant('contact.emailErrorInvalid');
-//     }
-//     return this.translate.instant('contact.emailPlaceholder');
-//   }
-
-//    getMessagePlaceholder(): string {
-//     const messageControl = this.userform.get('message');
-
-//     if (messageControl?.touched && messageControl?.hasError('required')) {
-//       return this.translate.instant('contact.messageErrorRequired');
-//     }
-//     if (messageControl?.touched && messageControl?.hasError('maxlength')) {
-//       return this.translate.instant('contact.messageErrorMaxLength');
-//     }
-//     return this.translate.instant('contact.messagePlaceholder');
-//   }
-
-onSubmit(){
-
-this.formSubmitted = true;
-
-if (this.userform.valid && !this.mailTest) {
+    if (this.userform.valid && !this.mailTest) {
       // Echtes E-Mail-Versenden
-      this.http.post(this.post.endPoint, this.post.body(this.userform.value))
-        .subscribe({
-          next: (response) => {
-            console.log('E-Mail erfolgreich versendet:', response);
-            this.formReset();
-          },
-          error: (error) => {
-            console.error('Fehler beim E-Mail-Versand:', error);
-          },
-          complete: () => console.info('send post complete'),
-        });
+      this.http.post(this.post.endPoint, this.post.body(this.userform.value)).subscribe({
+        next: (response) => {
+          console.log('E-Mail erfolgreich versendet:', response);
+          this.formReset();
+        },
+        error: (error) => {
+          console.error('Fehler beim E-Mail-Versand:', error);
+        },
+        complete: () => console.info('send post complete'),
+      });
     } else if (this.userform.valid && this.mailTest) {
       // Test-Modus: Nur Formular zurücksetzen
       console.log('Test-Modus: Formular-Daten:', this.userform.value);
       this.formReset();
     }
-}
+  }
 
-formReset(){
-  this.userform.reset();
-  this.formSubmitted = false;
-}
+  formReset() {
+    this.userform.reset();
+    this.formSubmitted = false;
+  }
 
-fillForm(){
-  this.userform.setValue({
-    name: "Your name goes here.",
-    email: "youremail@email.com",
-    message: "Hello Benjamin, I am interested in...",
-    privacyAccepted: false,
-  })
-}
+  fillForm() {
+    this.userform.setValue({
+      name: 'Your name goes here.',
+      email: 'youremail@email.com',
+      message: 'Hello Benjamin, I am interested in...',
+      privacyAccepted: false,
+    });
+  }
 
-autoResize(textarea: HTMLTextAreaElement) {
-  textarea.style.height = 'auto';
-  textarea.style.height = textarea.scrollHeight + 'px';
-}
-
-
-
+  autoResize(textarea: HTMLTextAreaElement) {
+    textarea.style.height = 'auto';
+    textarea.style.height = textarea.scrollHeight + 'px';
+  }
 }

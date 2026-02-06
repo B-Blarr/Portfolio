@@ -2,6 +2,8 @@ import { Component, ChangeDetectorRef } from '@angular/core';
 import { Reference, ReferenceData } from '../../shared/components/reference/reference';
 import { TranslatePipe } from '@ngx-translate/core';
 
+type Direction = 'next' | 'prev';
+
 @Component({
   selector: 'app-review',
   imports: [Reference, TranslatePipe],
@@ -35,6 +37,8 @@ export class Review {
   noTransitionIndex = -1;
   isAnimating = false;
 
+  private animationQueue: Direction[] = [];
+
   constructor(private cdr: ChangeDetectorRef) {
     this.initializePositions();
   }
@@ -55,98 +59,96 @@ export class Review {
   }
 
   get currentIndex(): number {
-    return this.cardPositions.findIndex(pos => pos === 0);
+    return this.cardPositions.findIndex((pos) => pos === 0);
   }
 
   previousSlide(): void {
-    if (this.isAnimating) return;
-    this.isAnimating = true;
-    const total = this.reviewList.length;
-    let maxPos = -999, minPos = 999, teleportIndex = -1;
-    for (let i = 0; i < total; i++) {
-      if (this.cardPositions[i] > maxPos) {
-        maxPos = this.cardPositions[i];
-        teleportIndex = i;
-      }
-      if (this.cardPositions[i] < minPos) {
-        minPos = this.cardPositions[i];
-      }
+    this.animationQueue.push('prev');
+    if (!this.isAnimating) {
+      this.processQueue();
     }
-    this.noTransitionIndex = teleportIndex;
-    this.cardPositions[teleportIndex] = minPos - 1;
-    this.cdr.detectChanges();
-
-    requestAnimationFrame(() => {
-      this.noTransitionIndex = -1;
-      this.cdr.detectChanges();
-
-      requestAnimationFrame(() => {
-        for (let i = 0; i < total; i++) {
-          this.cardPositions[i] += 1;
-        }
-        this.cdr.detectChanges();
-
-        setTimeout(() => {
-          this.isAnimating = false;
-          this.cdr.detectChanges();
-        }, this.ANIMATION_DURATION);
-      });
-    });
   }
 
   nextSlide(): void {
-    if (this.isAnimating) return;
-    this.isAnimating = true;
-    const total = this.reviewList.length;
-
-    for (let i = 0; i < total; i++) {
-      this.cardPositions[i] -= 1;
+    this.animationQueue.push('next');
+    if (!this.isAnimating) {
+      this.processQueue();
     }
+  }
+
+  processQueue(): void {
+    if (this.animationQueue.length === 0) {
+      this.isAnimating = false;
+      return;
+    }
+    this.isAnimating = true;
+    const direction = this.animationQueue.shift()!;
+    if (direction === 'next') this.prepareNextSlide();
+    setTimeout(() => this.executeSlide(direction), 20);
+  }
+
+  prepareNextSlide(): void {
+    this.reviewList.forEach((_, index) => {
+      if (this.cardPositions[index] === -2) {
+        this.performInstantTeleport(index, 2);
+      }
+    });
+  }
+
+  executeSlide(direction: string): void {
+    this.reviewList.forEach((_, i) => {
+      this.cardPositions[i] += direction === 'next' ? -1 : 1;
+    });
+    this.cdr.detectChanges();
+    setTimeout(() => this.finalizeSlide(direction), this.ANIMATION_DURATION);
+  }
+
+  finalizeSlide(direction: string): void {
+    if (direction === 'prev') this.cleanupPreviousSlide();
+    this.isAnimating = false;
+    this.processQueue();
+  }
+
+  cleanupPreviousSlide(): void {
+    this.reviewList.forEach((_, index) => {
+      if (this.cardPositions[index] === 2) {
+        this.performInstantTeleport(index, -2);
+      }
+    });
+  }
+
+  performInstantTeleport(index: number, newPos: number) {
+    this.noTransitionIndex = index;
+    this.cardPositions[index] = newPos;
     this.cdr.detectChanges();
 
     setTimeout(() => {
-      let minPos = 999, maxPos = -999, teleportIndex = -1;
-      for (let i = 0; i < total; i++) {
-        if (this.cardPositions[i] < minPos) {
-          minPos = this.cardPositions[i];
-          teleportIndex = i;
-        }
-        if (this.cardPositions[i] > maxPos) {
-          maxPos = this.cardPositions[i];
-        }
-      }
-      this.noTransitionIndex = teleportIndex;
+      this.noTransitionIndex = -1;
       this.cdr.detectChanges();
-
-      setTimeout(() => {
-        this.cardPositions[teleportIndex] = maxPos + 1;
-        this.cdr.detectChanges();
-
-        setTimeout(() => {
-          this.noTransitionIndex = -1;
-          this.isAnimating = false;
-          this.cdr.detectChanges();
-        }, 50);
-      }, 20);
-    }, this.ANIMATION_DURATION);
+    }, 10);
   }
 
   goToSlide(targetIndex: number): void {
-    if (this.isAnimating || targetIndex === this.currentIndex) return;
+    if (targetIndex === this.currentIndex) return;
     const total = this.reviewList.length;
     let diff = targetIndex - this.currentIndex;
 
     if (Math.abs(diff) > total / 2) {
       diff = diff > 0 ? diff - total : diff + total;
     }
-    diff > 0 ? this.nextSlide() : this.previousSlide();
-    if (Math.abs(diff) > 1) {
-      setTimeout(() => this.goToSlide(targetIndex), this.ANIMATION_DURATION + 150);
+    const direction = diff > 0 ? 'next' : 'prev';
+    const steps = Math.abs(diff);
+
+    for (let i = 0; i < steps; i++) {
+      this.animationQueue.push(direction);
+    }
+    if (!this.isAnimating) {
+      this.processQueue();
     }
   }
 
   getCardTransform(index: number): string {
-      return `translate3d(${this.cardPositions[index] * this.CARD_OFFSET}px, 0, 0)`;
+    return `translate3d(${this.cardPositions[index] * this.CARD_OFFSET}px, 0, 0)`;
   }
 
   getCardTransition(index: number): string {
@@ -156,6 +158,10 @@ export class Review {
   }
 
   getCardOpacity(index: number): number {
+    if (this.noTransitionIndex === index) {
+      return 0;
+    }
+
     const pos = this.cardPositions[index];
     if (pos === 0) return 1;
     if (pos === 1 || pos === -1) return 0.6;
@@ -163,6 +169,9 @@ export class Review {
   }
 
   getCardZIndex(index: number): number {
+    if (this.noTransitionIndex === index) {
+      return -1;
+    }
     const pos = Math.abs(this.cardPositions[index]);
     if (pos === 0) return 3;
     if (pos === 1) return 2;
@@ -170,10 +179,10 @@ export class Review {
   }
 
   getPrevIndex(): number {
-    return this.cardPositions.findIndex(pos => pos === -1);
+    return this.cardPositions.findIndex((pos) => pos === -1);
   }
 
   getNextIndex(): number {
-    return this.cardPositions.findIndex(pos => pos === 1);
+    return this.cardPositions.findIndex((pos) => pos === 1);
   }
 }
