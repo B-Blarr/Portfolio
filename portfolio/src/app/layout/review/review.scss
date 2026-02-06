@@ -59,16 +59,18 @@ h3 {
   margin-left: -260px;
   pointer-events: none;
   will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 
 
   &.active {
-    transform: scale(1);
+    transform: scale(1) translateZ(0);
     pointer-events: auto;
   }
 
   &.prev,
   &.next {
-    transform: scale(0.85);
+    transform: scale(0.85) translateZ(0);
     pointer-events: auto;
 
   }
@@ -147,6 +149,17 @@ h3 {
   }
 }
 
+.quotes{
+  position: absolute;
+  width: 90px;
+  height: 64px;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-310px);
+  pointer-events: none;
+  z-index: 10;
+}
+
 @media (max-width: 1024px) {
   .content {
     padding-right: 60px;
@@ -179,7 +192,7 @@ h3 {
       width: 85vw;
       max-width: 520px;
       min-width: 280px;
-      height: auto;
+      // height: auto;
       padding: clamp(20px, 5vw, 40px);
       left: 50%;
     }
@@ -198,6 +211,22 @@ h3 {
   }
 }
 
+@media (max-width: 707px) {
+.quotes {
+
+    top: 125px;
+    left: 10%;
+    transform: none;
+
+    & img{
+       width: 66px;
+    height: 48px;
+
+    }
+  }
+
+}
+
 @media (max-width: 620px) {
   .content {
     padding-left: 5px;
@@ -213,6 +242,20 @@ h3 {
   }
 }
 
+@media(max-width: 450px){
+  .quotes {
+
+    top: 115px;
+  }
+}
+
+@media (max-width: 370px) {
+ .quotes {
+
+    top: 160px;
+  }
+}
+
 @media (max-width: 340px) {
   .content {
     padding: 12px;
@@ -221,4 +264,9 @@ h3 {
   .reference-card.active {
     padding: 16px;
   }
+
+   .quotes {
+
+    top: 168px;
+   }
 }

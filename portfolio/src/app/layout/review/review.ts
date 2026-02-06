@@ -146,7 +146,7 @@ export class Review {
   }
 
   getCardTransform(index: number): string {
-    return `translateX(${this.cardPositions[index] * this.CARD_OFFSET}px)`;
+      return `translate3d(${this.cardPositions[index] * this.CARD_OFFSET}px, 0, 0)`;
   }
 
   getCardTransition(index: number): string {

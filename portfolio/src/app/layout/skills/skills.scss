@@ -17,9 +17,6 @@
 
 .content {
   @include m.content-limitation(row);
-  // height: 100%;
-  // align-items: flex-start;
-  // gap: clamp(24px, 5vw, 80px);
   gap: clamp(24px, 3vw, 48px);
   margin-top: clamp(60px, 8vw, 120px);
   font-family: Karla;
@@ -101,8 +98,7 @@ h3 {
 
   & h2 {
     @include m.big-headline;
-    font-size: clamp(32px, 5vw, 64px);
-
+    font-size: clamp(56px, 5vw, 64px);
   }
 
   & .skill-text-area {
@@ -200,8 +196,7 @@ app-animated-button {
   }
 }
 @media (max-width: 1200px) {
-
-.tech-stack {
+  .tech-stack {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -214,9 +209,10 @@ app-animated-button {
 }
 
 @media (max-width: 850px) {
- .content {
+  .content {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 80px;
   }
 
   .technologies {
@@ -240,8 +236,82 @@ app-animated-button {
   }
 }
 
+@media (max-width: 500px) {
+  .content {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .skillset-text {
+    padding: 30px 30px;
+    gap: 20px;
+
+    & h2 {
+      font-size: 42px;
+    }
+
+    & .skill-text-area {
+      gap: 20px;
+
+      & .main-text {
+        font-size: 16px;
+      }
+
+      & .request-skill {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .tech-stack {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 16px;
+
+    & .tech-stack-icon {
+
+      & span {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
 @media (max-width: 480px) {
- .tech-stack {
+  .tech-stack {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+@media (max-width: 450px) {
+  .content {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 60px;
+  }
+
+    .tech-stack {
+    gap: 32px 12px;
+
+    & .tech-stack-icon {
+
+      & span {
+        font-size: 16px;
+      }
+    }
+  }
+
+  h3 {
+  font-size: 20px;
+}
+}
+  @media (max-width: 400px) {
+  .skillset-text {
+ padding: 24px 20px;
+    gap: 20px;
+
+    & h2 {
+      font-size: 34px;
+    }
+  }
+}
+
