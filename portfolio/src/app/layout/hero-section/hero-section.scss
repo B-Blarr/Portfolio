@@ -5,6 +5,7 @@
   height: 100%;
   padding-right: 80px;
   padding-left: 80px;
+  z-index: 6;
 }
 
 .hero-area {
@@ -25,6 +26,37 @@
 .introduction-buttons {
   display: flex;
   gap: clamp(24px, 4vw, 48px);
+
+  & .animated-button {
+    overflow: hidden;
+
+    &:hover {
+      & a {
+        display: inline-block;
+        transform: translateX(0);
+        animation: slide-left 2s linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  45% {
+    transform: translateX(-160px);
+    opacity: 0;
+  }
+  46% {
+    transform: translateX(160px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 h1 {
@@ -41,11 +73,10 @@ h2 {
   font-weight: 400;
 }
 
- ::ng-deep .animated-button button{
- width: 174px;
-white-space: nowrap;
-
-  }
+::ng-deep .animated-button button {
+  width: 174px;
+  white-space: nowrap;
+}
 
 aside {
   display: flex;
@@ -67,12 +98,10 @@ aside {
   border: 1px solid var(--primary-color);
   border-radius: 32px;
 
-
-    & img{
-   animation: arrow-down 600ms linear infinite alternate;
+  & img {
+    animation: arrow-down 600ms linear infinite alternate;
     transform: translateY(0);
-
-    }
+  }
 }
 
 @keyframes arrow-down {
@@ -217,7 +246,7 @@ aside {
     flex-shrink: 0;
   }
 
-  .rotate-text{
+  .rotate-text {
     padding-left: 20px;
   }
 }
@@ -234,14 +263,13 @@ aside {
     flex-shrink: 1;
   }
 
-h1{
+  h1 {
+    font-size: 56px;
+    letter-spacing: -1px;
 
-  font-size: 56px;
-  letter-spacing: -1px;
-
-text-align: center;
-line-height: 1.1;
-}
+    text-align: center;
+    line-height: 1.1;
+  }
 }
 
 @media (max-width: 500px) {
@@ -252,15 +280,15 @@ line-height: 1.1;
 }
 
 @media (max-width: 450px) {
-h1{
-  white-space: normal;
-}
+  h1 {
+    white-space: normal;
+  }
 
   .introduction-buttons {
- flex-direction: column;
-}
+    flex-direction: column;
+  }
 
-aside:first-of-type {
+  aside:first-of-type {
     padding-left: 5px;
   }
 }

@@ -124,6 +124,37 @@ h3 {
       font-size: 16px;
     }
   }
+
+  & .contact-button{
+    overflow: hidden;
+
+    &:hover{
+      & a{
+        display: inline-block;
+        transform: translateX(0);
+        animation: slide-left 2s linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  45% {
+    transform: translateX(-160px);
+    opacity: 0;
+  }
+  46% {
+    transform: translateX(160px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 ::ng-deep .highlight {
