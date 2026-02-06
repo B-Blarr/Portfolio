@@ -66,6 +66,22 @@ aside {
   background-color: transparent;
   border: 1px solid var(--primary-color);
   border-radius: 32px;
+
+
+    & img{
+   animation: arrow-down 600ms linear infinite alternate;
+    transform: translateY(0);
+
+    }
+}
+
+@keyframes arrow-down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px);
+  }
 }
 
 .dividing-line {
@@ -103,7 +119,7 @@ aside {
 }
 
 .hero-links img {
-   width: clamp(18px, 2.5vw, 26px);
+  width: clamp(18px, 2.5vw, 26px);
   height: clamp(18px, 2.5vw, 26px);
   transition: filter 0.2s ease-in-out;
   cursor: pointer;
