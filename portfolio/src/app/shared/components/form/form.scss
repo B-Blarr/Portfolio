@@ -9,6 +9,7 @@
 .input-container {
   display: flex;
   flex-direction: column;
+  position: relative;
   gap: 32px;
   padding: 32px;
   gap: 16px;
@@ -36,6 +37,20 @@
     border-bottom: 1px solid var(--primary-color);
     border-top: 1px solid var(--primary-color);
     color: white;
+  }
+
+  .error-container {
+    position: absolute;
+    bottom: -6px;
+    left: 10px;
+    height: 0;
+  }
+
+  .error-message {
+    color: #EC7B7BCC;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+    margin: 0;
   }
 }
 
@@ -223,4 +238,27 @@ app-animated-button {
   .error-container {
   min-height: 45px;
 }
+
+.input-container {
+  gap: 32px;
+  padding: 32px 16px;
+
+  .error-container{
+    bottom: -20px;
+    left: -6px;
+    height: 0;
+    white-space: nowrap;
+  }
+}
+}
+
+@media (max-width: 350px) {
+.input-container {
+  padding: 32px 14px;
+
+  .error-container{
+    left: -8px;
+  }
+}
+
 }

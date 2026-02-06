@@ -77,7 +77,7 @@
   "emailErrorRequired": "Hoppla! Ihre E-Mail wird benötigt.",
   "emailErrorInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
   "messageQuestion": "Wie kann ich Ihnen helfen?",
-  "messagePlaceholder": "Hallo Benjamin, Ich interessiere mich für...",
+  "messagePlaceholder": "Hallo Benjamin, ich...",
   "messageErrorRequired": "Wie lautet Ihre Nachricht an mich?",
   "messageErrorMaxLength": "Nachricht ist zu lang (max 2500 Zeichen).",
   "privacy": "Ich habe die <span class='highlighted'>Datenschutzerklärung</span> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",

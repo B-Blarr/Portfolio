@@ -7,8 +7,16 @@
         id="name"
         type="text"
         formControlName="name"
-        [placeholder]="getNamePlaceholder()"
+        [placeholder]="'contact.namePlaceholder' | translate"
       />
+      <div class="error-container">
+        @if ((userform.get('name')?.touched || formSubmitted) && userform.get('name')?.invalid) {
+          <p class="error-message">
+            @if (userform.get('name')?.hasError('required')) { {{ "contact.nameErrorRequired" | translate }} }
+            @if (userform.get('name')?.hasError('minlength')) { {{ "contact.nameErrorMinLength" | translate }} }
+          </p>
+        }
+      </div>
     </div>
 
     <div class="input-container">
@@ -18,8 +26,16 @@
         id="mail"
         type="text"
         formControlName="email"
-        [placeholder]="getEmailPlaceholder()"
+        [placeholder]="'contact.emailPlaceholder' | translate"
       />
+      <div class="error-container">
+        @if ((userform.get('email')?.touched || formSubmitted) && userform.get('email')?.invalid) {
+          <p class="error-message">
+            @if (userform.get('email')?.hasError('required')) { {{ "contact.emailErrorRequired" | translate }} }
+            @if (userform.get('email')?.hasError('email')) { {{ "contact.emailErrorInvalid" | translate }} }
+          </p>
+        }
+      </div>
     </div>
 
 
@@ -30,9 +46,15 @@
         class="input message-box"
         id="message"
         formControlName="message"
-        [placeholder]="getMessagePlaceholder()"
-        (input)="autoResize(messageBox)"
+        [placeholder]="'contact.messagePlaceholder' | translate" (input)="autoResize(messageBox)"
       ></textarea>
+      <div class="error-container">
+        @if ((userform.get('message')?.touched || formSubmitted) && userform.get('message')?.invalid) {
+          <p class="error-message">
+            {{ "contact.messageErrorRequired" | translate }}
+          </p>
+        }
+      </div>
     </div>
 
 

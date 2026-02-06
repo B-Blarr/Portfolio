@@ -16,17 +16,13 @@ export class Form {
 http = inject(HttpClient);
 translate = inject(TranslateService);
 
-constructor(private cdr: ChangeDetectorRef,
-
-) {}
+constructor(private cdr: ChangeDetectorRef,) {}
 
 contactData = {
   name: "",
   mail: "",
   message: "",
 }
-
-
 
 ngOnInit() {
 
@@ -50,9 +46,6 @@ ngOnInit() {
     },
   };
 
-
-
-
   userform = new FormGroup({
     name: new FormControl("", {
      validators: [Validators.required, Validators.minLength(3)]
@@ -68,41 +61,41 @@ ngOnInit() {
     })
   })
 
-  getNamePlaceholder(): string {
-    const nameControl = this.userform.get('name');
+//   getNamePlaceholder(): string {
+//     const nameControl = this.userform.get('name');
 
-    if (nameControl?.touched && nameControl?.hasError('required')) {
-      return this.translate.instant('contact.nameErrorRequired');
-    }
-    if (nameControl?.touched && nameControl?.hasError('minlength')) {
-      return this.translate.instant('contact.nameErrorMinLength');
-    }
-    return this.translate.instant('contact.namePlaceholder');
-  }
+//     if (nameControl?.touched && nameControl?.hasError('required')) {
+//       return this.translate.instant('contact.nameErrorRequired');
+//     }
+//     if (nameControl?.touched && nameControl?.hasError('minlength')) {
+//       return this.translate.instant('contact.nameErrorMinLength');
+//     }
+//     return this.translate.instant('contact.namePlaceholder');
+//   }
 
- getEmailPlaceholder(): string {
-    const emailControl = this.userform.get('email');
+//  getEmailPlaceholder(): string {
+//     const emailControl = this.userform.get('email');
 
-    if (emailControl?.touched && emailControl?.hasError('required')) {
-      return this.translate.instant('contact.emailErrorRequired');
-    }
-    if (emailControl?.touched && emailControl?.hasError('email')) {
-      return this.translate.instant('contact.emailErrorInvalid');
-    }
-    return this.translate.instant('contact.emailPlaceholder');
-  }
+//     if (emailControl?.touched && emailControl?.hasError('required')) {
+//       return this.translate.instant('contact.emailErrorRequired');
+//     }
+//     if (emailControl?.touched && emailControl?.hasError('email')) {
+//       return this.translate.instant('contact.emailErrorInvalid');
+//     }
+//     return this.translate.instant('contact.emailPlaceholder');
+//   }
 
-   getMessagePlaceholder(): string {
-    const messageControl = this.userform.get('message');
+//    getMessagePlaceholder(): string {
+//     const messageControl = this.userform.get('message');
 
-    if (messageControl?.touched && messageControl?.hasError('required')) {
-      return this.translate.instant('contact.messageErrorRequired');
-    }
-    if (messageControl?.touched && messageControl?.hasError('maxlength')) {
-      return this.translate.instant('contact.messageErrorMaxLength');
-    }
-    return this.translate.instant('contact.messagePlaceholder');
-  }
+//     if (messageControl?.touched && messageControl?.hasError('required')) {
+//       return this.translate.instant('contact.messageErrorRequired');
+//     }
+//     if (messageControl?.touched && messageControl?.hasError('maxlength')) {
+//       return this.translate.instant('contact.messageErrorMaxLength');
+//     }
+//     return this.translate.instant('contact.messagePlaceholder');
+//   }
 
 onSubmit(){
 

@@ -70,7 +70,7 @@
   "text": "I enjoy building modern UIs with attention to detail from layout to performance. <br/><br/>If you need a Frontend developer who ships reliably,<span> Let's talk!</span>",
   "nameQuestion": "What's your name?",
   "namePlaceholder": "Your name goes here.",
-  "nameErrorRequired": "Oops! It seems your name is missing.",
+  "nameErrorRequired": "Oops! Your name is missing.",
   "nameErrorMinLength": "Name must be at least 3 characters.",
   "emailQuestion": "What's your email?",
   "emailPlaceholder": "youremail@email.com",
