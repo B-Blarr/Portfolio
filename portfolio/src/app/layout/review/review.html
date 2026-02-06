@@ -1,5 +1,5 @@
 <section class="content">
-  <h3>{{"references.headline" | translate}}</h3>
+  <h3>{{ 'references.headline' | translate }}</h3>
 
   <div class="carousel-wrapper">
     <article class="reference-area">
@@ -14,6 +14,9 @@
           [style.opacity]="getCardOpacity(i)"
           [style.z-index]="getCardZIndex(i)"
         >
+          <div class="quotes">
+            <img src="/icons/quotes.svg" alt="Quotes" />
+          </div>
           <app-reference [reference]="reference"></app-reference>
         </article>
       }
@@ -41,6 +44,3 @@
     </button>
   </aside>
 </section>
-<div class="quotes">
-<img src="/icons/quotes.svg" alt="Quotes">
-</div>
