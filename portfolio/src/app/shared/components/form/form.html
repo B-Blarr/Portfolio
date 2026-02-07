@@ -86,3 +86,14 @@
     <span>{{ "contact.button" | translate }}</span>
   </app-animated-button>
 </form>
+@if (mailSent) {
+  <div class="success-box">
+    {{ "contact.successMessage" | translate }}
+  </div>
+}
+
+@if (mailError) {
+  <div class="error-box">
+    {{ "contact.errorMessage" | translate }}
+  </div>
+}

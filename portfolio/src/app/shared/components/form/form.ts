@@ -39,9 +39,11 @@ export class Form {
   isFormInvalid = true;
   formSubmitted = false;
   mailTest = false;
+  mailSent = false;
+  mailError = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: '/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -69,28 +71,42 @@ export class Form {
   onSubmit() {
     this.formSubmitted = true;
 
+    this.mailSent = false;
+    this.mailError = false;
+
     if (this.userform.valid && !this.mailTest) {
       // Echtes E-Mail-Versenden
       this.http.post(this.post.endPoint, this.post.body(this.userform.value)).subscribe({
         next: (response) => {
           console.log('E-Mail erfolgreich versendet:', response);
-          this.formReset();
+          this.mailSent = true;
+          this.cdr.detectChanges();
+          setTimeout(() => {
+            this.formReset();
+          }, 3000);
         },
         error: (error) => {
           console.error('Fehler beim E-Mail-Versand:', error);
+          this.mailError = true;
         },
         complete: () => console.info('send post complete'),
       });
     } else if (this.userform.valid && this.mailTest) {
       // Test-Modus: Nur Formular zurücksetzen
       console.log('Test-Modus: Formular-Daten:', this.userform.value);
-      this.formReset();
+      this.mailSent = true;
+      setTimeout(() => {
+        this.formReset();
+      }, 3000);
+
     }
   }
 
   formReset() {
-    this.userform.reset();
     this.formSubmitted = false;
+    this.mailSent = false;
+    this.mailError = false;
+    this.userform.reset();
   }
 
   fillForm() {

@@ -8,6 +8,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         exit;
         case("POST"): //Send the email;
             header("Access-Control-Allow-Origin: *");
+            header("Content-Type: application/json");
             // Payload is not send to $_POST Variable,
             // is send to php:input as a text
             $json = file_get_contents('php://input');
@@ -29,7 +30,16 @@ switch ($_SERVER['REQUEST_METHOD']) {
             // Additional headers
             $headers[] = "From: noreply@mywebsite.com";
 
-            mail($recipient, $subject, $message, implode("\r\n", $headers));
+            $mailSent = mail($recipient, $subject, $message, implode("\r\n", $headers));
+
+        // ← NEU: Gib Response zurück!
+        if ($mailSent) {
+            echo json_encode(['success' => true, 'message' => 'Mail sent successfully']);
+        } else {
+            http_response_code(500);
+            echo json_encode(['success' => false, 'message' => 'Mail sending failed']);
+        }
+
             break;
         default: //Reject any non POST or OPTIONS requests.
             header("Allow: POST", true, 405);

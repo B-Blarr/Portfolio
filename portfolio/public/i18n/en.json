@@ -82,7 +82,9 @@
   "messageErrorMaxLength": "Message is too long (max 2500 characters).",
   "privacy": "I've read the <span class='highlighted'>privacy policy</span> and agree to the processing of my data as outlined.",
   "privacyError": "Please accept the privacy policy.",
-  "button": "Say Hello ;)"
+  "button": "Say Hello ;)",
+  "successMessage": "Message sent successfully! I'll get back to you soon.",
+  "errorMessage": "Error sending message. Please try again later."
 },
 "footer": {
   "home": "Schoeningen Germany",
@@ -106,5 +108,124 @@
   "indemnityText": "You agree to indemnify, defend and hold harmless us, the listed students, the <span>Developer Akademie</span>, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of <span>Portfolio</span> and/or your breach of this Legal Notice.",
   "contactMe": "For any questions or notices, please contact me at b.blarr@gmx.de.",
   "date": " February 05, 2026"
-}
+},
+"privacyPolicy": {
+  "mainTitle": "Privacy Policy",
+  "section1": {
+    "title": "1. An overview of data protection",
+    "general": {
+      "title": "General information",
+      "text": "The following information will provide you with an easy to navigate overview of what will happen with your personal data when you visit this website. The term “personal data” comprises all data that can be used to personally identify you. For detailed information about the subject matter of data protection, please consult our Data Protection Declaration, which we have included beneath this copy."
+    },
+    "recording": {
+      "title": "Data recording on this website",
+      "responsibleTitle": "Who is the responsible party for the recording of data on this website?",
+      "responsibleText": "The data on this website is processed by the website operator. The operator’s contact details can be found in the section “Information about the responsible party” in this Privacy Policy.",
+      "howTitle": "How do we record your data?",
+      "howText": "On the one hand, your data are collected by you communicating them to us. This may, for instance, be information you enter into our contact form. Other data are recorded by our IT systems automatically or after you consent to its recording during your website visit. This data comprises primarily technical information (e.g., web browser, operating system, or time the site was accessed).",
+      "whatForTitle": "What purposes do we use your data for?",
+      "whatForText": "Part of the data is collected to guarantee the error-free provision of the website. Other data may be used to analyze your user behavior. If contracts can be concluded or initiated via the website, the transmitted data will also be processed for contract offers, orders or other order inquiries."
+    },
+    "rights": {
+      "title": "What rights do you have as far as your information is concerned?",
+      "text": "You have the right to receive information about the source, recipients, and purposes of your archived personal data at any time without having to pay a fee for such disclosures. You also have the right to demand that your data are rectified or eradicated. If you have consented to data processing, you have the option to revoke this consent at any time."
+    }
+  },
+  "section2": {
+    "title": "2. Hosting",
+    "intro": "We are hosting the content of our website at the following provider:",
+    "external": {
+      "title": "External Hosting",
+      "text": "This website is hosted externally. Personal data collected on this website are stored on the servers of the host. These may include, but are not limited to, IP addresses, contact requests, metadata and communications, contract information, contact information, names, web page access, and other data generated through a web site.",
+      "purpose": "The external hosting serves the purpose of fulfilling the contract with our potential and existing customers (Art. 6(1)(b) GDPR) and in the interest of secure, fast, and efficient provision of our online services by a professional provider (Art. 6(1)(f) GDPR).",
+      "instructions": "Our host(s) will only process your data to the extent necessary to fulfil its performance obligations and to follow our instructions with respect to such data."
+    },
+    "hostDetails": {
+      "title": "We are using the following host(s):",
+      "name": "HOSTINGER operations, UAB",
+      "address": "Švitrigailos str. 34, Vilnius 03230 Litauen",
+      "contact": "Phone: +37064503378 | Email: domains@hostinger.com"
+    },
+    "dpa": {
+      "title": "Data processing",
+      "text": "We have concluded a data processing agreement (DPA) for the use of the above-mentioned service. This is a contract mandated by data privacy laws that guarantees that they process personal data of our website visitors only based on our instructions and in compliance with the GDPR."
+    }
+  },
+  "section3": {
+    "title": "3. General information and mandatory information",
+    "dataProtection": {
+      "title": "Data protection",
+      "text": "The operators of this website and its pages take the protection of your personal data very seriously. Hence, we handle your personal data as confidential information and in compliance with the statutory data protection regulations and this Data Protection Declaration."
+    },
+    "controller": {
+      "title": "Information about the responsible party (referred to as the “controller” in the GDPR)",
+      "text": "The data processing controller on this website is:",
+      "details": "Benjamin Blarr | Lindenweg 2 | 38364 Schöningen",
+      "contact": "E-mail: b.blarr@gmx.de",
+      "definition": "The controller is the natural person or legal entity that single-handedly or jointly with others makes decisions as to the purposes of and resources for the processing of personal data."
+    },
+    "storage": {
+      "title": "Storage duration",
+      "text": "Unless a more specific storage period has been specified in this privacy policy, your personal data will remain with us until the purpose for which it was collected no longer applies."
+    },
+    "legalBasis": {
+      "title": "General information on the legal basis for the data processing on this website",
+      "text": "If you have consented to data processing, we process your personal data on the basis of Art. 6(1)(a) GDPR or Art. 9 (2)(a) GDPR, if special categories of data are processed according to Art. 9 (1) DSGVO. In the case of explicit consent to the transfer of personal data to third countries, the data processing is also based on Art. 49 (1)(a) GDPR."
+    },
+    "recipients": {
+      "title": "Recipients of personal data",
+      "text": "In the scope of our business activities, we cooperate with various external parties. In some cases, this also requires the transfer of personal data to these external parties. We only disclose personal data to external parties if this is required as part of the fulfillment of a contract or if we have a legitimate interest."
+    },
+    "revocation": {
+      "title": "Revocation of your consent to the processing of data",
+      "text": "A wide range of data processing transactions are possible only subject to your express consent. You can also revoke at any time any consent you have already given us. This shall be without prejudice to the lawfulness of any data collection that occurred prior to your revocation."
+    },
+    "objection": {
+      "title": "Right to object to the collection of data in special cases; right to object to direct advertising (Art. 21 GDPR)",
+      "text": "IN THE EVENT THAT DATA ARE PROCESSED ON THE BASIS OF ART. 6(1)(E) OR (F) GDPR, YOU HAVE THE RIGHT TO AT ANY TIME OBJECT TO THE PROCESSING OF YOUR PERSONAL DATA BASED ON GROUNDS ARISING FROM YOUR UNIQUE SITUATION.",
+      "directAds": "IF YOUR PERSONAL DATA IS BEING PROCESSED IN ORDER TO ENGAGE IN DIRECT ADVERTISING, YOU HAVE THE RIGHT TO OBJECT TO THE PROCESSING OF YOUR AFFECTED PERSONAL DATA FOR THE PURPOSES OF SUCH ADVERTISING AT ANY TIME."
+    },
+    "complaint": {
+      "title": "Right to log a complaint with the competent supervisory agency",
+      "text": "In the event of violations of the GDPR, data subjects are entitled to log a complaint with a supervisory agency, in particular in the member state where they usually maintain their domicile."
+    },
+    "portability": {
+      "title": "Right to data portability",
+      "text": "You have the right to have data that we process automatically on the basis of your consent or in fulfillment of a contract handed over to you or to a third party in a common, machine-readable format."
+    },
+    "rectification": {
+      "title": "Information about, rectification and eradication of data",
+      "text": "Within the scope of the applicable statutory provisions, you have the right to demand information about your archived personal data, their source and recipients as well as the purpose of the processing of your data at any time."
+    },
+    "restriction": {
+      "title": "Right to demand processing restrictions",
+      "text": "You have the right to demand the imposition of restrictions as far as the processing of your personal data is concerned.",
+      "cases": "The right to demand restriction of processing applies in the following cases: If you dispute the correctness of your data; if the processing is unlawful; if we no longer need the data but you need them for legal claims; or if an objection pursuant to Art. 21(1) GDPR is being verified."
+    },
+    "encryption": {
+      "title": "SSL and/or TLS encryption",
+      "text": "For security reasons and to protect the transmission of confidential content, this website uses either an SSL or a TLS encryption program."
+    }
+  },
+  "section4": {
+    "title": "4. Recording of data on this website",
+    "logs": {
+      "title": "Server log files",
+      "text": "The provider of this website and its pages automatically collects and stores information in so-called server log files, which your browser communicates to us automatically.",
+      "basis": "This data is recorded on the basis of Art. 6(1)(f) GDPR. The operator of the website has a legitimate interest in the technically error free depiction and the optimization of the operator’s website."
+    },
+    "contactForm": {
+      "title": "Contact form",
+      "text": "If you submit inquiries to us via our contact form, the information provided in the contact form will be stored by us in order to handle your inquiry.",
+      "basis": "The processing of these data is based on Art. 6(1)(b) GDPR, if your request is related to the execution of a contract or if it is necessary to carry out pre-contractual measures."
+    },
+    "directContact": {
+      "title": "Request by e-mail, telephone, or fax",
+      "text": "If you contact us by e-mail, telephone or fax, your request, including all resulting personal data will be stored and processed by us for the purpose of processing your request.",
+      "basis": "These data are processed on the basis of Art. 6(1)(b) GDPR if your inquiry is related to the fulfillment of a contract or is required for the performance of pre-contractual measures."
+    }
+  },
+  "source": "Source:",
+    "sourceLink": "https://www.e-recht24.de"
+  }
 }

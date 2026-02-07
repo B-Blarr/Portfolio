@@ -19,7 +19,7 @@
     "introTwo": "Ich liebe es neue Technologien zu lernen und finde mich schnell in neue Tools und Frameworks ein. Auch KI finde ich sehr spannend, sie auf praktische und sinnvolle Weise in Produkte zu integrieren.",
     "introThree": "Um Probleme zu lösen arbeite ich strukturiert: erst das Problem verstehen, Lösungswege ausarbeiten und dann eine saubere Lösung umsetzen. Mir sind Lesbarkeit, Performance und eine großartige User Experience wichtig. Mir macht es große Freude mich in ein Team einzubringen und sich gegenseitig weiter zu bringen."
   },
-   "skills":{
+  "skills": {
     "technologies": "Technologien",
     "skillset": "Fähigkeiten",
     "mainText": "Frontend-Entwicklung verändert sich schnell, und ich halte Schritt, indem ich konsequent dranbleibe: Ich investiere viel Zeit, übe regelmäßig und verfeinere meine Fähigkeiten Schritt für Schritt. Ich lerne gerne neue Techniken und Tools und wende sie in echten Projekten an.",
@@ -30,81 +30,202 @@
     "interest": "Ich habe besonderes <br/> Interesse an:"
   },
   "projects": {
-  "headline": "Ausgewählte Projekte",
-  "intro": "Entdecken Sie hier eine Auswahl meiner Projekte. Interagieren Sie mit ihnen, um sie in Aktion zu sehen.",
-  "question": "Worum geht es in diesem Projekt?",
-  "nextButton": "Nächstes Projekt",
-  "join": {
-    "description": "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
+    "headline": "Ausgewählte Projekte",
+    "intro": "Entdecken Sie hier eine Auswahl meiner Projekte. Interagieren Sie mit ihnen, um sie in Aktion zu sehen.",
+    "question": "Worum geht es in diesem Projekt?",
+    "nextButton": "Nächstes Projekt",
+    "join": {
+      "description": "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
+    },
+    "polloLoco": {
+      "description": "Jump-, Run- und Wurfspiel basierend auf objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Boss-Henne zu kämpfen."
+    },
+    "pokedex": {
+      "description": "Basierend auf der PokéAPI eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
+    }
   },
-  "polloLoco": {
-    "description": "Jump-, Run- und Wurfspiel basierend auf objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Boss-Henne zu kämpfen."
+  "references": {
+    "headline": "Was meine Kollegen über mich sagen",
+    "janisch": {
+      "text": "Benjamin hat sich als zuverlässiger Gruppenpartner erwiesen. Seine technischen Fähigkeiten und proaktive Herangehensweise waren entscheidend für den Erfolg unseres Projekts.",
+      "evaluator": "H. Janisch - Team Partner"
+    },
+    "fischer": {
+      "text": "Ich hatte das Glück, mit Benjamin in einem Gruppenprojekt an der Developer Akademie zusammenzuarbeiten, das viel Aufwand erforderte. Er blieb immer ruhig, cool und konzentriert und sorgte dafür, dass unser Team erfolgreich war. Er ist super kompetent, angenehm in der Zusammenarbeit und ich würde gerne wieder mit ihm arbeiten, wenn sich die Gelegenheit ergibt.",
+      "evaluator": "A. Fischer - Team Partner"
+    },
+    "schulz": {
+      "text": "Unser Projekt profitierte enorm von Benjamins effizienter Arbeitsweise.",
+      "evaluator": "T. Schulz - Frontend Developer"
+    },
+    "weber": {
+      "text": "Die Zusammenarbeit mit Benjamin war eine großartige Erfahrung. Seine Problemlösungsfähigkeiten sind außergewöhnlich.",
+      "evaluator": "M. Weber - Project Manager"
+    }
   },
-  "pokedex": {
-    "description": "Basierend auf der PokéAPI eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
+  "contact": {
+    "contactMe": "Kontakt",
+    "headline": "Lassen Sie uns zusammen arbeiten",
+    "question": "Haben Sie ein Problem zu lösen?",
+    "text": "Ich baue gerne moderne UIs mit Liebe zum Detail vom Layout bis zur Performance. <br/><br/>Wenn Sie einen Frontend-Entwickler brauchen, auf den Sie sich verlassen können,<span> lassen Sie uns reden!</span>",
+    "nameQuestion": "Wie heißen Sie?",
+    "namePlaceholder": "Geben Sie Ihren Namen hier ein.",
+    "nameErrorRequired": "Oops! Ihr Name fehlt.",
+    "nameErrorMinLength": "Name muss mindestens 3 Zeichen lang sein.",
+    "emailQuestion": "Wie lautet Ihre Email?",
+    "emailPlaceholder": "deineemail@email.com",
+    "emailErrorRequired": "Hoppla! Ihre E-Mail wird benötigt.",
+    "emailErrorInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "messageQuestion": "Wie kann ich Ihnen helfen?",
+    "messagePlaceholder": "Hallo Benjamin, ich...",
+    "messageErrorRequired": "Wie lautet Ihre Nachricht an mich?",
+    "messageErrorMaxLength": "Nachricht ist zu lang (max 2500 Zeichen).",
+    "privacy": "Ich habe die <span class='highlighted'>Datenschutzerklärung</span> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "privacyError": "Bitte akzeptieren Sie die Datenschutzerklärung.",
+    "button": "Sag Hallo ;)",
+    "successMessage": "Nachricht erfolgreich gesendet! Ich melde mich bald bei dir.",
+    "errorMessage": "Fehler beim Versenden. Bitte versuche es später nochmal."
+  },
+  "footer": {
+    "home": "Schöningen Deutschland",
+    "legalNotice": "Impressum"
+  },
+  "legalNotice": {
+    "headline": "Impressum",
+    "imprint": "Angaben gemäß § 5 DDG",
+    "contact": "Kontakt",
+    "acceptance": "Annahme der Nutzungsbedingungen",
+    "acceptanceText": "Mit dem Zugriff auf und der Nutzung von <span>Portfolio</span> (Produkt) erkennen Sie die folgenden Geschäftsbedingungen sowie alle Richtlinien, Leitlinien oder Änderungen an, die Ihnen von Zeit zu Zeit vorgelegt werden können. Wir, die aufgeführten Studierenden, behalten uns das Recht vor, die Geschäftsbedingungen jederzeit ohne Vorankündigung zu aktualisieren oder zu ändern.",
+    "scope": "Umfang und Eigentum am Produkt",
+    "scopeText": "<span>Portfolio</span> wurde im Rahmen eines studentischen Gruppenprojekts in einem Webentwicklungs-Bootcamp an der <span>Developer Akademie GmbH</span> entwickelt. Es dient Bildungszwecken und ist nicht für eine umfassende private oder geschäftliche Nutzung vorgesehen. Aus diesem Grund können wir keine durchgängige Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder andere Qualitätsaspekte dieses Produkts garantieren. <br> <br>Das Design von <span>Portfolio</span> ist Eigentum der <span>Developer Akademie GmbH</span>. Jegliche unbefugte Nutzung, Vervielfältigung, Änderung, Verbreitung oder Reproduktion des Designs ist strengstens untersagt.",
+    "rights": "Urheberrechte",
+    "rightsText": "Abgesehen vom Design, das der <span>Developer Akademie GmbH</span> gehört, behalten wir, die aufgeführten Studierenden, alle Urheberrechte an <span>Portfolio</span>, einschließlich aller damit verbundenen urheberrechtlich geschützten Materialien, Marken und sonstigen geschützten Informationen.",
+    "use": "Nutzung des Produkts",
+    "useText": "<span>Portfolio</span> ist ausschließlich für rechtmäßige Zwecke und in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften zu verwenden. Jegliche Nutzung von <span>Portfolio</span> für illegale Aktivitäten oder um andere Personen zu belästigen, zu schädigen, zu bedrohen oder einzuschüchtern, ist strengstens untersagt. Sie sind allein verantwortlich für Ihre Interaktionen mit anderen Nutzern von <span>Portfolio</span>.",
+    "disclaimer": "Haftungsausschluss und Haftungsbeschränkung",
+    "disclaimerText": "<span>Portfolio</span> wird ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt, einschließlich, aber nicht beschränkt auf die stillschweigenden Gewährleistungen der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten Dritter. Wir, die aufgeführten Studierenden, oder die <span>Developer Akademie</span> haften in keinem Fall für direkte, indirekte, zufällige, besondere, Folge- oder exemplarische Schäden, einschließlich, aber nicht beschränkt auf entgangene Gewinne, Verlust des Firmenwerts, der Nutzung, von Daten oder andere immaterielle Verluste, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden, die sich aus oder in Verbindung mit der Nutzung oder Leistung von <span>Portfolio</span> ergeben.",
+    "indemnity": "Freistellung",
+    "indemnityText": "Sie verpflichten sich, uns, die aufgeführten Studierenden, die <span>Developer Akademie</span> sowie unsere verbundenen Unternehmen, Partner, leitenden Angestellten, Geschäftsführer, Vertreter und Mitarbeiter von jeglichen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Haftungen (einschließlich angemessener Anwaltskosten) freizustellen, zu verteidigen und schadlos zu halten, die sich aus oder im Zusammenhang mit Ihrer Nutzung von <span>Portfolio</span> und/oder Ihrem Verstoß gegen dieses Impressum ergeben.",
+    "contactMe": "Bei Fragen oder Hinweisen kontaktieren Sie mich bitte unter b.blarr@gmx.de.",
+    "date": " 05. Februar 2026"
+  },
+  "privacyPolicy": {
+    "mainTitle": "Datenschutzerklärung",
+    "section1": {
+      "title": "1. Datenschutz auf einen Blick",
+      "general": {
+        "title": "Allgemeine Hinweise",
+        "text": "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung."
+      },
+      "recording": {
+        "title": "Datenerfassung auf dieser Website",
+        "responsibleTitle": "Wer ist verantwortlich für die Datenerfassung auf dieser Website?",
+        "responsibleText": "Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle“ in dieser Datenschutzerklärung entnehmen.",
+        "howTitle": "Wie erfassen wir Ihre Daten?",
+        "howText": "Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).",
+        "whatForTitle": "Wofür nutzen wir Ihre Daten?",
+        "whatForText": "Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden. Sofern über die Website Verträge geschlossen oder angebahnt werden können, werden die übermittelten Daten auch für Vertragsangebote, Bestellungen oder sonstige Auftragsanfragen verarbeitet."
+      },
+      "rights": {
+        "title": "Welche Rechte haben Sie bezüglich Ihrer Daten?",
+        "text": "Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen."
+      }
+    },
+    "section2": {
+      "title": "2. Hosting",
+      "intro": "Wir hosten die Inhalte unserer Website bei folgendem Anbieter:",
+      "external": {
+        "title": "Externes Hosting",
+        "text": "Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.",
+        "purpose": "Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots.",
+        "instructions": "Unser(e) Hoster wird bzw. werden Ihre Daten nur insoweit verarbeiten, wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen."
+      },
+      "hostDetails": {
+        "title": "Wir setzen folgende(n) Hoster ein:",
+        "name": "HOSTINGER operations, UAB",
+        "address": "Švitrigailos str. 34, Vilnius 03230 Litauen",
+        "contact": "Phone: +37064503378 | Email: domains@hostinger.com"
+      },
+      "dpa": {
+        "title": "Auftragsverarbeitung",
+        "text": "Wir haben einen Vertrag über Auftragsverarbeitung (AVV) zur Nutzung des oben genannten Dienstes geschlossen. Dies gewährleistet, dass dieser die personenbezogenen Daten unserer Websitebesucher nur nach unseren Weisungen und unter Einhaltung der DSGVO verarbeitet."
+      }
+    },
+    "section3": {
+      "title": "3. Allgemeine Hinweise und Pflichtinformationen",
+      "dataProtection": {
+        "title": "Datenschutz",
+        "text": "Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung."
+      },
+      "controller": {
+        "title": "Hinweis zur verantwortlichen Stelle",
+        "text": "Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:",
+        "details": "Benjamin Blarr | Lindenweg 2 | 38364 Schöningen",
+        "contact": "E-Mail: b.blarr@gmx.de",
+        "definition": "Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet."
+      },
+      "storage": {
+        "title": "Speicherdauer",
+        "text": "Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt."
+      },
+      "legalBasis": {
+        "title": "Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website",
+        "text": "Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO. Im Falle einer ausdrücklichen Einwilligung in die Übertragung personenbezogener Daten in Drittstaaten erfolgt die Datenverarbeitung außerdem auf Grundlage von Art. 49 Abs. 1 lit. a DSGVO."
+      },
+      "revocation": {
+        "title": "Widerruf Ihrer Einwilligung zur Datenverarbeitung",
+        "text": "Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen."
+      },
+      "objection": {
+        "title": "Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)",
+        "text": "WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN; DIES GILT AUCH FÜRS EIN AUF DIESE BESTIMMUNGEN GESTÜTZTES PROFILING.",
+        "directAds": "WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, SO HABEN SIE DAS RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE DERARTIGER WERBUNG EINZULEGEN."
+      },
+      "complaint": {
+        "title": "Beschwerderecht bei der zuständigen Aufsichtsbehörde",
+        "text": "Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde zu."
+      },
+      "portability": {
+        "title": "Recht auf Datenübertragbarkeit",
+        "text": "Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen Format aushändigen zu lassen."
+      },
+      "rectification": {
+        "title": "Auskunft, Berichtigung und Löschung",
+        "text": "Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten."
+      },
+      "recipients": {
+        "title": "Empfänger von personenbezogenen Daten",
+        "text": "Im Rahmen unserer Geschäftstätigkeit arbeiten wir mit verschiedenen externen Stellen zusammen. Dabei ist teilweise auch eine Übermittlung von personenbezogenen Daten an diese externen Stellen erforderlich. Wir geben personenbezogene Daten nur dann an externe Stellen weiter, wenn dies im Rahmen einer Vertragserfüllung erforderlich ist oder wir ein berechtigtes Interesse haben."
+      },
+      "restriction": {
+        "title": "Recht auf Einschränkung der Verarbeitung",
+        "text": "Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Hierzu können Sie sich jederzeit an uns wenden.",
+        "cases": "Das Recht auf Einschränkung der Verarbeitung besteht in folgenden Fällen: Wenn Sie die Richtigkeit Ihrer Daten bestreiten; wenn die Verarbeitung unrechtmäßig geschah; wenn wir die Daten nicht mehr brauchen, Sie diese aber zur Rechtsverfolgung benötigen; oder wenn ein Widerspruch nach Art. 21 Abs. 1 DSGVO geprüft wird."
+      },
+      "encryption": {
+        "title": "SSL- bzw. TLS-Verschlüsselung",
+        "text": "Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung."
+      }
+    },
+    "section4": {
+      "title": "4. Datenerfassung auf dieser Website",
+      "logs": {
+        "title": "Server-Log-Dateien",
+        "text": "Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt.",
+        "basis": "Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO."
+      },
+      "contactForm": {
+        "title": "Kontaktformular",
+        "text": "Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben inklusive der Kontaktdaten zwecks Bearbeitung der Anfrage bei uns gespeichert.",
+        "basis": "Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist."
+      },
+      "directContact": {
+        "title": "Anfrage per E-Mail, Telefon oder Telefax",
+        "text": "Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden Daten gespeichert.",
+        "basis": "Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist."
+      }
+    },
+    "source": "Quelle:",
+    "sourceLink": "https://www.e-recht24.de"
   }
-},
-"references": {
-  "headline": "Was meine Kollegen über mich sagen",
-  "janisch": {
-    "text": "Benjamin hat sich als zuverlässiger Gruppenpartner erwiesen. Seine technischen Fähigkeiten und proaktive Herangehensweise waren entscheidend für den Erfolg unseres Projekts.",
-    "evaluator": "H. Janisch - Team Partner"
-  },
-  "fischer": {
-    "text": "Ich hatte das Glück, mit Benjamin in einem Gruppenprojekt an der Developer Akademie zusammenzuarbeiten, das viel Aufwand erforderte. Er blieb immer ruhig, cool und konzentriert und sorgte dafür, dass unser Team erfolgreich war. Er ist super kompetent, angenehm in der Zusammenarbeit und ich würde gerne wieder mit ihm arbeiten, wenn sich die Gelegenheit ergibt.",
-    "evaluator": "A. Fischer - Team Partner"
-  },
-  "schulz": {
-    "text": "Unser Projekt profitierte enorm von Benjamins effizienter Arbeitsweise.",
-    "evaluator": "T. Schulz - Frontend Developer"
-  },
-  "weber": {
-    "text": "Die Zusammenarbeit mit Benjamin war eine großartige Erfahrung. Seine Problemlösungsfähigkeiten sind außergewöhnlich.",
-    "evaluator": "M. Weber - Project Manager"
-  }
-},
-"contact": {
-  "contactMe": "Kontakt",
-  "headline": "Lassen Sie uns zusammen arbeiten",
-  "question": "Haben Sie ein Problem zu lösen?",
-  "text": "Ich baue gerne moderne UIs mit Liebe zum Detail vom Layout bis zur Performance. <br/><br/>Wenn Sie einen Frontend-Entwickler brauchen, auf den Sie sich verlassen können,<span> lassen Sie uns reden!</span>",
-  "nameQuestion": "Wie heißen Sie?",
-  "namePlaceholder": "Geben Sie Ihren Namen hier ein.",
-  "nameErrorRequired": "Oops! Ihr Name fehlt.",
-  "nameErrorMinLength": "Name muss mindestens 3 Zeichen lang sein.",
-  "emailQuestion": "Wie lautet Ihre Email?",
-  "emailPlaceholder": "deineemail@email.com",
-  "emailErrorRequired": "Hoppla! Ihre E-Mail wird benötigt.",
-  "emailErrorInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
-  "messageQuestion": "Wie kann ich Ihnen helfen?",
-  "messagePlaceholder": "Hallo Benjamin, ich...",
-  "messageErrorRequired": "Wie lautet Ihre Nachricht an mich?",
-  "messageErrorMaxLength": "Nachricht ist zu lang (max 2500 Zeichen).",
-  "privacy": "Ich habe die <span class='highlighted'>Datenschutzerklärung</span> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
-  "privacyError": "Bitte akzeptieren Sie die Datenschutzerklärung.",
-  "button": "Sag Hallo ;)"
-},
-"footer": {
-  "home": "Schöningen Deutschland",
-  "legalNotice": "Impressum"
-},
-"legalNotice": {
-  "headline": "Impressum",
-  "imprint": "Angaben gemäß § 5 DDG",
-  "contact": "Kontakt",
-  "acceptance": "Annahme der Nutzungsbedingungen",
-  "acceptanceText": "Mit dem Zugriff auf und der Nutzung von <span>Portfolio</span> (Produkt) erkennen Sie die folgenden Geschäftsbedingungen sowie alle Richtlinien, Leitlinien oder Änderungen an, die Ihnen von Zeit zu Zeit vorgelegt werden können. Wir, die aufgeführten Studierenden, behalten uns das Recht vor, die Geschäftsbedingungen jederzeit ohne Vorankündigung zu aktualisieren oder zu ändern.",
-  "scope": "Umfang und Eigentum am Produkt",
-  "scopeText": "<span>Portfolio</span> wurde im Rahmen eines studentischen Gruppenprojekts in einem Webentwicklungs-Bootcamp an der <span>Developer Akademie GmbH</span> entwickelt. Es dient Bildungszwecken und ist nicht für eine umfassende private oder geschäftliche Nutzung vorgesehen. Aus diesem Grund können wir keine durchgängige Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder andere Qualitätsaspekte dieses Produkts garantieren. <br> <br>Das Design von <span>Portfolio</span> ist Eigentum der <span>Developer Akademie GmbH</span>. Jegliche unbefugte Nutzung, Vervielfältigung, Änderung, Verbreitung oder Reproduktion des Designs ist strengstens untersagt.",
-  "rights": "Urheberrechte",
-  "rightsText": "Abgesehen vom Design, das der <span>Developer Akademie GmbH</span> gehört, behalten wir, die aufgeführten Studierenden, alle Urheberrechte an <span>Portfolio</span>, einschließlich aller damit verbundenen urheberrechtlich geschützten Materialien, Marken und sonstigen geschützten Informationen.",
-  "use": "Nutzung des Produkts",
-  "useText": "<span>Portfolio</span> ist ausschließlich für rechtmäßige Zwecke und in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften zu verwenden. Jegliche Nutzung von <span>Portfolio</span> für illegale Aktivitäten oder um andere Personen zu belästigen, zu schädigen, zu bedrohen oder einzuschüchtern, ist strengstens untersagt. Sie sind allein verantwortlich für Ihre Interaktionen mit anderen Nutzern von <span>Portfolio</span>.",
-  "disclaimer": "Haftungsausschluss und Haftungsbeschränkung",
-  "disclaimerText": "<span>Portfolio</span> wird ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt, einschließlich, aber nicht beschränkt auf die stillschweigenden Gewährleistungen der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten Dritter. Wir, die aufgeführten Studierenden, oder die <span>Developer Akademie</span> haften in keinem Fall für direkte, indirekte, zufällige, besondere, Folge- oder exemplarische Schäden, einschließlich, aber nicht beschränkt auf entgangene Gewinne, Verlust des Firmenwerts, der Nutzung, von Daten oder andere immaterielle Verluste, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden, die sich aus oder in Verbindung mit der Nutzung oder Leistung von <span>Portfolio</span> ergeben.",
-  "indemnity": "Freistellung",
-  "indemnityText": "Sie verpflichten sich, uns, die aufgeführten Studierenden, die <span>Developer Akademie</span> sowie unsere verbundenen Unternehmen, Partner, leitenden Angestellten, Geschäftsführer, Vertreter und Mitarbeiter von jeglichen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Haftungen (einschließlich angemessener Anwaltskosten) freizustellen, zu verteidigen und schadlos zu halten, die sich aus oder im Zusammenhang mit Ihrer Nutzung von <span>Portfolio</span> und/oder Ihrem Verstoß gegen dieses Impressum ergeben.",
-  "contactMe": "Bei Fragen oder Hinweisen kontaktieren Sie mich bitte unter b.blarr@gmx.de.",
-  "date": " 05. Februar 2026"
-}
 }

@@ -32,12 +32,10 @@ export class Review {
 
   CARD_OFFSET = 560;
   ANIMATION_DURATION = 600;
-
   cardPositions: number[] = [];
   noTransitionIndex = -1;
   isAnimating = false;
-
-  private animationQueue: Direction[] = [];
+  animationQueue: Direction[] = [];
 
   constructor(private cdr: ChangeDetectorRef) {
     this.initializePositions();
