@@ -2,7 +2,7 @@
 
 .hero-content {
   @include m.content-limitation();
-  height: 100vh;
+  height: 100dvh;
   padding-right: 80px;
   padding-left: 80px;
   z-index: 6;
@@ -27,15 +27,15 @@
   display: flex;
   gap: clamp(24px, 4vw, 48px);
 
-  & .animated-button {
-    overflow: hidden;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 
-    &:hover {
-      & a {
-        display: inline-block;
-        transform: translateX(0);
-        animation: slide-left 2s linear infinite;
-      }
+  app-animated-button:hover {
+    ::ng-deep button .button-text {
+      transform: translateX(0);
+      animation: slide-left 2s linear infinite;
     }
   }
 }

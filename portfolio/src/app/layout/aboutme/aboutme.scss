@@ -6,12 +6,9 @@
   height: 100%;
   align-items: flex-start;
   background-color: #1c1c1c;
-  // margin-top: 120px;
   margin-top: clamp(60px, 8vw, 120px);
-  // gap: 80px;
   gap: clamp(24px, 5vw, 80px);
   font-family: Karla;
-  // margin-bottom: 80px;
   padding-left: 80px;
   padding-right: 80px;
   margin-bottom: clamp(40px, 5vw, 80px);

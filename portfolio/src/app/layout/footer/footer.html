@@ -2,11 +2,11 @@
   <div class="footer-logo">
     <a routerLink="">
       <img class="logo-small" src="/icons/logo-small.png" alt="Logo" />
-    <img class="logo-full" src="/icons/logo.png" alt="Logo" />
+      <img class="logo-full" src="/icons/logo.png" alt="Logo" />
     </a>
     <div class="footer-logo-text">
       <span>Web Developer</span>
-      <span>{{"footer.home" | translate}}</span>
+      <span>{{ 'footer.home' | translate }}</span>
     </div>
   </div>
 
@@ -14,8 +14,10 @@
 
   <div class="footer-links">
     <div><a href="https://github.com/B-Blarr" target="_blank">Github</a></div>
-    <div><a href=""  target="_blank">Linkedin</a></div>
+    <div><a href="" target="_blank">Linkedin</a></div>
     <div><a href="mailto:b.blarr@gmx.de">Email</a></div>
-    <div> <a routerLink="/legal-notice">{{"footer.legalNotice" | translate}}</a></div>
+    <div>
+      <a routerLink="/legal-notice">{{ 'footer.legalNotice' | translate }}</a>
+    </div>
   </div>
 </section>

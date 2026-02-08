@@ -1,20 +1,22 @@
 <div class="skills-wrapper-full" id="skills-section">
   <section class="content">
     <div class="technologies">
-      <h3>{{"skills.technologies" | translate}}</h3>
+      <h3>{{ 'skills.technologies' | translate }}</h3>
       <article class="skillset-text">
-        <h2>{{"skills.skillset" | translate}}</h2>
+        <h2>{{ 'skills.skillset' | translate }}</h2>
         <div class="skill-text-area">
           <p class="main-text">
-            {{"skills.mainText" | translate}}
+            {{ 'skills.mainText' | translate }}
           </p>
 
           <p class="request-skill" [innerHTML]="'skills.request' | translate"></p>
         </div>
         <p class="request-contact">
-          {{"skills.requestText" | translate}}
+          {{ 'skills.requestText' | translate }}
         </p>
-        <app-animated-button class="contact-button"><a href="#contact-section">{{"skills.button" | translate}}</a> </app-animated-button>
+        <a href="#contact-section" class="contact-button">
+          <app-animated-button>{{ 'skills.button' | translate }}</app-animated-button>
+        </a>
       </article>
     </div>
     <aside class="tech-stack">
@@ -62,8 +64,7 @@
         <img src="/icons/mindset.svg" alt="Mindset Logo" />
         <span [innerHTML]="'skills.mindset' | translate"></span>
         <div class="speechbubble">
-          <p [innerHTML]="'skills.interest' | translate">
-          </p>
+          <p [innerHTML]="'skills.interest' | translate"></p>
           <div class="special-interests">
             <div class="single-interest">
               <img src="/icons/react.svg" alt="React Logo" />

@@ -107,34 +107,31 @@
     width: 100%;
     text-align: center;
     padding-top: 20px;
-    // border-top: 1px solid #ffffff20;
   }
 }
 
 @media (max-width: 750px) {
-  .content{
-  padding-left: 40px;
-  padding-right: 40px;
-  // padding-bottom: 80px;
+  .content {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
-  .footer-logo{
+  .footer-logo {
+    & .logo-full {
+      display: none;
+    }
 
-  & .logo-full {
-    display: none;
+    & .logo-small {
+      display: flex;
+      width: 48px;
+      height: auto;
+    }
   }
-
-  & .logo-small {
-    display: flex;
-    width: 48px;
-    height: auto;
-  }
-}
 }
 
 @media (max-width: 450px) {
-  .content{
-  padding-left: 20px;
-  padding-right: 20px;
+  .content {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

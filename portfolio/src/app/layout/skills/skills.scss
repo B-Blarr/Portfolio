@@ -127,14 +127,15 @@ h3 {
 
   & .contact-button{
     overflow: hidden;
+    align-self: flex-start;
 
-    &:hover{
-      & a{
-        display: inline-block;
-        transform: translateX(0);
-        animation: slide-left 2s linear infinite;
-      }
+
+    app-animated-button:hover {
+    ::ng-deep button .button-text {
+      transform: translateX(0);
+      animation: slide-left 2s linear infinite;
     }
+  }
   }
 }
 

@@ -38,7 +38,7 @@ export class Projects {
         { name: 'CSS', iconUrl: '/icons/css.svg' },
       ],
       github: 'https://github.com/B-Blarr/El-Pollo-Loco',
-      livetest: 'https://github.com/B-Blarr',
+      livetest: 'https://benjaminblarr.dev/el-pollo-loco',
     },
 
     {
@@ -53,7 +53,7 @@ export class Projects {
         { name: 'REST-API', iconUrl: '/icons/rest-api.svg' },
       ],
       github: 'https://github.com/B-Blarr/Pokedex',
-      livetest: 'https://github.com/B-Blarr',
+      livetest: 'https://benjaminblarr.dev/pokedex',
     },
   ];
 

@@ -9,7 +9,9 @@ import { provideHttpClient } from '@angular/common/http';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes, withInMemoryScrolling({ scrollPositionRestoration: 'enabled', anchorScrolling: 'enabled', })),
+    provideRouter(routes, withInMemoryScrolling({ scrollPositionRestoration: 'enabled',
+       anchorScrolling: 'enabled',
+       }),),
     provideHttpClient(),
     provideTranslateService({
       lang: 'en',
