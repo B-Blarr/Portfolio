@@ -8,9 +8,9 @@
       [class.active]="activeLanguage === 'de'"
       class="language-button">DE</button>
     </div>
-    <button class="nav-button" ><a href="#aboutme-section">{{"nav.about me" | translate}}</a></button>
-    <button class="nav-button" ><a href="#skills-section">{{"nav.skills" | translate}}</a></button>
-    <button class="nav-button" ><a href="#projects">{{"nav.projects" | translate}}</a></button>
+    <button class="nav-button" ><a [routerLink]="['/']" fragment="aboutme-section">{{"nav.about me" | translate}}</a></button>
+    <button class="nav-button" ><a [routerLink]="['/']" fragment="skills-section">{{"nav.skills" | translate}}</a></button>
+    <button class="nav-button" ><a [routerLink]="['/']" fragment="projects">{{"nav.projects" | translate}}</a></button>
   </div>
   <a routerLink="">
   <img class="logo logo-full" src="/icons/logo.png" alt="Logo" />
@@ -22,9 +22,9 @@
 
   <div class="burger-links-container" [class.flex]="isMenuOpen">
 
-    <button class="nav-button" ><a href="#aboutme-section">{{"nav.about me" | translate}}</a></button>
-    <button class="nav-button" ><a href="#skills-section">{{"nav.skills" | translate}}</a></button>
-    <button class="nav-button" ><a href="#projects">{{"nav.projects" | translate}}</a></button>
+    <button class="nav-button" (click)="closeMenu()"><a [routerLink]="['/']" fragment="aboutme-section">{{"nav.about me" | translate}}</a></button>
+    <button class="nav-button" (click)="closeMenu()"><a [routerLink]="['/']" fragment="skills-section">{{"nav.skills" | translate}}</a></button>
+    <button class="nav-button" (click)="closeMenu()"><a [routerLink]="['/']" fragment="projects">{{"nav.projects" | translate}}</a></button>
     <div class="language-switch">
       <button type="button" (click)="setActiveLanguage('en')"
       [class.active]="activeLanguage === 'en'"

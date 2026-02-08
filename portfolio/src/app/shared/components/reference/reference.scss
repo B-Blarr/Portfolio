@@ -12,6 +12,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  will-change: transform;
 }
 
 .line{
@@ -23,3 +24,4 @@ border: 1px solid white;
 .evaluator{
   white-space: nowrap;
 }
+

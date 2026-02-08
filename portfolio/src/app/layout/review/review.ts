@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectorRef, HostListener } from '@angular/core';
 import { Reference, ReferenceData } from '../../shared/components/reference/reference';
 import { TranslatePipe } from '@ngx-translate/core';
 
@@ -29,6 +29,10 @@ export class Review {
       evaluatorKey: 'references.weber.evaluator',
     },
   ];
+
+  private touchStartX = 0;
+  private touchEndX = 0;
+  private minSwipeDistance = 50;
 
   CARD_OFFSET = 560;
   ANIMATION_DURATION = 600;
@@ -146,7 +150,7 @@ export class Review {
   }
 
   getCardTransform(index: number): string {
-    return `translate3d(${this.cardPositions[index] * this.CARD_OFFSET}px, 0, 0)`;
+    return `translate3d(calc(var(--card-offset) * ${this.cardPositions[index]}), 0, 0)`;
   }
 
   getCardTransition(index: number): string {
@@ -163,16 +167,18 @@ export class Review {
     const pos = this.cardPositions[index];
     if (pos === 0) return 1;
     if (pos === 1 || pos === -1) return 0.6;
+    if (Math.abs(pos) > 1) return 0;
     return 0;
   }
 
   getCardZIndex(index: number): number {
     if (this.noTransitionIndex === index) {
-      return -1;
+      return -100;
     }
     const pos = Math.abs(this.cardPositions[index]);
     if (pos === 0) return 3;
     if (pos === 1) return 2;
+    if (pos > 1) return -10;
     return 1;
   }
 
@@ -182,5 +188,27 @@ export class Review {
 
   getNextIndex(): number {
     return this.cardPositions.findIndex((pos) => pos === 1);
+  }
+
+    @HostListener('touchstart', ['$event'])
+  onTouchStart(event: TouchEvent): void {
+    this.touchStartX = event.changedTouches[0].screenX;
+  }
+
+  @HostListener('touchend', ['$event'])
+  onTouchEnd(event: TouchEvent): void {
+    this.touchEndX = event.changedTouches[0].screenX;
+    this.handleSwipe();
+  }
+
+  private handleSwipe(): void {
+    const swipeDistance = this.touchStartX - this.touchEndX;
+    if (Math.abs(swipeDistance) > this.minSwipeDistance) {
+      if (swipeDistance > 0) {
+        this.nextSlide();
+      } else {
+        this.previousSlide();
+      }
+    }
   }
 }

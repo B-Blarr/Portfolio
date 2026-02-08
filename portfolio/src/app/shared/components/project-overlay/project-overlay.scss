@@ -232,11 +232,11 @@ h3{
 }
 
 @media (max-width: 990px) {
-
   .content {
-    max-height: none;
-    height: 990px;
+    max-height: 85vh;
+    height: auto;
     max-width: 680px;
+    gap: 20px;
   }
 
   .content-wrapper {
@@ -245,7 +245,7 @@ h3{
 
   .text-area {
     flex: none;
-    gap: 24px;
+    gap: 20px;
   }
 
   .image-area {
@@ -253,11 +253,14 @@ h3{
     width: 100%;
     align-items: flex-end;
     order: -1;
+    gap: 12px;
   }
 
   .project-image {
     max-width: 100%;
     width: 100%;
+    max-height: 250px;
+    // object-fit: contain;
     align-self: center;
   }
 
@@ -267,108 +270,327 @@ h3{
 }
 
 @media (max-width: 900px) {
+  .project-description {
+    font-size: 16px;
+  }
 
+  .tech {
+    flex-wrap: wrap;
+  }
 
-.project-description{
-  font-size: 16px;
-}
+  .project-image {
+    max-height: 220px;
+    width: auto;
+  }
 
-.tech {
-  flex-wrap: wrap;
-}
+  h2 {
+    font-size: 82px;
+  }
 
-h2 {
-  font-size: 82px;
-}
-
-h3 {
-  font-size: 64px;
-}
+  h3 {
+    font-size: 64px;
+  }
 }
 
 @media (max-width: 675px) {
-.button-area {
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 32px;
-}
+  .button-area {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
 
-.button-links{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+  .button-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
-.next-project-button{
-  align-self: flex-end;
-}
+  .next-project-button {
+    align-self: flex-end;
+  }
 
-h2 {
-  font-size: 72px;
-}
+  .project-image {
+    max-height: 200px;
+    width: auto;
+  }
 
-h3 {
-  font-size: 56px;
-}
+  h2 {
+    font-size: 72px;
+  }
+
+  h3 {
+    font-size: 56px;
+  }
 }
 
 @media (max-width: 600px) {
- .content {
+  .content {
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 16px;
+    gap: 16px;
   }
 
-h3 {
-  white-space: normal;
-}
-
-.next-project-button {
-  width: 140px;
-  padding-right: 60px;
-
-  & span {
-    font-size: 18px;
-    font-family: Karla;
-    white-space: nowrap;
+  .project-image {
+    max-height: 180px;
+    border-radius: 20px;
+    width: auto;
   }
-}
+
+  h3 {
+    white-space: normal;
+  }
+
+  .next-project-button {
+    width: 140px;
+    padding-right: 60px;
+
+    & span {
+      font-size: 18px;
+      font-family: Karla;
+      white-space: nowrap;
+    }
+  }
 }
 
 @media (max-width: 450px) {
-  .content{
-    height: 940px;
+  .content {
+    height: 70vh;
+    padding: 14px 10px;
+    gap: 12px;
   }
+
+  .project-image {
+    max-height: 150px;
+    border-radius: 16px;
+  }
+
+  .image-area {
+    gap: 8px;
+  }
+
   h2 {
-  font-size: 68px;
-}
+    font-size: 44px;
+    line-height: 0.85;
+  }
 
-h3 {
-  font-size: 52px;
-}
+  h3 {
+    font-size: 32px;
+    line-height: 1.1;
+  }
 
-.question {
-  font-size: 18px;
-}
+  .question {
+    font-size: 14px;
+  }
 
-.text-area {
-  gap: 24px;
-  min-width: 0px;
-}
+  .text-area {
+    gap: 10px;
+    min-width: 0px;
+  }
 
-.button-links {
-  gap: 24px;
-}
+  .project-description {
+    font-size: 13px;
+    line-height: 1.3;
+  }
 
-.button-links app-animated-button {
-  & ::ng-deep button {
-    min-width: 120px;
-    padding: 0 18px;
+  .tech {
+    gap: 8px;
+    flex-wrap: wrap;
+
+    .tech-item {
+      gap: 5px;
+    }
+
+    .icon-mask {
+      width: 18px;
+      height: 18px;
+    }
+
+    .tech-name {
+      font-size: 13px;
+    }
+  }
+
+  .button-area {
+    gap: 14px;
+    margin-top: auto;
+  }
+
+  .button-links {
+    gap: 32px;
+  }
+
+  .button-links app-animated-button {
+    & ::ng-deep button {
+      min-width: 95px;
+      padding: 0 10px;
+      font-size: 13px;
+      height: 34px;
+    }
+  }
+
+  .button-links a img {
+    display: none;
+  }
+
+  .next-project-button {
+    width: 120px;
+    height: 34px;
+
+    & span {
+      font-size: 14px;
+    }
+
+    & img {
+      width: 16px;
+      height: 16px;
+    }
   }
 }
 
-.button-links a img {
-  display: none;
+@media (max-width: 380px) {
+  .content {
+    height: 88vh;
+    padding: 12px 8px;
+    gap: 10px;
+  }
+
+  .project-image {
+    max-height: 130px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  .question {
+    font-size: 13px;
+  }
+
+  .project-description {
+    font-size: 12px;
+  }
+
+  .text-area {
+    gap: 8px;
+  }
+
+  .tech {
+    gap: 6px;
+
+    .tech-name {
+      font-size: 12px;
+    }
+
+    .icon-mask {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  // .button-area {
+  //   gap: 12px;
+  // }
+
+  // .button-links {
+  //   gap: 8px;
+  // }
+
+  .button-links app-animated-button {
+    & ::ng-deep button {
+      min-width: 85px;
+      padding: 0 8px;
+      font-size: 12px;
+      height: 32px;
+    }
+  }
+
+  .next-project-button {
+    width: 110px;
+    height: 32px;
+
+    & span {
+      font-size: 13px;
+    }
+  }
 }
+
+@media (max-width: 560px) and (min-height: 680px) {
+  .content {
+    height: 95vh;
+    gap: 14px;
+    padding-bottom: 16px;
+    padding-top: 8px;
+  }
+
+  .content-wrapper{
+    gap: 8px;
+  }
+
+  h2{
+    font-size: 56px;
+  }
+
+  h3{
+    font-size: 42px;
+  }
+
+  .text-area {
+    gap: 12px;
+  }
+
+  .button-area {
+    gap: 8px;
+    margin-top: auto;
+     flex-shrink: 0;
+     justify-content: flex-end;
+    align-items: stretch;
+  }
+
+  .image-area{
+    gap: 0;
+  }
+
+  .project-image {
+    max-height: 140px;
+  }
+}
+
+@media (min-width: 900px) and (max-height: 680px) {
+  .content {
+    height: 85vh;
+    max-height: 480px;
+    padding-bottom: 14px;
+    padding-top: 16px;
+  }
+
+  .content-wrapper {
+    gap: 16px;
+  }
+
+  .project-image {
+    max-height: 180px;
+  }
+
+  .text-area {
+    gap: 12px;
+  }
+
+  .button-area {
+    gap: 20px;
+  }
+
+  h2 {
+    font-size: 70px;
+  }
+
+  h3 {
+    font-size: 50px;
+    white-space: nowrap;
+  }
 }

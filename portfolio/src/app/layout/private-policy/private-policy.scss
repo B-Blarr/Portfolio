@@ -28,67 +28,125 @@ h2 {
   text-align: center;
   padding-top: 60px;
   padding-bottom: 64px;
-  color: white;
 }
 
 .paragraph {
   display: flex;
   flex-direction: column;
-  margin-bottom: 32px;
+  gap: 12px;
 
   & .imprint-headline {
-    font-size: 24px;
+    font-size: 19px;
     color: white;
-    margin-bottom: 16px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 8px;
+    margin-top: 12px;
   }
 
   & .imprint-text {
     font-size: 16px;
     color: var(--primary-color);
-    line-height: 1.6;
-    margin-bottom: 12px;
-
-    span {
-      color: white;
-    }
-
-    strong {
-      color: white;
-      font-weight: 700;
-    }
+    line-height: 1.5;
 
     em {
-      font-style: italic;
-      opacity: 0.9;
+      font-style: normal;
+      color: var(--primary-color);
+    }
+
+    span, strong {
+      color: white;
+      font-weight: 400;
     }
 
     a {
-        color: white;
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
+      color: white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
 
-.footer-source {
-    margin-top: 40px;
-    opacity: 0.7;
-}
-
-app-header {
+app-header{
+  width: 100%;
   padding-left: 80px;
   padding-right: 80px;
+}
 
-  @media (max-width: 768px) {
+app-footer {
+  margin-top: auto;
+}
+
+
+@media (max-width: 1024px) {
+  app-header {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .text-content {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 900px) {
+  h2 {
+    font-size: 52px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 750px) {
+  h2 {
+    font-size: 46px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+
+  .text-content {
+    padding-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  app-header {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 650px) {
+  h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 28px;
+    padding-bottom: 0px;
+    text-align: left;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .text-content {
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  app-header {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
 
-app-footer {
-  margin-top: auto;
+@media (max-width: 380px) {
+  h2 {
+    font-size: 22px;
+  }
 }
