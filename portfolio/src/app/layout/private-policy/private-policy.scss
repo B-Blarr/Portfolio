@@ -51,7 +51,8 @@ h2 {
       color: var(--primary-color);
     }
 
-    span, strong {
+    span,
+    strong {
       color: white;
       font-weight: 400;
     }
@@ -66,7 +67,7 @@ h2 {
   }
 }
 
-app-header{
+app-header {
   width: 100%;
   padding-left: 80px;
   padding-right: 80px;
@@ -75,7 +76,6 @@ app-header{
 app-footer {
   margin-top: auto;
 }
-
 
 @media (max-width: 1024px) {
   app-header {
@@ -104,7 +104,6 @@ app-footer {
     padding-bottom: 36px;
   }
 
-
   .text-content {
     padding-bottom: 60px;
     padding-left: 40px;
@@ -130,7 +129,6 @@ app-footer {
     text-align: left;
   }
 }
-
 
 @media (max-width: 450px) {
   .text-content {

@@ -45,7 +45,7 @@
     </div>
   </section>
   @if (isOverlayOpen && selectedProject) {
-    <div class="overlay-layer">
+    <div class="overlay-layer" (click)="closeOverlay()">
       <app-project-overlay
         [project]="selectedProject!"
         (close)="isOverlayOpen = false"

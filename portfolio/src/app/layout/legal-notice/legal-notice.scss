@@ -36,8 +36,6 @@ h2 {
   display: flex;
   flex-direction: column;
 
-
-
   & .imprint-headline {
     font-size: 19px;
     color: white;
@@ -47,9 +45,9 @@ h2 {
     font-size: 16px;
     color: var(--primary-color);
 
-    ::ng-deep span{
-    color: white;
-  }
+    ::ng-deep span {
+      color: white;
+    }
   }
 }
 
@@ -65,54 +63,51 @@ app-footer {
 }
 
 @media (max-width: 1024px) {
-app-header {
-  padding-left: 60px;
-  padding-right: 60px;
+  app-header {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .text-content {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 
-.text-content {
-  padding-left: 60px;
-  padding-right: 60px;
-}
-
-}
-
-
-
-@media(max-width: 750px){
+@media (max-width: 750px) {
   h2 {
-  font-size: 52px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+    font-size: 52px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .text-content {
+    padding-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  app-header {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
-.text-content {
-  padding-bottom: 60px;
-  padding-left: 40px;
-  padding-right: 40px;
-}
+@media (max-width: 450px) {
+  h2 {
+    font-size: 32px;
+    padding-bottom: 0px;
+    text-align: left;
+  }
 
-app-header {
-  padding-left: 40px;
-  padding-right: 40px;
-}
-}
+  .text-content {
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-@media(max-width: 450px){
-h2 {
-  font-size: 32px;
-  padding-bottom: 0px;
-  text-align: left;
-}
-
-.text-content {
-  padding-bottom: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-app-header {
-  padding-left: 20px;
-  padding-right: 20px;
-}
+  app-header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

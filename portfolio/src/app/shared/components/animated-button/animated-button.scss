@@ -1,5 +1,5 @@
 button {
-  min-width: clamp(153px, 16vw, 172px);
+  width: 172px;
   justify-content: center;
   padding: 0 24px;
   font-family: Karla;
@@ -9,7 +9,8 @@ button {
   color: white;
   border: 1px solid white;
   height: 48px;
-   overflow: hidden;
+  overflow: hidden;
+  white-space: nowrap;
 
   &:hover {
     border: 1px solid var(--primary-color);
@@ -23,9 +24,6 @@ button {
   }
 }
 
- .button-text {
-    display: inline-block;
-  }
-
-
-
+.button-text {
+  display: inline-block;
+}

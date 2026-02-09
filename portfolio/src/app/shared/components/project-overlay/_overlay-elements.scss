@@ -1,0 +1,132 @@
+.tech-image {
+  width: 24px;
+  height: 24px;
+  fill: var(--primary-color);
+}
+
+.tech {
+  display: flex;
+  flex-wrap: nowrap;
+
+  & .tech-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  & .icon-mask {
+    width: 24px;
+    height: 24px;
+    background-color: var(--primary-color);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+  }
+
+  & .tech-name {
+    color: white;
+    font-size: 16px;
+    font-family: Karla;
+  }
+}
+
+.next-project-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: var(--primary-color);
+  width: 150px;
+  height: 40px;
+  gap: 8px;
+  transition: color 100ms ease-in-out;
+  margin-top: auto;
+
+  & span {
+    font-size: 18px;
+    font-family: Karla;
+    white-space: nowrap;
+  }
+
+  & img {
+    width: 18px;
+    height: 18px;
+    transition: transform 125ms ease-in-out;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: white;
+
+    img {
+      content: url('/icons/arrow-right.svg');
+      transform: translateX(3px);
+    }
+  }
+
+  & .arrow-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 675px) {
+  .tech {
+    gap: 12px;
+  }
+
+  .next-project-button {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 600px) {
+  .tech {
+    flex-wrap: wrap;
+  }
+
+  .next-project-button {
+    width: 140px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 450px) {
+  .tech {
+    .icon-mask {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .next-project-button {
+    width: 120px;
+    height: 34px;
+
+    & span {
+      font-size: 14px;
+    }
+
+    & img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+@media (max-width: 400px), (max-height: 670px) {
+  .tech {
+    gap: 8px;
+    .icon-mask {
+      width: 16px;
+      height: 16px;
+    }
+    .tech-name {
+      font-size: 12px;
+    }
+  }
+}

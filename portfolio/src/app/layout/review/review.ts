@@ -35,7 +35,7 @@ export class Review {
   private minSwipeDistance = 50;
 
   CARD_OFFSET = 560;
-  ANIMATION_DURATION = 600;
+  ANIMATION_DURATION = 500;
   cardPositions: number[] = [];
   noTransitionIndex = -1;
   isAnimating = false;

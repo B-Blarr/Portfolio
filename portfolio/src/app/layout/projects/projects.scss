@@ -60,14 +60,14 @@
   border-bottom: 1px solid var(--primary-color);
   padding: clamp(20px, 3vw, 40px) clamp(16px, 2.5vw, 32px);
   cursor: pointer;
-  transition: 0.2s ease-in;
+  transition: 0.125s ease-in;
 
   &:hover {
     background: rgba(61, 207, 182, 0.3);
 
     & .project-name-arrow .hover-arrow {
       opacity: 1;
-      transition: opacity 150ms ease;
+      transition: opacity 125ms ease;
     }
   }
 
@@ -147,7 +147,7 @@
   .individual-project-container {
     position: absolute;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.125s ease-in-out;
     pointer-events: none;
 
     &.visible {
@@ -177,7 +177,7 @@
       border-radius: 16px;
       z-index: 1;
       opacity: 0;
-      transition: opacity 600ms ease;
+      transition: opacity 125ms ease;
 
       background: repeating-linear-gradient(
         135deg,
@@ -237,32 +237,26 @@
   }
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
   .projects-wrapper {
-  gap: 20px;
-}
+    gap: 20px;
+  }
 
-.project-image-stack {
+  .project-image-stack {
+    .individual-project-container {
+      & img {
+        width: 200px;
+        height: 135px;
+      }
 
-  .individual-project-container {
-
-    & img {
-      width: 200px;
-      height: 135px;
-    }
-
-    &::after {
-      width: 200px;
-      height: 135px;
-      top: 11px;
-      left: 11px;
+      &::after {
+        width: 200px;
+        height: 135px;
+        top: 11px;
+        left: 11px;
+      }
     }
   }
-}
-
-
-
-
 }
 
 @media (max-width: 770px) {
@@ -287,18 +281,17 @@
 }
 
 @media (max-width: 500px) {
-.project-teaser {
-  padding: 20px 0;
+  .project-teaser {
+    padding: 20px 0;
 
-  & .used-technologies {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 18px;
-    flex-wrap: wrap;
+    & .used-technologies {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 18px;
+      flex-wrap: wrap;
+    }
   }
-}
-
 }
 
 @media (max-width: 450px) {
@@ -308,7 +301,6 @@
   }
 
   .description {
-
     & h3 {
       font-size: 20px;
       margin-bottom: 0;

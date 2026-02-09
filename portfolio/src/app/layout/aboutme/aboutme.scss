@@ -34,8 +34,8 @@
 
     transform: translate(8px, -8px) scale(0.98);
     transition:
-      opacity 220ms ease,
-      transform 220ms ease;
+      opacity 125ms ease,
+      transform 125ms ease;
 
     background: repeating-linear-gradient(
       45deg,
@@ -60,7 +60,7 @@
     position: relative;
     z-index: 2;
     filter: grayscale(100%);
-    transition: filter 0.4s ease-in-out;
+    transition: filter 125ms ease-in-out;
 
     &:hover {
       filter: grayscale(0%);
@@ -116,6 +116,7 @@ h3 {
       gap: 24px;
       color: #ffffffcc;
       font-size: 18px;
+      transition: 125ms ease-in-out;
 
       &:hover {
         color: white;

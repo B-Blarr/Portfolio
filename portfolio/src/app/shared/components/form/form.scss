@@ -29,7 +29,7 @@
     font-family: Karla;
   }
 
-  & .input-field{
+  & .input-field {
     padding-bottom: 25px;
   }
 
@@ -47,7 +47,7 @@
   }
 
   .error-message {
-    color: #EC7B7BCC;
+    color: #ec7b7bcc;
     font-size: 16px;
     font-family: 'Karla', sans-serif;
     margin: 0;
@@ -122,7 +122,7 @@ textarea.input {
     background-color: transparent;
     cursor: pointer;
     position: relative;
-    transition: all 0.3s ease;
+    transition: all 0.12s ease;
     z-index: 1;
 
     &::before {
@@ -137,7 +137,7 @@ textarea.input {
       z-index: -1;
       opacity: 0;
       transform: translate(-50%, -50%) scale(0.8);
-      transition: all 0.2s ease-in-out;
+      transition: all 0.12s ease-in-out;
     }
 
     &:checked {
@@ -242,6 +242,21 @@ app-animated-button {
   text-align: center;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0 1000px #1c1c1c inset;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: white;
+  font-family: 'Karla', sans-serif;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -267,29 +282,28 @@ app-animated-button {
   }
 
   .error-container {
-  min-height: 45px;
-}
-
-.input-container {
-  gap: 32px;
-  padding: 32px 16px;
-
-  .error-container{
-    bottom: -20px;
-    left: -6px;
-    height: 0;
-    white-space: nowrap;
+    min-height: 45px;
   }
-}
+
+  .input-container {
+    gap: 32px;
+    padding: 32px 16px;
+
+    .error-container {
+      bottom: -20px;
+      left: -6px;
+      height: 0;
+      white-space: nowrap;
+    }
+  }
 }
 
 @media (max-width: 350px) {
-.input-container {
-  padding: 32px 14px;
+  .input-container {
+    padding: 32px 14px;
 
-  .error-container{
-    left: -8px;
+    .error-container {
+      left: -8px;
+    }
   }
-}
-
 }

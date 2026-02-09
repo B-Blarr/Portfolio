@@ -138,7 +138,7 @@ aside {
     position: absolute;
     right: -16px;
     transform: scale(0);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
   }
 
   &:hover::after {
@@ -150,7 +150,7 @@ aside {
 .hero-links img {
   width: clamp(18px, 2.5vw, 26px);
   height: clamp(18px, 2.5vw, 26px);
-  transition: filter 0.2s ease-in-out;
+  transition: filter 0.1s ease-in-out;
   cursor: pointer;
 
   &:hover {

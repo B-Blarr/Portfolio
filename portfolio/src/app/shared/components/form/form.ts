@@ -66,6 +66,8 @@ export class Form {
     privacyAccepted: new FormControl(false, {
       validators: [Validators.requiredTrue],
     }),
+  }, {
+    updateOn: 'blur'
   });
 
   onSubmit() {
@@ -75,7 +77,6 @@ export class Form {
     this.mailError = false;
 
     if (this.userform.valid && !this.mailTest) {
-      // Echtes E-Mail-Versenden
       this.http.post(this.post.endPoint, this.post.body(this.userform.value)).subscribe({
         next: (response) => {
           console.log('E-Mail erfolgreich versendet:', response);
@@ -92,7 +93,6 @@ export class Form {
         complete: () => console.info('send post complete'),
       });
     } else if (this.userform.valid && this.mailTest) {
-      // Test-Modus: Nur Formular zurücksetzen
       console.log('Test-Modus: Formular-Daten:', this.userform.value);
       this.mailSent = true;
       setTimeout(() => {
