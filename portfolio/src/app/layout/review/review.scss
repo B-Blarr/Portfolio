@@ -277,7 +277,7 @@ h3 {
   .reference-card.active {
     max-width: calc(100vw - 32px);
     width: auto;
-    height: 350px;
+    height: 240px;
   }
 
   .reference-card.active {
@@ -315,14 +315,11 @@ h3 {
     padding: 12px;
   }
 
-  .reference-card.active {
-    padding: 16px;
-  }
-
   .reference-card,
   .reference-card.active {
     height: 350px;
     padding: 16px;
+    padding-top: 20px;
   }
 
   .carousel-wrapper {

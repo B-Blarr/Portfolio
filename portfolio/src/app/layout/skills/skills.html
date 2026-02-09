@@ -1,83 +1,86 @@
 <div class="skills-wrapper-full" id="skills-section">
   <section class="content">
-    <div class="technologies">
-      <h3>{{ 'skills.technologies' | translate }}</h3>
-      <article class="skillset-text">
-        <h2>{{ 'skills.skillset' | translate }}</h2>
-        <div class="skill-text-area">
-          <p class="main-text">
-            {{ 'skills.mainText' | translate }}
-          </p>
+    <div class="skills-order">
+      <div class="skillset-wrapper">
+        <h3>{{ 'skills.technologies' | translate }}</h3>
 
-          <p class="request-skill" [innerHTML]="'skills.request' | translate"></p>
-        </div>
-        <p class="request-contact">
-          {{ 'skills.requestText' | translate }}
-        </p>
-        <a href="#contact-section" class="contact-button">
-          <app-animated-button>{{ 'skills.button' | translate }}</app-animated-button>
-        </a>
-      </article>
-    </div>
-    <aside class="tech-stack">
-      <div class="tech-stack-icon">
-        <img src="/icons/html.svg" alt="HTML Logo" />
-        <span>HTML</span>
-      </div>
-      <div class="tech-stack-icon">
-        <img src="/icons/css.svg" alt="CSS Logo" />
-        <span>CSS</span>
-      </div>
-      <div class="tech-stack-icon">
-        <img src="/icons/sass.svg" alt="SASS Logo" />
-        <span>SCSS</span>
-      </div>
-      <div class="tech-stack-icon">
-        <img src="/icons/javascript.svg" alt="JS Logo" />
-        <span>JavaScript</span>
-      </div>
-      <div class="tech-stack-icon">
-        <img src="/icons/typescript.svg" alt="TS Logo" />
-        <span>TypeScript</span>
-      </div>
-      <div class="tech-stack-icon">
-        <img src="/icons/angular.svg" alt="Angular Logo" />
-        <span>Angular</span>
-      </div>
-      <div class="tech-stack-icon">
-        <img src="/icons/git.svg" alt="Git Logo" />
-        <span>Git</span>
-      </div>
-      <div class="tech-stack-icon">
-        <img src="/icons/rest-api.svg" alt="Rest-API Logo" />
-        <span>REST-API</span>
-      </div>
-      <div class="tech-stack-icon">
-        <img src="/icons/supabase.svg" alt="Supabase Logo" />
-        <span>Supabase</span>
-      </div>
-      <div class="tech-stack-icon">
-        <img src="/icons/scrum.svg" alt="Scrum Logo" />
-        <span>Scrum</span>
-      </div>
-      <div class="tech-stack-icon highlight">
-        <img src="/icons/mindset.svg" alt="Mindset Logo" />
-        <span [innerHTML]="'skills.mindset' | translate"></span>
-        <div class="speechbubble">
-          <p [innerHTML]="'skills.interest' | translate"></p>
-          <div class="special-interests">
-            <div class="single-interest">
-              <img src="/icons/react.svg" alt="React Logo" />
-              <span>React</span>
-            </div>
-            <div class="single-interest">
-              <img src="/icons/vuejs.svg" alt="Vue.js Logo" />
-              <span>Vue.js</span>
-            </div>
+        <article class="skillset-text">
+          <h2>{{ 'skills.skillset' | translate }}</h2>
+          <div class="skill-text-area">
+            <p class="main-text">
+              {{ 'skills.mainText' | translate }}
+            </p>
+
+            <p class="request-skill" [innerHTML]="'skills.request' | translate"></p>
           </div>
-          <img src="/icons/triangle.svg" class="bubble-triangle" />
-        </div>
+          <p class="request-contact">
+            {{ 'skills.requestText' | translate }}
+          </p>
+          <a href="#contact-section" class="contact-button">
+            <app-animated-button>{{ 'skills.button' | translate }}</app-animated-button>
+          </a>
+        </article>
       </div>
-    </aside>
+      <aside class="tech-stack">
+        <div class="tech-stack-icon">
+          <img src="/icons/html.svg" alt="HTML Logo" />
+          <span>HTML</span>
+        </div>
+        <div class="tech-stack-icon">
+          <img src="/icons/css.svg" alt="CSS Logo" />
+          <span>CSS</span>
+        </div>
+        <div class="tech-stack-icon">
+          <img src="/icons/sass.svg" alt="SASS Logo" />
+          <span>SCSS</span>
+        </div>
+        <div class="tech-stack-icon">
+          <img src="/icons/javascript.svg" alt="JS Logo" />
+          <span>JavaScript</span>
+        </div>
+        <div class="tech-stack-icon">
+          <img src="/icons/typescript.svg" alt="TS Logo" />
+          <span>TypeScript</span>
+        </div>
+        <div class="tech-stack-icon">
+          <img src="/icons/angular.svg" alt="Angular Logo" />
+          <span>Angular</span>
+        </div>
+        <div class="tech-stack-icon">
+          <img src="/icons/git.svg" alt="Git Logo" />
+          <span>Git</span>
+        </div>
+        <div class="tech-stack-icon">
+          <img src="/icons/rest-api.svg" alt="Rest-API Logo" />
+          <span>REST-API</span>
+        </div>
+        <div class="tech-stack-icon">
+          <img src="/icons/supabase.svg" alt="Supabase Logo" />
+          <span>Supabase</span>
+        </div>
+        <div class="tech-stack-icon">
+          <img src="/icons/scrum.svg" alt="Scrum Logo" />
+          <span>Scrum</span>
+        </div>
+        <div class="tech-stack-icon highlight">
+          <img src="/icons/mindset.svg" alt="Mindset Logo" />
+          <span [innerHTML]="'skills.mindset' | translate"></span>
+          <div class="speechbubble">
+            <p [innerHTML]="'skills.interest' | translate"></p>
+            <div class="special-interests">
+              <div class="single-interest">
+                <img src="/icons/react.svg" alt="React Logo" />
+                <span>React</span>
+              </div>
+              <div class="single-interest">
+                <img src="/icons/vuejs.svg" alt="Vue.js Logo" />
+                <span>Vue.js</span>
+              </div>
+            </div>
+            <img src="/icons/triangle.svg" class="bubble-triangle" />
+          </div>
+        </div>
+      </aside>
+    </div>
   </section>
 </div>
