@@ -32,7 +32,7 @@
         @if ((userform.get('email')?.touched || formSubmitted) && userform.get('email')?.invalid) {
           <p class="error-message">
             @if (userform.get('email')?.hasError('required')) { {{ "contact.emailErrorRequired" | translate }} }
-            @if (userform.get('email')?.hasError('email')) { {{ "contact.emailErrorInvalid" | translate }} }
+            @if (userform.get('email')?.hasError('pattern')) { {{ "contact.emailErrorInvalid" | translate }} }
           </p>
         }
       </div>

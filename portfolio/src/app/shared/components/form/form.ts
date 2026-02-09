@@ -57,11 +57,8 @@ export class Form {
     name: new FormControl('', {
       validators: [Validators.required, Validators.minLength(3)],
     }),
-    email: new FormControl('', {
-      validators: [Validators.required, Validators.email],
-    }),
     message: new FormControl('', {
-      validators: [Validators.required, Validators.maxLength(2500)],
+      validators: [Validators.required, Validators.maxLength(2500), Validators.pattern(/[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/) ],
     }),
     privacyAccepted: new FormControl(false, {
       validators: [Validators.requiredTrue],
