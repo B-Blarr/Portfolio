@@ -67,7 +67,7 @@ export class Form {
       validators: [Validators.requiredTrue],
     }),
   }, {
-    updateOn: 'blur'
+    // updateOn: 'blur'
   });
 
   onSubmit() {
