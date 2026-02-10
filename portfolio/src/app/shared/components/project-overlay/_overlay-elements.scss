@@ -7,6 +7,7 @@
 .tech {
   display: flex;
   flex-wrap: nowrap;
+  gap: 8px;
 
   & .tech-item {
     display: flex;

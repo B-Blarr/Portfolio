@@ -17,7 +17,7 @@
 
   & h2 {
     @include m.big-headline;
-    font-size: clamp(38px, 5vw, 64px);
+    font-size: clamp(56px, 5vw, 64px);
     padding-top: 12px;
   }
 
@@ -281,6 +281,11 @@
 }
 
 @media (max-width: 500px) {
+  .description {
+    & h2 {
+      font-size: 42px;
+    }
+  }
   .project-teaser {
     padding: 20px 0;
 

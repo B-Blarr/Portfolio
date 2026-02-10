@@ -1,8 +1,7 @@
 *{
-  margin: 0;
+margin: 0;
 position: relative;
 text-decoration: none;
-// list-style: none;
 box-sizing: border-box;
 scroll-behavior: smooth;
 font-size: inherit;
@@ -35,6 +34,7 @@ body:has(app-project-overlay) {
   font-weight: 300;
   src: url('/fonts/fira-code-v27-latin-300.woff2') format('woff2');
 }
+
 /* fira-code-regular - latin */
 @font-face {
   font-display: swap;
@@ -43,6 +43,7 @@ body:has(app-project-overlay) {
   font-weight: 400;
   src: url('/fonts/fira-code-v27-latin-regular.woff2') format('woff2');
 }
+
 /* fira-code-500 - latin */
 @font-face {
   font-display: swap;
@@ -51,6 +52,7 @@ body:has(app-project-overlay) {
   font-weight: 500;
   src: url('/fonts/fira-code-v27-latin-500.woff2') format('woff2');
 }
+
 /* fira-code-600 - latin */
 @font-face {
   font-display: swap;
@@ -59,6 +61,7 @@ body:has(app-project-overlay) {
   font-weight: 600;
   src: url('/fonts/fira-code-v27-latin-600.woff2') format('woff2');
 }
+
 /* fira-code-700 - latin */
 @font-face {
   font-display: swap;
@@ -76,6 +79,7 @@ body:has(app-project-overlay) {
   font-weight: 200;
   src: url('/fonts/karla-v33-latin-200.woff2') format('woff2');
 }
+
 /* karla-300 - latin */
 @font-face {
   font-display: swap;
@@ -84,6 +88,7 @@ body:has(app-project-overlay) {
   font-weight: 300;
   src: url('/fonts/karla-v33-latin-300.woff2') format('woff2');
 }
+
 /* karla-regular - latin */
 @font-face {
   font-display: swap;
@@ -92,6 +97,7 @@ body:has(app-project-overlay) {
   font-weight: 400;
   src: url('/fonts/karla-v33-latin-regular.woff2') format('woff2');
 }
+
 /* karla-500 - latin */
 @font-face {
   font-display: swap;
@@ -108,6 +114,7 @@ body:has(app-project-overlay) {
   font-weight: 600;
   src: url('/fonts/karla-v33-latin-600.woff2') format('woff2');
 }
+
 /* karla-700 - latin */
 @font-face {
   font-display: swap;
@@ -116,6 +123,7 @@ body:has(app-project-overlay) {
   font-weight: 700;
   src: url('/fonts/karla-v33-latin-700.woff2') format('woff2');
 }
+
 /* karla-800 - latin */
 @font-face {
   font-display: swap;

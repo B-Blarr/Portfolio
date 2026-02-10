@@ -27,6 +27,7 @@
   display: flex;
   justify-content: space-between;
   gap: clamp(32px, 5vw, 80px);
+  // padding-top: 32px;
 }
 
 .text-area {
@@ -37,6 +38,7 @@
   height: 100%;
   flex: 1 1 40%;
   min-width: 300px;
+  padding-top: 24px;
 }
 
 h2 {
@@ -176,7 +178,11 @@ h3 {
     justify-content: space-between;
     flex: 1;
     max-height: 75%;
-    height: 670px;
+    // height: 670px;
+  }
+
+  .text-area {
+    gap: 12px;
   }
 
   .button-area {
@@ -193,6 +199,7 @@ h3 {
     padding-right: 16px;
     padding-top: 16px;
     gap: 16px;
+    height: 670px;
   }
 
   h2 {
@@ -201,6 +208,7 @@ h3 {
 
   .text-area {
     padding-top: 12px;
+    gap: 32px;
   }
 
   h3 {

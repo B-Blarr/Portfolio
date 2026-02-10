@@ -16,7 +16,6 @@
 
 .content {
   @include m.content-limitation();
-  // gap: clamp(24px, 3vw, 48px);
   margin-top: clamp(60px, 8vw, 120px);
   font-family: Karla;
   color: white;
@@ -253,13 +252,10 @@ app-animated-button {
 
   .skills-order {
     flex-direction: column;
-    // gap: 64px;
   }
 
   .skillset-text {
-    // max-width: 568px;
     width: 100%;
-    // align-self: center;
   }
 
   .tech-stack {
@@ -350,7 +346,7 @@ app-animated-button {
     gap: 20px;
 
     & h2 {
-      font-size: 34px;
+      word-spacing: -6px;
     }
   }
 }
