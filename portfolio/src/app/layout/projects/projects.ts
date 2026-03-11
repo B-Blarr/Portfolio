@@ -23,7 +23,7 @@ export class Projects {
         { name: 'SCSS', iconUrl: '/icons/sass.svg' },
         { name: 'Supabase', iconUrl: '/icons/supabase.svg' },
       ],
-      github: 'https://github.com/B-Blarr',
+      github: 'https://github.com/B-Blarr/join',
       livetest: 'https://benjaminblarr.dev/join',
     },
 
