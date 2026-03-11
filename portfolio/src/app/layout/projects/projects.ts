@@ -24,7 +24,7 @@ export class Projects {
         { name: 'Supabase', iconUrl: '/icons/supabase.svg' },
       ],
       github: 'https://github.com/B-Blarr',
-      livetest: 'https://github.com/B-Blarr',
+      livetest: 'https://benjaminblarr.dev/join',
     },
 
     {
@@ -37,7 +37,7 @@ export class Projects {
         { name: 'HTML', iconUrl: '/icons/html.svg' },
         { name: 'CSS', iconUrl: '/icons/css.svg' },
       ],
-      github: 'https://github.com/B-Blarr/El-Pollo-Loco',
+      github: 'https://github.com/B-Blarr/join',
       livetest: 'https://benjaminblarr.dev/el-pollo-loco',
     },
 
