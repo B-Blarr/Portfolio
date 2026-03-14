@@ -13,20 +13,20 @@ type Direction = 'next' | 'prev';
 export class Review {
   reviewList: ReferenceData[] = [
     {
-      textKey: 'references.janisch.text',
-      evaluatorKey: 'references.janisch.evaluator',
+      textKey: 'references.vadim.text',
+      evaluatorKey: 'references.vadim.evaluator',
     },
     {
-      textKey: 'references.fischer.text',
-      evaluatorKey: 'references.fischer.evaluator',
+      textKey: 'references.serhat.text',
+      evaluatorKey: 'references.serhat.evaluator',
     },
     {
-      textKey: 'references.schulz.text',
-      evaluatorKey: 'references.schulz.evaluator',
+      textKey: 'references.vladislav.text',
+      evaluatorKey: 'references.vladislav.evaluator',
     },
     {
-      textKey: 'references.weber.text',
-      evaluatorKey: 'references.weber.evaluator',
+      textKey: 'references.gregor.text',
+      evaluatorKey: 'references.gregor.evaluator',
     },
   ];
 

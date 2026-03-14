@@ -46,21 +46,21 @@
   },
   "references": {
   "headline": "What my colleagues say about me",
-  "janisch": {
-    "text": "Benjamin has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
-    "evaluator": "H. Janisch - Team Partner"
+  "vadim": {
+    "text": "I had the pleasure of collaborating with Benjamin on several frontend projects, and I can confidently say he is a skilled and reliable developer. Benjamin writes clean, maintainable code and consistently pays attention to detail in both functionality and UI quality. <br>Beyond his technical abilities, Benjamin communicates clearly and proactively, which made collaboration smooth and efficient. Whenever we faced complex problems, he approached them with a structured mindset and always found practical solutions. <br><br> I would highly recommend Benjamin to any team looking for a frontend developer who combines strong technical skills with great teamwork.",
+    "evaluator": "Vadim Cebanu - Team Partner"
   },
-  "fischer": {
-    "text": "I had the good fortune of working with Benjamin in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool and focused and made sure our team was set up for success. He is super knowledgeable, easy to work with and I would happily work with him again given the chance.",
-    "evaluator": "A. Fischer - Team Partner"
+  "serhat": {
+    "text": "Benjamin is truly a responsible, hardworking, and reliable person. He consistently completed his tasks on time and with great care, which contributed significantly to the smooth progress of the team’s work. His organized way of working and respect for deadlines made our collaboration much more efficient. He also has strong communication skills and is always kind and respectful. His constructive attitude and willingness to help made working together both easy and enjoyable.<br><br> I would definitely recommend Benjamin as a team member.",
+    "evaluator": "Serhat Özcakir - Team Partner"
   },
-  "schulz": {
-    "text": "Our project benefited enormously from Benjamins efficient way of working.",
-    "evaluator": "T. Schulz - Frontend Developer"
+  "vladislav": {
+    "text": "I completed a frontend developer training program with Benjamin at the Developer Akademie. During that time, I came to know him as a very responsible person. He keeps his commitments and reliably completes the tasks he takes on. Benjamin is a friendly and communicative colleague, and working with him is always pleasant. He works diligently and efficiently. I especially enjoyed collaborating with him on our joint project “Kochwelt,” which left a very positive impression on me.",
+    "evaluator": "Vladislav P. - Team Partner"
   },
-  "weber": {
-    "text": "Working with Benjamin was a great experience. His problem-solving skills are exceptional.",
-    "evaluator": "M. Weber - Project Manager"
+  "gregor": {
+    "text": "Benjamin creates a very productive atmosphere within the team. Thanks to him, the project was completed significantly faster than planned. If he plans something or says he will do something, you can rely on him 100%.",
+    "evaluator": "Gregor Zaren - Team Partner"
   }
 },
 "contact": {

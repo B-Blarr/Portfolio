@@ -46,21 +46,21 @@
   },
   "references": {
     "headline": "Was meine Kollegen über mich sagen",
-    "janisch": {
-      "text": "Benjamin hat sich als zuverlässiger Gruppenpartner erwiesen. Seine technischen Fähigkeiten und proaktive Herangehensweise waren entscheidend für den Erfolg unseres Projekts.",
-      "evaluator": "H. Janisch - Team Partner"
+    "vadim": {
+      "text": "Ich hatte das Vergnügen, mit Benjamin an mehreren Frontend-Projekten zusammenzuarbeiten, und ich kann mit Überzeugung sagen, dass er ein fähiger und zuverlässiger Entwickler ist. Benjamin schreibt sauberen, wartbaren Code und achtet stets auf Details, sowohl bei der Funktionalität als auch bei der Qualität der Benutzeroberfläche.<br> Über seine technischen Fähigkeiten hinaus kommuniziert Benjamin klar und vorausschauend, was die Zusammenarbeit angenehm und effizient gemacht hat. Immer wenn wir vor komplexen Problemen standen, ist er strukturiert an sie herangegangen und hat stets praxisnahe Lösungen gefunden. <br><br> Ich würde Benjamin jedem Team ausdrücklich empfehlen, das einen Frontend-Entwickler sucht, der starke technische Fähigkeiten mit ausgeprägter Teamfähigkeit verbindet.",
+      "evaluator": "Vadim Cebanu - Team Partner"
     },
-    "fischer": {
-      "text": "Ich hatte das Glück, mit Benjamin in einem Gruppenprojekt an der Developer Akademie zusammenzuarbeiten, das viel Aufwand erforderte. Er blieb immer ruhig, cool und konzentriert und sorgte dafür, dass unser Team erfolgreich war. Er ist super kompetent, angenehm in der Zusammenarbeit und ich würde gerne wieder mit ihm arbeiten, wenn sich die Gelegenheit ergibt.",
-      "evaluator": "A. Fischer - Team Partner"
+    "serhat": {
+      "text": "Benjamin ist wirklich eine verantwortungsbewusste, fleißige und zuverlässige Person. Er hat seine Aufgaben stets pünktlich und mit großer Sorgfalt erledigt, was wesentlich zum reibungslosen Fortschritt der Teamarbeit beigetragen hat. Seine organisierte Arbeitsweise und sein respektvoller Umgang mit Deadlines haben unsere Zusammenarbeit deutlich effizienter gemacht. Außerdem verfügt er über starke Kommunikationsfähigkeiten und ist immer freundlich und respektvoll. Seine konstruktive Einstellung und seine Hilfsbereitschaft haben die Zusammenarbeit sowohl einfach als auch angenehm gemacht.<br><br> Ich würde Benjamin auf jeden Fall als Teammitglied weiterempfehlen.",
+      "evaluator": "Serhat Özcakir - Team Partner"
     },
-    "schulz": {
-      "text": "Unser Projekt profitierte enorm von Benjamins effizienter Arbeitsweise.",
-      "evaluator": "T. Schulz - Frontend Developer"
+    "vladislav": {
+      "text": "Ich habe mit Benjamin an der Developer Akademie eine Weiterbildung zum Frontend Entwickler gemacht. In dieser Zeit habe ich ihn als einen sehr verantwortungsbewussten Menschen kennengelernt. Er hält sich an seine Zusagen und erledigt Aufgaben zuverlässig, wenn er sie übernimmt. Benjamin ist ein freundlicher und kommunikativer Kollege, mit dem die Zusammenarbeit immer angenehm ist. Er arbeitet fleißig und schnell. Besonders bei unserem gemeinsamen Projekt „Kochwelt“ hat mir die Zusammenarbeit mit ihm viel Freude gemacht und einen sehr positiven Eindruck hinterlassen.",
+      "evaluator": "Vladislav P. - Team Partner"
     },
-    "weber": {
-      "text": "Die Zusammenarbeit mit Benjamin war eine großartige Erfahrung. Seine Problemlösungsfähigkeiten sind außergewöhnlich.",
-      "evaluator": "M. Weber - Project Manager"
+    "gregor": {
+      "text": "Benjamin sorgt innerhalb des Teams für eine sehr produktive Atmosphäre. Durch ihn wurde das Projekt deutlich schneller als geplant abgeschlossen. Wenn er etwas plant oder sagt, das er etwas machen wird, dann kann man sich 100%ig darauf verlassen.",
+      "evaluator": "Gregor Zaren - Team Partner"
     }
   },
   "contact": {
