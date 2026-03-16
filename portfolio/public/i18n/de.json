@@ -72,7 +72,7 @@
     "namePlaceholder": "Gib deinen Namen hier ein.",
     "nameErrorRequired": "Oops! Dein Name fehlt.",
     "nameErrorMinLength": "Name muss mindestens 3 Zeichen lang sein.",
-    "emailQuestion": "Wie lautet deine Email?",
+    "emailQuestion": "Wie lautet deine E-Mail?",
     "emailPlaceholder": "deineemail@email.com",
     "emailErrorRequired": "Hoppla! Deine E-Mail wird benötigt.",
     "emailErrorInvalid": "Bitte gib eine gültige E-Mail-Adresse ein.",
@@ -144,7 +144,7 @@
         "title": "Wir setzen folgende(n) Hoster ein:",
         "name": "HOSTINGER operations, UAB",
         "address": "Švitrigailos str. 34, Vilnius 03230 Litauen",
-        "contact": "Phone: +37064503378 | Email: domains@hostinger.com"
+        "contact": "Phone: +37064503378 | E-Mail: domains@hostinger.com"
       },
       "dpa": {
         "title": "Auftragsverarbeitung",
@@ -178,7 +178,7 @@
       },
       "objection": {
         "title": "Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)",
-        "text": "WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN; DIES GILT AUCH FÜRS EIN AUF DIESE BESTIMMUNGEN GESTÜTZTES PROFILING.",
+        "text": "WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN; DIES GILT AUCH FÜR EIN AUF DIESE BESTIMMUNGEN GESTÜTZTES PROFILING.",
         "directAds": "WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, SO HABEN SIE DAS RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE DERARTIGER WERBUNG EINZULEGEN."
       },
       "complaint": {

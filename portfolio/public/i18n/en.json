@@ -74,7 +74,7 @@
   "nameErrorMinLength": "Name must be at least 3 characters.",
   "emailQuestion": "What's your email?",
   "emailPlaceholder": "youremail@email.com",
-  "emailErrorRequired": "Hoppla! Your email is required.",
+  "emailErrorRequired": "Oops! Your email is required.",
   "emailErrorInvalid": "Please enter a valid email address.",
   "messageQuestion": "How can I help you?",
   "messagePlaceholder": "Hello Benjamin, I am interested in...",
@@ -143,7 +143,7 @@
     "hostDetails": {
       "title": "We are using the following host(s):",
       "name": "HOSTINGER operations, UAB",
-      "address": "Švitrigailos str. 34, Vilnius 03230 Litauen",
+      "address": "Švitrigailos str. 34, Vilnius 03230 Lithuania",
       "contact": "Phone: +37064503378 | Email: domains@hostinger.com"
     },
     "dpa": {
