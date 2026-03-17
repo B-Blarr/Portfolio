@@ -24,11 +24,11 @@ export type ProjectData = {
   styleUrl: './project-overlay.scss',
 })
 export class ProjectOverlay {
-@Input({ required: true }) project!: ProjectData;
-@Output() close = new EventEmitter<void>();
-@Output() next = new EventEmitter<void>();
+  @Input({ required: true }) project!: ProjectData;
+  @Output() close = new EventEmitter<void>();
+  @Output() next = new EventEmitter<void>();
 
- @HostListener('document:keydown.escape')
+  @HostListener('document:keydown.escape')
   onEscapePressed() {
     this.close.emit();
   }
@@ -37,7 +37,7 @@ export class ProjectOverlay {
     this.close.emit();
   }
 
-  onNext(){
-  this.next.emit();
+  onNext() {
+    this.next.emit();
   }
 }

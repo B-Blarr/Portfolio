@@ -4,12 +4,12 @@ section{
   display: flex;
   flex-direction: column;
   justify-content: center;
-overflow-x: hidden;
-background-color: #1c1c1c;
+  overflow-x: hidden;
+  background-color: #1c1c1c;
 }
 
 app-aboutme, app-skills, app-projects, app-review{
-    width: 100%;
+  width: 100%;
   display: block;
 }
 

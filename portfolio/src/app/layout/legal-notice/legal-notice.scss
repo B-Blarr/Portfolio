@@ -45,7 +45,7 @@ h2 {
     font-size: 16px;
     color: var(--primary-color);
 
-    ::ng-deep span {
+    & ::ng-deep span {
       color: white;
     }
   }

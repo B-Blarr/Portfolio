@@ -77,10 +77,10 @@ export class Projects {
   }
 
   setHover(subtitle: string): void {
-  this.hoveredProjectSubtitle = subtitle;
-}
+    this.hoveredProjectSubtitle = subtitle;
+  }
 
-clearHover(): void {
-  this.hoveredProjectSubtitle = null;
-}
+  clearHover(): void {
+    this.hoveredProjectSubtitle = null;
+  }
 }

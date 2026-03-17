@@ -3,7 +3,6 @@ import {
   FormControl,
   FormGroup,
   FormsModule,
-  NgForm,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
@@ -38,7 +37,6 @@ export class Form {
 
   isFormInvalid = true;
   formSubmitted = false;
-  mailTest = false;
   mailSent = false;
   mailError = false;
 
@@ -66,8 +64,6 @@ export class Form {
     privacyAccepted: new FormControl(false, {
       validators: [Validators.requiredTrue],
     }),
-  }, {
-    // updateOn: 'blur'
   });
 
   onSubmit() {
@@ -76,10 +72,9 @@ export class Form {
     this.mailSent = false;
     this.mailError = false;
 
-    if (this.userform.valid && !this.mailTest) {
+    if (this.userform.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.userform.value)).subscribe({
-        next: (response) => {
-          console.log('E-Mail erfolgreich versendet:', response);
+        next: () => {
           this.mailSent = true;
           this.cdr.detectChanges();
           setTimeout(() => {
@@ -90,15 +85,7 @@ export class Form {
           console.error('Fehler beim E-Mail-Versand:', error);
           this.mailError = true;
         },
-        complete: () => console.info('send post complete'),
       });
-    } else if (this.userform.valid && this.mailTest) {
-      console.log('Test-Modus: Formular-Daten:', this.userform.value);
-      this.mailSent = true;
-      setTimeout(() => {
-        this.formReset();
-      }, 3000);
-
     }
   }
 

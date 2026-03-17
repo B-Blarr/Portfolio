@@ -1,8 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 
-
-
 export type ReferenceData = {
   textKey: string;
   evaluatorKey: string;
@@ -15,11 +13,5 @@ export type ReferenceData = {
   styleUrl: './reference.scss',
 })
 export class Reference {
-@Input({ required: true }) reference!: ReferenceData;
-
-
-
-
-
-
+  @Input({ required: true }) reference!: ReferenceData;
 }

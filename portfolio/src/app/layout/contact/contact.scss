@@ -1,4 +1,5 @@
 @use '../../../styles/mixins' as m;
+
 .content {
   @include m.content-limitation(row);
   padding-left: 80px;
@@ -64,6 +65,7 @@
     align-items: center;
     gap: 60px;
   }
+
   .text-area {
     padding-bottom: 18px;
 
@@ -76,6 +78,7 @@
 @media (max-width: 500px) {
   .text-area {
     padding-bottom: 20px;
+
     & h3 {
       font-size: 20px;
     }

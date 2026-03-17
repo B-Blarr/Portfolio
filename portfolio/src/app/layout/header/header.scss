@@ -112,15 +112,14 @@ header {
   z-index: 2;
 
   & .language-switch {
-      border: 1px solid var(--primary-color);
-      border-radius: 100px;
-    }
+    border: 1px solid var(--primary-color);
+    border-radius: 100px;
+  }
 
-      &.active {
-        color: white;
-        background-color: var(--primary-color);
-      }
-
+  &.active {
+    color: white;
+    background-color: var(--primary-color);
+  }
 
   & a {
     font-size: 18px;
@@ -151,20 +150,13 @@ header {
     width: 32px;
     height: 24px;
     background-color: white;
-
     mask-image: url('/icons/burger-menu.svg');
     mask-repeat: no-repeat;
     mask-size: contain;
     -webkit-mask-image: url('/icons/burger-menu.svg');
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
-
     transition: background-color 0.2s ease;
-  }
-
-  &.open {
-      background-color: var(--primary-color);
-
   }
 }
 
@@ -186,7 +178,7 @@ header {
 }
 
 @media(max-width: 800px){
-    .logo-full {
+  .logo-full {
     display: none;
   }
 
@@ -234,19 +226,12 @@ header {
     -webkit-mask-image: url('/icons/burger-menu.svg');
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
-
     transition: background-color 0.2s ease;
   }
-
-  // .language-button {
-  // font-size: 18px;
-  // }
 }
 
 @media (max-width: 450px) {
-header{
-  padding-top: 20px;
+  header{
+    padding-top: 20px;
+  }
 }
-}
-
-

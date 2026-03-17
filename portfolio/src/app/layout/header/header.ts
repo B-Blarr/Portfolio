@@ -9,7 +9,6 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
   styleUrl: './header.scss',
 })
 export class Header {
-  protected title = 'ngx';
   private translate = inject(TranslateService);
 
   activeLanguage = (localStorage.getItem('language') || 'en') as 'de' | 'en';

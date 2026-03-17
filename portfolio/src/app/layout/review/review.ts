@@ -190,7 +190,7 @@ export class Review {
     return this.cardPositions.findIndex((pos) => pos === 1);
   }
 
-    @HostListener('touchstart', ['$event'])
+  @HostListener('touchstart', ['$event'])
   onTouchStart(event: TouchEvent): void {
     this.touchStartX = event.changedTouches[0].screenX;
   }

@@ -46,20 +46,21 @@ h2 {
     color: var(--primary-color);
     line-height: 1.5;
 
-    em {
+    & em {
       font-style: normal;
       color: var(--primary-color);
     }
 
-    span,
+    & span,
     strong {
       color: white;
       font-weight: 400;
     }
 
-    a {
+    & a {
       color: white;
       text-decoration: none;
+
       &:hover {
         text-decoration: underline;
       }

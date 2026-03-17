@@ -31,12 +31,8 @@
     height: 94%;
     border-radius: inherit;
     pointer-events: none;
-
     transform: translate(8px, -8px) scale(0.98);
-    transition:
-      opacity 125ms ease,
-      transform 125ms ease;
-
+    transition: opacity 125ms ease, transform 125ms ease;
     background: repeating-linear-gradient(
       45deg,
       color-mix(in srgb, var(--primary-color) 95%, transparent) 0 1px,
@@ -218,8 +214,8 @@ h3 {
         gap: 16px;
       }
     }
-
   }
+
   h3 {
     font-size: 20px;
   }
