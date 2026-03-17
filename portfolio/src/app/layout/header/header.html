@@ -8,23 +8,23 @@
       [class.active]="activeLanguage === 'de'"
       class="language-button">DE</button>
     </div>
-    <button class="nav-button" ><a [routerLink]="['/']" fragment="aboutme-section">{{"nav.about me" | translate}}</a></button>
-    <button class="nav-button" ><a [routerLink]="['/']" fragment="skills-section">{{"nav.skills" | translate}}</a></button>
-    <button class="nav-button" ><a [routerLink]="['/']" fragment="projects">{{"nav.projects" | translate}}</a></button>
+    <button type="button" class="nav-button"><a [routerLink]="['/']" fragment="aboutme-section">{{"nav.about me" | translate}}</a></button>
+    <button type="button" class="nav-button"><a [routerLink]="['/']" fragment="skills-section">{{"nav.skills" | translate}}</a></button>
+    <button type="button" class="nav-button"><a [routerLink]="['/']" fragment="projects">{{"nav.projects" | translate}}</a></button>
   </div>
   <a routerLink="">
   <img class="logo logo-full" src="/icons/logo.png" alt="Logo" />
   <img class="logo logo-small" src="/icons/logo-small.png" alt="Logo" />
   </a>
-  <button (click)="toggleBurgerMenu()" class="burger-menu" [class.open]="isMenuOpen"><img class="burger-icon" src="/icons/burger-menu.svg" alt="Burger Menu">
+  <button type="button" (click)="toggleBurgerMenu()" class="burger-menu" [class.open]="isMenuOpen"><img class="burger-icon" src="/icons/burger-menu.svg" alt="Burger Menu">
   </button>
 </header>
 
   <div class="burger-links-container" [class.flex]="isMenuOpen">
 
-    <button class="nav-button" (click)="closeMenu()"><a [routerLink]="['/']" fragment="aboutme-section">{{"nav.about me" | translate}}</a></button>
-    <button class="nav-button" (click)="closeMenu()"><a [routerLink]="['/']" fragment="skills-section">{{"nav.skills" | translate}}</a></button>
-    <button class="nav-button" (click)="closeMenu()"><a [routerLink]="['/']" fragment="projects">{{"nav.projects" | translate}}</a></button>
+    <button type="button" class="nav-button" (click)="closeMenu()"><a [routerLink]="['/']" fragment="aboutme-section">{{"nav.about me" | translate}}</a></button>
+    <button type="button" class="nav-button" (click)="closeMenu()"><a [routerLink]="['/']" fragment="skills-section">{{"nav.skills" | translate}}</a></button>
+    <button type="button" class="nav-button" (click)="closeMenu()"><a [routerLink]="['/']" fragment="projects">{{"nav.projects" | translate}}</a></button>
     <div class="language-switch">
       <button type="button" (click)="setActiveLanguage('en')"
       [class.active]="activeLanguage === 'en'"

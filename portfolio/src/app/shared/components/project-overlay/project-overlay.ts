@@ -29,15 +29,15 @@ export class ProjectOverlay {
   @Output() next = new EventEmitter<void>();
 
   @HostListener('document:keydown.escape')
-  onEscapePressed() {
+  onEscapePressed(): void {
     this.close.emit();
   }
 
-  onClose() {
+  onClose(): void {
     this.close.emit();
   }
 
-  onNext() {
+  onNext(): void {
     this.next.emit();
   }
 }

@@ -8,7 +8,6 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
-
 export class Projects {
   projectsList: ProjectData[] = [
     {
@@ -37,7 +36,7 @@ export class Projects {
         { name: 'HTML', iconUrl: '/icons/html.svg' },
         { name: 'CSS', iconUrl: '/icons/css.svg' },
       ],
-      github: 'https://github.com/B-Blarr/join',
+      github: 'https://github.com/B-Blarr/El-Pollo-Loco',
       livetest: 'https://benjaminblarr.dev/el-pollo-loco',
     },
 
@@ -70,7 +69,7 @@ export class Projects {
     this.isOverlayOpen = false;
   }
 
-  nextProject() {
+  nextProject(): void {
     const currentIndex = this.projectsList.indexOf(this.selectedProject!);
     const nextIndex = (currentIndex + 1) % this.projectsList.length;
     this.selectedProject = this.projectsList[nextIndex];

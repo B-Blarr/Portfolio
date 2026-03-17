@@ -51,7 +51,8 @@
       <div class="error-container">
         @if ((userform.get('message')?.touched || formSubmitted) && userform.get('message')?.invalid) {
           <p class="error-message">
-            {{ "contact.messageErrorRequired" | translate }}
+            @if (userform.get('message')?.hasError('required')) { {{ "contact.messageErrorRequired" | translate }} }
+            @if (userform.get('message')?.hasError('maxlength')) { {{ "contact.messageErrorMaxLength" | translate }} }
           </p>
         }
       </div>

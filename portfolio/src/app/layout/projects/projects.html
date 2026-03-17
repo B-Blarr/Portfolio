@@ -1,4 +1,4 @@
-<div class="stage" >
+<div class="stage">
   <section class="content" id="projects">
     <div class="description">
       <h3>Portfolio</h3>
@@ -14,6 +14,8 @@
         @for (project of projectsList; track project.subtitle) {
           <aside
             class="project-teaser"
+            role="button"
+            tabindex="0"
             (click)="openOverlay(project)"
             (mouseenter)="setHover(project.subtitle)"
             (mouseleave)="clearHover()"

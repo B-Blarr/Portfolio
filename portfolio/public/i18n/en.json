@@ -107,7 +107,7 @@
     "indemnity": "Indemnity",
     "indemnityText": "You agree to indemnify, defend and hold harmless us, the listed students, the <span>Developer Akademie</span>, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of <span>Portfolio</span> and/or your breach of this Legal Notice.",
     "contactMe": "For any questions or notices, please contact me at b.blarr@gmx.de.",
-    "date": " February 05, 2026"
+    "date": "February 5, 2026"
   },
   "privacyPolicy": {
     "mainTitle": "Privacy Policy",
@@ -170,7 +170,7 @@
       },
       "legalBasis": {
         "title": "General information on the legal basis for the data processing on this website",
-        "text": "If you have consented to data processing, we process your personal data on the basis of Art. 6(1)(a) GDPR or Art. 9 (2)(a) GDPR, if special categories of data are processed according to Art. 9 (1) DSGVO. In the case of explicit consent to the transfer of personal data to third countries, the data processing is also based on Art. 49 (1)(a) GDPR."
+        "text": "If you have consented to data processing, we process your personal data on the basis of Art. 6(1)(a) GDPR or Art. 9(2)(a) GDPR, if special categories of data are processed according to Art. 9(1) GDPR. In the case of explicit consent to the transfer of personal data to third countries, the data processing is also based on Art. 49 (1)(a) GDPR."
       },
       "recipients": {
         "title": "Recipients of personal data",
@@ -212,7 +212,7 @@
       "logs": {
         "title": "Server log files",
         "text": "The provider of this website and its pages automatically collects and stores information in so-called server log files, which your browser communicates to us automatically.",
-        "basis": "This data is recorded on the basis of Art. 6(1)(f) GDPR. The operator of the website has a legitimate interest in the technically error free depiction and the optimization of the operator’s website."
+        "basis": "This data is recorded on the basis of Art. 6(1)(f) GDPR. The operator of the website has a legitimate interest in the technically error-free depiction and the optimization of the operator’s website."
       },
       "contactForm": {
         "title": "Contact form",

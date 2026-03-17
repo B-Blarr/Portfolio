@@ -14,13 +14,13 @@ export class Header {
   activeLanguage = (localStorage.getItem('language') || 'en') as 'de' | 'en';
   isMenuOpen = false;
 
-  setActiveLanguage(language: 'de' | 'en') {
+  setActiveLanguage(language: 'de' | 'en'): void {
     this.translate.use(language);
     this.activeLanguage = language;
     localStorage.setItem('language', language);
   }
 
-  toggleBurgerMenu() {
+  toggleBurgerMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
   }
 

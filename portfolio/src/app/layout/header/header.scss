@@ -139,7 +139,7 @@ header {
   display: flex;
 }
 
-.open{
+.open {
   background-color: var(--primary-color);
 }
 
@@ -177,7 +177,7 @@ header {
   }
 }
 
-@media(max-width: 800px){
+@media(max-width: 800px) {
   .logo-full {
     display: none;
   }
@@ -231,7 +231,7 @@ header {
 }
 
 @media (max-width: 450px) {
-  header{
+  header {
     padding-top: 20px;
   }
 }

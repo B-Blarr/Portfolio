@@ -1,24 +1,24 @@
-*{
-margin: 0;
-position: relative;
-text-decoration: none;
-box-sizing: border-box;
-scroll-behavior: smooth;
-font-size: inherit;
-color: inherit;
-font-family: inherit;
-object-fit: cover;
-;}
+* {
+  margin: 0;
+  position: relative;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+  object-fit: cover;
+}
 
-:root{
+:root {
   --primary-color: #3DCFB6;
 }
 
-.background-primary{
+.background-primary {
   background-color: var(--primary-color);
 }
 
-.background-white{
+.background-white {
   background-color: white;
 }
 

@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './animated-button.scss',
 })
 export class AnimatedButton {
-@Input() disabled: boolean = false;
-@Input() type: 'button' | 'submit' = "button";
+  @Input() disabled: boolean = false;
+  @Input() type: 'button' | 'submit' = "button";
 }

@@ -1,7 +1,7 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import {provideTranslateHttpLoader} from "@ngx-translate/http-loader";
-import {provideTranslateService, TranslateService} from "@ngx-translate/core";
+import {provideTranslateService} from "@ngx-translate/core";
 
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
