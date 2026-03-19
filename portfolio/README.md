@@ -13,6 +13,7 @@ A responsive single-page portfolio showcasing my projects, skills and background
 - Bilingual (DE/EN) with language switching
 - Responsive design across all devices
 - Project showcase with live links
+- -Contact form for direct messaging
 
 ## 🛠️ Technologies
 ![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat&logo=angular&logoColor=white)
