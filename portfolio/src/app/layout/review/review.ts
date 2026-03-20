@@ -86,6 +86,7 @@ export class Review {
     this.isAnimating = true;
     const direction = this.animationQueue.shift()!;
     if (direction === 'next') this.prepareNextSlide();
+    else this.preparePrevSlide();
     setTimeout(() => this.executeSlide(direction), 20);
   }
 
@@ -93,6 +94,14 @@ export class Review {
     this.reviewList.forEach((_, index) => {
       if (this.cardPositions[index] === -2) {
         this.performInstantTeleport(index, 2);
+      }
+    });
+  }
+
+  preparePrevSlide(): void {
+    this.reviewList.forEach((_, index) => {
+      if (this.cardPositions[index] === 2) {
+        this.performInstantTeleport(index, -2);
       }
     });
   }
