@@ -4,7 +4,7 @@ My personal developer portfolio, built with Angular and TypeScript.
 
 👉 **[Visit the portfolio](https://benjaminblarr.dev/)**
 
-![Portfolio Preview](public/images/preview.png)
+![Portfolio Preview](portfolio/public/images/preview.png)
 
 ## 📌 About
 A responsive single-page portfolio showcasing my projects, skills and background as a Fullstack Developer in training. Available in German and English.
