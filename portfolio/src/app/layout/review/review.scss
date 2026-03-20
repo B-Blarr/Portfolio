@@ -78,13 +78,6 @@ h3 {
     pointer-events: auto;
   }
 
-  &[style*='transition: none'],
-  &[style*='transition:none'] {
-    opacity: 0;
-    visibility: hidden;
-    z-index: -10;
-  }
-
   & .quotes {
     position: absolute;
     display: none;
