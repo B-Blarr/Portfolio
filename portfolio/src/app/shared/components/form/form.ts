@@ -41,14 +41,8 @@ export class Form {
   mailError = false;
 
   post = {
-    endPoint: '/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
-    options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
-    },
+    endPoint: '/api/contact/',
+    body: (payload: any) => payload,
   };
 
   userform = new FormGroup({
@@ -64,6 +58,9 @@ export class Form {
     privacyAccepted: new FormControl(false, {
       validators: [Validators.requiredTrue],
     }),
+    // Honeypot: fuer Besucher unsichtbar. Nur Bots fuellen dieses Feld
+    // aus, der Server verwirft solche Einsendungen stillschweigend.
+    website: new FormControl(''),
   });
 
   onSubmit() {
@@ -102,6 +99,7 @@ export class Form {
       email: 'youremail@email.com',
       message: 'Hello Benjamin, I am interested in...',
       privacyAccepted: false,
+      website: '',
     });
   }
 

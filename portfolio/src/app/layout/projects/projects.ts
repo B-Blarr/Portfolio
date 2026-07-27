@@ -23,7 +23,7 @@ export class Projects {
         { name: 'Supabase', iconUrl: '/icons/supabase.svg' },
       ],
       github: 'https://github.com/B-Blarr/join',
-      livetest: 'https://benjaminblarr.dev/join',
+      livetest: 'https://benjaminblarr.de/join',
     },
 
     {
@@ -37,7 +37,7 @@ export class Projects {
         { name: 'CSS', iconUrl: '/icons/css.svg' },
       ],
       github: 'https://github.com/B-Blarr/El-Pollo-Loco',
-      livetest: 'https://benjaminblarr.dev/el-pollo-loco',
+      livetest: 'https://benjaminblarr.de/el-pollo-loco',
     },
 
     {
@@ -52,7 +52,7 @@ export class Projects {
         { name: 'REST-API', iconUrl: '/icons/rest-api.svg' },
       ],
       github: 'https://github.com/B-Blarr/Pokedex',
-      livetest: 'https://benjaminblarr.dev/pokedex',
+      livetest: 'https://benjaminblarr.de/pokedex',
     },
   ];
 

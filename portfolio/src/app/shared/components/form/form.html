@@ -1,4 +1,14 @@
 <form class="contact-form" [formGroup]="userform" (ngSubmit)="onSubmit()">
+  <!-- Honeypot gegen Bots. Fuer Menschen unsichtbar, per tabindex und
+       aria-hidden auch fuer Tastatur und Screenreader ausgeblendet. -->
+  <input
+    class="hp-field"
+    type="text"
+    formControlName="website"
+    tabindex="-1"
+    autocomplete="off"
+    aria-hidden="true"
+  />
   <div>
     <div class="input-container border-top">
       <label class="label" for="name">{{"contact.nameQuestion" | translate}}</label>

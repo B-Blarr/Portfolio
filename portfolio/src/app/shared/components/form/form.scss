@@ -299,3 +299,14 @@ textarea:-webkit-autofill:active {
     }
   }
 }
+
+// Honeypot-Feld: aus dem sichtbaren Bereich geschoben statt display:none,
+// weil manche Bots ausgeblendete Felder erkennen und ueberspringen.
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
