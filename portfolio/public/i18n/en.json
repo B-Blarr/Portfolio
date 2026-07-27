@@ -42,6 +42,9 @@
     },
     "pokedex": {
       "description": "Based on the PokéAPI an interactive library that provides and catalogues pokémon information."
+    },
+    "coderr": {
+      "description": "REST API, built with Django REST Framework. Offers, orders and reviews with token authentication. Frontend provided by the Developer Akademie."
     }
   },
   "references": {

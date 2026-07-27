@@ -54,6 +54,20 @@ export class Projects {
       github: 'https://github.com/B-Blarr/Pokedex',
       livetest: 'https://benjaminblarr.de/pokedex',
     },
+
+    {
+      title: '04',
+      subtitle: 'Coderr',
+      descriptionKey: 'projects.coderr.description',
+      imageUrl: '/images/coderr.jpg',
+      techs: [
+        { name: 'Python', iconUrl: '/icons/python.svg' },
+        { name: 'Django', iconUrl: '/icons/django.svg' },
+        { name: 'REST-API', iconUrl: '/icons/rest-api.svg' },
+      ],
+      github: 'https://github.com/B-Blarr/Coderr-Backend',
+      livetest: 'https://benjaminblarr.de/coderr',
+    },
   ];
 
   selectedProject: ProjectData | null = null;
