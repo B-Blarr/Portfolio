@@ -11,13 +11,16 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 export class Header {
   private translate = inject(TranslateService);
 
-  activeLanguage = (localStorage.getItem('language') || 'en') as 'de' | 'en';
+  activeLanguage = (localStorage.getItem('language') || 'de') as 'de' | 'en';
   isMenuOpen = false;
 
   setActiveLanguage(language: 'de' | 'en'): void {
     this.translate.use(language);
     this.activeLanguage = language;
     localStorage.setItem('language', language);
+    // Zieht das lang-Attribut des <html>-Elements mit um, damit die
+    // Sprachauszeichnung der Seite zur angezeigten Sprache passt.
+    document.documentElement.lang = language;
   }
 
   toggleBurgerMenu(): void {

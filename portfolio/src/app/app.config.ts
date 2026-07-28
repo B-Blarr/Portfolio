@@ -14,7 +14,7 @@ export const appConfig: ApplicationConfig = {
        }),),
     provideHttpClient(),
     provideTranslateService({
-      lang: 'en',
+      lang: 'de',
       fallbackLang: 'en',
       loader: provideTranslateHttpLoader({
         prefix: '/i18n/',

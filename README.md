@@ -2,7 +2,7 @@
 
 My personal developer portfolio, built with Angular and TypeScript.
 
-👉 **[Visit the portfolio](https://benjaminblarr.dev/)**
+👉 **[Visit the portfolio](https://benjaminblarr.de/)**
 
 ![Portfolio Preview](portfolio/public/images/preview.png)
 
@@ -20,12 +20,16 @@ A responsive single-page portfolio showcasing my projects, skills and background
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat&logo=sass&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)
+![Django REST Framework](https://img.shields.io/badge/Django_REST_Framework-A30000?style=flat&logo=django&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat&logo=supabase&logoColor=white)
 
 ---
 
 ## 🚀 Getting Started
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.5.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.0.
 
 ### Development server
 
@@ -39,12 +43,6 @@ Navigate to `http://localhost:4200/`.
 
 ```bash
 ng build
-```
-
-### Running unit tests
-
-```bash
-ng test
 ```
 
 For more information visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
