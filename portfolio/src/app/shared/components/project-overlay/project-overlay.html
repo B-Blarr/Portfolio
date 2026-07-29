@@ -28,15 +28,23 @@
     </div>
     <div class="button-area">
       <div class="button-links">
-        <app-animated-button
-          ><a [href]="project.github" target="_blank" rel="noopener noreferrer" class="github-link">
+        <a
+          class="github-link"
+          [href]="project.github"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <app-animated-button>
             <span>GitHub</span>
-            <img src="/icons/arrow-out.svg" alt="Arrow Out" /> </a
-        ></app-animated-button>
-        <app-animated-button
-          ><a [href]="project.livetest" target="_blank" rel="noopener noreferrer"
-            ><span>Live Test</span><img src="/icons/arrow-out.svg" alt="Arrow Out" /></a
-        ></app-animated-button>
+            <img src="/icons/arrow-out.svg" alt="Arrow Out" />
+          </app-animated-button>
+        </a>
+        <a [href]="project.livetest" target="_blank" rel="noopener noreferrer">
+          <app-animated-button>
+            <span>Live Test</span>
+            <img src="/icons/arrow-out.svg" alt="Arrow Out" />
+          </app-animated-button>
+        </a>
       </div>
       <button type="button" class="next-project-button" (click)="onNext()">
         <span>{{ 'projects.nextButton' | translate }}</span>
