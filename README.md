@@ -1,4 +1,4 @@
-# 👨‍💻 Benjamin Blarr – Portfolio
+# Benjamin Blarr, Portfolio
 
 My personal developer portfolio, built with Angular and TypeScript.
 
@@ -6,43 +6,50 @@ My personal developer portfolio, built with Angular and TypeScript.
 
 ![Portfolio Preview](portfolio/public/images/preview.png)
 
-## 📌 About
-A responsive single-page portfolio showcasing my projects, skills and background as a Fullstack Developer in training. Available in German and English.
+## About
 
-## ✨ Features
-- Bilingual (DE/EN) with language switching
-- Responsive design across all devices
-- Project showcase with live links
-- Contact form for direct messaging
+A single-page portfolio in German and English, showing my projects and how to
+reach me. The language switch keeps the current position on the page, and the
+contact form posts to a Django endpoint on the same server rather than to a
+third-party service.
 
-## 🛠️ Technologies
-![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat&logo=angular&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
-![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat&logo=sass&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)
-![Django REST Framework](https://img.shields.io/badge/Django_REST_Framework-A30000?style=flat&logo=django&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat&logo=supabase&logoColor=white)
+## Features
 
----
+- German and English, switchable without a reload
+- Responsive from 4K down to 320 pixels
+- Project showcase with links to the running applications
+- Contact form with server-side validation and spam protection
 
-## 🚀 Getting Started
+## Built with
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.0.
+**Frontend**
 
-### Development server
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" height="40" alt="angular logo" />
+<img width="12" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo" />
+<img width="12" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" height="40" alt="sass logo" />
+<img width="12" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo" />
+
+**Backend**
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="python logo" />
+<img width="12" />
+<img src="https://cdn.jsdelivr.net/gh/B-Blarr/B-Blarr@main/assets/django.svg" height="40" alt="django logo" />
+<img width="12" />
+<img src="https://cdn.jsdelivr.net/gh/B-Blarr/B-Blarr@main/assets/drf.svg?v=2" height="40" alt="django rest framework logo" />
+
+The contact endpoint lives in the [Coderr backend](https://github.com/B-Blarr/Coderr-Backend),
+which runs on the same server.
+
+## Getting Started
 
 ```bash
+npm install
 ng serve
 ```
 
-Navigate to `http://localhost:4200/`.
+The site is then available at `http://localhost:4200/`.
 
-### Building
-
-```bash
-ng build
-```
-
-For more information visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Built with Angular CLI 21.1.0.
