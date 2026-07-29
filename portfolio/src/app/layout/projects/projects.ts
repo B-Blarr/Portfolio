@@ -66,7 +66,7 @@ export class Projects {
         { name: 'REST-API', iconUrl: '/icons/rest-api.svg' },
       ],
       github: 'https://github.com/B-Blarr/Coderr-Backend',
-      livetest: 'https://benjaminblarr.de/coderr',
+      livetest: 'https://coderr.benjaminblarr.de',
     },
   ];
 
