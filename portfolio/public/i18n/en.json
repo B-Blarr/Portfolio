@@ -82,6 +82,7 @@
     "messageQuestion": "How can I help you?",
     "messagePlaceholder": "Hello Benjamin, I am interested in...",
     "messageErrorRequired": "What is your message to me?",
+    "messageErrorMinLength": "Please write at least 10 characters.",
     "messageErrorMaxLength": "Message is too long (max 2500 characters).",
     "privacy": "I've read the <span class='highlighted'>privacy policy</span> and agree to the processing of my data as outlined.",
     "privacyError": "Please accept the privacy policy.",

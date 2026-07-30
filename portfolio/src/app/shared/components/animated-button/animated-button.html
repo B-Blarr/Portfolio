@@ -1,4 +1,4 @@
-<button [type]="type" [disabled]="disabled">
+<button [type]="type" [disabled]="disabled" [attr.tabindex]="tabbable ? null : -1">
   <span class="button-text">
     <ng-content></ng-content>
   </span>

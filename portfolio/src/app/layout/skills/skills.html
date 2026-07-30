@@ -15,7 +15,7 @@
             {{ 'skills.requestText' | translate }}
           </p>
           <a href="#contact-section" class="contact-button">
-            <app-animated-button>{{ 'skills.button' | translate }}</app-animated-button>
+            <app-animated-button [tabbable]="false">{{ 'skills.button' | translate }}</app-animated-button>
           </a>
         </article>
       </div>
@@ -55,6 +55,10 @@
         <div class="tech-stack-icon">
           <img src="/icons/git.svg" alt="Git Logo" />
           <span>Git</span>
+        </div>
+        <div class="tech-stack-icon">
+          <img src="/icons/linux.svg" alt="Linux Logo" />
+          <span>Linux</span>
         </div>
         <div class="tech-stack-icon">
           <img src="/icons/rest-api.svg" alt="REST-API Logo" />

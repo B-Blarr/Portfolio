@@ -60,6 +60,7 @@
         @if ((userform.get('message')?.touched || formSubmitted) && userform.get('message')?.invalid) {
           <p class="error-message">
             @if (userform.get('message')?.hasError('required')) { {{ "contact.messageErrorRequired" | translate }} }
+            @if (userform.get('message')?.hasError('minlength')) { {{ "contact.messageErrorMinLength" | translate }} }
             @if (userform.get('message')?.hasError('maxlength')) { {{ "contact.messageErrorMaxLength" | translate }} }
           </p>
         }

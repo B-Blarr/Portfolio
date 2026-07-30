@@ -64,6 +64,7 @@ export class Projects {
         { name: 'Python', iconUrl: '/icons/python.svg' },
         { name: 'Django', iconUrl: '/icons/django.svg' },
         { name: 'REST-API', iconUrl: '/icons/rest-api.svg' },
+        { name: 'Linux', iconUrl: '/icons/linux.svg' },
       ],
       github: 'https://github.com/B-Blarr/Coderr-Backend',
       livetest: 'https://coderr.benjaminblarr.de',

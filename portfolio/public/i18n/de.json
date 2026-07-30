@@ -82,6 +82,7 @@
     "messageQuestion": "Wie kann ich dir helfen?",
     "messagePlaceholder": "Hallo Benjamin, ich...",
     "messageErrorRequired": "Wie lautet deine Nachricht an mich?",
+    "messageErrorMinLength": "Bitte schreib mindestens 10 Zeichen.",
     "messageErrorMaxLength": "Nachricht ist zu lang (max 2500 Zeichen).",
     "privacy": "Ich habe die <span class='highlighted'>Datenschutzerklärung</span> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
     "privacyError": "Bitte akzeptiere die Datenschutzerklärung.",
