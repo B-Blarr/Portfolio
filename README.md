@@ -36,6 +36,8 @@ third-party service.
 
 Angular 21 with standalone components, SCSS, and no UI framework.
 
+<br />
+
 **Backend**
 
 <p align="left">
