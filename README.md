@@ -34,6 +34,8 @@ third-party service.
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo" />
 </p>
 
+Angular 21 with standalone components, SCSS, and no UI framework.
+
 **Backend**
 
 <p align="left">
@@ -44,16 +46,7 @@ third-party service.
   <img src="https://cdn.jsdelivr.net/gh/B-Blarr/B-Blarr@main/assets/drf.svg?v=2" height="40" alt="django rest framework logo" />
 </p>
 
-The contact endpoint lives in the [Coderr backend](https://github.com/B-Blarr/Coderr-Backend),
-which runs on the same server.
+A small Django endpoint handles the contact form, running on the same server.
 
-## Getting Started
 
-```bash
-npm install
-ng serve
-```
 
-The site is then available at `http://localhost:4200/`.
-
-Built with Angular CLI 21.1.0.
