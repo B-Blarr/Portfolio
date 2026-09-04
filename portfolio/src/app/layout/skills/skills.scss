@@ -229,6 +229,10 @@ app-animated-button {
   .tech-stack {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .speechbubble {
+    padding: 8px 16px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -238,7 +242,7 @@ app-animated-button {
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
   .content {
     margin-bottom: 80px;
   }
@@ -305,6 +309,9 @@ app-animated-button {
         font-size: 18px;
       }
     }
+  }
+    .tech-stack .highlight {
+    grid-column: 1 / -1;
   }
 }
 
