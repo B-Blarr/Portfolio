@@ -1,0 +1,27 @@
+# =====================================================================
+# Line endings
+#
+# Single source of truth for this repository. It wins over whatever
+# core.autocrlf a machine happens to have configured locally.
+#
+# Reason: the CI runner is Linux and checks out LF. Without this file
+# Windows keeps CRLF in the working copy, so "npm run format:check"
+# would fail locally while passing in CI, which makes the check
+# useless.
+# =====================================================================
+
+# Default: Git detects text files on its own, always stores them with
+# LF, and thanks to eol=lf checks them out with LF on Windows too.
+* text=auto eol=lf
+
+# --- Windows tools expect CRLF ---
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+*.ps1   text eol=crlf
+
+# --- Binary files: Git must never convert these ---
+*.png   -text
+*.jpg   -text
+*.jpeg  -text
+*.ico   -text
+*.woff2 -text
