@@ -9,6 +9,4 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './hero-section.html',
   styleUrl: './hero-section.scss',
 })
-export class HeroSection {
-
-}
+export class HeroSection {}

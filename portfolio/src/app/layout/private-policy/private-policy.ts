@@ -5,10 +5,8 @@ import { Header } from '../header/header';
 
 @Component({
   selector: 'app-private-policy',
-  imports: [ TranslatePipe, Footer, Header ],
+  imports: [TranslatePipe, Footer, Header],
   templateUrl: './private-policy.html',
   styleUrl: './private-policy.scss',
 })
-export class PrivatePolicy {
-
-}
+export class PrivatePolicy {}

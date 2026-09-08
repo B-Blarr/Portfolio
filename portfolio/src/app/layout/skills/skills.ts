@@ -8,6 +8,4 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './skills.html',
   styleUrl: './skills.scss',
 })
-export class Skills {
-
-}
+export class Skills {}

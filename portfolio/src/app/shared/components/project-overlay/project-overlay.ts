@@ -1,4 +1,4 @@
-import {Component, HostListener, Output, EventEmitter, Input} from '@angular/core';
+import { Component, HostListener, Output, EventEmitter, Input } from '@angular/core';
 import { AnimatedButton } from '../animated-button/animated-button';
 import { TranslatePipe } from '@ngx-translate/core';
 

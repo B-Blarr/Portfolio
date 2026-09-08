@@ -7,6 +7,4 @@ import { HeroSection } from '../../layout/hero-section/hero-section';
   templateUrl: './hero-wrapper.html',
   styleUrl: './hero-wrapper.scss',
 })
-export class HeroWrapper {
-
-}
+export class HeroWrapper {}

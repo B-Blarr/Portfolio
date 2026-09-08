@@ -9,6 +9,4 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
-export class Contact {
-
-}
+export class Contact {}

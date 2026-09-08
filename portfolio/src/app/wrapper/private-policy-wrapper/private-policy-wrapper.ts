@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PrivatePolicy } from "../../layout/private-policy/private-policy";
+import { PrivatePolicy } from '../../layout/private-policy/private-policy';
 
 @Component({
   selector: 'app-private-policy-wrapper',
@@ -7,6 +7,4 @@ import { PrivatePolicy } from "../../layout/private-policy/private-policy";
   templateUrl: './private-policy-wrapper.html',
   styleUrl: './private-policy-wrapper.scss',
 })
-export class PrivatePolicyWrapper {
-
-}
+export class PrivatePolicyWrapper {}

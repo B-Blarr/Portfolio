@@ -3,10 +3,8 @@ import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-aboutme',
-  imports: [ TranslatePipe],
+  imports: [TranslatePipe],
   templateUrl: './aboutme.html',
   styleUrl: './aboutme.scss',
 })
-export class Aboutme {
-
-}
+export class Aboutme {}

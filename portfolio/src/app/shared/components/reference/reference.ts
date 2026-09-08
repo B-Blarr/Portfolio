@@ -4,7 +4,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 export type ReferenceData = {
   textKey: string;
   evaluatorKey: string;
-}
+};
 
 @Component({
   selector: 'app-reference',

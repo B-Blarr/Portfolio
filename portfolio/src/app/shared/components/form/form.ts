@@ -50,14 +50,13 @@ export class Form {
       validators: [Validators.required, Validators.minLength(3)],
     }),
     email: new FormControl('', {
-      validators: [Validators.required, Validators.pattern(/[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/)],
-    }),
-    message: new FormControl('', {
       validators: [
         Validators.required,
-        Validators.minLength(10),
-        Validators.maxLength(2500),
+        Validators.pattern(/[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/),
       ],
+    }),
+    message: new FormControl('', {
+      validators: [Validators.required, Validators.minLength(10), Validators.maxLength(2500)],
     }),
     privacyAccepted: new FormControl(false, {
       validators: [Validators.requiredTrue],

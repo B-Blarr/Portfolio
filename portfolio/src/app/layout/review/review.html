@@ -12,7 +12,7 @@
           [style.transition]="getCardTransition(i)"
           [style.opacity]="getCardOpacity(i)"
           [style.z-index]="getCardZIndex(i)"
-          >
+        >
           <div class="quotes">
             <img src="/icons/quotes.svg" alt="Quotes" />
           </div>
@@ -22,7 +22,12 @@
     </article>
   </div>
   <aside class="reference-area--navigation">
-    <button type="button" class="arrow-button" (click)="previousSlide()" aria-label="Previous review">
+    <button
+      type="button"
+      class="arrow-button"
+      (click)="previousSlide()"
+      aria-label="Previous review"
+    >
       <span class="arrow-icon arrow-left" aria-hidden="true"></span>
     </button>
     <div class="dots-container">

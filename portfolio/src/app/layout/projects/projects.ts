@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import {ProjectOverlay,ProjectData,} from '../../shared/components/project-overlay/project-overlay';
+import {
+  ProjectOverlay,
+  ProjectData,
+} from '../../shared/components/project-overlay/project-overlay';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({

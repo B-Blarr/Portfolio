@@ -153,9 +153,7 @@ export class Review {
    * @param direction - The direction of the slide.
    */
   private executeSlide(direction: string): void {
-    this.cardPositions = this.cardPositions.map((pos) =>
-      pos + (direction === 'next' ? -1 : 1),
-    );
+    this.cardPositions = this.cardPositions.map((pos) => pos + (direction === 'next' ? -1 : 1));
     this.cdr.detectChanges();
     setTimeout(() => this.finalizeSlide(direction), this.ANIMATION_DURATION);
   }
