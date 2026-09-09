@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef, inject } from '@angular/core';
+import { Component, ChangeDetectorRef, inject, OnInit } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -17,11 +17,10 @@ import { RouterLink } from '@angular/router';
   templateUrl: './form.html',
   styleUrl: './form.scss',
 })
-export class Form {
+export class Form implements OnInit {
   http = inject(HttpClient);
   translate = inject(TranslateService);
-
-  constructor(private cdr: ChangeDetectorRef) {}
+  private cdr = inject(ChangeDetectorRef);
 
   contactData = {
     name: '',
@@ -42,7 +41,6 @@ export class Form {
 
   post = {
     endPoint: '/api/contact/',
-    body: (payload: any) => payload,
   };
 
   userform = new FormGroup({
@@ -52,7 +50,7 @@ export class Form {
     email: new FormControl('', {
       validators: [
         Validators.required,
-        Validators.pattern(/[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/),
+        Validators.pattern(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/),
       ],
     }),
     message: new FormControl('', {
@@ -61,8 +59,7 @@ export class Form {
     privacyAccepted: new FormControl(false, {
       validators: [Validators.requiredTrue],
     }),
-    // Honeypot: fuer Besucher unsichtbar. Nur Bots fuellen dieses Feld
-    // aus, der Server verwirft solche Einsendungen stillschweigend.
+    // Honeypot
     website: new FormControl(''),
   });
 
@@ -73,7 +70,7 @@ export class Form {
     this.mailError = false;
 
     if (this.userform.valid) {
-      this.http.post(this.post.endPoint, this.post.body(this.userform.value)).subscribe({
+      this.http.post(this.post.endPoint, this.userform.value).subscribe({
         next: () => {
           this.mailSent = true;
           this.cdr.detectChanges();
@@ -82,8 +79,9 @@ export class Form {
           }, 3000);
         },
         error: (error) => {
-          console.error('Fehler beim E-Mail-Versand:', error);
+          console.error('Contact form submission failed:', error);
           this.mailError = true;
+          this.cdr.detectChanges();
         },
       });
     }

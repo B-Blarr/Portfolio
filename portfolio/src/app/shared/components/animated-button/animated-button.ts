@@ -7,12 +7,12 @@ import { Component, Input } from '@angular/core';
   styleUrl: './animated-button.scss',
 })
 export class AnimatedButton {
-  @Input() disabled: boolean = false;
+  @Input() disabled = false;
   @Input() type: 'button' | 'submit' = 'button';
   /**
    * Set to false when this button sits inside a surrounding <a>.
    * The link is then the only tab stop, so keyboard users do not
    * land on a shell element that does nothing.
    */
-  @Input() tabbable: boolean = true;
+  @Input() tabbable = true;
 }

@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 
-export type ReferenceData = {
+export interface ReferenceData {
   textKey: string;
   evaluatorKey: string;
-};
+}
 
 @Component({
   selector: 'app-reference',

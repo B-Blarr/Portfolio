@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef, HostListener } from '@angular/core';
+import { Component, ChangeDetectorRef, HostListener, inject } from '@angular/core';
 import { Reference, ReferenceData } from '../../shared/components/reference/reference';
 import { TranslatePipe } from '@ngx-translate/core';
 
@@ -53,7 +53,9 @@ export class Review {
   isAnimating = false;
   animationQueue: Direction[] = [];
 
-  constructor(private cdr: ChangeDetectorRef) {
+  private cdr = inject(ChangeDetectorRef);
+
+  constructor() {
     this.initializePositions();
   }
 
@@ -292,7 +294,11 @@ export class Review {
   private handleSwipe(): void {
     const swipeDistance = this.touchStartX - this.touchEndX;
     if (Math.abs(swipeDistance) > this.minSwipeDistance) {
-      swipeDistance > 0 ? this.nextSlide() : this.previousSlide();
+      if (swipeDistance > 0) {
+        this.nextSlide();
+      } else {
+        this.previousSlide();
+      }
     }
   }
 }

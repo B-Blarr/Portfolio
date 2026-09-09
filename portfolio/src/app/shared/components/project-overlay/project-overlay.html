@@ -1,4 +1,10 @@
+<!-- The backdrop closes the overlay on click. Keyboard users use Escape
+     (see the HostListener below) or the close button inside the content. -->
+<!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
 <div class="backdrop" (click)="onClose()">
+  <!-- Not an interaction: this only keeps clicks inside the content from
+       reaching the backdrop handler above. -->
+  <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
   <section class="content" (click)="$event.stopPropagation()">
     <div class="content-wrapper">
       <article class="text-area">

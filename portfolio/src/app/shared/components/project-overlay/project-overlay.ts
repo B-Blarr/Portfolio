@@ -2,12 +2,12 @@ import { Component, HostListener, Output, EventEmitter, Input } from '@angular/c
 import { AnimatedButton } from '../animated-button/animated-button';
 import { TranslatePipe } from '@ngx-translate/core';
 
-export type ProjectTech = {
+export interface ProjectTech {
   iconUrl: string;
   name: string;
-};
+}
 
-export type ProjectData = {
+export interface ProjectData {
   title: string;
   subtitle: string;
   descriptionKey: string;
@@ -15,7 +15,7 @@ export type ProjectData = {
   techs: ProjectTech[];
   github: string;
   livetest: string;
-};
+}
 
 @Component({
   selector: 'app-project-overlay',
@@ -25,16 +25,16 @@ export type ProjectData = {
 })
 export class ProjectOverlay {
   @Input({ required: true }) project!: ProjectData;
-  @Output() close = new EventEmitter<void>();
+  @Output() closed = new EventEmitter<void>();
   @Output() next = new EventEmitter<void>();
 
   @HostListener('document:keydown.escape')
   onEscapePressed(): void {
-    this.close.emit();
+    this.closed.emit();
   }
 
   onClose(): void {
-    this.close.emit();
+    this.closed.emit();
   }
 
   onNext(): void {

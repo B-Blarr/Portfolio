@@ -18,8 +18,6 @@ export class Header {
     this.translate.use(language);
     this.activeLanguage = language;
     localStorage.setItem('language', language);
-    // Zieht das lang-Attribut des <html>-Elements mit um, damit die
-    // Sprachauszeichnung der Seite zur angezeigten Sprache passt.
     document.documentElement.lang = language;
   }
 

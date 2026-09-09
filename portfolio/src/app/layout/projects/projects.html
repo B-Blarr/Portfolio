@@ -44,10 +44,14 @@
     </div>
   </section>
   @if (isOverlayOpen && selectedProject) {
+    <!-- The backdrop is a mouse convenience, not the only way out: Escape is
+         handled in project-overlay.ts and the overlay carries its own close
+         button. Making this focusable would add a meaningless tab stop. -->
+    <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
     <div class="overlay-layer" (click)="closeOverlay()">
       <app-project-overlay
         [project]="selectedProject!"
-        (close)="isOverlayOpen = false"
+        (closed)="isOverlayOpen = false"
         (next)="nextProject()"
       >
       </app-project-overlay>
