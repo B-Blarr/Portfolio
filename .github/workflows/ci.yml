@@ -1,4 +1,4 @@
-name: CI
+name: CI/CD
 
 on:
   push:
@@ -51,3 +51,56 @@ jobs:
       - name: Build
         if: '!cancelled()'
         run: npm run build
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    # Waits for the whole CI job. A red lint, format or build run stops the
+    # deployment before it starts.
+    needs: frontend
+
+    # Only a real push to main deploys. Pull requests run CI, never this job.
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    defaults:
+      run:
+        working-directory: portfolio
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: portfolio/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      # The runner is destroyed after the job, but the key still gets the
+      # narrowest permissions ssh accepts: it refuses to use a key file that
+      # others can read. known_hosts is filled from a fingerprint compared by
+      # hand against the server, so a machine in the middle would be rejected.
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      # First run on purpose with --dry-run: rsync reports every file it would
+      # copy and every file it would delete, and changes nothing at all.
+      # Remove the flag only after that list has been read.
+      - name: Deploy to server
+        run: |
+          rsync -rltv --delete --dry-run --chmod=D755,F644 \
+            -e "ssh -i ~/.ssh/deploy_key" \
+            dist/portfolio/browser/ \
+            "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/portfolio/"
