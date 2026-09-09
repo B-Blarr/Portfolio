@@ -11,9 +11,6 @@ jobs:
     name: Angular
     runs-on: ubuntu-latest
 
-    # The Angular application lives in portfolio/, not in the repository
-    # root. This applies to run steps only, never to the with: parameters
-    # of an action - see cache-dependency-path below.
     defaults:
       run:
         working-directory: portfolio
@@ -25,25 +22,19 @@ jobs:
         with:
           node-version: 24
           cache: npm
-          # Full path on purpose: defaults.run.working-directory does not
-          # reach into with: parameters. A bare package-lock.json here
-          # would silently disable the cache, with no error to show for it.
+          # Full path required: defaults.run.working-directory does not apply
+          # to with: parameters. A bare package-lock.json disables the cache
+          # silently, without an error.
           cache-dependency-path: portfolio/package-lock.json
 
-      # npm ci installs the lock file verbatim and fails if it disagrees
-      # with package.json. npm install would quietly resolve newer
-      # versions, so the runner could build against other packages than
-      # the developer does.
       - name: Install dependencies
         run: npm ci
 
       - name: Lint
         run: npm run lint
 
-      # Every check runs even when an earlier one failed, so a single push
-      # reports all problems at once instead of one class at a time. Only
-      # an install failure stops the job, because nothing can run without
-      # the dependencies.
+      # !cancelled() keeps the remaining checks running after an earlier
+      # failure, so one push reports every problem instead of only the first.
       - name: Check formatting
         if: '!cancelled()'
         run: npm run format:check
@@ -55,12 +46,9 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-
-    # Waits for the whole CI job. A red lint, format or build run stops the
-    # deployment before it starts.
     needs: frontend
 
-    # Only a real push to main deploys. Pull requests run CI, never this job.
+    # Pull requests run the checks above, but never deploy.
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
 
     defaults:
@@ -82,10 +70,7 @@ jobs:
       - name: Build
         run: npm run build
 
-      # The runner is destroyed after the job, but the key still gets the
-      # narrowest permissions ssh accepts: it refuses to use a key file that
-      # others can read. known_hosts is filled from a fingerprint compared by
-      # hand against the server, so a machine in the middle would be rejected.
+      # ssh refuses a private key file that others can read, hence chmod 600.
       - name: Set up SSH
         run: |
           mkdir -p ~/.ssh
@@ -95,12 +80,22 @@ jobs:
           echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
 
-      # First run on purpose with --dry-run: rsync reports every file it would
-      # copy and every file it would delete, and changes nothing at all.
-      # Remove the flag only after that list has been read.
+      # --delete removes the previous build's hashed bundles in the same pass,
+      # so the directory is never empty in between. --chmod sets the
+      # permissions while writing, which nginx needs to enter the directories.
       - name: Deploy to server
         run: |
-          rsync -rltv --delete --dry-run --chmod=D755,F644 \
+          rsync -rltv --delete --chmod=D755,F644 \
             -e "ssh -i ~/.ssh/deploy_key" \
             dist/portfolio/browser/ \
             "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/portfolio/"
+
+      # A directory nginx cannot enter makes it answer with index.html and
+      # status 200 instead of the file. A JSON file coming back as text/html
+      # is the symptom, so a broken rollout fails here instead of looking fine.
+      - name: Verify deployment
+        run: |
+          curl -sS -o /dev/null -w 'index.html: %{http_code}\n' https://benjaminblarr.de/
+          typ=$(curl -sSI https://benjaminblarr.de/i18n/de.json | grep -i '^content-type:')
+          echo "$typ"
+          echo "$typ" | grep -qi 'application/json'
