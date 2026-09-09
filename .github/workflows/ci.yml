@@ -37,11 +37,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Lint
+        run: npm run lint
+
+      # Every check runs even when an earlier one failed, so a single push
+      # reports all problems at once instead of one class at a time. Only
+      # an install failure stops the job, because nothing can run without
+      # the dependencies.
       - name: Check formatting
+        if: '!cancelled()'
         run: npm run format:check
 
-      # Runs even when the formatting check failed. Otherwise a stray
-      # space would hide a real build error until the next push.
       - name: Build
         if: '!cancelled()'
         run: npm run build

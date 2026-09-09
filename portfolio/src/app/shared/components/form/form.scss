@@ -300,6 +300,8 @@ textarea:-webkit-autofill:active {
   }
 }
 
+// Honeypot field: moved out of the viewport instead of display:none,
+// because some bots detect hidden fields and skip them.
 .hp-field {
   position: absolute;
   left: -9999px;
