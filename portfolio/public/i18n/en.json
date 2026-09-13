@@ -8,90 +8,90 @@
     "buttonProject": "Check my work",
     "buttonContact": "Contact me",
     "bannerOne": "Available for remote work",
-    "bannerTwo": "Based in Schöningen",
+    "bannerTwo": "At home in the Braunschweig area",
     "bannerThree": "Open to Work"
   },
   "aboutMe": {
     "whoAmI": "Who am I",
     "aboutMe": "About me",
-    "introMain": "Hi, I'm Benjamin. A few years ago, I discovered the world of software development and was immediately hooked. As a career changer, I turned my passion into a profession, and after completing my training at the Developer Akademie, I can't imagine doing anything else. I'm eager to learn, hardworking and love exploring new technologies.",
-    "introOne": "I live in Schöningen, in the Braunschweig / Wolfsburg / Magdeburg area. I'm very open to remote work and commuting. Relocating is not planned at this time.",
-    "introTwo": "I get up to speed quickly with new tools and frameworks. I find AI particularly exciting as a practical tool in everyday development and know how to apply it in a targeted way.",
+    "introMain": "Hi, I'm Benjamin. I came to software development from another field and spent a year of full-time training in frontend and backend development at the Developer Akademie. Today I build web applications from the interface to the API and run them on a server I set up myself. What I enjoy most is implementing a design exactly and in detail, like the responsive layouts in the projects on this page.",
+    "introOne": "I live in Schöningen, in the Braunschweig, Wolfsburg and Magdeburg area. I'm very open to remote work and commuting is not a problem for me, though I'm not planning to relocate at the moment.",
+    "introTwo": "These days I enjoy working with AI more than anything else, because it gets me further faster and takes over the recurring steps I would otherwise do by hand every day. I check the results myself and I don't use code I don't understand.",
     "introThree": "I approach problems in a structured way: first understand them, then work out solutions, then implement them cleanly. Readability, performance and user experience matter to me, as does collaboration within a team, learning from each other and growing together."
   },
   "skills": {
     "technologies": "Technologies",
     "skillset": "Skill Set",
-    "mainText": "Software development moves fast and I keep up. I invest a lot of time, love learning new techniques and tools, and apply them directly in real projects.",
-    "request": "Need <span class='highlight'>different skills?</span>",
-    "requestText": "Feel free to contact me. I'm always happy to dive into new areas.",
+    "mainText": "The tools in software development keep changing, but I really enjoy working my way into new ones. What I like best is putting them to use in a real project right away.",
+    "request": "Something missing from this <span class='highlight'>list?</span>",
+    "requestText": "Just send me a message. I'm happy to work my way into a new topic.",
     "button": "Let's talk",
     "mindset": "Growth<br />Mindset",
-    "interest": "I have a strong <br/> interest in learning:"
+    "interest": "A strong <br/> interest in learning:"
   },
   "projects": {
     "headline": "Featured Projects",
-    "intro": "Explore a selection of my projects and see them in action",
+    "intro": "A selection of my projects. Each one can be opened and tried out right away.",
     "question": "What is this project about?",
     "nextButton": "Next project",
     "join": {
-      "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      "description": "Task manager modelled on a Kanban board. Tasks can be assigned to users and categories, then moved between columns by drag and drop."
     },
     "polloLoco": {
-      "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy boss hen."
+      "description": "Jump-and-run game in plain JavaScript, built object-oriented from 24 classes. Pepe collects coins and tabasco salsa to face the boss hen."
     },
     "pokedex": {
-      "description": "Based on the PokéAPI an interactive library that provides and catalogues pokémon information."
+      "description": "A Pokémon reference with search and a detail view. The data is pulled live from the PokéAPI and rendered in the browser."
     },
     "coderr": {
       "description": "REST API, built with Django REST Framework. Offers, orders and reviews with token authentication. Frontend provided by the Developer Akademie."
     }
   },
   "references": {
-    "headline": "What my colleagues say about me",
+    "headline": "What my teammates say about me",
     "vadim": {
       "text": "I had the pleasure of collaborating with Benjamin on several projects, and I can confidently say he is a skilled and reliable developer. Benjamin writes clean, maintainable code and consistently pays attention to detail in both functionality and UI quality. <br>Beyond his technical abilities, Benjamin communicates clearly and proactively, which made collaboration smooth and efficient. Whenever we faced complex problems, he approached them with a structured mindset and always found practical solutions. <br><br> I would highly recommend Benjamin to any team looking for a developer who combines strong technical skills with great teamwork.",
-      "evaluator": "Vadim Cebanu - Team Partner"
+      "evaluator": "Vadim Cebanu, Teammate"
     },
     "serhat": {
       "text": "Benjamin is truly a responsible, hardworking, and reliable person. He consistently completed his tasks on time and with great care, which contributed significantly to the smooth progress of the team’s work. His organized way of working and respect for deadlines made our collaboration much more efficient. He also has strong communication skills and is always kind and respectful. His constructive attitude and willingness to help made working together both easy and enjoyable.<br><br> I would definitely recommend Benjamin as a team member.",
-      "evaluator": "Serhat Özcakir - Team Partner"
+      "evaluator": "Serhat Özcakir, Teammate"
     },
     "vladislav": {
       "text": "I completed a frontend developer training program with Benjamin at the Developer Akademie. During that time, I came to know him as a very responsible person. He keeps his commitments and reliably completes the tasks he takes on. Benjamin is a friendly and communicative colleague, and working with him is always pleasant. He works diligently and efficiently. I especially enjoyed collaborating with him on our joint project “Kochwelt,” which left a very positive impression on me.",
-      "evaluator": "Vladislav Perju - Team Partner"
+      "evaluator": "Vladislav Perju, Teammate"
     },
     "gregor": {
       "text": "Benjamin creates a very productive atmosphere within the team. Thanks to him, the project was completed significantly faster than planned. If he plans something or says he will do something, you can rely on him 100%.",
-      "evaluator": "Gregor Zaren - Team Partner"
+      "evaluator": "Gregor Zaren, Teammate"
     }
   },
   "contact": {
     "contactMe": "Contact me",
     "headline": "Let's work together",
-    "question": "Got a problem to solve?",
-    "text": "I enjoy building thoughtful applications with attention to detail, from the data model to performance in the browser. <br/><br/>If you need a developer who ships reliably,<span> let's talk!</span>",
+    "question": "Do you have a task for me?",
+    "text": "Whether you have a whole project in mind or only a question, send me a message. <br/><br/>I reply quickly and I'll tell you honestly<span> whether I'm the right person for it.</span>",
     "nameQuestion": "What's your name?",
-    "namePlaceholder": "Your name goes here.",
-    "nameErrorRequired": "Oops! Your name is missing.",
-    "nameErrorMinLength": "Name must be at least 3 characters.",
+    "namePlaceholder": "Your name",
+    "nameErrorRequired": "Your name is missing.",
+    "nameErrorMinLength": "Your name must be at least 3 characters.",
     "emailQuestion": "What's your email?",
-    "emailPlaceholder": "youremail@email.com",
-    "emailErrorRequired": "Oops! Your email is required.",
+    "emailPlaceholder": "you@email.com",
+    "emailErrorRequired": "Your email is missing.",
     "emailErrorInvalid": "Please enter a valid email address.",
     "messageQuestion": "How can I help you?",
     "messagePlaceholder": "Hello Benjamin, I am interested in...",
     "messageErrorRequired": "What is your message to me?",
     "messageErrorMinLength": "Please write at least 10 characters.",
-    "messageErrorMaxLength": "Message is too long (max 2500 characters).",
+    "messageErrorMaxLength": "Your message is too long (max 2500 characters).",
     "privacy": "I've read the <span class='highlighted'>privacy policy</span> and agree to the processing of my data as outlined.",
     "privacyError": "Please accept the privacy policy.",
     "button": "Say Hello ;)",
-    "successMessage": "Message sent successfully! I'll get back to you soon.",
+    "successMessage": "Message sent! I'll get back to you shortly.",
     "errorMessage": "Error sending message. Please try again later."
   },
   "footer": {
-    "home": "Schöningen Germany",
+    "home": "Schöningen, Germany",
     "legalNotice": "Legal Notice"
   },
   "legalNotice": {
