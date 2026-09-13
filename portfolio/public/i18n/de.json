@@ -8,90 +8,90 @@
     "buttonProject": "Meine Projekte",
     "buttonContact": "Kontakt",
     "bannerOne": "Offen für Remote-Arbeit",
-    "bannerTwo": "Wohnhaft in Schöningen",
+    "bannerTwo": "Zuhause im Raum Braunschweig",
     "bannerThree": "Offen für Jobangebote"
   },
   "aboutMe": {
     "whoAmI": "Wer bin ich",
     "aboutMe": "Über mich",
-    "introMain": "Hallo, ich bin Benjamin. Vor einigen Jahren bin ich auf die Welt der Softwareentwicklung gestoßen und war sofort Feuer und Flamme. Als Quereinsteiger habe ich meine Leidenschaft zur Profession gemacht und nach meiner Weiterbildung bei der Developer Akademie kann ich mir beruflich nichts anderes mehr vorstellen. Ich bin sehr lernbereit und fleißig und ich liebe es mich mit neuen Technologien auseinanderzusetzen.",
-    "introOne": "Ich lebe in Schöningen, im Bereich Braunschweig / Wolfsburg / Magdeburg, ich bin sehr offen für Remote-Arbeit und Pendelstrecken. Ein Umzug ist derzeit nicht geplant.",
-    "introTwo": "Ich finde mich schnell in neue Tools und Frameworks ein. KI als praktisches Werkzeug im Entwickleralltag finde ich dabei besonders spannend und kann es gezielt einsetzen.",
+    "introMain": "Hallo, ich bin Benjamin. Ich bin als Quereinsteiger zur Softwareentwicklung gekommen und habe bei der Developer Akademie ein Jahr in Vollzeit Frontend und Backend gelernt. Heute baue ich Webanwendungen von der Oberfläche bis zur API und betreibe sie auf einem eigenen Server, den ich selbst aufgesetzt habe. Am liebsten setze ich Vorlagen exakt und detailliert um, so wie die responsiven Layouts in den Projekten hier auf der Seite.",
+    "introOne": "Ich lebe in Schöningen in der Region Braunschweig, Wolfsburg und Magdeburg. Für Remote-Arbeit bin ich sehr offen und pendeln ist für mich kein Problem, umziehen möchte ich im Moment aber nicht.",
+    "introTwo": "Am meisten Spaß macht mir inzwischen die Arbeit mit KI, weil ich damit schneller vorankomme und weil sie mir wiederkehrende Abläufe abnimmt, die ich sonst jeden Tag von Hand machen müsste. Was dabei herauskommt, prüfe ich nach und ich übernehme keinen Code, den ich nicht verstehe.",
     "introThree": "Probleme löse ich strukturiert: Zunächst verstehen, dann Lösungswege erarbeiten und dann sauber umsetzen. Mir sind Lesbarkeit, Performance und User Experience wichtig, genauso wie die Zusammenarbeit im Team, voneinander zu lernen und gemeinsam zu wachsen."
   },
   "skills": {
     "technologies": "Technologien",
     "skillset": "Fähigkeiten",
-    "mainText": "Softwareentwicklung verändert sich schnell und ich halte Schritt. Ich investiere viel Zeit, liebe es neue Techniken und Tools zu lernen und wende sie direkt in echten Projekten an.",
-    "request": "Du benötigst <span class='highlight'>andere Kompetenzen?</span>",
-    "requestText": "Kontaktiere mich gerne. Ich freue mich darauf, mich in neue Bereiche einzuarbeiten.",
+    "mainText": "Die Werkzeuge in der Softwareentwicklung wechseln ständig, aber mir macht es sehr viel Spaß, mich in neue einzuarbeiten. Dabei setze ich sie am liebsten direkt in echten Projekten ein.",
+    "request": "Dir fehlt etwas in dieser <span class='highlight'>Liste?</span>",
+    "requestText": "Schreib mir einfach. In ein neues Thema arbeite ich mich gerne ein.",
     "button": "Lass uns reden",
-    "mindset": "Wachstums-<br />mentalität",
-    "interest": "Ich habe besonderes <br/> Interesse an:"
+    "mindset": "Immer am<br />Lernen",
+    "interest": "Besonderes <br/> Interesse an:"
   },
   "projects": {
     "headline": "Ausgewählte Projekte",
-    "intro": "Entdecke hier eine Auswahl meiner Projekte und erlebe sie direkt in Aktion.",
+    "intro": "Eine Auswahl meiner Projekte. Jedes davon lässt sich direkt öffnen und ausprobieren.",
     "question": "Worum geht es in diesem Projekt?",
     "nextButton": "Nächstes Projekt",
     "join": {
-      "description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise sie Benutzer und Kategorien zu."
+      "description": "Task-Manager nach dem Vorbild eines Kanban-Boards. Aufgaben lassen sich Nutzern und Kategorien zuordnen und per Drag-and-Drop zwischen den Spalten verschieben."
     },
     "polloLoco": {
-      "description": "Jump-, Run- und Wurfspiel basierend auf objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Boss-Henne zu kämpfen."
+      "description": "Jump-and-Run-Spiel in reinem JavaScript, objektorientiert aufgebaut aus 24 Klassen. Pepe sammelt Münzen und Tabasco-Salsa für den Kampf gegen die Boss-Henne."
     },
     "pokedex": {
-      "description": "Basierend auf der PokéAPI eine interaktive Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
+      "description": "Nachschlagewerk für Pokémon mit Suche und Detailansicht. Die Daten kommen live aus der PokéAPI und werden im Browser aufbereitet."
     },
     "coderr": {
       "description": "REST-API, gebaut mit Django REST Framework. Angebote, Bestellungen und Bewertungen mit Token-Authentifizierung. Frontend von der Developer Akademie bereitgestellt."
     }
   },
   "references": {
-    "headline": "Was meine Kollegen über mich sagen",
+    "headline": "Was meine Teampartner über mich sagen",
     "vadim": {
       "text": "Ich hatte das Vergnügen, mit Benjamin an mehreren Projekten zusammenzuarbeiten, und ich kann mit Überzeugung sagen, dass er ein fähiger und zuverlässiger Entwickler ist. Benjamin schreibt sauberen, wartbaren Code und achtet stets auf Details, sowohl bei der Funktionalität als auch bei der Qualität der Benutzeroberfläche.<br> Über seine technischen Fähigkeiten hinaus kommuniziert Benjamin klar und vorausschauend, was die Zusammenarbeit angenehm und effizient gemacht hat. Immer wenn wir vor komplexen Problemen standen, ist er strukturiert an sie herangegangen und hat stets praxisnahe Lösungen gefunden. <br><br> Ich würde Benjamin jedem Team ausdrücklich empfehlen, das einen Entwickler sucht, der starke technische Fähigkeiten mit ausgeprägter Teamfähigkeit verbindet.",
-      "evaluator": "Vadim Cebanu - Team Partner"
+      "evaluator": "Vadim Cebanu, Teampartner"
     },
     "serhat": {
       "text": "Benjamin ist wirklich eine verantwortungsbewusste, fleißige und zuverlässige Person. Er hat seine Aufgaben stets pünktlich und mit großer Sorgfalt erledigt, was wesentlich zum reibungslosen Fortschritt der Teamarbeit beigetragen hat. Seine organisierte Arbeitsweise und sein respektvoller Umgang mit Deadlines haben unsere Zusammenarbeit deutlich effizienter gemacht. Außerdem verfügt er über starke Kommunikationsfähigkeiten und ist immer freundlich und respektvoll. Seine konstruktive Einstellung und seine Hilfsbereitschaft haben die Zusammenarbeit sowohl einfach als auch angenehm gemacht.<br><br> Ich würde Benjamin auf jeden Fall als Teammitglied weiterempfehlen.",
-      "evaluator": "Serhat Özcakir - Team Partner"
+      "evaluator": "Serhat Özcakir, Teampartner"
     },
     "vladislav": {
       "text": "Ich habe mit Benjamin an der Developer Akademie eine Weiterbildung zum Frontend Entwickler gemacht. In dieser Zeit habe ich ihn als einen sehr verantwortungsbewussten Menschen kennengelernt. Er hält sich an seine Zusagen und erledigt Aufgaben zuverlässig, wenn er sie übernimmt. Benjamin ist ein freundlicher und kommunikativer Kollege, mit dem die Zusammenarbeit immer angenehm ist. Er arbeitet fleißig und schnell. Besonders bei unserem gemeinsamen Projekt „Kochwelt“ hat mir die Zusammenarbeit mit ihm viel Freude gemacht und einen sehr positiven Eindruck hinterlassen.",
-      "evaluator": "Vladislav Perju - Team Partner"
+      "evaluator": "Vladislav Perju, Teampartner"
     },
     "gregor": {
-      "text": "Benjamin sorgt innerhalb des Teams für eine sehr produktive Atmosphäre. Durch ihn wurde das Projekt deutlich schneller als geplant abgeschlossen. Wenn er etwas plant oder sagt, das er etwas machen wird, dann kann man sich 100%ig darauf verlassen.",
-      "evaluator": "Gregor Zaren - Team Partner"
+      "text": "Benjamin sorgt innerhalb des Teams für eine sehr produktive Atmosphäre. Durch ihn wurde das Projekt deutlich schneller als geplant abgeschlossen. Wenn er etwas plant oder sagt, dass er etwas machen wird, dann kann man sich 100%ig darauf verlassen.",
+      "evaluator": "Gregor Zaren, Teampartner"
     }
   },
   "contact": {
     "contactMe": "Kontakt",
     "headline": "Lass uns zusammen arbeiten",
-    "question": "Hast du ein Problem zu lösen?",
-    "text": "Ich baue gerne durchdachte Anwendungen mit Liebe zum Detail, vom Datenmodell bis zur Performance im Browser. <br/><br/>Wenn du einen Entwickler brauchst, auf den du dich verlassen kannst,<span> lass uns gern reden!</span>",
+    "question": "Du hast eine Aufgabe für mich?",
+    "text": "Ob du ein ganzes Projekt vor dir hast oder erst einmal eine Frage, schreib mir einfach. <br/><br/>Ich antworte schnell und sage dir ehrlich,<span> ob ich der Richtige dafür bin.</span>",
     "nameQuestion": "Wie heißt du?",
-    "namePlaceholder": "Gib deinen Namen hier ein.",
-    "nameErrorRequired": "Oops! Dein Name fehlt.",
-    "nameErrorMinLength": "Name muss mindestens 3 Zeichen lang sein.",
+    "namePlaceholder": "Dein Name",
+    "nameErrorRequired": "Dein Name fehlt.",
+    "nameErrorMinLength": "Dein Name muss mindestens 3 Zeichen lang sein.",
     "emailQuestion": "Wie lautet deine E-Mail?",
-    "emailPlaceholder": "deineemail@email.com",
-    "emailErrorRequired": "Hoppla! Deine E-Mail wird benötigt.",
+    "emailPlaceholder": "deine@email.de",
+    "emailErrorRequired": "Deine E-Mail fehlt.",
     "emailErrorInvalid": "Bitte gib eine gültige E-Mail-Adresse ein.",
     "messageQuestion": "Wie kann ich dir helfen?",
     "messagePlaceholder": "Hallo Benjamin, ich...",
     "messageErrorRequired": "Wie lautet deine Nachricht an mich?",
     "messageErrorMinLength": "Bitte schreib mindestens 10 Zeichen.",
-    "messageErrorMaxLength": "Nachricht ist zu lang (max 2500 Zeichen).",
+    "messageErrorMaxLength": "Deine Nachricht ist zu lang (maximal 2500 Zeichen).",
     "privacy": "Ich habe die <span class='highlighted'>Datenschutzerklärung</span> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
     "privacyError": "Bitte akzeptiere die Datenschutzerklärung.",
     "button": "Sag Hallo ;)",
-    "successMessage": "Nachricht erfolgreich gesendet! Ich melde mich bald bei dir.",
+    "successMessage": "Nachricht gesendet! Ich melde mich schnell bei dir.",
     "errorMessage": "Fehler beim Versenden. Bitte versuche es später nochmal."
   },
   "footer": {
-    "home": "Schöningen Deutschland",
+    "home": "Schöningen, Deutschland",
     "legalNotice": "Impressum"
   },
   "legalNotice": {
@@ -103,7 +103,7 @@
     "disclaimer": "Haftung für Inhalte und Links",
     "disclaimerText": "Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Für Richtigkeit, Vollständigkeit und Aktualität kann ich jedoch keine Gewähr übernehmen.<br><br>Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für diese fremden Inhalte ist stets der jeweilige Anbieter verantwortlich. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Werde ich auf eine Rechtsverletzung aufmerksam, entferne ich den betreffenden Link umgehend.",
     "contactMe": "Bei Fragen oder Hinweisen kontaktieren Sie mich bitte unter b.blarr@gmx.de.",
-    "date": " 28. Juli 2026"
+    "date": "28. Juli 2026"
   },
   "privacyPolicy": {
     "mainTitle": "Datenschutzerklärung",
