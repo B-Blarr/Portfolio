@@ -55,7 +55,7 @@ h3 {
     gap: 8px;
     cursor: default;
 
-    & img {
+    & > img {
       width: 56px;
       height: 56px;
       transition: transform 125ms ease;
@@ -67,7 +67,7 @@ h3 {
     }
 
     &:hover {
-      & img {
+      & > img {
         transform: scale(1.1);
       }
     }
@@ -196,12 +196,12 @@ app-animated-button {
 
   & .bubble-triangle {
     position: absolute;
-    top: 75%;
-    left: 37%;
-    width: 25px;
-    height: 20px;
+    top: calc(100% - 1px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 15px;
     pointer-events: none;
-    z-index: -1;
   }
 
   & .special-interests {
