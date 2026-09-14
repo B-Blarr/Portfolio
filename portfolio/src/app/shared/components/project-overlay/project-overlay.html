@@ -34,18 +34,17 @@
     </div>
     <div class="button-area">
       <div class="button-links">
-        <a class="github-link" [href]="project.github" target="_blank" rel="noopener noreferrer">
-          <app-animated-button [tabbable]="false">
-            <span>GitHub</span>
-            <img src="/icons/arrow-out.svg" alt="Arrow Out" />
-          </app-animated-button>
-        </a>
-        <a [href]="project.livetest" target="_blank" rel="noopener noreferrer">
-          <app-animated-button [tabbable]="false">
-            <span>Live Test</span>
-            <img src="/icons/arrow-out.svg" alt="Arrow Out" />
-          </app-animated-button>
-        </a>
+        <!-- track $index, nicht die URL: die Liste ist statisch und wird nie
+             umsortiert, zwei Knoepfe duerfen aber auf dieselbe Adresse zeigen.
+             Doppelte track-Werte wuerfen zur Laufzeit NG0955. -->
+        @for (link of project.links; track $index) {
+          <a [href]="link.url" target="_blank" rel="noopener noreferrer">
+            <app-animated-button [tabbable]="false">
+              <span>{{ link.labelKey | translate }}</span>
+              <img src="/icons/arrow-out.svg" alt="Arrow Out" />
+            </app-animated-button>
+          </a>
+        }
       </div>
       <button type="button" class="next-project-button" (click)="onNext()">
         <span>{{ 'projects.nextButton' | translate }}</span>

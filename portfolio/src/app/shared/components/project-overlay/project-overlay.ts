@@ -7,14 +7,24 @@ export interface ProjectTech {
   name: string;
 }
 
+/**
+ * Ein Knopf in der Fussleiste des Overlays. `labelKey` ist ein i18n-Schluessel,
+ * damit die Beschriftung je Projekt frei waehlbar und trotzdem zweisprachig
+ * bleibt. Die Liste ersetzt die frueheren Felder `github` und `livetest`, weil
+ * nicht jedes Projekt ein Repository oder eine laufende Fassung hat.
+ */
+export interface ProjectLink {
+  url: string;
+  labelKey: string;
+}
+
 export interface ProjectData {
   title: string;
   subtitle: string;
   descriptionKey: string;
   imageUrl: string;
   techs: ProjectTech[];
-  github: string;
-  livetest: string;
+  links: ProjectLink[];
 }
 
 @Component({
