@@ -31,17 +31,21 @@
   },
   "projects": {
     "headline": "Ausgewählte Projekte",
-    "intro": "Eine Auswahl meiner Projekte. Jedes davon lässt sich direkt öffnen und ausprobieren.",
+    "intro": "Eine Auswahl meiner Projekte.",
     "question": "Worum geht es in diesem Projekt?",
     "nextButton": "Nächstes Projekt",
+    "githubButton": "GitHub",
+    "liveButton": "Live Test",
+    "architectureButton": "Architektur",
+    "screenshotsButton": "Screenshots",
     "join": {
       "description": "Task-Manager nach dem Vorbild eines Kanban-Boards. Aufgaben lassen sich Nutzern und Kategorien zuordnen und per Drag-and-Drop zwischen den Spalten verschieben."
     },
     "polloLoco": {
       "description": "Jump-and-Run-Spiel in reinem JavaScript, objektorientiert aufgebaut aus 24 Klassen. Pepe sammelt Münzen und Tabasco-Salsa für den Kampf gegen die Boss-Henne."
     },
-    "pokedex": {
-      "description": "Nachschlagewerk für Pokémon mit Suche und Detailansicht. Die Daten kommen live aus der PokéAPI und werden im Browser aufbereitet."
+    "cardelia": {
+      "description": "Kartenkatalog mit Sammlungsverwaltung: rund 77.000 Pokémon-Karten in vier Sprachen, Preise aus mehreren Quellen. Läuft, ist aber noch nicht öffentlich."
     },
     "coderr": {
       "description": "REST-API, gebaut mit Django REST Framework. Angebote, Bestellungen und Bewertungen mit Token-Authentifizierung. Frontend von der Developer Akademie bereitgestellt."

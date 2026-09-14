@@ -25,8 +25,10 @@ export class Projects {
         { name: 'SCSS', iconUrl: '/icons/sass.svg' },
         { name: 'Supabase', iconUrl: '/icons/supabase.svg' },
       ],
-      github: 'https://github.com/B-Blarr/join',
-      livetest: 'https://benjaminblarr.de/join',
+      links: [
+        { url: 'https://github.com/B-Blarr/join', labelKey: 'projects.githubButton' },
+        { url: 'https://benjaminblarr.de/join', labelKey: 'projects.liveButton' },
+      ],
     },
 
     {
@@ -39,23 +41,32 @@ export class Projects {
         { name: 'HTML', iconUrl: '/icons/html.svg' },
         { name: 'CSS', iconUrl: '/icons/css.svg' },
       ],
-      github: 'https://github.com/B-Blarr/El-Pollo-Loco',
-      livetest: 'https://benjaminblarr.de/el-pollo-loco',
+      links: [
+        { url: 'https://github.com/B-Blarr/El-Pollo-Loco', labelKey: 'projects.githubButton' },
+        { url: 'https://benjaminblarr.de/el-pollo-loco', labelKey: 'projects.liveButton' },
+      ],
     },
 
     {
       title: '03',
-      subtitle: 'Pokédex',
-      descriptionKey: 'projects.pokedex.description',
-      imageUrl: '/images/pokedex.jpg',
+      subtitle: 'Cardelia',
+      descriptionKey: 'projects.cardelia.description',
+      imageUrl: '/images/cardelia.jpg',
       techs: [
-        { name: 'JavaScript', iconUrl: '/icons/javascript.svg' },
-        { name: 'HTML', iconUrl: '/icons/html.svg' },
-        { name: 'CSS', iconUrl: '/icons/css.svg' },
-        { name: 'REST-API', iconUrl: '/icons/rest-api.svg' },
+        { name: 'Python', iconUrl: '/icons/python.svg' },
+        { name: 'Django', iconUrl: '/icons/django.svg' },
+        { name: 'PostgreSQL', iconUrl: '/icons/postgresql.svg' },
+        { name: 'Supabase', iconUrl: '/icons/supabase.svg' },
       ],
-      github: 'https://github.com/B-Blarr/Pokedex',
-      livetest: 'https://benjaminblarr.de/pokedex',
+      // Kein Repository und keine oeffentliche Fassung. Beide Knoepfe zeigen
+      // auf die Architekturseite, der zweite auf den Bilderteil darin.
+      links: [
+        { url: 'https://benjaminblarr.de/cardelia/', labelKey: 'projects.architectureButton' },
+        {
+          url: 'https://benjaminblarr.de/cardelia/#bilder',
+          labelKey: 'projects.screenshotsButton',
+        },
+      ],
     },
 
     {
@@ -69,8 +80,10 @@ export class Projects {
         { name: 'REST-API', iconUrl: '/icons/rest-api.svg' },
         { name: 'Linux', iconUrl: '/icons/linux.svg' },
       ],
-      github: 'https://github.com/B-Blarr/Coderr-Backend',
-      livetest: 'https://coderr.benjaminblarr.de',
+      links: [
+        { url: 'https://github.com/B-Blarr/Coderr-Backend', labelKey: 'projects.githubButton' },
+        { url: 'https://coderr.benjaminblarr.de', labelKey: 'projects.liveButton' },
+      ],
     },
   ];
 
