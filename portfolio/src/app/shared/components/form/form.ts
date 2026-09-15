@@ -50,7 +50,9 @@ export class Form implements OnInit {
     email: new FormControl('', {
       validators: [
         Validators.required,
-        Validators.pattern(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/),
+        Validators.pattern(
+          /^\s*[a-zA-Z0-9_%+-]+(?:\.[a-zA-Z0-9_%+-]+)*@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}\s*$/,
+        ),
       ],
     }),
     message: new FormControl('', {
