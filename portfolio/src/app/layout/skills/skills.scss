@@ -122,10 +122,11 @@ h3 {
         color: var(--primary-color);
       }
     }
+  }
 
-    & .request-contact {
-      font-size: 16px;
-    }
+  & .request-contact {
+    align-self: stretch;
+    font-size: 16px;
   }
 
   & .contact-button {
