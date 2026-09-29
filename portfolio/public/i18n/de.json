@@ -70,6 +70,34 @@
       "evaluator": "Gregor Zaren, Teampartner"
     }
   },
+  "assistant": {
+    "headline": "Frag meinen Assistenten",
+    "intro": "Eigene Wissensbasis, eigene Vektorsuche, alles auf meinem Server. Er beantwortet Fragen zu mir und meinen Projekten und sagt dir, wenn er etwas nicht weiß.",
+    "label": "Deine Frage",
+    "placeholder": "Frag mich etwas über Benjamin",
+    "button": "Fragen",
+    "suggestionsLabel": "Zum Beispiel:",
+    "suggestions": {
+      "stack": "Welche Technologien nutzt Benjamin?",
+      "project": "Was steckt hinter Coderr?",
+      "assistant": "Wie funktioniert dieser Assistent?"
+    },
+    "loading": "Einen Moment, ich suche in der Wissensbasis …",
+    "greeting": "Hallo! Stell mir eine Frage zu Benjamin oder seinen Projekten.",
+    "offTopic": "Dazu sage ich nichts. Ich beantworte nur Fragen zu Benjamin und seinen Projekten.",
+    "noAnswerHint": "Frag Benjamin direkt, das Formular steht gleich darunter.",
+    "errorRequired": "Stell mir eine Frage.",
+    "errorMaxLength": "Deine Frage ist zu lang (höchstens 500 Zeichen).",
+    "errors": {
+      "invalid": "Die Frage kam so nicht durch. Formulier sie bitte kürzer.",
+      "rejected": "Diese Frage beantworte ich nicht.",
+      "rateLimited": "Gerade wurden zu viele Fragen gestellt. Versuch es in {{minutes}} Minuten noch einmal.",
+      "rateLimitedSoon": "Gerade wurden zu viele Fragen gestellt. Versuch es gleich noch einmal.",
+      "unavailable": "Der Assistent ist im Moment nicht erreichbar. Schreib mir solange über das Formular darunter.",
+      "timeout": "Das hat zu lange gedauert. Versuch es bitte noch einmal.",
+      "generic": "Da ist etwas schiefgegangen. Versuch es bitte noch einmal."
+    }
+  },
   "contact": {
     "contactMe": "Kontakt",
     "headline": "Lass uns zusammen arbeiten",

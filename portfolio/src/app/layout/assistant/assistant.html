@@ -1,0 +1,87 @@
+<div class="glow-wrapper">
+  <section class="content" id="assistant-section">
+    <h3>{{ 'assistant.headline' | translate }}</h3>
+    <p class="intro">{{ 'assistant.intro' | translate }}</p>
+
+    <form class="ask-form" [formGroup]="askForm" (ngSubmit)="submit()">
+      <label class="visually-hidden" for="assistant-question">
+        {{ 'assistant.label' | translate }}
+      </label>
+      <div class="field">
+        <textarea
+          #questionBox
+          id="assistant-question"
+          class="input"
+          rows="1"
+          autocomplete="off"
+          formControlName="question"
+          [maxlength]="maxLength"
+          [placeholder]="'assistant.placeholder' | translate"
+          (input)="autoResize()"
+          (keydown.enter)="onEnter($event)"
+        ></textarea>
+      </div>
+      <div class="error-container">
+        @if (submitted && question.invalid) {
+          <p class="error-message">
+            @if (question.hasError('required')) {
+              {{ 'assistant.errorRequired' | translate }}
+            }
+            @if (question.hasError('maxlength')) {
+              {{ 'assistant.errorMaxLength' | translate }}
+            }
+          </p>
+        }
+      </div>
+      <div class="actions">
+        <app-animated-button [type]="'submit'" [disabled]="isLoading">
+          <span>{{ 'assistant.button' | translate }}</span>
+        </app-animated-button>
+      </div>
+    </form>
+
+    <div class="suggestions">
+      <p class="suggestions-label" id="assistant-suggestions">
+        {{ 'assistant.suggestionsLabel' | translate }}
+      </p>
+      <ul class="suggestion-list" aria-labelledby="assistant-suggestions">
+        @for (key of suggestionKeys; track key) {
+          <li>
+            <button
+              type="button"
+              class="suggestion"
+              [disabled]="isLoading"
+              (click)="askSuggestion(key)"
+            >
+              {{ key | translate }}
+            </button>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <div class="result" role="status" aria-live="polite" [attr.aria-busy]="isLoading">
+      @if (isLoading) {
+        <p class="loading">
+          <span class="spinner" aria-hidden="true"></span>
+          {{ 'assistant.loading' | translate }}
+        </p>
+      } @else if (errorKey) {
+        <p class="error-box">{{ errorKey | translate: { minutes: retryMinutes } }}</p>
+      } @else if (result) {
+        @if (result.kind === 'greeting') {
+          <p class="answer">{{ 'assistant.greeting' | translate }}</p>
+        }
+        @if (result.kind === 'off_topic') {
+          <p class="answer">{{ 'assistant.offTopic' | translate }}</p>
+        }
+        @if (result.kind === 'answer') {
+          <p class="answer">{{ result.answer }}</p>
+          @if (!result.answered) {
+            <p class="hint">{{ 'assistant.noAnswerHint' | translate }}</p>
+          }
+        }
+      }
+    </div>
+  </section>
+</div>
