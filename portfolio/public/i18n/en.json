@@ -72,7 +72,7 @@
   },
   "assistant": {
     "headline": "Ask my assistant",
-    "intro": "My own knowledge base, my own vector search, all on my own server. It answers questions about me and my projects, and tells you when it does not know something.",
+    "intro": "Own knowledge base, own vector search, all on my server. It answers questions about me and my projects, and tells you when it does not know.",
     "label": "Your question",
     "placeholder": "Ask me something about Benjamin",
     "button": "Ask",

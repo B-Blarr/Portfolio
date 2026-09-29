@@ -1,13 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import {
-  ChangeDetectorRef,
-  Component,
-  ElementRef,
-  OnDestroy,
-  OnInit,
-  ViewChild,
-  inject,
-} from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, ViewChild, inject } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import {
   AbstractControl,
   FormControl,
@@ -17,7 +10,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { Subscription, TimeoutError } from 'rxjs';
+import { TimeoutError } from 'rxjs';
 import { AnimatedButton } from '../../shared/components/animated-button/animated-button';
 import {
   AssistantApi,
@@ -36,11 +29,10 @@ function notBlank(control: AbstractControl): ValidationErrors | null {
   templateUrl: './assistant.html',
   styleUrl: './assistant.scss',
 })
-export class Assistant implements OnInit, OnDestroy {
+export class Assistant {
   private api = inject(AssistantApi);
   private translate = inject(TranslateService);
   private cdr = inject(ChangeDetectorRef);
-  private langChange?: Subscription;
 
   @ViewChild('questionBox') private questionBox?: ElementRef<HTMLTextAreaElement>;
 
@@ -70,12 +62,8 @@ export class Assistant implements OnInit, OnDestroy {
   errorKey: string | null = null;
   retryMinutes = 0;
 
-  ngOnInit(): void {
-    this.langChange = this.translate.onLangChange.subscribe(() => this.clearResult());
-  }
-
-  ngOnDestroy(): void {
-    this.langChange?.unsubscribe();
+  constructor() {
+    this.translate.onLangChange.pipe(takeUntilDestroyed()).subscribe(() => this.clearResult());
   }
 
   /**
