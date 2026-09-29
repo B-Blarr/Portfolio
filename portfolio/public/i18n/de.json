@@ -247,6 +247,13 @@
         "text": "Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben inklusive der Kontaktdaten zwecks Bearbeitung der Anfrage bei uns gespeichert.",
         "basis": "Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist."
       },
+      "assistant": {
+        "title": "KI-Assistent",
+        "text": "Auf unserer Website können Sie einem KI-Assistenten Fragen zu uns und unseren Projekten stellen. Wenn Sie eine Frage absenden, wird der eingegebene Text an unseren Server übertragen, dort mit passenden Abschnitten aus einer von uns gepflegten Wissensbasis zusammengeführt und zur Beantwortung an Anthropic weitergegeben. Ihre Frage und die Antwort werden auf unserem Server nicht gespeichert.",
+        "recipient": "Die Antwort erzeugt Anthropic PBC, 548 Market St, PMB 90375, San Francisco, CA 94104, USA. Anthropic verarbeitet Ihre Frage dabei als Auftragsverarbeiter in unserem Auftrag. Grundlage der Übermittlung in die USA sind die Standardvertragsklauseln der Europäischen Kommission, die Anthropic in seine Vertragsbedingungen einbezieht. Nach Angaben von Anthropic werden die übermittelten Inhalte nicht zum Training der Modelle verwendet und in der Regel innerhalb von 30 Tagen gelöscht. Wird ein Inhalt als Verstoß gegen die Nutzungsrichtlinien von Anthropic eingestuft, kann er dort bis zu zwei Jahre und die zugehörige Bewertung bis zu sieben Jahre aufbewahrt werden.",
+        "ip": "Ihre IP-Adresse wird nicht an Anthropic übermittelt, die Anfrage dorthin stellt unser Server. Auf unserem Server wird Ihre IP-Adresse in den Server-Log-Dateien gespeichert (siehe oben) und zur Begrenzung der Anzahl der Fragen pro Stunde für höchstens etwa zwei Stunden nach Ihrer letzten Frage vorgehalten.",
+        "basis": "Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse daran, Fragen zu unserer Arbeit unmittelbar zu beantworten. Die Nutzung des Assistenten ist freiwillig. Wenn Sie keine Daten an Anthropic übermitteln möchten, nutzen Sie bitte das Kontaktformular."
+      },
       "directContact": {
         "title": "Anfrage per E-Mail, Telefon oder Telefax",
         "text": "Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden Daten gespeichert.",
