@@ -1,0 +1,257 @@
+@use '../../../styles/mixins' as m;
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.glow-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: radial-gradient(
+    ellipse 900px 520px at 50% 40%,
+    rgba(8, 70, 59, 0.55) 0%,
+    rgba(8, 70, 59, 0.28) 35%,
+    rgba(8, 70, 59, 0) 75%
+  );
+  background-repeat: no-repeat;
+}
+
+.content {
+  @include m.content-limitation();
+  align-items: center;
+  font-family: Karla;
+  color: white;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-top: 60px;
+  margin-bottom: 160px;
+}
+
+h3 {
+  font-family: Fira Code;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: center;
+  width: 100%;
+  max-width: 680px;
+  margin-bottom: 12px;
+}
+
+.intro {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #ffffffcc;
+  width: 100%;
+  max-width: 680px;
+  margin-bottom: 40px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.ask-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 680px;
+}
+
+.field {
+  display: flex;
+  border-bottom: 1px solid #3dcfb680;
+  padding-bottom: 14px;
+  transition: border-color 125ms ease;
+
+  &:focus-within,
+  &:hover {
+    border-bottom-color: var(--primary-color);
+  }
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  font-family: Karla;
+  font-size: 18px;
+  line-height: 1.5;
+  background-color: transparent;
+  border: none;
+  color: white;
+  caret-color: var(--primary-color);
+  resize: none;
+  overflow-y: auto;
+  max-height: 180px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #ffffff80;
+  }
+}
+
+.error-container {
+  min-height: 18px;
+  padding-top: 6px;
+}
+
+.error-message {
+  font-size: 16px;
+  color: #ec7b7bcc;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 680px;
+  margin-top: 36px;
+}
+
+.suggestions-label {
+  font-size: 16px;
+  color: #ffffff99;
+}
+
+.suggestion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.suggestion {
+  font-family: Karla;
+  font-size: 16px;
+  text-align: left;
+  color: #ffffffcc;
+  background-color: transparent;
+  border: none;
+  padding: 0 0 0 22px;
+  cursor: pointer;
+  transition: color 125ms ease;
+
+  &::before {
+    content: '\2192';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+  }
+
+  &:hover:not([disabled]) {
+    color: var(--primary-color);
+  }
+
+  &[disabled] {
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+  }
+}
+
+.result {
+  width: 100%;
+  max-width: 680px;
+  font-size: 16px;
+  line-height: 1.8;
+
+  &:not(:empty) {
+    margin-top: 40px;
+    padding: 24px 28px;
+    border: 1px solid #3dcfb640;
+    border-radius: 8px;
+    background-color: rgba(61, 207, 182, 0.04);
+  }
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffffcc;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #3dcfb680;
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 900ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.answer {
+  white-space: pre-line;
+}
+
+.hint {
+  margin-top: 12px;
+  color: var(--primary-color);
+}
+
+.error-box {
+  color: #ec7b7b;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation-duration: 3s;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 0;
+    margin-bottom: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  .input {
+    font-size: 16px;
+  }
+
+  .result:not(:empty) {
+    padding: 20px;
+  }
+}
