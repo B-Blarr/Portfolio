@@ -84,16 +84,16 @@
     },
     "loading": "One moment, searching the knowledge base …",
     "greeting": "Hello! Ask me anything about Benjamin or his projects.",
-    "offTopic": "I have nothing to say about that. I only answer questions about Benjamin and his projects.",
-    "noAnswerHint": "Ask Benjamin directly, the form is right below.",
+    "offTopic": "I am afraid I do not know about that. I can only answer questions about Benjamin and his projects.",
+    "noAnswerHint": "Just ask Benjamin directly through the contact form below.",
     "errorRequired": "Please ask me a question.",
     "errorMaxLength": "Your question is too long (500 characters at most).",
     "errors": {
-      "invalid": "That question did not get through. Please make it shorter.",
-      "rejected": "I will not answer that question.",
+      "invalid": "That question did not get through. Please put it differently.",
+      "rejected": "I will not answer that question. If you did mean it seriously, please put it differently.",
       "rateLimited": "Too many questions have been asked. Please try again in {{minutes}} minutes.",
       "rateLimitedSoon": "Too many questions have been asked. Please try again in a moment.",
-      "unavailable": "The assistant is unavailable right now. Use the form below to reach me instead.",
+      "unavailable": "The assistant is unavailable right now. Use the contact form below to reach Benjamin instead.",
       "timeout": "That took too long. Please try again.",
       "generic": "Something went wrong. Please try again."
     }
