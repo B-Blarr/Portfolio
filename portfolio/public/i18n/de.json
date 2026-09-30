@@ -71,8 +71,8 @@
     }
   },
   "assistant": {
-    "headline": "Frag meinen Assistenten",
-    "intro": "Eigene Wissensbasis, eigene Vektorsuche, alles auf meinem Server. Er beantwortet Fragen zu mir und meinen Projekten und sagt dir, wenn er etwas nicht weiß.",
+    "headline": "Frag meinen KI-Assistenten",
+    "intro": "Er beantwortet Fragen zu mir und meinen Projekten und sagt dir, wenn er etwas nicht weiß.",
     "label": "Deine Frage",
     "placeholder": "Frag mich etwas über Benjamin",
     "button": "Fragen",
@@ -84,6 +84,10 @@
     },
     "loading": "Einen Moment, ich suche in der Wissensbasis …",
     "greeting": "Hallo! Stell mir eine Frage zu Benjamin oder seinen Projekten.",
+    "thanks": "Gern geschehen! Wenn du noch etwas über Benjamin wissen möchtest, frag einfach.",
+    "farewell": "Tschüss und danke für deinen Besuch!",
+    "unclear": "Das habe ich nicht verstanden. Stell mir eine Frage zu Benjamin oder seinen Projekten.",
+    "unknownReply": "Darauf habe ich keine Antwort. Stell mir gern eine Frage zu Benjamin oder seinen Projekten.",
     "offTopic": "Darüber weiß ich leider nichts. Ich kann nur Fragen zu Benjamin und seinen Projekten beantworten.",
     "noAnswerHint": "Frag Benjamin doch einfach direkt über das Kontaktformular hier drunter.",
     "errorRequired": "Stell mir eine Frage.",
@@ -124,7 +128,8 @@
   },
   "footer": {
     "home": "Schöningen, Deutschland",
-    "legalNotice": "Impressum"
+    "legalNotice": "Impressum",
+    "privacyPolicy": "Datenschutzerklärung"
   },
   "legalNotice": {
     "headline": "Impressum",

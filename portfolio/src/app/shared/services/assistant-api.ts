@@ -19,14 +19,12 @@ export interface AssistantSource {
   heading: string;
 }
 
-/** Greeting, farewell or a simple thank you. */
-export interface AssistantGreeting {
-  kind: 'greeting';
-}
+/** Reply kinds that carry no payload and are shown with a fixed text of their own. */
+export type AssistantFixedTextKind = 'greeting' | 'thanks' | 'farewell' | 'unclear' | 'off_topic';
 
-/** Question outside the assistant's subject. */
-export interface AssistantOffTopic {
-  kind: 'off_topic';
+/** Reply that consists of its kind alone, without any text from the backend. */
+export interface AssistantFixedTextReply {
+  kind: AssistantFixedTextKind;
 }
 
 /** Answer built from the knowledge base. */
@@ -37,7 +35,7 @@ export interface AssistantAnswer {
   sources: AssistantSource[];
 }
 
-export type AssistantResponse = AssistantGreeting | AssistantOffTopic | AssistantAnswer;
+export type AssistantResponse = AssistantFixedTextReply | AssistantAnswer;
 
 @Injectable({ providedIn: 'root' })
 export class AssistantApi {

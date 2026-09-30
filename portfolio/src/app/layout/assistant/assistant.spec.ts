@@ -169,12 +169,24 @@ describe('Assistant', () => {
 
     it.each([
       ['greeting', 'assistant.greeting'],
+      ['thanks', 'assistant.thanks'],
+      ['farewell', 'assistant.farewell'],
+      ['unclear', 'assistant.unclear'],
       ['off_topic', 'assistant.offTopic'],
     ])('shows the own text for kind %j', (kind, key) => {
       ask();
       httpTesting.expectOne('/api/assistant/').flush({ kind });
 
       expect(fixture.nativeElement.querySelector('.answer').textContent).toContain(key);
+    });
+
+    it('falls back to a general text for a kind this build does not know', () => {
+      ask();
+      httpTesting.expectOne('/api/assistant/').flush({ kind: 'invented_later' });
+
+      expect(fixture.nativeElement.querySelector('.answer').textContent).toContain(
+        'assistant.unknownReply',
+      );
     });
 
     it('drops a shown answer when the language is switched', () => {

@@ -69,16 +69,30 @@
       } @else if (errorKey) {
         <p class="error-box">{{ errorKey | translate: { minutes: retryMinutes } }}</p>
       } @else if (result) {
-        @if (result.kind === 'greeting') {
-          <p class="answer">{{ 'assistant.greeting' | translate }}</p>
-        }
-        @if (result.kind === 'off_topic') {
-          <p class="answer">{{ 'assistant.offTopic' | translate }}</p>
-        }
-        @if (result.kind === 'answer') {
-          <p class="answer">{{ result.answer }}</p>
-          @if (!result.answered) {
-            <p class="hint">{{ 'assistant.noAnswerHint' | translate }}</p>
+        @switch (result.kind) {
+          @case ('answer') {
+            <p class="answer">{{ result.answer }}</p>
+            @if (!result.answered) {
+              <p class="hint">{{ 'assistant.noAnswerHint' | translate }}</p>
+            }
+          }
+          @case ('greeting') {
+            <p class="answer">{{ 'assistant.greeting' | translate }}</p>
+          }
+          @case ('thanks') {
+            <p class="answer">{{ 'assistant.thanks' | translate }}</p>
+          }
+          @case ('farewell') {
+            <p class="answer">{{ 'assistant.farewell' | translate }}</p>
+          }
+          @case ('unclear') {
+            <p class="answer">{{ 'assistant.unclear' | translate }}</p>
+          }
+          @case ('off_topic') {
+            <p class="answer">{{ 'assistant.offTopic' | translate }}</p>
+          }
+          @default {
+            <p class="answer">{{ 'assistant.unknownReply' | translate }}</p>
           }
         }
       }
