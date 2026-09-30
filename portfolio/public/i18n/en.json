@@ -71,8 +71,8 @@
     }
   },
   "assistant": {
-    "headline": "Ask my assistant",
-    "intro": "Own knowledge base, own vector search, all on my server. It answers questions about me and my projects, and tells you when it does not know.",
+    "headline": "Ask my AI assistant",
+    "intro": "It answers questions about me and my projects, and tells you when it does not know.",
     "label": "Your question",
     "placeholder": "Ask me something about Benjamin",
     "button": "Ask",
@@ -84,6 +84,10 @@
     },
     "loading": "One moment, searching the knowledge base …",
     "greeting": "Hello! Ask me anything about Benjamin or his projects.",
+    "thanks": "You are welcome! If there is anything else you would like to know about Benjamin, just ask.",
+    "farewell": "Goodbye, and thanks for stopping by!",
+    "unclear": "I did not understand that. Ask me a question about Benjamin or his projects.",
+    "unknownReply": "I have no answer for that. Feel free to ask me a question about Benjamin or his projects.",
     "offTopic": "I am afraid I do not know about that. I can only answer questions about Benjamin and his projects.",
     "noAnswerHint": "Just ask Benjamin directly through the contact form below.",
     "errorRequired": "Please ask me a question.",
@@ -124,7 +128,8 @@
   },
   "footer": {
     "home": "Schöningen, Germany",
-    "legalNotice": "Legal Notice"
+    "legalNotice": "Legal Notice",
+    "privacyPolicy": "Privacy Policy"
   },
   "legalNotice": {
     "headline": "Legal Notice",
