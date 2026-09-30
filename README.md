@@ -13,11 +13,11 @@ reach me. The language switch keeps the current position on the page, and the
 contact form posts to a Django endpoint on the same server rather than to a
 third-party service.
 
-The page also carries an assistant. It answers questions about me and my
+The page also carries an AI assistant. It answers questions about me and my
 projects from a knowledge base I wrote myself: a vector search picks the
 relevant sections, Claude puts the answer into words, and a separate guard
-model checks every question before any of that happens. Everything except the
-wording runs on my own server.
+model checks every question before it reaches the knowledge base or Claude.
+Everything except the wording runs on my own server.
 
 ## Features
 
@@ -25,7 +25,7 @@ wording runs on my own server.
 - Responsive from 4K down to 320 pixels
 - Project showcase with links to the running applications
 - Contact form with server-side validation and spam protection
-- Assistant answering from my own knowledge base, with sources kept on my server
+- AI assistant answering from my own knowledge base, sources kept on my server
 
 ## Built with
 
@@ -62,6 +62,3 @@ assistant. The assistant stores its knowledge base as vectors in PostgreSQL
 with pgvector and runs its own embedding and guard services next to it. That
 code lives in its own repository:
 [Coderr-Backend](https://github.com/B-Blarr/Coderr-Backend).
-
-
-
