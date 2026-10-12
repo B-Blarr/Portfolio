@@ -44,7 +44,7 @@
       "description": "Jump-and-Run-Spiel in reinem JavaScript, objektorientiert aufgebaut aus 24 Klassen. Pepe sammelt Münzen und Tabasco-Salsa für den Kampf gegen die Boss-Henne."
     },
     "cardelia": {
-      "description": "Kartenkatalog mit Sammlungsverwaltung: rund 53.000 Pokémon-Karten in vier Sprachen, tägliche Preise aus mehreren Quellen. Als Demo ohne Konto ausprobierbar."
+      "description": "Kartenkatalog mit Sammlungsverwaltung: über 78.000 Pokémon-Karten in vier Sprachen, tägliche Preise aus mehreren Quellen. Als Demo ohne Konto ausprobierbar."
     },
     "coderr": {
       "description": "REST-API, gebaut mit Django REST Framework. Angebote, Bestellungen und Bewertungen mit Token-Authentifizierung. Frontend von der Developer Akademie bereitgestellt."
