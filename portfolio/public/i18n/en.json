@@ -37,7 +37,6 @@
     "githubButton": "GitHub",
     "liveButton": "Live Test",
     "architectureButton": "Architecture",
-    "screenshotsButton": "Screenshots",
     "join": {
       "description": "Task manager modelled on a Kanban board. Tasks can be assigned to users and categories, then moved between columns by drag and drop."
     },
@@ -45,7 +44,7 @@
       "description": "Jump-and-run game in plain JavaScript, built object-oriented from 24 classes. Pepe collects coins and tabasco salsa to face the boss hen."
     },
     "cardelia": {
-      "description": "Card catalogue with collection tracking: about 77,000 Pokémon cards in four languages, prices from several sources. Running, not public yet."
+      "description": "Card catalogue with collection tracking: about 53,000 Pokémon cards in four languages, daily prices from several sources. Try the demo without an account."
     },
     "coderr": {
       "description": "REST API, built with Django REST Framework. Offers, orders and reviews with token authentication. Frontend provided by the Developer Akademie."

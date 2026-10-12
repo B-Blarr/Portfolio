@@ -58,14 +58,11 @@ export class Projects {
         { name: 'PostgreSQL', iconUrl: '/icons/postgresql.svg' },
         { name: 'Supabase', iconUrl: '/icons/supabase.svg' },
       ],
-      // Kein Repository und keine oeffentliche Fassung. Beide Knoepfe zeigen
-      // auf die Architekturseite, der zweite auf den Bilderteil darin.
+      // Kein oeffentliches Repository. Der erste Knopf zeigt auf die
+      // Architekturseite, der zweite startet die Demo ohne Konto.
       links: [
         { url: 'https://benjaminblarr.de/cardelia/', labelKey: 'projects.architectureButton' },
-        {
-          url: 'https://benjaminblarr.de/cardelia/#bilder',
-          labelKey: 'projects.screenshotsButton',
-        },
+        { url: 'https://cardelia.de/demo?von=portfolio', labelKey: 'projects.liveButton' },
       ],
     },
 
