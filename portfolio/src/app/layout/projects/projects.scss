@@ -56,10 +56,19 @@
 .project-teaser {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
   border-bottom: 1px solid var(--primary-color);
   padding: clamp(20px, 3vw, 40px) clamp(16px, 2.5vw, 32px);
   cursor: pointer;
+  text-align: left;
   transition: 0.125s ease-in;
+
+  &:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: -2px;
+  }
 
   &:hover {
     background: rgba(61, 207, 182, 0.3);
