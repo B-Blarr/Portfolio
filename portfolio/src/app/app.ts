@@ -2,6 +2,8 @@ import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
+import { readStoredLanguage } from './shared/language-storage';
+
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
@@ -13,7 +15,7 @@ export class App {
 
   constructor() {
     this.translate.setFallbackLang('en');
-    const savedLanguage = localStorage.getItem('language') || 'de';
+    const savedLanguage = readStoredLanguage();
     this.translate.use(savedLanguage);
     document.documentElement.lang = savedLanguage;
   }

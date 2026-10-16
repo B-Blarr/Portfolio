@@ -2,6 +2,8 @@ import { Component, inject, HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
+import { AppLanguage, readStoredLanguage, storeLanguage } from '../../shared/language-storage';
+
 @Component({
   selector: 'app-header',
   imports: [TranslatePipe, RouterLink],
@@ -11,13 +13,13 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 export class Header {
   private translate = inject(TranslateService);
 
-  activeLanguage = (localStorage.getItem('language') || 'de') as 'de' | 'en';
+  activeLanguage: AppLanguage = readStoredLanguage();
   isMenuOpen = false;
 
-  setActiveLanguage(language: 'de' | 'en'): void {
+  setActiveLanguage(language: AppLanguage): void {
     this.translate.use(language);
     this.activeLanguage = language;
-    localStorage.setItem('language', language);
+    storeLanguage(language);
     document.documentElement.lang = language;
   }
 

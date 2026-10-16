@@ -36,7 +36,7 @@
             [class.visible]="hoveredProjectSubtitle === project.subtitle"
             [style.top.px]="i * 60"
           >
-            <img [src]="project.imageUrl" alt="{{ project.subtitle }}" />
+            <img [src]="project.imageUrl" alt="{{ project.subtitle }}" loading="lazy" />
           </div>
         }
       </div>

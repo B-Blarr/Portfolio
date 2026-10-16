@@ -4,7 +4,7 @@ My personal developer portfolio, built with Angular and TypeScript.
 
 👉 **[Visit the portfolio](https://benjaminblarr.de/)**
 
-![Portfolio Preview](portfolio/public/images/preview.png)
+![Portfolio Preview](docs/preview.png)
 
 ## About
 

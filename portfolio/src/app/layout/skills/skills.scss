@@ -180,7 +180,8 @@ app-animated-button {
   visibility: hidden;
   transition: all 0.125s ease-in-out;
   z-index: 10;
-  background-color: white;
+  background-color: #1c1c1c;
+  border: 1px solid var(--primary-color);
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   overflow: visible;
   display: flex;
@@ -203,6 +204,13 @@ app-animated-button {
     width: 26px;
     height: 15px;
     pointer-events: none;
+    background-color: var(--primary-color);
+    -webkit-mask-image: url('/icons/triangle.svg');
+    mask-image: url('/icons/triangle.svg');
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
   }
 
   & .special-interests {
