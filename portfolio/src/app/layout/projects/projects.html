@@ -9,24 +9,23 @@
         <p [innerHTML]="'projects.intro' | translate"></p>
         <article class="projects">
           @for (project of projectsList; track project.subtitle) {
-            <aside
+            <button
+              type="button"
               class="project-teaser"
-              role="button"
-              tabindex="0"
               (click)="openOverlay(project)"
               (mouseenter)="setHover(project.subtitle)"
               (mouseleave)="clearHover()"
             >
-              <div class="project-name-arrow">
+              <span class="project-name-arrow">
                 <span class="project-name">{{ project.subtitle }}</span>
                 <img class="hover-arrow" src="/icons/arrow-out.white.svg" alt="Arrow Out" />
-              </div>
+              </span>
               <span class="used-technologies">
                 @for (tech of project.techs; track tech.name) {
                   <span>{{ tech.name }}</span>
                 }
               </span>
-            </aside>
+            </button>
           }
         </article>
       </div>
