@@ -31,7 +31,7 @@
   flex-direction: column;
 }
 
-h3 {
+.section-label {
   @include m.small-headline;
 }
 
@@ -348,7 +348,7 @@ app-animated-button {
     }
   }
 
-  h3 {
+  .section-label {
     font-size: 20px;
   }
 }

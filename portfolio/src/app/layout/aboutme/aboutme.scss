@@ -73,7 +73,7 @@ article {
   flex-shrink: 1;
 }
 
-h3 {
+.section-label {
   @include m.small-headline;
 }
 
@@ -215,7 +215,7 @@ h3 {
     }
   }
 
-  h3 {
+  .section-label {
     font-size: 20px;
   }
 }
