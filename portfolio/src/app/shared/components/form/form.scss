@@ -171,6 +171,7 @@ textarea.input {
 
 ::ng-deep .highlighted {
   color: var(--primary-color);
+  text-decoration: underline;
 
   &:hover {
     color: white;
