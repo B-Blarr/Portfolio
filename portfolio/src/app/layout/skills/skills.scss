@@ -225,6 +225,7 @@ app-animated-button {
       & img {
         width: 34px;
         height: 32px;
+        object-fit: contain;
       }
 
       & span {
