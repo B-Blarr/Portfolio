@@ -23,7 +23,7 @@
   }
 }
 
-h2 {
+h1 {
   @include m.big-headline;
   text-align: center;
   padding-top: 60px;
@@ -91,7 +91,7 @@ app-footer {
 }
 
 @media (max-width: 900px) {
-  h2 {
+  h1 {
     font-size: 52px;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -99,7 +99,7 @@ app-footer {
 }
 
 @media (max-width: 750px) {
-  h2 {
+  h1 {
     font-size: 46px;
     padding-top: 36px;
     padding-bottom: 36px;
@@ -118,13 +118,13 @@ app-footer {
 }
 
 @media (max-width: 650px) {
-  h2 {
+  h1 {
     font-size: 34px;
   }
 }
 
 @media (max-width: 480px) {
-  h2 {
+  h1 {
     font-size: 28px;
     padding-bottom: 0px;
     text-align: left;
@@ -145,7 +145,7 @@ app-footer {
 }
 
 @media (max-width: 380px) {
-  h2 {
+  h1 {
     font-size: 22px;
   }
 }
