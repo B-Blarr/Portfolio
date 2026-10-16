@@ -88,14 +88,13 @@
           id="confirmation-checkbox"
           formControlName="privacyAccepted"
         />
-        <a routerLink="/private-policy">
-          <label
-            class="checkbox-text"
-            for="confirmation-checkbox"
-            [innerHTML]="'contact.privacy' | translate"
-          >
-          </label>
-        </a>
+        <label class="checkbox-text" for="confirmation-checkbox">
+          {{ 'contact.privacyBefore' | translate
+          }}<a class="highlighted" routerLink="/private-policy">{{
+            'contact.privacyLink' | translate
+          }}</a
+          >{{ 'contact.privacyAfter' | translate }}
+        </label>
       </div>
       <div class="error-container">
         @if (formSubmitted && userform.get('privacyAccepted')?.invalid) {
