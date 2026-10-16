@@ -27,6 +27,20 @@ Everything except the wording runs on my own server.
 - Contact form with server-side validation and spam protection
 - AI assistant answering from my own knowledge base, sources kept on my server
 
+## Getting started
+
+The Angular application lives in `portfolio/`, not in the repository root.
+
+```bash
+cd portfolio
+npm ci
+npm start
+```
+
+CI builds with Node 24. The contact form and the AI assistant post to
+`/api/contact/` and `/api/assistant/`, which a separate Django backend serves,
+so both stay inactive on a local run.
+
 ## Built with
 
 **Frontend**
