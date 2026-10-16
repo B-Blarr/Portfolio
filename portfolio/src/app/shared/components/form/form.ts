@@ -1,32 +1,19 @@
 import { Component, ChangeDetectorRef, inject, OnInit } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  FormsModule,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AnimatedButton } from '../animated-button/animated-button';
 import { HttpClient } from '@angular/common/http';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-form',
-  imports: [ReactiveFormsModule, AnimatedButton, FormsModule, TranslatePipe, RouterLink],
+  imports: [ReactiveFormsModule, AnimatedButton, TranslatePipe, RouterLink],
   templateUrl: './form.html',
   styleUrl: './form.scss',
 })
 export class Form implements OnInit {
   http = inject(HttpClient);
-  translate = inject(TranslateService);
   private cdr = inject(ChangeDetectorRef);
-
-  contactData = {
-    name: '',
-    mail: '',
-    message: '',
-  };
 
   ngOnInit() {
     this.userform.valueChanges.subscribe(() => {
@@ -34,7 +21,6 @@ export class Form implements OnInit {
     });
   }
 
-  isFormInvalid = true;
   formSubmitted = false;
   mailSent = false;
   mailError = false;
@@ -94,16 +80,6 @@ export class Form implements OnInit {
     this.mailSent = false;
     this.mailError = false;
     this.userform.reset();
-  }
-
-  fillForm() {
-    this.userform.setValue({
-      name: 'Your name goes here.',
-      email: 'youremail@email.com',
-      message: 'Hello Benjamin, I am interested in...',
-      privacyAccepted: false,
-      website: '',
-    });
   }
 
   autoResize(textarea: HTMLTextAreaElement) {
