@@ -1,33 +1,11 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/portfolio"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-    # Only minor and patch updates are grouped. Major updates arrive as
-    # separate pull requests, so one incompatible package cannot block the rest.
-    groups:
-      angular:
-        patterns: ["@angular/*", "angular-eslint"]
-        update-types: ["minor", "patch"]
-      werkzeuge:
-        patterns: ["*"]
-        update-types: ["minor", "patch"]
-    # These follow the Angular major version (Angular's build tools only
-    # support specific TypeScript and Vitest majors) and move together with
-    # it through `ng update`, which also migrates the code.
-    ignore:
-      - dependency-name: "@angular/*"
-        update-types: ["version-update:semver-major"]
-      - dependency-name: "angular-eslint"
-        update-types: ["version-update:semver-major"]
-      - dependency-name: "typescript"
-        update-types: ["version-update:semver-major"]
-      - dependency-name: "vitest"
-        update-types: ["version-update:semver-major"]
-
+  # npm packages are updated by hand with `ng update` and `npm update`.
+  # Dependabot drops optional @emnapi entries when it regenerates
+  # package-lock.json, which makes `npm ci` fail on every npm pull request.
+  # Security alerts for npm still work without an entry here.
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "monday"
