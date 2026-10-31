@@ -1,0 +1,21 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/portfolio"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    groups:
+      angular:
+        patterns: ["@angular/*", "angular-eslint"]
+      werkzeuge:
+        patterns: ["*"]
+    ignore:
+      # Angular major versions go through `ng update`, which also migrates the code.
+      - dependency-name: "@angular/*"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
