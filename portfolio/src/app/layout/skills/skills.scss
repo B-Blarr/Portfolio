@@ -245,6 +245,12 @@ app-animated-button {
   }
 }
 
+@media (min-width: 1001px) and (max-width: 1200px) {
+  .tech-stack .highlight {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 1024px) {
   .content {
     padding-right: 60px;
