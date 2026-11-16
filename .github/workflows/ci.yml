@@ -103,3 +103,16 @@ jobs:
           typ=$(curl -sSI https://benjaminblarr.de/i18n/de.json | grep -i '^content-type:')
           echo "$typ"
           echo "$typ" | grep -qi 'application/json'
+          # The video is the largest file of the rollout. A partial answer with
+          # the right type shows that it arrived and that nginx serves byte
+          # ranges, which players need to seek.
+          video=$(curl -sS -r 0-99 -o /dev/null -w '%{http_code} %{content_type}' https://benjaminblarr.de/videos/cardelia.mp4)
+          echo "cardelia.mp4: $video"
+          echo "$video" | grep -q '^206 video/mp4'
+          # Subtitles fail only when the file is missing, which shows as
+          # text/html. The type itself is printed for information.
+          subtitles=$(curl -sSI https://benjaminblarr.de/videos/cardelia.en.vtt | grep -i '^content-type:' || true)
+          echo "cardelia.en.vtt: $subtitles"
+          if echo "$subtitles" | grep -qi 'text/html'; then
+            exit 1
+          fi
