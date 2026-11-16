@@ -5,7 +5,7 @@
   <!-- Not an interaction: this only keeps clicks inside the content from
        reaching the backdrop handler above. -->
   <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
-  <section class="content" (click)="$event.stopPropagation()">
+  <section class="content" [attr.inert]="videoOpen ? '' : null" (click)="$event.stopPropagation()">
     <div class="content-wrapper">
       <article class="text-area">
         <h2>{{ project.title }}</h2>
@@ -29,7 +29,24 @@
         <button class="close-btn" type="button" (click)="onClose()">
           <img src="/icons/close-small.svg" alt="Close Overlay" />
         </button>
-        <img class="project-image" [src]="project.imageUrl" [alt]="project.title" />
+        @if (project.video; as video) {
+          <!-- Wide screens show the start image as a plain picture, like the
+               other projects, and open the video with the button below. On
+               narrow screens a third button does not fit, so the picture
+               itself becomes the play button. -->
+          <img class="project-image video-still" [src]="video.poster" [alt]="project.title" />
+          <button
+            type="button"
+            class="project-image video-teaser"
+            [style.background-image]="'url(' + video.poster + ')'"
+            [attr.aria-label]="'projects.videoPlay' | translate"
+            (click)="openVideo()"
+          >
+            <span class="play-symbol" aria-hidden="true"></span>
+          </button>
+        } @else {
+          <img class="project-image" [src]="project.imageUrl" [alt]="project.title" />
+        }
       </article>
     </div>
     <div class="button-area">
@@ -45,6 +62,12 @@
             </app-animated-button>
           </a>
         }
+        @if (project.video) {
+          <app-animated-button class="video-button" (click)="openVideo()">
+            <span>{{ 'projects.videoButton' | translate }}</span>
+            <img src="/icons/play-out.svg" alt="" />
+          </app-animated-button>
+        }
       </div>
       <button type="button" class="next-project-button" (click)="onNext()">
         <span>{{ 'projects.nextButton' | translate }}</span>
@@ -54,4 +77,7 @@
       </button>
     </div>
   </section>
+  @if (videoOpen && project.video; as video) {
+    <app-video-lightbox [video]="video" (closed)="closeVideo()"></app-video-lightbox>
+  }
 </div>
