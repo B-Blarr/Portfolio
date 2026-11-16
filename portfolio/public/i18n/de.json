@@ -37,6 +37,9 @@
     "nextButton": "Nächstes Projekt",
     "githubButton": "GitHub",
     "liveButton": "Live Test",
+    "videoButton": "Erklärvideo",
+    "videoPlay": "Erklärvideo abspielen",
+    "videoClose": "Video schließen",
     "architectureButton": "Architektur",
     "join": {
       "description": "Task-Manager nach dem Vorbild eines Kanban-Boards. Aufgaben lassen sich Nutzern und Kategorien zuordnen und per Drag-and-Drop zwischen den Spalten verschieben."

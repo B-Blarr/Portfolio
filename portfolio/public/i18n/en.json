@@ -37,6 +37,9 @@
     "nextButton": "Next project",
     "githubButton": "GitHub",
     "liveButton": "Live Test",
+    "videoButton": "Explainer",
+    "videoPlay": "Play explainer video",
+    "videoClose": "Close video",
     "architectureButton": "Architecture",
     "join": {
       "description": "Task manager modelled on a Kanban board. Tasks can be assigned to users and categories, then moved between columns by drag and drop."

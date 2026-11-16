@@ -163,7 +163,8 @@ h3 {
 
   .project-image {
     width: 100%;
-    max-height: 250px;
+    --image-max-height: 250px;
+    max-height: var(--image-max-height);
     align-self: center;
   }
 
@@ -224,7 +225,8 @@ h3 {
   }
 
   .project-image {
-    max-height: 150px;
+    --image-max-height: 150px;
+    max-height: var(--image-max-height);
     border-radius: 16px;
   }
 
@@ -278,8 +280,10 @@ h3 {
   }
 
   .project-image {
-    max-height: 140px;
-    max-width: 280px;
+    --image-max-height: 140px;
+    max-height: var(--image-max-height);
+    --image-max-width: 280px;
+    max-width: var(--image-max-width);
   }
 
   h2 {
@@ -314,8 +318,10 @@ h3 {
   }
 
   .project-image {
-    max-height: 120px;
-    max-width: 240px;
+    --image-max-height: 120px;
+    max-height: var(--image-max-height);
+    --image-max-width: 240px;
+    max-width: var(--image-max-width);
   }
 
   .image-area {
@@ -336,7 +342,8 @@ h3 {
   }
 
   .project-image {
-    max-height: 180px;
+    --image-max-height: 180px;
+    max-height: var(--image-max-height);
   }
 
   .text-area {
@@ -354,5 +361,72 @@ h3 {
   h3 {
     font-size: 50px;
     white-space: nowrap;
+  }
+}
+
+// Explainer video: a third button on wide screens, the start image as play
+// button on narrow ones. The play button carries .project-image as well and
+// takes its height cap from the breakpoints above.
+.video-teaser {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  border: none;
+  background-color: #0b0d14;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  & .play-symbol {
+    width: clamp(40px, 6vw, 72px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+    transition: transform 125ms ease-in-out;
+
+    &::after {
+      content: '';
+      width: 34%;
+      aspect-ratio: 1;
+      margin-left: 8%;
+      background-color: #1c1c1c;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+    }
+  }
+
+  &:hover .play-symbol,
+  &:focus-visible .play-symbol {
+    transform: scale(1.1);
+  }
+}
+
+@media (min-width: 991px) {
+  // Three buttons must stay on one line next to "next project".
+  .button-links {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 990px) {
+  .video-still,
+  .video-button {
+    display: none;
+  }
+
+  // From here on the image box has a height cap and, on small or low
+  // screens, a width cap. The play button takes whichever is tighter at
+  // 16:9, so the start image is never cropped and never larger than the
+  // images of the other projects.
+  .video-teaser {
+    display: flex;
+    max-width: min(var(--image-max-width, 100%), calc(var(--image-max-height) * 16 / 9));
   }
 }

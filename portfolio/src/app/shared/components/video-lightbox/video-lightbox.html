@@ -1,0 +1,49 @@
+<!-- The dark area closes the video on click. Keyboard users use Escape
+     (handled in video-lightbox.ts) or the close button. -->
+<!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events -->
+<div
+  class="layer"
+  role="dialog"
+  aria-modal="true"
+  [attr.aria-label]="'projects.videoButton' | translate"
+  (click)="onClose($event)"
+>
+  <!-- Not an interaction: this only keeps clicks on the player from reaching
+       the layer handler above. -->
+  <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
+  <div class="box" (click)="$event.stopPropagation()">
+    <button
+      #closeButton
+      class="close-btn"
+      type="button"
+      [attr.aria-label]="'projects.videoClose' | translate"
+      (click)="onClose($event)"
+    >
+      <img src="/icons/close-small.svg" alt="" />
+    </button>
+    <video
+      #player
+      controls
+      autoplay
+      [attr.playsinline]="playsInline ? '' : null"
+      [poster]="video.poster"
+      (fullscreenchange)="onFullscreenChange()"
+      (webkitendfullscreen)="onNativeFullscreenEnd()"
+    >
+      <source [src]="video.srcSmall" type="video/mp4" media="(max-width: 700px)" />
+      <source [src]="video.src" type="video/mp4" />
+      @for (subtitle of video.subtitles; track subtitle.lang) {
+        <track
+          kind="subtitles"
+          [src]="subtitle.src"
+          [srclang]="subtitle.lang"
+          [label]="subtitle.label"
+          [attr.default]="startsVisible(subtitle) ? '' : null"
+        />
+      }
+    </video>
+    <!-- Tab stop behind the player controls: sends the focus back to the
+         close button instead of into the page behind the lightbox. -->
+    <span class="focus-wrap" tabindex="0" (focus)="closeButton.focus()"></span>
+  </div>
+</div>

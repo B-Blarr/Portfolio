@@ -5,6 +5,9 @@ import {
 } from '../../shared/components/project-overlay/project-overlay';
 import { TranslatePipe } from '@ngx-translate/core';
 
+/** Start image of the Cardelia video, also used as its project image. */
+const CARDELIA_IMAGE = '/videos/cardelia-poster.jpg';
+
 @Component({
   selector: 'app-projects',
   imports: [ProjectOverlay, TranslatePipe],
@@ -51,7 +54,7 @@ export class Projects {
       title: '03',
       subtitle: 'Cardelia',
       descriptionKey: 'projects.cardelia.description',
-      imageUrl: '/images/cardelia.jpg',
+      imageUrl: CARDELIA_IMAGE,
       techs: [
         { name: 'Python', iconUrl: '/icons/python.svg' },
         { name: 'Django', iconUrl: '/icons/django.svg' },
@@ -64,6 +67,18 @@ export class Projects {
         { url: 'https://benjaminblarr.de/cardelia/', labelKey: 'projects.architectureButton' },
         { url: 'https://cardelia.de/demo?von=portfolio', labelKey: 'projects.liveButton' },
       ],
+      // The files live in public/videos and not under /cardelia/: on the
+      // server that path belongs to the architecture page, a separate tree.
+      video: {
+        language: 'de',
+        src: '/videos/cardelia.mp4',
+        srcSmall: '/videos/cardelia-720p.mp4',
+        poster: CARDELIA_IMAGE,
+        subtitles: [
+          { src: '/videos/cardelia.de.vtt', lang: 'de', label: 'Deutsch' },
+          { src: '/videos/cardelia.en.vtt', lang: 'en', label: 'English' },
+        ],
+      },
     },
 
     {

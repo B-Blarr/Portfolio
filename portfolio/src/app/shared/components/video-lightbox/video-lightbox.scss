@@ -1,0 +1,49 @@
+.layer {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.88);
+  --layer-padding: clamp(8px, 3vw, 48px);
+  padding: var(--layer-padding);
+  box-sizing: border-box;
+}
+
+.box {
+  // The height term keeps the 16:9 player inside short windows: full height
+  // minus both paddings, the close button (40px) and the gap below it (8px).
+  width: min(100%, 1280px, calc((100dvh - 2 * var(--layer-padding) - 48px) * 16 / 9));
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--primary-color);
+  border-radius: clamp(8px, 2vw, 20px);
+  background-color: #0b0d14;
+}
+
+.close-btn {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  & img {
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover img {
+    content: url('/icons/close.svg');
+    width: 25px;
+    height: 25px;
+  }
+}
