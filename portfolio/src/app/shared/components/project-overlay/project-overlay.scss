@@ -1,10 +1,20 @@
 @use 'overlay-elements';
 
 .content {
+  // The breakpoints below set the designed height of the box through these
+  // two properties. It is a minimum: a project with more text or more
+  // technologies makes the box taller instead of spilling out of it. The box
+  // never outgrows the screen, beyond that its content scrolls.
+  --content-height: 85dvh;
+  --content-max-height: 700px;
+  --screen-height: calc(100dvh - 16px);
   width: min(90vw, 1440px);
-  height: 85dvh;
+  min-height: min(var(--content-height), var(--content-max-height), var(--screen-height));
   max-width: 1300px;
-  max-height: 700px;
+  max-height: var(--screen-height);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) transparent;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -143,8 +153,8 @@ h3 {
 
 @media (max-width: 990px) {
   .content {
-    max-height: 85dvh;
-    height: 870px;
+    --content-max-height: 85dvh;
+    --content-height: 870px;
   }
 
   .content-wrapper {
@@ -177,7 +187,8 @@ h3 {
   .content {
     justify-content: space-between;
     flex: 1;
-    max-height: 75%;
+    // No cap of its own here, only the screen limits the box.
+    --content-max-height: 100dvh;
   }
 
   .text-area {
@@ -198,7 +209,7 @@ h3 {
     padding-right: 16px;
     padding-top: 16px;
     gap: 16px;
-    height: 670px;
+    --content-height: 670px;
   }
 
   h2 {
@@ -310,7 +321,7 @@ h3 {
 @media (max-width: 400px), (max-height: 670px) {
   .content {
     padding: 8px 16px;
-    height: 620px;
+    --content-height: 620px;
   }
 
   .content-wrapper {
@@ -331,8 +342,8 @@ h3 {
 
 @media (min-width: 900px) and (max-height: 680px) {
   .content {
-    height: 85dvh;
-    max-height: 480px;
+    --content-height: 85dvh;
+    --content-max-height: 480px;
     padding-bottom: 14px;
     padding-top: 16px;
   }
