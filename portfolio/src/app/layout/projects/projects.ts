@@ -5,7 +5,7 @@ import {
 } from '../../shared/components/project-overlay/project-overlay';
 import { TranslatePipe } from '@ngx-translate/core';
 
-const CARDELIA_IMAGE = '/videos/cardelia-poster.jpg';
+const CARDELIA_IMAGE = '/videos/cardelia-cover.jpg';
 
 @Component({
   selector: 'app-projects',
