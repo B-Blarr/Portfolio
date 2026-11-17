@@ -408,6 +408,12 @@ h3 {
   }
 }
 
+// The play symbol is taller than the arrows of the other buttons and would
+// sit above the text line without this.
+.video-button img {
+  vertical-align: -4px;
+}
+
 @media (min-width: 991px) {
   // Three buttons must stay on one line next to "next project".
   .button-links {
