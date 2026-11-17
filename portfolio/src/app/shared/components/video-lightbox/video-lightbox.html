@@ -1,5 +1,3 @@
-<!-- The dark area closes the video on click. Keyboard users use Escape
-     (handled in video-lightbox.ts) or the close button. -->
 <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events -->
 <div
   class="layer"
@@ -8,8 +6,6 @@
   [attr.aria-label]="'projects.videoButton' | translate"
   (click)="onClose($event)"
 >
-  <!-- Not an interaction: this only keeps clicks on the player from reaching
-       the layer handler above. -->
   <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
   <div class="box" (click)="$event.stopPropagation()">
     <button
@@ -42,8 +38,6 @@
         />
       }
     </video>
-    <!-- Tab stop behind the player controls: sends the focus back to the
-         close button instead of into the page behind the lightbox. -->
     <span class="focus-wrap" tabindex="0" (focus)="closeButton.focus()"></span>
   </div>
 </div>

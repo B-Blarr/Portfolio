@@ -30,10 +30,6 @@
           <img src="/icons/close-small.svg" alt="Close Overlay" />
         </button>
         @if (project.video; as video) {
-          <!-- Wide screens show the start image as a plain picture, like the
-               other projects, and open the video with the button below. On
-               narrow screens a third button does not fit, so the picture
-               itself becomes the play button. -->
           <img class="project-image video-still" [src]="video.poster" [alt]="project.title" />
           <button
             type="button"

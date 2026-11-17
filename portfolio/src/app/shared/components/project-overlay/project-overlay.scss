@@ -1,10 +1,6 @@
 @use 'overlay-elements';
 
 .content {
-  // The breakpoints below set the designed height of the box through these
-  // two properties. It is a minimum: a project with more text or more
-  // technologies makes the box taller instead of spilling out of it. The box
-  // never outgrows the screen, beyond that its content scrolls.
   --content-height: 85dvh;
   --content-max-height: 700px;
   --screen-height: calc(100dvh - 16px);
@@ -187,7 +183,6 @@ h3 {
   .content {
     justify-content: space-between;
     flex: 1;
-    // No cap of its own here, only the screen limits the box.
     --content-max-height: 100dvh;
   }
 
@@ -375,9 +370,6 @@ h3 {
   }
 }
 
-// Explainer video: a third button on wide screens, the start image as play
-// button on narrow ones. The play button carries .project-image as well and
-// takes its height cap from the breakpoints above.
 .video-teaser {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -419,14 +411,11 @@ h3 {
   }
 }
 
-// The play symbol is taller than the arrows of the other buttons and would
-// sit above the text line without this.
 .video-button img {
   vertical-align: -4px;
 }
 
 @media (min-width: 991px) {
-  // Three buttons must stay on one line next to "next project".
   .button-links {
     flex-shrink: 0;
   }
@@ -438,10 +427,6 @@ h3 {
     display: none;
   }
 
-  // From here on the image box has a height cap and, on small or low
-  // screens, a width cap. The play button takes whichever is tighter at
-  // 16:9, so the start image is never cropped and never larger than the
-  // images of the other projects.
   .video-teaser {
     display: flex;
     max-width: min(var(--image-max-width, 100%), calc(var(--image-max-height) * 16 / 9));

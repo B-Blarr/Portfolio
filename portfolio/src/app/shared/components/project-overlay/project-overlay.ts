@@ -34,7 +34,6 @@ export interface ProjectData {
   imageUrl: string;
   techs: ProjectTech[];
   links: ProjectLink[];
-  /** Optional explainer video, opened from the overlay. */
   video?: ProjectVideo;
 }
 
@@ -56,7 +55,6 @@ export class ProjectOverlay {
 
   @HostListener('document:keydown.escape')
   onEscapePressed(): void {
-    // An open video takes Escape for itself, see video-lightbox.ts.
     this.closed.emit();
   }
 
@@ -65,8 +63,6 @@ export class ProjectOverlay {
   }
 
   onNext(): void {
-    // The overlay instance survives the switch, so an open video would
-    // otherwise come back with the next project that has one.
     this.videoOpen = false;
     this.next.emit();
   }
@@ -79,8 +75,6 @@ export class ProjectOverlay {
 
   closeVideo(): void {
     this.videoOpen = false;
-    // The lightbox takes the focus with it when it is removed. Render first:
-    // the button to return to is still inert until then.
     this.changeDetector.detectChanges();
     this.videoOpener?.focus();
     this.videoOpener = null;

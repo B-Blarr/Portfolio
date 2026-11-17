@@ -100,7 +100,6 @@ describe('ProjectOverlay', () => {
 
   describe('with a video', () => {
     beforeEach(async () => {
-      // jsdom has no media playback.
       vi.spyOn(HTMLMediaElement.prototype, 'play').mockResolvedValue(undefined);
       vi.spyOn(HTMLMediaElement.prototype, 'pause').mockReturnValue(undefined);
       vi.spyOn(HTMLMediaElement.prototype, 'load').mockReturnValue(undefined);
@@ -109,7 +108,6 @@ describe('ProjectOverlay', () => {
     });
 
     afterEach(() => {
-      // Destroy the fixture first: an open video still pauses itself then.
       TestBed.resetTestingModule();
       vi.restoreAllMocks();
     });
@@ -156,7 +154,6 @@ describe('ProjectOverlay', () => {
     it('names the play button on the start image', () => {
       const teaser: HTMLElement = fixture.nativeElement.querySelector('.video-teaser');
 
-      // Without loaded translations the pipe returns the key itself.
       expect(teaser.getAttribute('aria-label')).toBe('projects.videoPlay');
     });
 
