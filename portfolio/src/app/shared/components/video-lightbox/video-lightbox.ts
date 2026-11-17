@@ -17,12 +17,6 @@ export interface VideoSubtitle {
   label: string;
 }
 
-/**
- * A self-hosted video. `srcSmall` is the lighter file that narrow screens
- * load instead of `src`. `language` is the language spoken in the video.
- * Subtitles are offered in the player menu. They start switched off, except
- * for visitors who read the site in another language than the spoken one.
- */
 export interface ProjectVideo {
   language: string;
   src: string;
@@ -31,7 +25,6 @@ export interface ProjectVideo {
   subtitles: VideoSubtitle[];
 }
 
-/** Touch devices up to tablet width, where the video opens in fullscreen. */
 const PHONE = '(pointer: coarse) and (max-width: 990px)';
 
 type LockableOrientation = ScreenOrientation & { lock?: (orientation: string) => Promise<void> };
@@ -63,10 +56,6 @@ export class VideoLightbox implements AfterViewInit, OnDestroy {
 
   private openedInFullscreen = false;
 
-  // Listens in the capture phase and stops the event there, so the project
-  // overlay behind does not close together with the video. Browsers keep key
-  // events to themselves while the focus is inside the player's own controls,
-  // which is why Tab leads back to the close button (see the template).
   private readonly onKeydown = (event: KeyboardEvent): void => {
     if (event.key !== 'Escape') return;
     event.stopImmediatePropagation();
@@ -85,7 +74,6 @@ export class VideoLightbox implements AfterViewInit, OnDestroy {
     if (this.phone) {
       void this.enterFullscreen();
     } else {
-      // Keyboard users continue inside the lightbox, not behind it.
       this.closeButton?.nativeElement.focus();
     }
   }
@@ -102,30 +90,22 @@ export class VideoLightbox implements AfterViewInit, OnDestroy {
     video.load();
   }
 
-  /** Whether this track is shown without the visitor asking for it. */
   startsVisible(subtitle: VideoSubtitle): boolean {
     return this.siteLanguage !== this.video.language && subtitle.lang === this.siteLanguage;
   }
 
   onClose(event: Event): void {
-    // The lightbox sits inside the overlay backdrop, whose own click handler
-    // would close the whole project overlay.
     event.stopPropagation();
     this.closed.emit();
   }
 
   onFullscreenChange(): void {
-    // A video this component sent to fullscreen is only ever shown that way,
-    // so leaving fullscreen means the visitor is done with it. The flag and
-    // not the media query decides: turning the phone changes its width.
     if (!document.fullscreenElement && this.openedInFullscreen) {
       this.closed.emit();
     }
   }
 
   onNativeFullscreenEnd(): void {
-    // The same for the iOS player. Tablets fire this event too when someone
-    // leaves fullscreen by hand, and there the lightbox stays.
     if (!this.playsInline) {
       this.closed.emit();
     }
@@ -137,8 +117,6 @@ export class VideoLightbox implements AfterViewInit, OnDestroy {
     try {
       await video.requestFullscreen();
       this.openedInFullscreen = true;
-      // Upright, the video is too small to read. Android can turn the screen
-      // itself, other systems reject the call.
       await (screen.orientation as LockableOrientation).lock?.('landscape');
     } catch {
       // Without fullscreen or orientation lock the player stays open in the page.

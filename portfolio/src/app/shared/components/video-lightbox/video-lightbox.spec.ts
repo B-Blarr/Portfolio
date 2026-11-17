@@ -19,13 +19,11 @@ describe('VideoLightbox', () => {
   let play: ReturnType<typeof vi.spyOn>;
 
   afterEach(() => {
-    // Destroy the fixtures first: the component still pauses its video then.
     TestBed.resetTestingModule();
     vi.restoreAllMocks();
   });
 
   beforeEach(async () => {
-    // jsdom has no media playback.
     play = vi.spyOn(HTMLMediaElement.prototype, 'play').mockResolvedValue(undefined);
     vi.spyOn(HTMLMediaElement.prototype, 'pause').mockReturnValue(undefined);
     vi.spyOn(HTMLMediaElement.prototype, 'load').mockReturnValue(undefined);

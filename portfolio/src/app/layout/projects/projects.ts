@@ -5,7 +5,6 @@ import {
 } from '../../shared/components/project-overlay/project-overlay';
 import { TranslatePipe } from '@ngx-translate/core';
 
-/** Start image of the Cardelia video, also used as its project image. */
 const CARDELIA_IMAGE = '/videos/cardelia-poster.jpg';
 
 @Component({
@@ -67,8 +66,6 @@ export class Projects {
         { url: 'https://benjaminblarr.de/cardelia/', labelKey: 'projects.architectureButton' },
         { url: 'https://cardelia.de/demo?von=portfolio', labelKey: 'projects.liveButton' },
       ],
-      // The files live in public/videos and not under /cardelia/: on the
-      // server that path belongs to the architecture page, a separate tree.
       video: {
         language: 'de',
         src: '/videos/cardelia.mp4',
