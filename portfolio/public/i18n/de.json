@@ -15,10 +15,10 @@
   "aboutMe": {
     "whoAmI": "Wer bin ich",
     "aboutMe": "Über mich",
-    "introMain": "Hallo, ich bin Benjamin. Ich bin als Quereinsteiger zur Softwareentwicklung gekommen und habe bei der Developer Akademie ein Jahr in Vollzeit Frontend und Backend gelernt. Heute baue ich Webanwendungen von der Oberfläche bis zur API und betreibe sie auf einem eigenen Server, den ich selbst aufgesetzt habe. Am liebsten setze ich Vorlagen exakt und detailliert um, so wie die responsiven Layouts in den Projekten hier auf der Seite.",
-    "introOne": "Ich lebe in Schöningen in der Region Braunschweig, Wolfsburg und Magdeburg. Für Remote-Arbeit bin ich sehr offen und pendeln ist für mich kein Problem, umziehen möchte ich im Moment aber nicht.",
-    "introTwo": "Am meisten Spaß macht mir inzwischen die Arbeit mit KI, weil ich damit schneller vorankomme und weil sie mir wiederkehrende Abläufe abnimmt, die ich sonst jeden Tag von Hand machen müsste. Was dabei herauskommt, prüfe ich nach und ich übernehme keinen Code, den ich nicht verstehe.",
-    "introThree": "Probleme löse ich strukturiert: Zunächst verstehen, dann Lösungswege erarbeiten und dann sauber umsetzen. Mir sind Lesbarkeit, Performance und User Experience wichtig, genauso wie die Zusammenarbeit im Team, voneinander zu lernen und gemeinsam zu wachsen."
+    "introMain": "Hallo, ich bin Benjamin. Mit Python und TypeScript entwickle ich Webanwendungen von der Oberfläche bis zur API und bringe sie eigenständig in den Live-Betrieb, auf meinen Linux-Server oder in die Cloud. Bei Anwendungen wie meiner Web-App Cardelia oder dem KI-Assistenten hier auf der Seite lege ich Stack und Architektur selbst fest. Arbeite ich nach einer Vorlage, setze ich sie exakt um und prüfe jedes Feature auf jeder Bildschirmbreite, bis Bedienung und Optik stimmen.",
+    "introOne": "Ich lebe in Schöningen in der Region Braunschweig, Wolfsburg und Magdeburg. Für Remote-Arbeit bin ich sehr offen und Pendeln ist für mich kein Problem.",
+    "introTwo": "An KI begeistert mich am meisten, dass sie auch Menschen ohne Technikwissen spürbar Arbeit abnimmt, deshalb baue ich am liebsten Werkzeuge, die anderen den Alltag erleichtern. Beim Programmieren arbeite ich selbst mit KI-Agenten, Planung und Entscheidungen liegen dabei aber immer bei mir und was die KI schreibt, gebe ich erst nach meiner Prüfung frei.",
+    "introThree": "Probleme löse ich strukturiert, indem ich sie erst genau verstehe, bevor ich nach einem Lösungsweg suche. Über viele Jahre habe ich Menschen mit ganz unterschiedlichem Vorwissen digitale Technik erklärt und sehe deshalb alles, was ich baue, auch mit den Augen der Anwender, die später damit arbeiten."
   },
   "skills": {
     "technologies": "Technologien",
