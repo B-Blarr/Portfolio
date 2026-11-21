@@ -15,10 +15,10 @@
   "aboutMe": {
     "whoAmI": "Who am I",
     "aboutMe": "About me",
-    "introMain": "Hi, I'm Benjamin. I came to software development from another field and spent a year of full-time training in frontend and backend development at the Developer Akademie. Today I build web applications from the interface to the API and run them on a server I set up myself. What I enjoy most is implementing a design exactly and in detail, like the responsive layouts in the projects on this page.",
-    "introOne": "I live in Schöningen, in the Braunschweig, Wolfsburg and Magdeburg area. I'm very open to remote work and commuting is not a problem for me, though I'm not planning to relocate at the moment.",
-    "introTwo": "These days I enjoy working with AI more than anything else, because it gets me further faster and takes over the recurring steps I would otherwise do by hand every day. I check the results myself and I don't use code I don't understand.",
-    "introThree": "I approach problems in a structured way: first understand them, then work out solutions, then implement them cleanly. Readability, performance and user experience matter to me, as does collaboration within a team, learning from each other and growing together."
+    "introMain": "Hi, I'm Benjamin. With Python and TypeScript I build web applications from the user interface to the API and deploy them to production independently, on my Linux server or in the cloud. On projects like my web app Cardelia or the AI assistant on this site, I choose the stack and architecture myself. When I work from a given design, I implement it exactly and test every feature at every screen width until it works and looks right.",
+    "introOne": "I live in Schöningen, near Braunschweig, Wolfsburg and Magdeburg. I'm very open to remote work and happy to commute.",
+    "introTwo": "What excites me most about AI is that it noticeably lightens people's workload, even for those with no technical background. That's why the tools I most enjoy building are the ones that make everyday life easier for others. I also use AI agents when I code, but the planning and the decisions always stay with me and I only approve what the AI writes once I have reviewed it.",
+    "introThree": "I solve problems methodically by making sure I understand them thoroughly before I look for a solution. For many years I explained digital technology to people with very different levels of experience, which is why I also see everything I build through the eyes of the people who will use it."
   },
   "skills": {
     "technologies": "Technologies",
@@ -82,7 +82,7 @@
     "suggestionsLabel": "For example:",
     "suggestions": {
       "stack": "Which technologies does Benjamin use?",
-      "project": "What is behind Coderr?",
+      "voiceAgent": "Has Benjamin built a voice agent?",
       "assistant": "How does this assistant work?"
     },
     "loading": "One moment, searching the knowledge base …",
@@ -109,7 +109,7 @@
     "contactMe": "Contact me",
     "headline": "Let's work together",
     "question": "Do you have a task for me?",
-    "text": "Whether you have a whole project in mind or only a question, send me a message. <br/><br/>I reply quickly and I'll tell you honestly<span> whether I'm the right person for it.</span>",
+    "text": "Whether you have a position to fill or just a question, send me a message. <br/><br/>I reply quickly and I'll tell you honestly<span> whether I'm the right person for it.</span>",
     "nameQuestion": "What's your name?",
     "namePlaceholder": "Your name",
     "nameErrorRequired": "Your name is missing.",
