@@ -40,7 +40,7 @@ export class Assistant {
 
   readonly suggestionKeys = [
     'assistant.suggestions.stack',
-    'assistant.suggestions.project',
+    'assistant.suggestions.voiceAgent',
     'assistant.suggestions.assistant',
   ];
 

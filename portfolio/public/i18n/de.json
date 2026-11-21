@@ -82,7 +82,7 @@
     "suggestionsLabel": "Zum Beispiel:",
     "suggestions": {
       "stack": "Welche Technologien nutzt Benjamin?",
-      "project": "Was steckt hinter Coderr?",
+      "voiceAgent": "Hat Benjamin einen Voice-Agenten gebaut?",
       "assistant": "Wie funktioniert dieser Assistent?"
     },
     "loading": "Einen Moment, ich suche in der Wissensbasis …",
@@ -109,7 +109,7 @@
     "contactMe": "Kontakt",
     "headline": "Lass uns zusammen arbeiten",
     "question": "Du hast eine Aufgabe für mich?",
-    "text": "Ob du ein ganzes Projekt vor dir hast oder erst einmal eine Frage, schreib mir einfach. <br/><br/>Ich antworte schnell und sage dir ehrlich,<span> ob ich der Richtige dafür bin.</span>",
+    "text": "Ob du eine Stelle zu besetzen hast oder erst einmal eine Frage, schreib mir einfach. <br/><br/>Ich antworte schnell und sage dir ehrlich,<span> ob ich der Richtige dafür bin.</span>",
     "nameQuestion": "Wie heißt du?",
     "namePlaceholder": "Dein Name",
     "nameErrorRequired": "Dein Name fehlt.",
