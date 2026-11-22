@@ -92,12 +92,10 @@
 
   .footer-logo {
     order: 1;
-    width: 50%;
   }
 
   .footer-links {
     order: 2;
-    width: 50%;
     align-items: flex-end;
     text-align: right;
   }
@@ -133,5 +131,12 @@
   .content {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .footer-links {
+    width: 100%;
+    margin-left: -1rem;
+    align-items: flex-start;
+    text-align: left;
   }
 }

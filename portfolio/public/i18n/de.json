@@ -27,8 +27,8 @@
     "request": "Dir fehlt etwas in dieser <span class='highlight'>Liste?</span>",
     "requestText": "Meld dich einfach. In ein neues Thema arbeite ich mich gerne ein.",
     "button": "Schreib mir",
-    "mindset": "Immer am<br />Lernen",
-    "interest": "Besonderes <br/> Interesse an:"
+    "mindset": "Offen für<br />Neues",
+    "interest": "Aktuell <br/> im Fokus:"
   },
   "projects": {
     "headline": "Ausgewählte Projekte",
@@ -148,7 +148,7 @@
     "date": "28. Juli 2026"
   },
   "privacyPolicy": {
-    "mainTitle": "Datenschutzerklärung",
+    "mainTitle": "Datenschutz\u00aderklärung",
     "section1": {
       "title": "1. Datenschutz auf einen Blick",
       "general": {
