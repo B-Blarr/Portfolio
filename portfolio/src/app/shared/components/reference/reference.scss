@@ -18,8 +18,6 @@ p {
   flex: 1;
   min-height: 0;
   overflow-y: auto;
-  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 26px), transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 calc(100% - 26px), transparent 100%);
   padding-right: 6px;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
@@ -27,6 +25,11 @@ p {
 
   &:hover {
     scrollbar-color: rgba(61, 207, 182, 0.4) transparent;
+  }
+
+  &.has-more {
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 26px), transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 calc(100% - 26px), transparent 100%);
   }
 
   &::-webkit-scrollbar {
