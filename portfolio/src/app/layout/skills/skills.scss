@@ -51,6 +51,7 @@
   & .highlight {
     display: grid;
     justify-items: center;
+    align-content: start;
     text-align: center;
     gap: 8px;
     cursor: default;
