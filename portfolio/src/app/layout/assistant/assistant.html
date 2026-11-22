@@ -60,7 +60,7 @@
       </ul>
     </div>
 
-    <div class="result" role="status" aria-live="polite" [attr.aria-busy]="isLoading">
+    <div #resultBox class="result" role="status" aria-live="polite" [attr.aria-busy]="isLoading">
       @if (isLoading) {
         <p class="loading">
           <span class="spinner" aria-hidden="true"></span>

@@ -35,6 +35,7 @@ export class Assistant {
   private cdr = inject(ChangeDetectorRef);
 
   @ViewChild('questionBox') private questionBox?: ElementRef<HTMLTextAreaElement>;
+  @ViewChild('resultBox') private resultBox?: ElementRef<HTMLElement>;
 
   readonly maxLength = MAX_QUESTION_LENGTH;
 
@@ -91,6 +92,8 @@ export class Assistant {
     this.isLoading = true;
     this.result = null;
     this.errorKey = null;
+    this.cdr.detectChanges();
+    this.revealResult();
 
     this.api.ask(this.question.value.trim(), this.translate.getCurrentLang()).subscribe({
       next: (response) => this.handleResponse(response),
@@ -114,6 +117,7 @@ export class Assistant {
     this.isLoading = false;
     this.result = response;
     this.cdr.detectChanges();
+    this.revealResult();
   }
 
   private handleError(error: unknown): void {
@@ -122,6 +126,21 @@ export class Assistant {
     this.retryMinutes = 0;
     this.errorKey = this.errorKeyFor(error);
     this.cdr.detectChanges();
+    this.revealResult();
+  }
+
+  /**
+   * Scrolls just far enough that the loading state or the answer is fully
+   * visible. On small phones it would otherwise appear below the screen edge.
+   * The scroll never goes past the top of the result.
+   */
+  private revealResult(): void {
+    const box = this.resultBox?.nativeElement;
+    if (!box) return;
+    const rect = box.getBoundingClientRect();
+    const hiddenBelow = rect.bottom - window.innerHeight + 24;
+    if (hiddenBelow <= 0) return;
+    window.scrollBy({ top: Math.max(0, Math.min(hiddenBelow, rect.top - 16)) });
   }
 
   /** Maps a failed request to a translation key. Backend messages are never shown. */
