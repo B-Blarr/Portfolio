@@ -362,7 +362,7 @@ h3 {
   }
 }
 
-@media (min-width: 900px) and (max-height: 680px) {
+@media (min-width: 900px) and (max-height: 680px), (min-width: 991px) and (max-height: 750px) {
   .content {
     --content-height: 85dvh;
     --content-max-height: 480px;
