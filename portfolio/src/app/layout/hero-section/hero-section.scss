@@ -3,6 +3,7 @@
 .hero-content {
   @include m.content-limitation();
   height: 100dvh;
+  min-height: 740px;
   padding-right: 80px;
   padding-left: 80px;
   z-index: 6;
@@ -231,6 +232,7 @@ aside {
 
 @media (max-width: 1024px) {
   .hero-content {
+    min-height: 660px;
     padding-right: 60px;
     padding-left: 60px;
   }
@@ -274,6 +276,10 @@ aside {
 }
 
 @media (max-width: 450px) {
+  .hero-content {
+    min-height: 620px;
+  }
+
   h1 {
     white-space: normal;
   }
