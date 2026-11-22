@@ -316,6 +316,16 @@ h3 {
   }
 }
 
+@media (max-width: 359px) {
+  .button-links {
+    gap: 12px;
+  }
+
+  .button-links app-animated-button ::ng-deep button {
+    width: 118px;
+  }
+}
+
 @media (max-width: 400px), (max-height: 670px) {
   .content {
     padding: 8px 16px;
