@@ -44,6 +44,7 @@
   flex: 1 1 40%;
   min-width: 300px;
   padding-top: 24px;
+  container-type: inline-size;
 }
 
 h2 {
@@ -54,7 +55,7 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(42px, 5vw, 64px);
+  font-size: min(clamp(42px, 5vw, 64px), 12.6cqi);
   font-family: Fira Code;
   color: white;
   white-space: nowrap;
@@ -136,7 +137,7 @@ h3 {
 
 @media (max-width: 1300px) {
   h3 {
-    font-size: 56px;
+    font-size: min(56px, 12.6cqi);
     white-space: normal;
   }
 }
@@ -392,7 +393,7 @@ h3 {
   }
 
   h3 {
-    font-size: 50px;
+    font-size: min(50px, 12.6cqi);
     white-space: nowrap;
   }
 }
