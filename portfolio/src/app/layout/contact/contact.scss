@@ -67,11 +67,18 @@
   }
 
   .text-area {
+    width: 100%;
+    max-width: 620px;
     padding-bottom: 18px;
 
     & h2 {
       font-size: clamp(34px, 8vw, 56px);
     }
+  }
+
+  .form-area {
+    max-width: 620px;
+    align-items: stretch;
   }
 }
 
