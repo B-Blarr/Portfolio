@@ -65,6 +65,7 @@ h3 {
   font-family: Fira Code;
   font-weight: 700;
   color: var(--primary-color);
+  text-wrap: balance;
 }
 
 .project-description {
@@ -159,6 +160,8 @@ h3 {
 
   .text-area {
     flex: none;
+    padding-top: 0;
+    gap: 24px;
   }
 
   .image-area {
@@ -313,6 +316,16 @@ h3 {
   }
 }
 
+@media (max-width: 359px) {
+  .button-links {
+    gap: 12px;
+  }
+
+  .button-links app-animated-button ::ng-deep button {
+    width: 118px;
+  }
+}
+
 @media (max-width: 400px), (max-height: 670px) {
   .content {
     padding: 8px 16px;
@@ -332,6 +345,20 @@ h3 {
 
   .image-area {
     gap: 0;
+  }
+}
+
+@media (max-width: 600px) and (max-height: 600px) {
+  .project-image {
+    --image-max-height: 90px;
+  }
+
+  .text-area {
+    padding-top: 0;
+  }
+
+  .project-description {
+    font-size: 14px;
   }
 }
 
@@ -377,7 +404,7 @@ h3 {
   border: none;
   background-color: #0b0d14;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   cursor: pointer;
   display: none;
   justify-content: center;
@@ -429,6 +456,6 @@ h3 {
 
   .video-teaser {
     display: flex;
-    max-width: min(var(--image-max-width, 100%), calc(var(--image-max-height) * 16 / 9));
+    max-width: var(--image-max-width, 520px);
   }
 }
