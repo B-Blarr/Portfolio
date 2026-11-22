@@ -348,6 +348,20 @@ h3 {
   }
 }
 
+@media (max-width: 600px) and (max-height: 600px) {
+  .project-image {
+    --image-max-height: 90px;
+  }
+
+  .text-area {
+    padding-top: 0;
+  }
+
+  .project-description {
+    font-size: 14px;
+  }
+}
+
 @media (min-width: 900px) and (max-height: 680px) {
   .content {
     --content-height: 85dvh;
