@@ -102,20 +102,21 @@
   & .used-technologies {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 8px 21px;
+    overflow: hidden;
     font-size: 18px;
     font-family: Karla;
     color: white;
   }
 
   & .used-technologies span {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    position: relative;
   }
 
-  & .used-technologies span:not(:last-child)::after {
-    content: ' | ';
+  & .used-technologies span::before {
+    content: '|';
+    position: absolute;
+    right: calc(100% + 8px);
     color: var(--primary-color);
   }
 }
@@ -292,10 +293,6 @@
     padding: 20px 0;
 
     & .used-technologies {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 18px;
       flex-wrap: wrap;
     }
   }
