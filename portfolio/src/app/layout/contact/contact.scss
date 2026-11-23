@@ -55,6 +55,11 @@
   flex: 1;
   width: 100%;
   align-items: center;
+
+  & app-form {
+    width: 100%;
+    max-width: 620px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -77,6 +82,10 @@
   .form-area {
     width: 100%;
     align-items: stretch;
+
+    & app-form {
+      max-width: none;
+    }
   }
 }
 
