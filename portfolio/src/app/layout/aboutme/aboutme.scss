@@ -134,14 +134,13 @@ article {
   .content {
     flex-direction: column;
     align-items: center;
-    padding-left: 60px;
-    padding-right: 60px;
+    @include m.tablet-column(60px);
   }
 
   .main-image-wrap {
     padding-bottom: 0px;
     padding-left: 0px;
-    width: min(568px, 100%);
+    width: 100%;
 
     &::after {
       top: 60px;
@@ -151,15 +150,17 @@ article {
 
   article {
     width: 100%;
-    max-width: 568px;
     margin-top: 30px;
+  }
+
+  .aboutme-text {
+    width: 100%;
   }
 }
 
 @media (max-width: 750px) {
   .content {
-    padding-left: 40px;
-    padding-right: 40px;
+    @include m.tablet-column(40px);
   }
 
   .main-image-wrap {

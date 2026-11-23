@@ -200,8 +200,7 @@
 
 @media (max-width: 1024px) {
   .content {
-    padding-right: 60px;
-    padding-left: 60px;
+    @include m.tablet-column(60px);
   }
 
   .project-image-stack {
@@ -275,8 +274,7 @@
 
 @media (max-width: 750px) {
   .content {
-    padding-right: 40px;
-    padding-left: 40px;
+    @include m.tablet-column(40px);
   }
 
   .project-image-stack {

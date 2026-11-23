@@ -87,7 +87,9 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px 0;
-    padding: 40px 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include m.tablet-column(60px);
   }
 
   .footer-logo {
@@ -110,8 +112,7 @@
 
 @media (max-width: 750px) {
   .content {
-    padding-left: 40px;
-    padding-right: 40px;
+    @include m.tablet-column(40px);
   }
 
   .footer-logo {

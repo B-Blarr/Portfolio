@@ -233,10 +233,23 @@ h3 {
 
 @media (max-width: 1024px) {
   .content {
-    padding-left: 40px;
-    padding-right: 40px;
+    @include m.tablet-column(60px);
     margin-top: 0;
     margin-bottom: 120px;
+  }
+
+  h3,
+  .intro,
+  .ask-form,
+  .suggestions,
+  .result {
+    max-width: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .content {
+    @include m.tablet-column(40px);
   }
 }
 

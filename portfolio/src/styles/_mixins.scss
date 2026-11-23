@@ -22,3 +22,8 @@
   font-weight: 700;
   font-family: Fira Code;
 }
+
+@mixin tablet-column($min-padding) {
+  padding-left: max($min-padding, calc((100% - 648px) / 2));
+  padding-right: max($min-padding, calc((100% - 648px) / 2));
+}

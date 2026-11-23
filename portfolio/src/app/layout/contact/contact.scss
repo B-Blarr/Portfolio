@@ -60,15 +60,13 @@
 @media (max-width: 1024px) {
   .content {
     flex-direction: column;
-    padding-left: 40px;
-    padding-right: 40px;
+    @include m.tablet-column(60px);
     align-items: center;
     gap: 60px;
   }
 
   .text-area {
     width: 100%;
-    max-width: 620px;
     padding-bottom: 18px;
 
     & h2 {
@@ -77,8 +75,14 @@
   }
 
   .form-area {
-    max-width: 620px;
+    width: 100%;
     align-items: stretch;
+  }
+}
+
+@media (max-width: 750px) {
+  .content {
+    @include m.tablet-column(40px);
   }
 }
 
