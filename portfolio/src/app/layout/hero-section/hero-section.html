@@ -2,9 +2,13 @@
   <app-header></app-header>
   <article class="hero-area">
     <aside>
-      <button type="button" class="arrow-down-button">
-        <img src="/icons/arrow-down.png" alt="Arrow Down" />
-      </button>
+      <a
+        class="arrow-down-button"
+        href="#aboutme-section"
+        [attr.aria-label]="'hero.scrollDown' | translate"
+      >
+        <img src="/icons/arrow-down.png" alt="" />
+      </a>
       <div class="dividing-line background-primary"></div>
     </aside>
     <div class="developer-introduction">
