@@ -18,7 +18,6 @@
 
   & .section-label {
     @include m.small-headline;
-    font-weight: 500;
   }
 
   & h2 {
@@ -55,20 +54,23 @@
   flex: 1;
   width: 100%;
   align-items: center;
+
+  & app-form {
+    width: 100%;
+    max-width: 620px;
+  }
 }
 
 @media (max-width: 1024px) {
   .content {
     flex-direction: column;
-    padding-left: 40px;
-    padding-right: 40px;
+    @include m.tablet-column(60px);
     align-items: center;
     gap: 60px;
   }
 
   .text-area {
     width: 100%;
-    max-width: 620px;
     padding-bottom: 18px;
 
     & h2 {
@@ -77,18 +79,24 @@
   }
 
   .form-area {
-    max-width: 620px;
+    width: 100%;
     align-items: stretch;
+
+    & app-form {
+      max-width: none;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .content {
+    @include m.tablet-column(40px);
   }
 }
 
 @media (max-width: 500px) {
   .text-area {
     padding-bottom: 20px;
-
-    & .section-label {
-      font-size: 20px;
-    }
   }
 }
 
