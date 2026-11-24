@@ -22,6 +22,10 @@ ul {
   flex-direction: column;
   justify-content: center;
   gap: 24px;
+  width: 100%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 80px;
   padding-left: 80px;
   padding-right: 80px;
