@@ -42,4 +42,15 @@ export class Header {
   closeMenu(): void {
     this.isMenuOpen = false;
   }
+
+  /**
+   * Moves the keyboard focus past the navigation to the page content. A plain
+   * fragment link only scrolls, so the next Tab would start at the top again.
+   */
+  skipToContent(event: Event): void {
+    const target = document.getElementById('main-content');
+    if (!target) return;
+    event.preventDefault();
+    target.focus();
+  }
 }

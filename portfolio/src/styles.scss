@@ -31,6 +31,10 @@ li {
   text-wrap: pretty;
 }
 
+#main-content:focus {
+  outline: none;
+}
+
 /* fira-code-300 - latin */
 @font-face {
   font-display: swap;

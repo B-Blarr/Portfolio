@@ -1,4 +1,6 @@
-<a class="skip-link" href="#main-content">{{ 'nav.skipToContent' | translate }}</a>
+<a class="skip-link" href="#main-content" (click)="skipToContent($event)">{{
+  'nav.skipToContent' | translate
+}}</a>
 <header>
   <div class="button-area">
     <div class="language-switch">
