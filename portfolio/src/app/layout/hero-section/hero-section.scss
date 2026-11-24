@@ -34,7 +34,7 @@
   }
 
   app-animated-button:hover {
-    ::ng-deep button .button-text {
+    ::ng-deep .button-text {
       transform: translateX(0);
       animation: slide-left 2s linear infinite;
     }

@@ -4,12 +4,20 @@
 <div class="backdrop" (click)="onClose()">
   <!-- Not an interaction: this only keeps clicks inside the content from
        reaching the backdrop handler above. -->
-  <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
-  <section class="content" [attr.inert]="videoOpen ? '' : null" (click)="$event.stopPropagation()">
+  <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events -->
+  <section
+    #dialog
+    class="content"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="project-overlay-title"
+    [attr.inert]="videoOpen ? '' : null"
+    (click)="$event.stopPropagation()"
+  >
     <div class="content-wrapper">
       <article class="text-area">
         <h2>{{ project.title }}</h2>
-        <h3>{{ project.subtitle }}</h3>
+        <h3 id="project-overlay-title">{{ project.subtitle }}</h3>
         <p class="question">{{ 'projects.question' | translate }}</p>
         <p class="project-description">{{ project.descriptionKey | translate }}</p>
         <aside class="tech">
@@ -26,11 +34,11 @@
         </aside>
       </article>
       <article class="image-area">
-        <button class="close-btn" type="button" (click)="onClose()">
-          <img src="/icons/close-small.svg" alt="Close Overlay" />
+        <button #closeButton class="close-btn" type="button" (click)="onClose()">
+          <img src="/icons/close-small.svg" [alt]="'projects.close' | translate" />
         </button>
         @if (project.video; as video) {
-          <img class="project-image video-still" [src]="video.poster" [alt]="project.title" />
+          <img class="project-image video-still" [src]="video.poster" [alt]="project.subtitle" />
           <button
             type="button"
             class="project-image video-teaser"
@@ -41,7 +49,7 @@
             <span class="play-symbol" aria-hidden="true"></span>
           </button>
         } @else {
-          <img class="project-image" [src]="project.imageUrl" [alt]="project.title" />
+          <img class="project-image" [src]="project.imageUrl" [alt]="project.subtitle" />
         }
       </article>
     </div>
@@ -52,9 +60,9 @@
              Doppelte track-Werte wuerfen zur Laufzeit NG0955. -->
         @for (link of project.links; track $index) {
           <a [href]="link.url" target="_blank" rel="noopener noreferrer">
-            <app-animated-button [tabbable]="false">
+            <app-animated-button insideLink>
               <span>{{ link.labelKey | translate }}</span>
-              <img src="/icons/arrow-out.svg" alt="Arrow Out" />
+              <img src="/icons/arrow-out.svg" alt="" />
             </app-animated-button>
           </a>
         }
@@ -68,7 +76,7 @@
       <button type="button" class="next-project-button" (click)="onNext()">
         <span>{{ 'projects.nextButton' | translate }}</span>
         <div class="arrow-icon">
-          <img src="/icons/arrow-right-nohover.svg" alt="Arrow Right" />
+          <img src="/icons/arrow-right-nohover.svg" alt="" />
         </div>
       </button>
     </div>

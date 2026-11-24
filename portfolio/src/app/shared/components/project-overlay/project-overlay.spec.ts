@@ -86,7 +86,7 @@ describe('ProjectOverlay', () => {
     for (const link of links) {
       expect(link.target).toBe('_blank');
       expect(link.rel).toContain('noopener');
-      expect(link.querySelector('button')?.getAttribute('tabindex')).toBe('-1');
+      expect(link.querySelector('button')).toBeNull();
     }
   });
 
@@ -96,6 +96,63 @@ describe('ProjectOverlay', () => {
     expect(fixture.nativeElement.querySelector('.project-image').getAttribute('src')).toBe(
       project.imageUrl,
     );
+  });
+
+  describe('keyboard focus', () => {
+    function tabStops(): HTMLElement[] {
+      return Array.from(
+        fixture.nativeElement.querySelectorAll(
+          '.content a[href], .content button:not([tabindex="-1"])',
+        ),
+      );
+    }
+
+    function pressTab(shiftKey = false): void {
+      document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Tab', shiftKey }));
+    }
+
+    it('is a modal dialog named after the project', () => {
+      const dialog: HTMLElement = fixture.nativeElement.querySelector('.content');
+
+      expect(dialog.getAttribute('role')).toBe('dialog');
+      expect(dialog.getAttribute('aria-modal')).toBe('true');
+      expect(document.getElementById(dialog.getAttribute('aria-labelledby')!)?.textContent).toBe(
+        project.subtitle,
+      );
+    });
+
+    it('moves the focus to the close button when it opens', () => {
+      expect(document.activeElement).toBe(fixture.nativeElement.querySelector('.close-btn'));
+    });
+
+    it('wraps Tab from the last element back to the first', () => {
+      const stops = tabStops();
+      stops[stops.length - 1].focus();
+
+      pressTab();
+
+      expect(document.activeElement).toBe(stops[0]);
+    });
+
+    it('wraps Shift+Tab from the first element back to the last', () => {
+      const stops = tabStops();
+      stops[0].focus();
+
+      pressTab(true);
+
+      expect(document.activeElement).toBe(stops[stops.length - 1]);
+    });
+
+    it('brings a focus that slipped outside back into the overlay', () => {
+      const outside = document.createElement('button');
+      document.body.appendChild(outside);
+      outside.focus();
+
+      pressTab();
+
+      expect(document.activeElement).toBe(tabStops()[0]);
+      outside.remove();
+    });
   });
 
   describe('with a video', () => {

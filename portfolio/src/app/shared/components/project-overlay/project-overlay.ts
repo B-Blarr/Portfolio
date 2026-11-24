@@ -1,11 +1,14 @@
 import {
+  afterNextRender,
   ChangeDetectorRef,
   Component,
+  ElementRef,
   EventEmitter,
   HostListener,
   inject,
   Input,
   Output,
+  ViewChild,
 } from '@angular/core';
 import { AnimatedButton } from '../animated-button/animated-button';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -48,14 +51,48 @@ export class ProjectOverlay {
   @Output() closed = new EventEmitter<void>();
   @Output() next = new EventEmitter<void>();
 
+  @ViewChild('dialog') private dialog?: ElementRef<HTMLElement>;
+  @ViewChild('closeButton') private closeButton?: ElementRef<HTMLButtonElement>;
+
   private readonly changeDetector = inject(ChangeDetectorRef);
 
   videoOpen = false;
   private videoOpener: HTMLElement | null = null;
 
+  constructor() {
+    afterNextRender(() => this.closeButton?.nativeElement.focus());
+  }
+
   @HostListener('document:keydown.escape')
   onEscapePressed(): void {
     this.closed.emit();
+  }
+
+  /**
+   * Keeps Tab and Shift+Tab inside the overlay while it is open, so keyboard
+   * users do not wander into the page hidden behind it. While the video is
+   * open, the video lightbox handles the focus itself.
+   */
+  @HostListener('document:keydown.tab', ['$event'])
+  @HostListener('document:keydown.shift.tab', ['$event'])
+  onTabPressed(event: Event): void {
+    if (this.videoOpen || !this.dialog) return;
+    const focusable = this.focusableElements(this.dialog.nativeElement);
+    if (focusable.length === 0) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    const active = document.activeElement;
+    const outside = !this.dialog.nativeElement.contains(active);
+    const backwards = (event as KeyboardEvent).shiftKey;
+
+    if (backwards && (active === first || outside)) {
+      event.preventDefault();
+      last.focus();
+    } else if (!backwards && (active === last || outside)) {
+      event.preventDefault();
+      first.focus();
+    }
   }
 
   onClose(): void {
@@ -71,6 +108,16 @@ export class ProjectOverlay {
     this.videoOpener =
       document.activeElement instanceof HTMLElement ? document.activeElement : null;
     this.videoOpen = true;
+  }
+
+  /** Returns the visible elements inside the overlay that Tab can reach, in order. */
+  private focusableElements(container: HTMLElement): HTMLElement[] {
+    const candidates = container.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled]):not([tabindex="-1"]), [tabindex]:not([tabindex="-1"])',
+    );
+    return Array.from(candidates).filter((element) =>
+      typeof element.checkVisibility === 'function' ? element.checkVisibility() : true,
+    );
   }
 
   closeVideo(): void {

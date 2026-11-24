@@ -3,7 +3,9 @@
     "skipToContent": "Skip to content",
     "about me": "About me",
     "skills": "Skills",
-    "projects": "Projects"
+    "projects": "Projects",
+    "home": "Benjamin Blarr, to the homepage",
+    "menu": "Menu"
   },
   "hero": {
     "buttonProject": "Check my work",
@@ -11,7 +13,9 @@
     "bannerOne": "Available for remote work",
     "bannerTwo": "At home in the Braunschweig area",
     "bannerThree": "Open to Work",
-    "scrollDown": "Continue to About me"
+    "scrollDown": "Continue to About me",
+    "github": "GitHub profile",
+    "linkedin": "LinkedIn profile"
   },
   "aboutMe": {
     "whoAmI": "Who am I",
@@ -53,7 +57,8 @@
     },
     "coderr": {
       "description": "REST API, built with Django REST Framework. Offers, orders and reviews with token authentication. Frontend provided by the Developer Akademie."
-    }
+    },
+    "close": "Close project"
   },
   "references": {
     "headline": "What my teammates say about me",
@@ -72,7 +77,10 @@
     "gregor": {
       "text": "Benjamin creates a very productive atmosphere within the team. Thanks to him, the project was completed significantly faster than planned. If he plans something or says he will do something, you can rely on him 100%.",
       "evaluator": "Gregor Zaren, Teammate"
-    }
+    },
+    "previous": "Previous reference",
+    "next": "Next reference",
+    "goTo": "Go to reference {{number}}"
   },
   "assistant": {
     "headline": "Ask my AI assistant",

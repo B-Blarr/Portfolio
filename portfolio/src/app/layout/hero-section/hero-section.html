@@ -11,17 +11,17 @@
       </a>
       <div class="dividing-line background-primary"></div>
     </aside>
-    <div class="developer-introduction">
+    <div id="main-content" class="developer-introduction" tabindex="-1">
       <p class="role-label">Fullstack Developer</p>
       <h1>Benjamin Blarr</h1>
       <div class="introduction-buttons">
         <a href="#projects">
-          <app-animated-button [tabbable]="false">{{
+          <app-animated-button insideLink>{{
             'hero.buttonProject' | translate
           }}</app-animated-button>
         </a>
         <a href="#contact-section">
-          <app-animated-button [tabbable]="false">{{
+          <app-animated-button insideLink>{{
             'hero.buttonContact' | translate
           }}</app-animated-button>
         </a>
@@ -34,14 +34,14 @@
         href="https://github.com/B-Blarr"
         target="_blank"
         rel="noopener noreferrer"
-        ><img src="/icons/github.png" alt="GitHub Profile" />
+        ><img src="/icons/github.png" [alt]="'hero.github' | translate" />
       </a>
       <a
         class="icon-link"
         href="https://www.linkedin.com/in/benjaminblarr/"
         target="_blank"
         rel="noopener noreferrer"
-        ><img src="/icons/linkedin.png" alt="LinkedIn Profile" />
+        ><img src="/icons/linkedin.png" [alt]="'hero.linkedin' | translate" />
       </a>
       <div class="dividing-line background-white"></div>
     </aside>

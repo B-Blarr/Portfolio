@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  inject,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
 import {
   ProjectOverlay,
   ProjectData,
@@ -96,6 +103,10 @@ export class Projects {
     },
   ];
 
+  @ViewChildren('teaser') private teasers?: QueryList<ElementRef<HTMLButtonElement>>;
+
+  private readonly changeDetector = inject(ChangeDetectorRef);
+
   selectedProject: ProjectData | null = null;
   isOverlayOpen = false;
   hoveredProjectSubtitle: string | null = null;
@@ -105,8 +116,15 @@ export class Projects {
     this.isOverlayOpen = true;
   }
 
+  /**
+   * Closes the overlay and puts the focus back on the list entry of the
+   * project that was shown last, so keyboard users continue where they are.
+   */
   closeOverlay(): void {
     this.isOverlayOpen = false;
+    this.changeDetector.detectChanges();
+    const index = this.selectedProject ? this.projectsList.indexOf(this.selectedProject) : -1;
+    this.teasers?.get(index)?.nativeElement.focus({ preventScroll: true });
   }
 
   nextProject(): void {

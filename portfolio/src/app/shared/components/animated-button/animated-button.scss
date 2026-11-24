@@ -1,6 +1,9 @@
-button {
+.animated-button {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
   width: 172px;
-  justify-content: center;
+  justify-content: safe center;
   padding: 0 24px;
   font-family: Karla;
   font-size: 18px;

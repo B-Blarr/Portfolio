@@ -17,11 +17,13 @@ describe('AnimatedButton', () => {
     expect(button.hasAttribute('tabindex')).toBe(false);
   });
 
-  it('leaves the tab order when it sits inside a link', async () => {
-    fixture.componentRef.setInput('tabbable', false);
+  it('renders a span instead of a button when it sits inside a link', async () => {
+    fixture.componentRef.setInput('insideLink', true);
     await fixture.whenStable();
 
-    expect(button.getAttribute('tabindex')).toBe('-1');
+    const host: HTMLElement = fixture.nativeElement;
+    expect(host.querySelector('button')).toBeNull();
+    expect(host.querySelector('span.animated-button .button-text')).not.toBeNull();
   });
 
   it('can be the submit button of a form', async () => {
