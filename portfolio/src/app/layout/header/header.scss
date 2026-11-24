@@ -158,16 +158,15 @@ header {
   display: flex;
 }
 
-.open {
-  background-color: var(--primary-color);
-}
-
 .burger-menu {
+  width: 52px;
+  min-height: 44px;
   padding: 10px;
 
-  .burger-icon {
-    width: 32px;
-    height: 24px;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
     background-color: white;
     mask-image: url('/icons/burger-menu.svg');
     mask-repeat: no-repeat;
@@ -238,14 +237,6 @@ header {
 
   .burger-menu {
     display: flex;
-    background-color: white;
-    mask-image: url('/icons/burger-menu.svg');
-    mask-repeat: no-repeat;
-    mask-size: contain;
-    -webkit-mask-image: url('/icons/burger-menu.svg');
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    transition: background-color 0.2s ease;
   }
 }
 
