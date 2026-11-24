@@ -51,10 +51,14 @@ h1 {
       color: var(--primary-color);
     }
 
-    & span,
-    strong {
+    & span {
       color: white;
       font-weight: 400;
+    }
+
+    & strong {
+      color: white;
+      font-weight: 700;
     }
 
     & a {
