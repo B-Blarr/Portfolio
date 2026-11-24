@@ -21,15 +21,15 @@
         DE
       </button>
     </div>
-    <button type="button" class="nav-button">
-      <a [routerLink]="['/']" fragment="aboutme-section">{{ 'nav.about me' | translate }}</a>
-    </button>
-    <button type="button" class="nav-button">
-      <a [routerLink]="['/']" fragment="skills-section">{{ 'nav.skills' | translate }}</a>
-    </button>
-    <button type="button" class="nav-button">
-      <a [routerLink]="['/']" fragment="projects">{{ 'nav.projects' | translate }}</a>
-    </button>
+    <a class="nav-button" [routerLink]="['/']" fragment="aboutme-section">{{
+      'nav.about me' | translate
+    }}</a>
+    <a class="nav-button" [routerLink]="['/']" fragment="skills-section">{{
+      'nav.skills' | translate
+    }}</a>
+    <a class="nav-button" [routerLink]="['/']" fragment="projects">{{
+      'nav.projects' | translate
+    }}</a>
   </div>
   <a routerLink="">
     <img class="logo logo-full" src="/icons/logo.png" width="397" height="161" alt="Logo" />
@@ -40,15 +40,15 @@
   </button>
 </header>
 <div class="burger-links-container" [class.flex]="isMenuOpen">
-  <button type="button" class="nav-button" (click)="closeMenu()">
-    <a [routerLink]="['/']" fragment="aboutme-section">{{ 'nav.about me' | translate }}</a>
-  </button>
-  <button type="button" class="nav-button" (click)="closeMenu()">
-    <a [routerLink]="['/']" fragment="skills-section">{{ 'nav.skills' | translate }}</a>
-  </button>
-  <button type="button" class="nav-button" (click)="closeMenu()">
-    <a [routerLink]="['/']" fragment="projects">{{ 'nav.projects' | translate }}</a>
-  </button>
+  <a class="nav-button" [routerLink]="['/']" fragment="aboutme-section" (click)="closeMenu()">{{
+    'nav.about me' | translate
+  }}</a>
+  <a class="nav-button" [routerLink]="['/']" fragment="skills-section" (click)="closeMenu()">{{
+    'nav.skills' | translate
+  }}</a>
+  <a class="nav-button" [routerLink]="['/']" fragment="projects" (click)="closeMenu()">{{
+    'nav.projects' | translate
+  }}</a>
   <div class="language-switch">
     <button
       type="button"
