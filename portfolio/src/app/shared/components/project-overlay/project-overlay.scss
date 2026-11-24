@@ -272,7 +272,7 @@ h3 {
   }
 
   .button-links app-animated-button {
-    & ::ng-deep button {
+    & ::ng-deep .animated-button {
       width: 130px;
       padding: 0 10px;
       font-size: 13px;
@@ -327,7 +327,7 @@ h3 {
     gap: 12px;
   }
 
-  .button-links app-animated-button ::ng-deep button {
+  .button-links app-animated-button ::ng-deep .animated-button {
     width: 118px;
   }
 }

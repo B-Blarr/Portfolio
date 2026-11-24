@@ -60,7 +60,7 @@
              Doppelte track-Werte wuerfen zur Laufzeit NG0955. -->
         @for (link of project.links; track $index) {
           <a [href]="link.url" target="_blank" rel="noopener noreferrer">
-            <app-animated-button [tabbable]="false">
+            <app-animated-button insideLink>
               <span>{{ link.labelKey | translate }}</span>
               <img src="/icons/arrow-out.svg" alt="" />
             </app-animated-button>

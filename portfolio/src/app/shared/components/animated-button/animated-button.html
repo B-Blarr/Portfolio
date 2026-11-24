@@ -1,5 +1,15 @@
-<button [type]="type" [disabled]="disabled" [attr.tabindex]="tabbable ? null : -1">
+@if (insideLink) {
+  <span class="animated-button">
+    <ng-container [ngTemplateOutlet]="content" />
+  </span>
+} @else {
+  <button class="animated-button" [type]="type" [disabled]="disabled">
+    <ng-container [ngTemplateOutlet]="content" />
+  </button>
+}
+
+<ng-template #content>
   <span class="button-text">
     <ng-content></ng-content>
   </span>
-</button>
+</ng-template>

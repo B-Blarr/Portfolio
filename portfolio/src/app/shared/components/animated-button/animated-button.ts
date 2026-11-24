@@ -1,8 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { booleanAttribute, Component, Input } from '@angular/core';
+import { NgTemplateOutlet } from '@angular/common';
 
 @Component({
   selector: 'app-animated-button',
-  imports: [],
+  imports: [NgTemplateOutlet],
   templateUrl: './animated-button.html',
   styleUrl: './animated-button.scss',
 })
@@ -10,9 +11,9 @@ export class AnimatedButton {
   @Input() disabled = false;
   @Input() type: 'button' | 'submit' = 'button';
   /**
-   * Set to false when this button sits inside a surrounding <a>.
-   * The link is then the only tab stop, so keyboard users do not
-   * land on a shell element that does nothing.
+   * Set when this button sits inside a surrounding <a>. It then renders a
+   * plain <span> with the same look, so the link stays the only tab stop and
+   * screen readers announce one link instead of a button inside a link.
    */
-  @Input() tabbable = true;
+  @Input({ transform: booleanAttribute }) insideLink = false;
 }

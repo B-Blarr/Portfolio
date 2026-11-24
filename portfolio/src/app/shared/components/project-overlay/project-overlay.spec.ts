@@ -86,7 +86,7 @@ describe('ProjectOverlay', () => {
     for (const link of links) {
       expect(link.target).toBe('_blank');
       expect(link.rel).toContain('noopener');
-      expect(link.querySelector('button')?.getAttribute('tabindex')).toBe('-1');
+      expect(link.querySelector('button')).toBeNull();
     }
   });
 
