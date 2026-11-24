@@ -258,8 +258,12 @@ h3 {
   .text-area {
     gap: 10px;
     min-width: 0px;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex: 1;
+  }
+
+  .tech {
+    margin-top: auto;
   }
 
   .project-description {
