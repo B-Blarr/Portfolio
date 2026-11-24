@@ -80,7 +80,8 @@
     },
     "previous": "Previous reference",
     "next": "Next reference",
-    "goTo": "Go to reference {{number}}"
+    "goTo": "Go to reference {{number}}",
+    "position": "Reference {{number}} of {{total}}:"
   },
   "assistant": {
     "headline": "Ask my AI assistant",

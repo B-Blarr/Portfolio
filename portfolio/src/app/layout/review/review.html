@@ -22,6 +22,14 @@
       }
     </article>
   </div>
+  <p class="visually-hidden" aria-live="polite">
+    @if (slideAnnounced) {
+      {{
+        'references.position' | translate: { number: currentIndex + 1, total: reviewList.length }
+      }}
+      {{ reviewList[currentIndex].evaluatorKey | translate }}
+    }
+  </p>
   <aside class="reference-area--navigation">
     <button
       type="button"
