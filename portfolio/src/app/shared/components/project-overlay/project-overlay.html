@@ -17,7 +17,7 @@
     <div class="content-wrapper">
       <article class="text-area">
         <h2>{{ project.title }}</h2>
-        <h3 id="project-overlay-title">{{ project.subtitle }}</h3>
+        <h3 id="project-overlay-title" aria-live="polite">{{ project.subtitle }}</h3>
         <p class="question">{{ 'projects.question' | translate }}</p>
         <p class="project-description">{{ project.descriptionKey | translate }}</p>
         <aside class="tech">

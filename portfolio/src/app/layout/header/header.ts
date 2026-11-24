@@ -1,4 +1,4 @@
-import { Component, inject, HostListener } from '@angular/core';
+import { Component, ElementRef, inject, HostListener, ViewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
@@ -12,6 +12,9 @@ import { AppLanguage, readStoredLanguage, storeLanguage } from '../../shared/lan
 })
 export class Header {
   private translate = inject(TranslateService);
+
+  @ViewChild('burgerButton') burgerButton?: ElementRef<HTMLButtonElement>;
+  @ViewChild('burgerLinks') burgerLinks?: ElementRef<HTMLElement>;
 
   activeLanguage: AppLanguage = readStoredLanguage();
   isMenuOpen = false;
@@ -40,6 +43,25 @@ export class Header {
   }
 
   closeMenu(): void {
+    this.isMenuOpen = false;
+  }
+
+  /** Closes the open menu with Escape and returns the focus to the burger button. */
+  @HostListener('document:keydown.escape')
+  onEscape(): void {
+    if (!this.isMenuOpen) return;
+    this.isMenuOpen = false;
+    this.burgerButton?.nativeElement.focus();
+  }
+
+  /** Closes the menu once the keyboard focus leaves the button and the menu links. */
+  onMenuFocusOut(event: FocusEvent): void {
+    const next = event.relatedTarget as Node | null;
+    const insideMenu =
+      !!next &&
+      (!!this.burgerButton?.nativeElement.contains(next) ||
+        !!this.burgerLinks?.nativeElement.contains(next));
+    if (!next || insideMenu) return;
     this.isMenuOpen = false;
   }
 

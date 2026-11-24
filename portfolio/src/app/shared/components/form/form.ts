@@ -51,6 +51,17 @@ export class Form implements OnInit {
     website: new FormControl(''),
   });
 
+  /**
+   * Whether the error message of a field is visible. Text fields show it once
+   * they were left, the privacy checkbox only after a submit attempt.
+   */
+  isErrorShown(field: 'name' | 'email' | 'message' | 'privacyAccepted'): boolean {
+    const control = this.userform.get(field);
+    if (!control?.invalid) return false;
+    if (field === 'privacyAccepted') return this.formSubmitted;
+    return control.touched || this.formSubmitted;
+  }
+
   onSubmit() {
     this.formSubmitted = true;
 

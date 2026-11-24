@@ -88,6 +88,11 @@ h3 {
     pointer-events: none;
     z-index: 10;
   }
+
+  &:focus-within {
+    outline: auto;
+    outline-offset: 4px;
+  }
 }
 
 .reference-area--navigation {

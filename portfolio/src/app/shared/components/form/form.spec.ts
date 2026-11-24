@@ -154,4 +154,28 @@ describe('Form', () => {
       expect(fixture.nativeElement.querySelector('.error-box')).not.toBeNull();
     });
   });
+
+  describe('screen reader', () => {
+    it('links a shown error to its field', async () => {
+      const name: HTMLInputElement = fixture.nativeElement.querySelector('#name');
+      expect(name.getAttribute('aria-invalid')).toBeNull();
+      expect(name.getAttribute('aria-describedby')).toBeNull();
+
+      component.userform.controls.name.markAsTouched();
+      fixture.detectChanges();
+      await fixture.whenStable();
+
+      expect(name.getAttribute('aria-invalid')).toBe('true');
+      expect(name.getAttribute('aria-describedby')).toBe('name-error');
+      expect(fixture.nativeElement.querySelector('#name-error')).not.toBeNull();
+    });
+
+    it('shows the privacy error only after a submit attempt', () => {
+      component.userform.controls.privacyAccepted.markAsTouched();
+      expect(component.isErrorShown('privacyAccepted')).toBe(false);
+
+      component.onSubmit();
+      expect(component.isErrorShown('privacyAccepted')).toBe(true);
+    });
+  });
 });

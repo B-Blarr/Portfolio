@@ -200,7 +200,7 @@ app-animated-button {
 
   & .bubble-triangle {
     position: absolute;
-    top: calc(100% - 1px);
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     width: 26px;
