@@ -10,6 +10,7 @@
         <article class="projects">
           @for (project of projectsList; track project.subtitle) {
             <button
+              #teaser
               type="button"
               class="project-teaser"
               (click)="openOverlay(project)"
@@ -50,7 +51,7 @@
     <div class="overlay-layer" (click)="closeOverlay()">
       <app-project-overlay
         [project]="selectedProject!"
-        (closed)="isOverlayOpen = false"
+        (closed)="closeOverlay()"
         (next)="nextProject()"
       >
       </app-project-overlay>
