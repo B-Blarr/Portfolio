@@ -7,10 +7,12 @@
 }
 
 ul {
-  padding-top: 24px;
+  padding-left: 0;
+  list-style: none;
 
   & li {
     font-size: 16px;
+    line-height: 1.5;
     color: var(--primary-color);
   }
 }
@@ -35,15 +37,18 @@ h1 {
 .paragraph {
   display: flex;
   flex-direction: column;
+  gap: 12px;
 
   & .imprint-headline {
     font-size: 19px;
     color: white;
+    margin-top: 12px;
   }
 
   & .imprint-text {
     font-size: 16px;
     color: var(--primary-color);
+    line-height: 1.5;
 
     & ::ng-deep span {
       color: white;
