@@ -31,7 +31,7 @@ li {
   text-wrap: pretty;
 }
 
-#main-content:focus {
+[tabindex='-1']:focus {
   outline: none;
 }
 
