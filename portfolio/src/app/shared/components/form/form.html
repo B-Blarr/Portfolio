@@ -15,11 +15,15 @@
         id="name"
         type="text"
         formControlName="name"
+        autocomplete="name"
+        aria-required="true"
+        [attr.aria-invalid]="isErrorShown('name') || null"
+        [attr.aria-describedby]="isErrorShown('name') ? 'name-error' : null"
         [placeholder]="'contact.namePlaceholder' | translate"
       />
-      <div class="error-container">
-        @if ((userform.get('name')?.touched || formSubmitted) && userform.get('name')?.invalid) {
-          <p class="error-message">
+      <div class="error-container" aria-live="polite">
+        @if (isErrorShown('name')) {
+          <p class="error-message" id="name-error">
             @if (userform.get('name')?.hasError('required')) {
               {{ 'contact.nameErrorRequired' | translate }}
             }
@@ -35,13 +39,17 @@
       <input
         class="input input-field"
         id="mail"
-        type="text"
+        type="email"
         formControlName="email"
+        autocomplete="email"
+        aria-required="true"
+        [attr.aria-invalid]="isErrorShown('email') || null"
+        [attr.aria-describedby]="isErrorShown('email') ? 'mail-error' : null"
         [placeholder]="'contact.emailPlaceholder' | translate"
       />
-      <div class="error-container">
-        @if ((userform.get('email')?.touched || formSubmitted) && userform.get('email')?.invalid) {
-          <p class="error-message">
+      <div class="error-container" aria-live="polite">
+        @if (isErrorShown('email')) {
+          <p class="error-message" id="mail-error">
             @if (userform.get('email')?.hasError('required')) {
               {{ 'contact.emailErrorRequired' | translate }}
             }
@@ -59,14 +67,15 @@
         class="input message-box"
         id="message"
         formControlName="message"
+        aria-required="true"
+        [attr.aria-invalid]="isErrorShown('message') || null"
+        [attr.aria-describedby]="isErrorShown('message') ? 'message-error' : null"
         [placeholder]="'contact.messagePlaceholder' | translate"
         (input)="autoResize(messageBox)"
       ></textarea>
-      <div class="error-container">
-        @if (
-          (userform.get('message')?.touched || formSubmitted) && userform.get('message')?.invalid
-        ) {
-          <p class="error-message">
+      <div class="error-container" aria-live="polite">
+        @if (isErrorShown('message')) {
+          <p class="error-message" id="message-error">
             @if (userform.get('message')?.hasError('required')) {
               {{ 'contact.messageErrorRequired' | translate }}
             }
@@ -87,6 +96,9 @@
           type="checkbox"
           id="confirmation-checkbox"
           formControlName="privacyAccepted"
+          aria-required="true"
+          [attr.aria-invalid]="isErrorShown('privacyAccepted') || null"
+          [attr.aria-describedby]="isErrorShown('privacyAccepted') ? 'privacy-error' : null"
         />
         <label class="checkbox-text" for="confirmation-checkbox">
           {{ 'contact.privacyBefore' | translate
@@ -96,9 +108,9 @@
           >{{ 'contact.privacyAfter' | translate }}
         </label>
       </div>
-      <div class="error-container">
-        @if (formSubmitted && userform.get('privacyAccepted')?.invalid) {
-          <p class="error-message">
+      <div class="error-container" aria-live="polite">
+        @if (isErrorShown('privacyAccepted')) {
+          <p class="error-message" id="privacy-error">
             {{ 'contact.privacyError' | translate }}
           </p>
         }
