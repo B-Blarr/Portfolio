@@ -4,6 +4,7 @@
   @include m.content-limitation(row);
   display: grid;
   grid-template-columns: 1fr auto 1fr;
+  column-gap: 40px;
   padding-left: 80px;
   padding-right: 80px;
   padding-bottom: 80px;
