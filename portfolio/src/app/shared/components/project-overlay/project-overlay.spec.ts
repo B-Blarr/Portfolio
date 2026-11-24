@@ -68,6 +68,19 @@ describe('ProjectOverlay', () => {
     expect(closed).toHaveBeenCalledTimes(1);
   });
 
+  it('hides the page behind it from screen readers and restores it on close', async () => {
+    const page = document.body.appendChild(document.createElement('div'));
+    const second = TestBed.createComponent(ProjectOverlay);
+    second.componentRef.setInput('project', project);
+    await second.whenStable();
+
+    expect(page.inert).toBe(true);
+
+    second.destroy();
+    expect(page.inert).toBe(false);
+    page.remove();
+  });
+
   it('asks for the next project without closing', () => {
     click('.next-project-button');
 

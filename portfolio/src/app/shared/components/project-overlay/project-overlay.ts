@@ -7,6 +7,7 @@ import {
   HostListener,
   inject,
   Input,
+  OnDestroy,
   Output,
   ViewChild,
 } from '@angular/core';
@@ -46,7 +47,7 @@ export interface ProjectData {
   templateUrl: './project-overlay.html',
   styleUrl: './project-overlay.scss',
 })
-export class ProjectOverlay {
+export class ProjectOverlay implements OnDestroy {
   @Input({ required: true }) project!: ProjectData;
   @Output() closed = new EventEmitter<void>();
   @Output() next = new EventEmitter<void>();
@@ -55,12 +56,38 @@ export class ProjectOverlay {
   @ViewChild('closeButton') private closeButton?: ElementRef<HTMLButtonElement>;
 
   private readonly changeDetector = inject(ChangeDetectorRef);
+  private readonly host: ElementRef<HTMLElement> = inject(ElementRef);
+  private readonly hiddenBackground: HTMLElement[] = [];
 
   videoOpen = false;
   private videoOpener: HTMLElement | null = null;
 
   constructor() {
-    afterNextRender(() => this.closeButton?.nativeElement.focus());
+    afterNextRender(() => {
+      this.hideBackground();
+      this.closeButton?.nativeElement.focus();
+    });
+  }
+
+  ngOnDestroy(): void {
+    for (const element of this.hiddenBackground) element.inert = false;
+  }
+
+  /**
+   * Makes the page behind the overlay inert, so screen readers cannot leave
+   * the dialog with their reading cursor either. Walks up from the overlay and
+   * marks every sibling on the way, leaving elements that were inert already.
+   */
+  private hideBackground(): void {
+    let node: HTMLElement = this.host.nativeElement;
+    while (node.parentElement && node !== document.body) {
+      for (const sibling of Array.from(node.parentElement.children)) {
+        if (sibling === node || !(sibling instanceof HTMLElement) || sibling.inert) continue;
+        sibling.inert = true;
+        this.hiddenBackground.push(sibling);
+      }
+      node = node.parentElement;
+    }
   }
 
   @HostListener('document:keydown.escape')
