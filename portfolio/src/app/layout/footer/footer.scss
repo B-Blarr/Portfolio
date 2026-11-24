@@ -41,6 +41,11 @@
   font-family: Fira Code;
   font-size: 18px;
   color: var(--primary-color);
+
+  & .copyright-sign {
+    position: relative;
+    top: 1.5px;
+  }
 }
 
 .footer-links {
