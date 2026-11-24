@@ -80,7 +80,8 @@
     },
     "previous": "Vorherige Referenz",
     "next": "Nächste Referenz",
-    "goTo": "Zur Referenz {{number}}"
+    "goTo": "Zur Referenz {{number}}",
+    "position": "Referenz {{number}} von {{total}}:"
   },
   "assistant": {
     "headline": "Frag meinen KI-Assistenten",

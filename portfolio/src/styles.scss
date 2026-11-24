@@ -35,6 +35,15 @@ li {
   outline: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 /* fira-code-300 - latin */
 @font-face {
   font-display: swap;

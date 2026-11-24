@@ -51,6 +51,9 @@ export class Review {
   noTransitionIndex = -1;
 
   isAnimating = false;
+
+  /** Set after the first slide, so the live region announces changes but not the initial card. */
+  slideAnnounced = false;
   animationQueue: Direction[] = [];
 
   private cdr = inject(ChangeDetectorRef);
@@ -155,6 +158,7 @@ export class Review {
    * @param direction - The direction of the slide.
    */
   private executeSlide(direction: string): void {
+    this.slideAnnounced = true;
     this.cardPositions = this.cardPositions.map((pos) => pos + (direction === 'next' ? -1 : 1));
     this.cdr.detectChanges();
     setTimeout(() => this.finalizeSlide(direction), this.ANIMATION_DURATION);
