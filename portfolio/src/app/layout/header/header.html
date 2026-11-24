@@ -32,11 +32,30 @@
     }}</a>
   </div>
   <a routerLink="">
-    <img class="logo logo-full" src="/icons/logo.png" width="397" height="161" alt="Logo" />
-    <img class="logo logo-small" src="/icons/logo-small.png" width="131" height="147" alt="Logo" />
+    <img
+      class="logo logo-full"
+      src="/icons/logo.png"
+      width="397"
+      height="161"
+      [alt]="'nav.home' | translate"
+    />
+    <img
+      class="logo logo-small"
+      src="/icons/logo-small.png"
+      width="131"
+      height="147"
+      [alt]="'nav.home' | translate"
+    />
   </a>
-  <button type="button" (click)="toggleBurgerMenu()" class="burger-menu" [class.open]="isMenuOpen">
-    <img class="burger-icon" src="/icons/burger-menu.svg" alt="Burger Menu" />
+  <button
+    type="button"
+    (click)="toggleBurgerMenu()"
+    class="burger-menu"
+    [class.open]="isMenuOpen"
+    [attr.aria-label]="'nav.menu' | translate"
+    [attr.aria-expanded]="isMenuOpen"
+  >
+    <img class="burger-icon" src="/icons/burger-menu.svg" alt="" />
   </button>
 </header>
 <div class="burger-links-container" [class.flex]="isMenuOpen">

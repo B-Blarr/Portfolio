@@ -26,7 +26,7 @@
       type="button"
       class="arrow-button"
       (click)="previousSlide()"
-      aria-label="Previous review"
+      [attr.aria-label]="'references.previous' | translate"
     >
       <span class="arrow-icon arrow-left" aria-hidden="true"></span>
     </button>
@@ -37,11 +37,16 @@
           class="dot"
           [class.active]="i === currentIndex"
           (click)="goToSlide(i)"
-          [attr.aria-label]="'Go to review ' + (i + 1)"
+          [attr.aria-label]="'references.goTo' | translate: { number: i + 1 }"
         ></button>
       }
     </div>
-    <button type="button" class="arrow-button" (click)="nextSlide()" aria-label="Next review">
+    <button
+      type="button"
+      class="arrow-button"
+      (click)="nextSlide()"
+      [attr.aria-label]="'references.next' | translate"
+    >
       <span class="arrow-icon arrow-right" aria-hidden="true"></span>
     </button>
   </aside>

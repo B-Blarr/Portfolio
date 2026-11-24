@@ -35,7 +35,7 @@
       </article>
       <article class="image-area">
         <button #closeButton class="close-btn" type="button" (click)="onClose()">
-          <img src="/icons/close-small.svg" alt="Close Overlay" />
+          <img src="/icons/close-small.svg" [alt]="'projects.close' | translate" />
         </button>
         @if (project.video; as video) {
           <img class="project-image video-still" [src]="video.poster" [alt]="project.title" />

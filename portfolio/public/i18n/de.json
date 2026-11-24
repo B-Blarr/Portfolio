@@ -3,7 +3,9 @@
     "skipToContent": "Zum Inhalt springen",
     "about me": "Über mich",
     "skills": "Fähigkeiten",
-    "projects": "Projekte"
+    "projects": "Projekte",
+    "home": "Benjamin Blarr, zur Startseite",
+    "menu": "Menü"
   },
   "hero": {
     "buttonProject": "Meine Projekte",
@@ -11,7 +13,9 @@
     "bannerOne": "Offen für Remote-Arbeit",
     "bannerTwo": "Zuhause im Raum Braunschweig",
     "bannerThree": "Offen für Jobangebote",
-    "scrollDown": "Weiter zu Über mich"
+    "scrollDown": "Weiter zu Über mich",
+    "github": "GitHub-Profil",
+    "linkedin": "LinkedIn-Profil"
   },
   "aboutMe": {
     "whoAmI": "Wer bin ich",
@@ -53,7 +57,8 @@
     },
     "coderr": {
       "description": "REST-API, gebaut mit Django REST Framework. Angebote, Bestellungen und Bewertungen mit Token-Authentifizierung. Frontend von der Developer Akademie bereitgestellt."
-    }
+    },
+    "close": "Projekt schließen"
   },
   "references": {
     "headline": "Was meine Teampartner über mich sagen",
@@ -72,7 +77,10 @@
     "gregor": {
       "text": "Benjamin sorgt innerhalb des Teams für eine sehr produktive Atmosphäre. Durch ihn wurde das Projekt deutlich schneller als geplant abgeschlossen. Wenn er etwas plant oder sagt, dass er etwas machen wird, dann kann man sich 100%ig darauf verlassen.",
       "evaluator": "Gregor Zaren, Teampartner"
-    }
+    },
+    "previous": "Vorherige Referenz",
+    "next": "Nächste Referenz",
+    "goTo": "Zur Referenz {{number}}"
   },
   "assistant": {
     "headline": "Frag meinen KI-Assistenten",
