@@ -5,7 +5,8 @@ import { ImprintWrapper } from './wrapper/imprint-wrapper/imprint-wrapper';
 
 export const routes: Routes = [
   { path: '', component: Home },
-  { path: 'legal-notice', component: ImprintWrapper },
-  { path: 'private-policy', component: PrivatePolicyWrapper },
+  { path: 'legal-notice', component: ImprintWrapper, title: 'pageTitle.legalNotice' },
+  { path: 'private-policy', component: PrivatePolicyWrapper, title: 'pageTitle.privacyPolicy' },
+  { path: 'privacy-policy', redirectTo: 'private-policy' },
   { path: '**', redirectTo: '' },
 ];

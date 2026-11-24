@@ -143,7 +143,8 @@
   "footer": {
     "home": "Schöningen, Germany",
     "legalNotice": "Legal Notice",
-    "privacyPolicy": "Privacy Policy"
+    "privacyPolicy": "Privacy Policy",
+    "email": "Email"
   },
   "legalNotice": {
     "headline": "Legal Notice",
@@ -154,7 +155,8 @@
     "disclaimer": "Liability for content and links",
     "disclaimerText": "The content of this website has been created with care. However, I cannot guarantee its accuracy, completeness or timeliness.<br><br>This website contains links to external websites operated by third parties, over whose content I have no influence. The respective provider is always responsible for such external content. At the time of linking, no legal violations were apparent. Should I become aware of any infringement, I will remove the link in question immediately.",
     "contactMe": "For any questions or notices, please contact me at b.blarr@gmx.de.",
-    "date": "July 28, 2026"
+    "date": "July 28, 2026",
+    "email": "Email"
   },
   "privacyPolicy": {
     "mainTitle": "Privacy Policy",
@@ -281,5 +283,10 @@
     },
     "source": "Source:",
     "sourceLink": "https://www.e-recht24.de"
+  },
+  "pageTitle": {
+    "home": "Benjamin Blarr | Fullstack Developer",
+    "legalNotice": "Legal Notice | Benjamin Blarr",
+    "privacyPolicy": "Privacy Policy | Benjamin Blarr"
   }
 }
