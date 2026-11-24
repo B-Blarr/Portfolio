@@ -4,12 +4,20 @@
 <div class="backdrop" (click)="onClose()">
   <!-- Not an interaction: this only keeps clicks inside the content from
        reaching the backdrop handler above. -->
-  <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
-  <section class="content" [attr.inert]="videoOpen ? '' : null" (click)="$event.stopPropagation()">
+  <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events -->
+  <section
+    #dialog
+    class="content"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="project-overlay-title"
+    [attr.inert]="videoOpen ? '' : null"
+    (click)="$event.stopPropagation()"
+  >
     <div class="content-wrapper">
       <article class="text-area">
         <h2>{{ project.title }}</h2>
-        <h3>{{ project.subtitle }}</h3>
+        <h3 id="project-overlay-title">{{ project.subtitle }}</h3>
         <p class="question">{{ 'projects.question' | translate }}</p>
         <p class="project-description">{{ project.descriptionKey | translate }}</p>
         <aside class="tech">
@@ -26,7 +34,7 @@
         </aside>
       </article>
       <article class="image-area">
-        <button class="close-btn" type="button" (click)="onClose()">
+        <button #closeButton class="close-btn" type="button" (click)="onClose()">
           <img src="/icons/close-small.svg" alt="Close Overlay" />
         </button>
         @if (project.video; as video) {
